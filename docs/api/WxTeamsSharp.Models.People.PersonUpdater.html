@@ -1,0 +1,728 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PersonUpdater
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PersonUpdater
+   ">
+    <meta name="generator" content="docfx 2.43.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="WxTeamsSharp.Models.People.PersonUpdater">
+  
+  
+  <h1 id="WxTeamsSharp_Models_People_PersonUpdater" data-uid="WxTeamsSharp.Models.People.PersonUpdater" class="text-break">Class PersonUpdater
+  </h1>
+  <div class="markdown level0 summary"><p>Builder class for updating an existing user</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PersonUpdater</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="WxTeamsSharp.Models.People.html">WxTeamsSharp.Models.People</a></h6>
+  <h6><strong>Assembly</strong>: WxTeamsSharp.dll</h6>
+  <h5 id="WxTeamsSharp_Models_People_PersonUpdater_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PersonUpdater : IPersonUpdater</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=27">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater__ctor_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.#ctor*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater__ctor_WxTeamsSharp_Interfaces_People_IPerson_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.#ctor(WxTeamsSharp.Interfaces.People.IPerson)">PersonUpdater(IPerson)</h4>
+  <div class="markdown level1 summary"><p>Create a new PersonUpdater with specific IPerson.
+Prefer to use an IPerson.Update() or
+PersonUpdater.New(IPerson person)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersonUpdater(IPerson person)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPerson.html">IPerson</a></td>
+        <td><span class="parametername">person</span></td>
+        <td><p>Person object to udpate</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=80">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater_AddLicense_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.AddLicense*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater_AddLicense_System_String_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.AddLicense(System.String)">AddLicense(String)</h4>
+  <div class="markdown level1 summary"><p>Add a license to the user (keep existing)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPersonUpdater AddLicense(string licenseId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">licenseId</span></td>
+        <td><p>License Id to add</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=61">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater_AddRole_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.AddRole*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater_AddRole_System_String_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.AddRole(System.String)">AddRole(String)</h4>
+  <div class="markdown level1 summary"><p>Add a role to the user (keep existing)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPersonUpdater AddRole(string roleId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">roleId</span></td>
+        <td><p>Role Id to add</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=134">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater_Build_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.Build*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater_Build" data-uid="WxTeamsSharp.Models.People.PersonUpdater.Build">Build()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IUpdateablePerson Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IUpdateablePerson.html">IUpdateablePerson</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=106">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater_ReplaceLicenses_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.ReplaceLicenses*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater_ReplaceLicenses_System_Collections_Generic_List_System_String__" data-uid="WxTeamsSharp.Models.People.PersonUpdater.ReplaceLicenses(System.Collections.Generic.List{System.String})">ReplaceLicenses(List&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Replace (overwrite) all licenses with new ones</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPersonUpdater ReplaceLicenses(List&lt;string&gt; licenses)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">licenses</span></td>
+        <td><p>License Ids to set for the user</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=99">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater_ReplaceRoles_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.ReplaceRoles*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater_ReplaceRoles_System_Collections_Generic_List_System_String__" data-uid="WxTeamsSharp.Models.People.PersonUpdater.ReplaceRoles(System.Collections.Generic.List{System.String})">ReplaceRoles(List&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Replace (overwrite) all roles with new ones</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPersonUpdater ReplaceRoles(List&lt;string&gt; roles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">roles</span></td>
+        <td><p>Role Ids to set for the user</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=33">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater_Update_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.Update*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater_Update_WxTeamsSharp_Interfaces_People_IPerson_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.Update(WxTeamsSharp.Interfaces.People.IPerson)">Update(IPerson)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IPersonUpdater Update(IPerson person)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPerson.html">IPerson</a></td>
+        <td><span class="parametername">person</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=47">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater_UpdateAvatar_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.UpdateAvatar*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater_UpdateAvatar_System_String_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.UpdateAvatar(System.String)">UpdateAvatar(String)</h4>
+  <div class="markdown level1 summary"><p>Update avatar URL</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPersonUpdater UpdateAvatar(string avatarUrl)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">avatarUrl</span></td>
+        <td><p>New avatar url address</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=113">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater_UpdateDisplayName_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.UpdateDisplayName*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater_UpdateDisplayName_System_String_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.UpdateDisplayName(System.String)">UpdateDisplayName(String)</h4>
+  <div class="markdown level1 summary"><p>Update display name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPersonUpdater UpdateDisplayName(string displayName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">displayName</span></td>
+        <td><p>New display name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=36">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater_UpdateEmail_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.UpdateEmail*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater_UpdateEmail_System_String_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.UpdateEmail(System.String)">UpdateEmail(String)</h4>
+  <div class="markdown level1 summary"><p>Update email</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPersonUpdater UpdateEmail(string email)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">email</span></td>
+        <td><p>New email address</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=120">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater_UpdateFirstName_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.UpdateFirstName*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater_UpdateFirstName_System_String_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.UpdateFirstName(System.String)">UpdateFirstName(String)</h4>
+  <div class="markdown level1 summary"><p>Update first name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPersonUpdater UpdateFirstName(string firstName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">firstName</span></td>
+        <td><p>New first name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=127">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater_UpdateLastName_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.UpdateLastName*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater_UpdateLastName_System_String_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.UpdateLastName(System.String)">UpdateLastName(String)</h4>
+  <div class="markdown level1 summary"><p>Update last name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPersonUpdater UpdateLastName(string lastName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">lastName</span></td>
+        <td><p>New last name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=54">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_People_PersonUpdater_UpdateOrgId_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.UpdateOrgId*"></a>
+  <h4 id="WxTeamsSharp_Models_People_PersonUpdater_UpdateOrgId_System_String_" data-uid="WxTeamsSharp.Models.People.PersonUpdater.UpdateOrgId(System.String)">UpdateOrgId(String)</h4>
+  <div class="markdown level1 summary"><p>Update organization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPersonUpdater UpdateOrgId(string orgId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">orgId</span></td>
+        <td><p>Organization Id</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/People/PersonUpdater.cs&amp;version=GBmaster&amp;line=9" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2691 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WxTeamsSharp</name>
+    </assembly>
+    <members>
+        <member name="T:WxTeamsSharp.Api.WxTeamsApi">
+            <summary>
+            Webex Teams API
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetEventsAsync(System.Int32,System.Nullable{WxTeamsSharp.Enums.EventResource},System.Nullable{WxTeamsSharp.Enums.EventType},System.String,System.DateTimeOffset,System.DateTimeOffset)">
+            <summary>
+            List events in your organization. Several query parameters are available to filter the response.
+            Long result sets will be split into pages.
+            </summary>
+            <param name="max">Limit the maximum number of events in the response.</param>
+            <param name="resource">List events with a specific resource type.</param>
+            <param name="type">List events with a specific event type.</param>
+            <param name="actorId">List events performed by this person, by ID.</param>
+            <param name="from">List events which occurred after a specific date and time.</param>
+            <param name="to">List events which occurred before a specific date and time.</param>
+            <returns>The method returns an IListResult object whose Items property is a list of Events</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetEventAsync(System.String)">
+            <summary>
+            Shows details for an event, by event ID.
+            </summary>
+            <param name="eventId">The unique identifier for the event.</param>
+            <returns>This method returns an Event</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetLicensesAsync">
+            <summary>
+            List all licenses for a given organization. 
+            If no orgId is specified, the default is the organization of the authenticated user.
+            </summary>
+            <returns>The method returns an IListResult object whose Items property is a list of Licenses</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetLicenseAsync(System.String)">
+            <summary>
+            Shows details for a license, by ID.
+            </summary>
+            <param name="licenseId">The unique identifier for the license.</param>
+            <returns>The method returns a License</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetAllMembershipsAsync(System.Int32)">
+            <summary>
+            Lists all room memberships.
+            </summary>
+            <param name="max">Limit the maximum number of memberships in the response.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of IMembership</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetMembershipsAssociatedWithAsync(System.String,System.Int32)">
+            <summary>
+            Lists all room memberships associated with a particular user by userId or email
+            </summary>
+            <param name="userIdOrEmail">The Id or Email memberships should be associated with</param>
+            <param name="max">Limit the maximum number of memberships in the response.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of IMembership</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetRoomMembershipsAsync(System.String,System.Int32)">
+            <summary>
+            Lists all room memberships associated with a specific room
+            </summary>
+            <param name="roomId">Id of the room to which memberships should be associated</param>
+            <param name="max">Limit the maximum number of memberships in the response.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of IMembership</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.AddUserToRoomAsync(System.String,System.String,System.Boolean)">
+            <summary>
+            Add someone to a room by Person ID or email address; optionally making them a moderator.
+            </summary>
+            <param name="roomId">The room ID</param>
+            <param name="userIdOrEmail">The ID or email address of the person</param>
+            <param name="IsModerator">Whether or not the participant is a room moderator.</param>
+            <returns>This method returns the Membership that was created</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.UpdateMembershipAsync(System.String,System.Boolean)">
+            <summary>
+            Updates properties for a membership by ID.
+            </summary>
+            <param name="membershipId">The unique identifier for the membership.</param>
+            <param name="isModerator">Whether or not the participant is a room moderator.</param>
+            <returns>This method returns the Membership that was updated</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetMembershipAsync(System.String)">
+            <summary>
+            Get details for a membership by ID.
+            </summary>
+            <param name="membershipId">The unique identifier for the membership.</param>
+            <returns>This method returns a Membership</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.DeleteMembershipAsync(System.String)">
+            <summary>
+            Deletes a membership by ID.
+            </summary>
+            <param name="membershipId">The unique identifier for the membership.</param>
+            <returns>This method returns a response message which should be "OK"</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.DeleteMessageAsync(System.String)">
+            <summary>
+            Deletes a message, by message ID.
+            </summary>
+            <param name="messageId">The unique identifier for the message.</param>
+            <returns>This method returns a ResponseMessage which should be "OK"</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetMessageAsync(System.String)">
+            <summary>
+            Shows details for a message, by message ID.
+            </summary>
+            <param name="messageId">The unique identifier for the message.</param>
+            <returns>This method returns a Message</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.SendMessageAsync(WxTeamsSharp.Interfaces.Messages.ISendableMessage)">
+            <summary>
+            Post a plain text or rich text message, and optionally, a file attachment attachment, to a room.
+            </summary>
+            <param name="sendMessage">Use MessageBuilder.New() to start building a message. .Build() will produce an ISendableMessage</param>
+            <returns>This method returns the Message object that was sent.</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetDirectMessagesAsync(System.String)">
+            <summary>
+            Lists all messages in a 1:1 (direct) room.
+            The list sorts the messages in descending order by creation date.
+            </summary>
+            <param name="userIdOrEmail">User ID or Email to retreive messages for</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Messages</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetRoomMessagesBeforeDateAsync(System.String,System.DateTimeOffset,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">
+            <summary>
+            Lists all messages in a room before a specific date and time. 
+            Each message will include content attachments if present.
+            The list sorts the messages in descending order by creation date.
+            Long result sets will be split into pages.
+            </summary>
+            <param name="roomId">List messages in a room, by ID.</param>
+            <param name="before">List messages sent before a date and time.</param>
+            <param name="max">Limit the maximum number of messages in the response.</param>
+            <param name="userMentioned">List messages where the authenticated user is mentioned</param>
+            <param name="mentionedPeople">List messages with these people mentioned, by ID.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Messages</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetRoomMessagesBeforeMessageAsync(System.String,System.String,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">
+            <summary>
+            Lists all messages in a room before a specific message. 
+            Each message will include content attachments if present.
+            The list sorts the messages in descending order by creation date.
+            Long result sets will be split into pages.
+            </summary>
+            <param name="roomId">List messages in a room, by ID.</param>
+            <param name="messageId">List messages sent before a message, by ID.</param>
+            <param name="max">Limit the maximum number of messages in the response.</param>
+            <param name="userMentioned">List messages where the authenticated user is mentioned</param>
+            <param name="mentionedPeople">List messages with these people mentioned, by ID.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Messages</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetRoomMessagesAsync(System.String,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String},System.DateTimeOffset,System.String)">
+            <summary>
+            Lists all messages in a room. 
+            Each message will include content attachments if present.
+            The list sorts the messages in descending order by creation date.
+            Long result sets will be split into pages.
+            </summary>
+            <param name="roomId">List messages in a room, by ID.</param>
+            <param name="max">Limit the maximum number of messages in the response.</param>
+            <param name="userMentioned">List messages where the authenticated user is mentioned</param>
+            <param name="mentionedPeople">List messages with these people mentioned, by ID.</param>
+            <param name="before">List messages sent before a date and time.</param>
+            <param name="beforeMessage">List messages sent before a message, by ID.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Messages</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetOrganizationsAsync">
+            <summary>
+            List all organizations visible by your account. The results will not be paginated.
+            </summary>
+            <returns>This method returns an IListResult object whose Items property is a list of Organizations</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetOrganizationAsync(System.String)">
+            <summary>
+            Shows details for an organization, by ID.
+            </summary>
+            <param name="organizationId">The unique identifier for the organization.</param>
+            <returns>This method returns an Organization</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.DeleteUserAsync(System.String)">
+            <summary>
+            Remove a person from the system. Only an admin can remove a person.
+            </summary>
+            <param name="personId">A unique identifier for the person.</param>
+            <returns>This method returns a response message which should be "OK"</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.UpdateUserAsync(System.String,WxTeamsSharp.Interfaces.People.IUpdateablePerson)">
+            <summary>
+            Update details for a person, by ID
+            </summary>
+            <param name="personId">A unique identifier for the person.</param>
+            <param name="personParams">Get from PersonUpdater.Update(IPerson)</param>
+            <returns>This method returns the updated Person object</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.CreateUserAsync(WxTeamsSharp.Interfaces.People.ICreateablePerson)">
+            <summary>
+            Create a new user account for a given organization. Only an admin can create a new user account.
+            Currently, users may have only one email address associated with their account.
+            </summary>
+            <param name="personParams">Get from PersonBuilder.New()</param>
+            <returns>This method returns the created Person object</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetMyUserDetails">
+            <summary>
+            Show the profile for the authenticated user.
+            </summary>
+            <returns>This method returns the user's Person object</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUserAsync(System.String)">
+            <summary>
+            Shows details for a person, by ID
+            </summary>
+            <param name="userId">A unique identifier for the person.</param>
+            <returns>This method returns a Person</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmail(System.String,System.Int32)">
+            <summary>
+            List people in your organization with this email address
+            Long result sets will be split into pages.
+            </summary>
+            <param name="email">List people with this email address.</param>
+            <param name="max">Limit the maximum number of people in the response.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of People</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayName(System.String,System.Int32)">
+            <summary>
+            List people in your organization with this display name
+            Long result sets will be split into pages.
+            </summary>
+            <param name="displayName">List people whose name starts with this string.</param>
+            <param name="max">Limit the maximum number of people in the response.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of People</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdList(System.Collections.Generic.IEnumerable{System.String},System.Int32)">
+            <summary>
+            List people in your organization that match this list of IDs.
+            Long result sets will be split into pages.
+            </summary>
+            <param name="ids">List people by ID. Accepts up to 85 person IDs separated by commas.</param>
+            <param name="max">Limit the maximum number of people in the response.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of People</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgId(System.String,System.Int32)">
+            <summary>
+            List people in this organization. Only admin users of another organization (such as partners) may use this.
+            Long result sets will be split into pages.
+            </summary>
+            <param name="orgId">A unique identifier for the organization</param>
+            <param name="max">Limit the maximum number of people in the response.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of People</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersAsync(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Int32)">
+            <summary>
+            List people in your organization. For most users, either the email or displayName parameter is required. 
+            Admin users can omit these fields and list all users in their organization.
+            Long result sets will be split into pages.
+            </summary>
+            <param name="email">List people with this email address. For non-admin requests, either this or displayName are required.</param>
+            <param name="displayName">List people whose name starts with this string. For non-admin requests, either this or email are required.</param>
+            <param name="id">List people by ID. Accepts up to 85 person IDs separated by commas.</param>
+            <param name="orgId">List people in this organization. Only admin users of another organization (such as partners) may use this parameter.</param>
+            <param name="max">Limit the maximum number of people in the response.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of People</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetResourceGroupsAsync(System.String)">
+            <summary>
+            List resource groups.
+            </summary>
+            <param name="orgId">List resource groups in this organization. Only admin users of another organization (such as partners) may use this parameter.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Resource Groups</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetResourceGroupAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="resourceGroupId"></param>
+            <returns>This method returns a Resource Group</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetResourceGroupMembershipsAsync(System.Int32,System.String,System.String,System.String,System.Nullable{WxTeamsSharp.Enums.ResourceMembershipStatus})">
+            <summary>
+            Lists all resource group memberships for an organization.
+            </summary>
+            <param name="max"></param>
+            <param name="licenseId">List resource group memberships for a license, by ID.</param>
+            <param name="personId">List resource group memberships for a person, by ID.</param>
+            <param name="personOrgId">List resource group memberships for an organization, by ID.</param>
+            <param name="status">Limit resource group memberships to a specific status.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Resource Group Memberships</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetResourceGroupMembershipAsync(System.String)">
+            <summary>
+            Shows details for a resource group membership, by ID.
+            </summary>
+            <param name="resourceGroupMembershipId">The unique identifier for the resource group membership.</param>
+            <returns>This method returns a Resource Group Membership</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.UpdateResourceGroupMembershipAsync(System.String,System.String,System.String,System.String,System.String,WxTeamsSharp.Enums.ResourceMembershipStatus)">
+            <summary>
+            Updates a resource group membership, by ID.
+            </summary>
+            <param name="resourceGroupMembershipId">The unique identifier for the resource group membership.</param>
+            <param name="resourceGroupId">The resource group ID.</param>
+            <param name="licenseId">The license ID.</param>
+            <param name="personId">The person ID.</param>
+            <param name="personOrgId">The organization ID of the person.</param>
+            <param name="status">The activation status of the resource group membership.</param>
+            <returns>This method returns the updated Resource Group Membership</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetRolesAsync">
+            <summary>
+            List all roles.
+            This roles resource can be accessed only by an admin.
+            </summary>
+            <returns>This method returns an IListResult object whose Items property is a list of Roles</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetRoleAsync(System.String)">
+            <summary>
+            Shows details for a role, by ID.
+            This roles resource can be accessed only by an admin.
+            </summary>
+            <param name="roleId"></param>
+            <returns>This method returns a Role</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetRoomAsync(System.String)">
+            <summary>
+            Shows details for a room, by ID.
+            The title of the room for 1:1 rooms will be the display name of the other person.
+            </summary>
+            <param name="roomId">The unique identifier for the room.</param>
+            <returns>This method will return a Room</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.CreateRoomAsync(System.String,System.String)">
+            <summary>
+            Creates a room. The authenticated user is automatically added as a member of the room. 
+            To create a 1:1 room, use MessageBuilder.New().SendToPersonId() or .SendToPersonEmail() to send a 
+            message directly to another person.
+            </summary>
+            <param name="title">A user-friendly name for the room.</param>
+            <param name="teamId">The ID for the team with which this room is associated.</param>
+            <returns>This method returns the created Room</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.DeleteRoomAsync(System.String)">
+            <summary>
+            Deletes a room, by ID. Deleted rooms cannot be recovered.
+            Deleting a room that is part of a team will archive the room instead.
+            </summary>
+            <param name="roomId">The unique identifier for the room.</param>
+            <returns>This method returns a ResponseMessage which should be "OK"</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.UpdateRoomAsync(System.String,System.String)">
+            <summary>
+            Updates details for a room, by ID.
+            </summary>
+            <param name="roomId">The unique identifier for the room.</param>
+            <param name="title">A user-friendly name for the room.</param>
+            <returns>This method returns the updated Room</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetRoomsAsync(System.Int32,System.String,System.Nullable{WxTeamsSharp.Enums.RoomType},System.Nullable{WxTeamsSharp.Enums.SortBy})">
+            <summary>
+            List rooms.
+            The title of the room for 1:1 rooms will be the display name of the other person.
+            By default, lists rooms to which the authenticated user belongs.
+            Long result sets will be split into pages.
+            </summary>
+            <param name="max">Limit the maximum number of rooms in the response.</param>
+            <param name="teamId">List rooms associated with a team, by ID.</param>
+            <param name="type">List rooms by type.</param>
+            <param name="sortBy">Sort results.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Rooms</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetMeetingDetailsAsync(System.String)">
+            <summary>
+            Shows Webex meeting details for a room such as the SIP address, meeting URL, toll-free and toll dial-in numbers.
+            </summary>
+            <param name="roomId">The unique identifier for the room.</param>
+            <returns>This method returns Meeting Details for a room</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.RemoveUserFromTeamAsync(System.String)">
+            <summary>
+            Deletes a team membership, by ID.
+            </summary>
+            <param name="membershipId">The unique identifier for the team membership.</param>
+            <returns>This method returns a ResponseMessage with should be "OK"</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.AddUserToTeamAsync(System.String,System.String,System.Boolean)">
+            <summary>
+            Add someone to a team by Person ID or email address; optionally making them a moderator.
+            </summary>
+            <param name="teamId">The team ID.</param>
+            <param name="userIdOrEmail">The user ID or email of the person</param>
+            <param name="isModerator">Whether or not the participant is a team moderator.</param>
+            <returns>This method returns the added user's Membership object</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetTeamMembership(System.String)">
+            <summary>
+            Shows details for a team membership, by ID.
+            </summary>
+            <param name="membershipId">The unique identifier for the team membership.</param>
+            <returns>This method returns a Membership</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.UpdateTeamMembership(System.String,System.Boolean)">
+            <summary>
+            Updates a team membership, by ID.
+            </summary>
+            <param name="membershipId">The unique identifier for the team membership.</param>
+            <param name="isModerator">Whether or not the participant is a team moderator.</param>
+            <returns>This method returns the updated Membership</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetTeamMembershipsAsync(System.String,System.Int32)">
+            <summary>
+            Lists all team memberships for a given team, specified by the teamId query parameter.
+            </summary>
+            <param name="teamId">List memberships for a team, by ID.</param>
+            <param name="max">Limit the maximum number of team memberships in the response.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Team Memberships</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetTeamsAsync(System.Int32)">
+            <summary>
+            Lists teams to which the authenticated user belongs.
+            </summary>
+            <param name="max">Limit the maximum number of teams in the response.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Teams</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetTeamAsync(System.String)">
+            <summary>
+            Shows details for a team, by ID.
+            </summary>
+            <param name="teamId">The unique identifier for the team.</param>
+            <returns>This method returns a Team</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.CreateTeamAsync(System.String)">
+            <summary>
+            Creates a team. The authenticated user is automatically added as a member of the team.
+            </summary>
+            <param name="name">A user-friendly name for the team.</param>
+            <returns>This method returns the created Team</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.UpdateTeamAsync(System.String,System.String)">
+            <summary>
+            Updates details for a team, by ID.
+            </summary>
+            <param name="teamId">The unique identifier for the team.</param>
+            <param name="name">A user-friendly name for the team.</param>
+            <returns>This method returns an updated Team</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.DeleteTeamAsync(System.String)">
+            <summary>
+            Deletes a team, by ID.
+            </summary>
+            <param name="teamId">The unique identifier for the team.</param>
+            <returns>This method returns a ResponseMessage that should be "OK"</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetWebhooksAsync(System.Int32)">
+            <summary>
+            List all of your webhooks.
+            </summary>
+            <param name="max">Limit the maximum number of webhooks in the response.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Webhooks</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetWebhookAsync(System.String)">
+            <summary>
+            Shows details for a webhook, by ID.
+            </summary>
+            <param name="webhookId">The unique identifier for the webhook.</param>
+            <returns>This method returns a Webhook</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.CreateWebhookAsync(System.String,System.String,WxTeamsSharp.Enums.WebhookResource,WxTeamsSharp.Enums.EventType,System.String,System.String)">
+            <summary>
+            Creates a webhook.
+            For me information: https://developer.webex.com/docs/api/guides/webhooks
+            </summary>
+            <param name="name">A user-friendly name for the webhook.</param>
+            <param name="targetUrl">The URL that receives POST requests for each event.</param>
+            <param name="resource">The resource type for the webhook. Creating a webhook requires 'read' scope on the resource the webhook is for.</param>
+            <param name="eventType">The event type for the webhook.</param>
+            <param name="filter">The filter that defines the webhook scope.</param>
+            <param name="secret">The secret used to generate payload signature.</param>
+            <returns>This method returns the created Webhook</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.DeleteWebhookAsync(System.String)">
+            <summary>
+            Deletes a webhook, by ID.
+            </summary>
+            <param name="webhookId">The unique identifier for the webhook.</param>
+            <returns>This method returns a ResponseMessage which should be "OK"</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.UpdateWebhookAsync(System.String,System.String,System.String,System.String,System.Nullable{WxTeamsSharp.Enums.WebhookStatus})">
+            <summary>
+            Updates a webhook, by ID.
+            </summary>
+            <param name="webhookId">The unique identifier for the webhook.</param>
+            <param name="name">A user-friendly name for the webhook.</param>
+            <param name="targetUrl">The URL that receives POST requests for each event.</param>
+            <param name="secret">The secret used to generate payload signature.</param>
+            <param name="status">The status of the webhook. Use active to reactivate a disabled webhook.</param>
+            <returns>This method returns the updated Webhook</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.SetAuth(System.String,System.String)">
+            <summary>
+            Sets the access token (and optionally the url of the API). 
+            Required before using the API.
+            </summary>
+            <param name="accessToken">The token used to access the API</param>
+            <param name="url">The url of the API. Don't change this unless you have a really good reason.</param>
+        </member>
+        <member name="T:WxTeamsSharp.Enums.EventResource">
+            <summary>
+            The type of resource in the event.
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.EventResource.Messages">
+            <summary>
+            Messages resource
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.EventResource.Memberships">
+            <summary>
+            Memberships resource
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Enums.EventType">
+            <summary>
+            The action which took place in the event.
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.EventType.Created">
+            <summary>
+            Created event
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.EventType.Updated">
+            <summary>
+            Updated event
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.EventType.Deleted">
+            <summary>
+            Deleted event
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Enums.PersonStatus">
+            <summary>
+            The current presence status of the person.
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.PersonStatus.Active">
+            <summary>
+            active within the last 10 minutes
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.PersonStatus.Call">
+            <summary>
+            the user is in a call
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.PersonStatus.DoNotDisturb">
+            <summary>
+            the user has manually set their status to "Do Not Disturb"
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.PersonStatus.Inactive">
+            <summary>
+            last activity occurred more than 10 minutes ago
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.PersonStatus.Meeting">
+            <summary>
+            the user is in a meeting
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.PersonStatus.OutOfOffice">
+            <summary>
+            the user or a Hybrid Calendar service has indicated that they are "Out of Office"
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.PersonStatus.Pending">
+            <summary>
+            the user has never logged in; a status cannot be determined
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.PersonStatus.Presenting">
+            <summary>
+            the user is sharing content
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.PersonStatus.Unknown">
+            <summary>
+            the user’s status could not be determined
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Enums.PersonType">
+            <summary>
+            The type of person account, such as person or bot.
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.PersonType.Person">
+            <summary>
+            account belongs to a person
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.PersonType.Bot">
+            <summary>
+            account is a bot user
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Enums.ResourceMembershipStatus">
+            <summary>
+            The activation status of the resource group membership
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.ResourceMembershipStatus.Pending">
+            <summary>
+            activation pending
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.ResourceMembershipStatus.Activated">
+            <summary>
+            activated
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.ResourceMembershipStatus.Error">
+            <summary>
+            error present
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Enums.RoomType">
+            <summary>
+            Room Type
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.RoomType.Direct">
+            <summary>
+            1:1 room
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.RoomType.Group">
+            <summary>
+            group room
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Enums.SortBy">
+            <summary>
+            Sort By
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.SortBy.Id">
+            <summary>
+            Sort by Id
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.SortBy.LastActivity">
+            <summary>
+            Sort by LastActivity
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.SortBy.Created">
+            <summary>
+            Sort by Created
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Enums.WebhookResource">
+            <summary>
+            The resource type for the webhook. Creating a webhook requires 'read' scope on the resource the webhook is for.
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.WebhookResource.Memberships">
+            <summary>
+            the Memberships resource
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.WebhookResource.Messages">
+            <summary>
+            the Messages resource
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.WebhookResource.Rooms">
+            <summary>
+            the Rooms resource
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Enums.WebhookStatus">
+            <summary>
+            The status of the webhook. Use active to reactivate a disabled webhook.
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.WebhookStatus.Active">
+            <summary>
+            the webhook is active
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.WebhookStatus.Inactive">
+            <summary>
+            the webhook is inactive
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Events.IEvent">
+            <summary>
+            Events are generated when actions take place within Webex Teams, 
+            such as when someone creates or deletes a message. Compliance Officers 
+            may use the Events API to retrieve events for all users within an organization.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEvent.Id">
+            <summary>
+            The unique identifier for the event.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEvent.Resource">
+            <summary>
+            The type of resource in the event.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEvent.Type">
+            <summary>
+            The action which took place in the event.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEvent.AppId">
+            <summary>
+            The ID of the application for the event.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEvent.ActorId">
+            <summary>
+            The ID of the person who performed the action.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEvent.OrgId">
+            <summary>
+            The ID of the organization for the event.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEvent.Created">
+            <summary>
+            The date and time of the event.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEvent.EventData">
+            <summary>
+            The event’s data representation. This object will contain the event's resource, 
+            such as memberships or messages, at the time the event took place.
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Events.IEventData">
+            <summary>
+            Details for an Event
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEventData.Id">
+            <summary>
+            Unique Id for the EventData
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEventData.RoomId">
+            <summary>
+            Unique Id for the Room
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEventData.RoomType">
+            <summary>
+            Type of Room
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEventData.Text">
+            <summary>
+            Event Text
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEventData.PersonId">
+            <summary>
+            Unique Id for the user
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEventData.PersonEmail">
+            <summary>
+            Email for the user
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Events.IEventData.Created">
+            <summary>
+            When the EventData was created
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.General.IErrorTitle">
+            <summary>
+            Resources which encounter errors during retrieval will include an errors object. 
+            This errors object will contain a specific error code and reason describing why the 
+            individual resource could not be returned in the request. Read more: https://developer.webex.com/docs/api/basics
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.General.IErrorTitle.Code">
+            <summary>
+            Error code
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.General.IErrorTitle.Reason">
+            <summary>
+            Reason describing why the individual resource could not be returned in the request
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.General.IFormDataParams">
+            <summary>
+            Can export to MultipartFormData
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.General.IFormDataParams.ToFormData">
+            <summary>
+            Export to MultipartFormData
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.General.IJsonParams">
+            <summary>
+            To Json
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.General.IJsonParams.ToJson">
+            <summary>
+            ToJson
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.General.IListable">
+            <summary>
+            Includes ListErrors
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.General.IListable.Error">
+            <summary>
+            Potential error when get multiple results
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.General.IListError">
+            <summary>
+            Multiple result error
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.General.IListError.Title">
+            <summary>
+             Error Object
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.General.IListResult`1">
+            <summary>
+            Webex Teams returns an array of Items when getting multiple objects such as rooms.
+            </summary>
+            <typeparam name="TItem">Type for list of results from API</typeparam>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.General.IListResult`1.Items">
+            <summary>
+            List of items of specified type
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.General.IListResult`1.HasNextPage">
+            <summary>
+            Whether the list has a next page or not
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.General.IListResult`1.GetNextPage">
+            <summary>
+            Method for retrieving next page
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.General.IListResult`1.NotFoundIds">
+            <summary>
+            If searching by Ids, this includes any not found
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.General.IResponseMessage">
+            <summary>
+            Response generated for the user
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.General.IResponseMessage.Message">
+            <summary>
+            Message response from APIs which do not return object results
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Licenses.ILicense">
+            <summary>
+            An allowance for features and services that are provided to users on a Webex Teams services subscription. 
+            Cisco and its partners manage the amount of licenses provided to administrators and users. 
+            This license resource can be accessed only by an admin.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Licenses.ILicense.Id">
+            <summary>
+            A unique identifier for the license.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Licenses.ILicense.Name">
+            <summary>
+            Name of the licensed feature.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Licenses.ILicense.TotalUnits">
+            <summary>
+            Total number of license units allocated.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Licenses.ILicense.ConsumedUnits">
+            <summary>
+            Total number of license units consumed.
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Memberships.IMembership">
+             <summary>
+             Memberships represent a person's relationship to a room. Use this API to list members 
+             of any room that you're in or create memberships to invite someone to a room. 
+             Memberships can also be updated to make someone a moderator or deleted to remove them from the room.
+            
+             Just like in the Webex Teams app, you must be a member of the room in order to list its memberships or invite people.
+             </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IMembership.Id">
+            <summary>
+            A unique identifier for the membership.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IMembership.RoomId">
+            <summary>
+            The room ID.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IMembership.PersonId">
+            <summary>
+            The person ID.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IMembership.PersonEmail">
+            <summary>
+            The email address of the person.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IMembership.PersonDisplayName">
+            <summary>
+            The display name of the person.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IMembership.PersonOrgId">
+            <summary>
+            The organization ID of the person.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IMembership.IsModerator">
+            <summary>
+            Whether or not the participant is a room moderator.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IMembership.Created">
+            <summary>
+            The date and time when the membership was created.
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Memberships.IMembership.UpdateAsync(System.Boolean)">
+            <summary>
+            Updates properties for this membership
+            </summary>
+            <param name="isModerator">Whether or not the participant is a room moderator.</param>
+            <returns>This method returns the updated Membership</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Memberships.IMembership.DeleteAsync">
+            <summary>
+            Delete this membership
+            </summary>
+            <returns>This method returns a ResponseMessage which should be "OK"</returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Memberships.IResourceGroupMembership">
+            <summary>
+            Resource Group Memberships represent a person's relationship to a Resource Group for a particular 
+            Hybrid Services license. Users assigned a new license will be automatically placed in a "default" Resource Group. 
+            Use this API to list memberships for all people in an organization or update memberships to use a different Resource Group.
+            
+            Searching and viewing Resource Group Memberships requires an administrator auth token with 
+            the spark-admin:resource_group_memberships_read scope.Updating memberships requires an administrator auth token 
+            with the spark-admin:resource_group_memberships_write scope.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IResourceGroupMembership.Id">
+            <summary>
+            A unique identifier for the resource group membership.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IResourceGroupMembership.ResourceGroupId">
+            <summary>
+            The resource group ID.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IResourceGroupMembership.LicenseId">
+            <summary>
+            The license ID.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IResourceGroupMembership.PersonId">
+            <summary>
+            The person ID.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IResourceGroupMembership.PersonOrgId">
+            <summary>
+            The organization ID of the person.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Memberships.IResourceGroupMembership.Status">
+            <summary>
+            The activation status of the resource group membership.
+            
+            pending - activation pending
+            activated - activated
+            error - error present
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Messages.IBuildableMessage">
+            <summary>
+            MessageBuilder interface
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.IBuildableMessage.Build">
+            <summary>
+            Will build into a sendable message. i.e. can run SendAsync()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Messages.IMessage">
+            <summary>
+            Messages are how we communicate in a room. In Webex Teams, each message is displayed 
+            on its own line along with a timestamp and sender information. Use this API to list, create, and delete messages.
+            
+            Message can contain plain text, rich text, and a file attachment.
+            
+            Just like in the Webex Teams app, you must be a member of the room in order to target it with this API.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.Id">
+            <summary>
+            The unique identifier for the message.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.RoomId">
+            <summary>
+            The room ID of the message.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.RoomType">
+            <summary>
+            The type of room.
+            direct - 1:1 room
+            group - group room
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.RecipientId">
+            <summary>
+            The person ID of the recipient when sending a private 1:1 message.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.RecipientEmail">
+            <summary>
+            The email address of the recipient when sending a private 1:1 message.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.Text">
+            <summary>
+            The message, in plain text. If markdown is specified this parameter may be 
+            optionally used to provide alternate text for UI clients that do not support rich text.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.Markdown">
+            <summary>
+            The message, in Markdown format.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.Files">
+            <summary>
+            Public URLs for files attached to the message. Currently limited to 1 at a time.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.AuthorId">
+            <summary>
+            The person ID of the message author.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.AuthorEmail">
+            <summary>
+            The email address of the message author.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.MentionedPeople">
+            <summary>
+            People IDs for anyone mentioned in the message.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.MentionedGroups">
+            <summary>
+            Group names for the groups mentioned in the message.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Messages.IMessage.Created">
+            <summary>
+            The date and time the message was created.
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.IMessage.DeleteAsync">
+            <summary>
+            Deletes this Message
+            </summary>
+            <returns>This method returns a ResponseMessage which should be "OK"</returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Messages.IMessageable">
+            <summary>
+            Supports sending messages via Webex Teams API
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.IMessageable.SendPlainMessageAsync(System.String)">
+            <summary>
+            Send a plain text message
+            </summary>
+            <param name="text">text to send</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.IMessageable.SendMessageAsync(System.String)">
+            <summary>
+            Send a markdown message
+            </summary>
+            <param name="markdown">markdown to send</param>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Messages.ISendableMessage">
+            <summary>
+            Message that can be sent
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.ISendableMessage.HasLocalFile">
+            <summary>
+            Whether the message includes a local file or not.
+            Determines whether or not it gets exported to JSON or MultipartFormData
+            </summary>
+            <returns>boolean</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.ISendableMessage.SendAsync">
+            <summary>
+            Sends the message
+            </summary>
+            <returns>This method returns the new Message object</returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Messages.ISendMessageContent">
+            <summary>
+            Can add content to new Message
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.ISendMessageContent.WithText(System.String)">
+            <summary>
+            Add plain text content to new message
+            </summary>
+            <param name="text">plain text to add</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.ISendMessageContent.WithMarkdown(System.String)">
+            <summary>
+            Add markdown content to new message
+            </summary>
+            <param name="markdown">markdown content to add</param>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Messages.ISendMessageTo">
+            <summary>
+            Can set a recipent for new Message. Can be a user Id, email, or room
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.ISendMessageTo.SendToRoom(System.String)">
+            <summary>
+            Send a message to room
+            </summary>
+            <param name="roomId">Room Id to send message to</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.ISendMessageTo.SendToUserId(System.String)">
+            <summary>
+            Send message to User Id
+            </summary>
+            <param name="toUserId">User Id to send message to</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.ISendMessageTo.SendToUserEmail(System.String)">
+            <summary>
+            Send message to user email
+            </summary>
+            <param name="toUserEmail">User email to send message to</param>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Messages.ISendMessageWithFile">
+            <summary>
+            Can add a single file to the message
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.ISendMessageWithFile.WithLocalFile(System.String)">
+            <summary>
+            Add a local file to the message
+            </summary>
+            <param name="file">location of local file</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Messages.ISendMessageWithFile.WithPublicFileUrl(System.String)">
+            <summary>
+            Add a remote publically accessible file to message
+            </summary>
+            <param name="fileUrl">Url of file to add</param>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Organizations.IOrganization">
+            <summary>
+            A set of people in Webex Teams. Organizations may manage other organizations or be managed themselves. 
+            This organizations resource can be accessed only by an admin.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Organizations.IOrganization.Id">
+            <summary>
+            A unique identifier for the organization.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Organizations.IOrganization.DisplayName">
+            <summary>
+            Full name of the organization.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Organizations.IOrganization.Created">
+            <summary>
+            The date and time the organization was created.
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.People.IBuildablePerson">
+            <summary>
+            PersonBuilder Interface
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IBuildablePerson.Build">
+            <summary>
+            Will build into a createable person. I.e. can run CreateAsync()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.People.ICreateablePerson">
+            <summary>
+            PersonBuilder Interface
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.ICreateablePerson.CreateAsync">
+            <summary>
+            Will create a person. Requires Admin privileges.
+            </summary>
+            <returns>IPerson object</returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.People.IOtherProperties">
+            <summary>
+            Set other optional properties of new person
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IOtherProperties.WithAvatar(System.String)">
+            <summary>
+            Set Avatar URL
+            </summary>
+            <param name="avatarUrl">publically accessible url of avatar image</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IOtherProperties.WithOrgId(System.String)">
+            <summary>
+            Set Organization ID
+            </summary>
+            <param name="orgId">Organization Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IOtherProperties.AddRole(System.String)">
+            <summary>
+            Add a role to the user (keep existing)
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IOtherProperties.AddLicense(System.String)">
+            <summary>
+            Add a license to the user (keep existing)
+            </summary>
+            <param name="licenseId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.People.IPerson">
+            <summary>
+            People are registered users of Webex Teams. Searching and viewing People requires an auth token with a scope of spark:people_read. 
+            Viewing the list of all People in your Organization requires an administrator auth token with spark-admin:people_read scope. 
+            Adding, updating, and removing People requires an administrator auth token with the spark-admin:people_write scope.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.Id">
+            <summary>
+            A unique identifier for the person.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.Emails">
+            <summary>
+            The email addresses of the person.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.PhoneNumbers">
+            <summary>
+            Phone numbers for the person.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.DisplayName">
+            <summary>
+            The full name of the person.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.NickName">
+            <summary>
+            The nickname of the person if configured. If no nickname is configured for the person, this field will not be present.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.FirstName">
+            <summary>
+            The first name of the person.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.LastName">
+            <summary>
+            The last name of the person.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.Avatar">
+            <summary>
+            The URL to the person's avatar in PNG format.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.OrgId">
+            <summary>
+            The ID of the organization to which this person belongs.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.Roles">
+            <summary>
+            An array of role strings representing the roles to which this person belongs.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.Licenses">
+            <summary>
+            An array of license strings allocated to this person.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.Created">
+            <summary>
+            The date and time the person was created.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.LastModified">
+            <summary>
+            The date and time the person was last changed.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.Timezone">
+            <summary>
+            The time zone of the person if configured. If no timezone is configured on the account, this field will not be present
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.LastActivity">
+            <summary>
+            The date and time of the person's last activity within Webex Teams.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.Status">
+            <summary>
+            The current presence status of the person.
+            
+            active - active within the last 10 minutes
+            call - the user is in a call
+            DoNotDisturb - the user has manually set their status to "Do Not Disturb"
+            inactive - last activity occurred more than 10 minutes ago
+            meeting - the user is in a meeting
+            OutOfOffice - the user or a Hybrid Calendar service has indicated that they are "Out of Office"
+            pending - the user has never logged in; a status cannot be determined
+            presenting - the user is sharing content
+            unknown - the user's status could not be determined
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.InvitePending">
+            <summary>
+            Whether or not an invite is pending for the user to complete account activation.
+            
+            true - the person has been invited to Webex Teams but has not created an account
+            false - an invite is not pending for this person
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.LoginEnabled">
+            <summary>
+            Whether or not the user is allowed to use Webex Teams.
+            
+            true - the person can log into Webex Teams
+            false - the person cannot log into Webex Teams
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPerson.Type">
+            <summary>
+            The type of person account, such as person or bot.
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPerson.UpdateEmailAsync(System.String)">
+            <summary>
+            Update the email of this user
+            </summary>
+            <param name="email">new email address</param>
+            <returns>This method returns the updated Person</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPerson.UpdateDisplayNameAsync(System.String)">
+            <summary>
+            Update the display name of this user
+            </summary>
+            <param name="displayName">new display name</param>
+            <returns>This method returns the updated Person</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPerson.UpdateFirstNameAsync(System.String)">
+            <summary>
+            Update the first name of this user
+            </summary>
+            <param name="firstName">new first name</param>
+            <returns>This method returns the updated Person</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPerson.UpdateLastNameAsync(System.String)">
+            <summary>
+            Update the last name of this Person
+            </summary>
+            <param name="lastName">new last name</param>
+            <returns>This method returns the updated Person</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPerson.UpdateAvatarAsync(System.String)">
+            <summary>
+            Update the avatar of this user
+            </summary>
+            <param name="avatar">new avatar url</param>
+            <returns>This method returns the updated Person</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPerson.UpdateOrganizationAsync(System.String)">
+            <summary>
+            Update the organization of this user
+            </summary>
+            <param name="orgId">new organization id</param>
+            <returns>This method returns the updated Person</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPerson.AddRoleAsync(System.String)">
+            <summary>
+            Add a role to this user (keeps existing roles).
+            </summary>
+            <param name="roleId">role id to add to user</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPerson.AddLicenseAsync(System.String)">
+            <summary>
+            Add a license to this user (keeps existing licenses).
+            </summary>
+            <param name="licenseId">license id to add to user</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPerson.ReplaceRolesAsync(System.Collections.Generic.List{System.String})">
+            <summary>
+            Replace (overwrite) all roles for this user
+            </summary>
+            <param name="roleIds">list of role ids to give the user</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPerson.ReplaceLicensesAsync(System.Collections.Generic.List{System.String})">
+            <summary>
+            Replace (overwrite) all licenses for this user
+            </summary>
+            <param name="licenseIds">list of license ids to give the user</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPerson.UpdateUser">
+            <summary>
+            Start the PersonUpdater for this user.
+            </summary>
+            <returns>This method returns a PersonUpdater object for this user</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPerson.DeleteAsync">
+            <summary>
+            Delete this user.
+            </summary>
+            <returns>This method returns a ResponseMessage which should be "OK"</returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.People.IPersonUpdater">
+            <summary>
+            Fluent class for updating an existing user
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateEmail(System.String)">
+            <summary>
+            Update email
+            </summary>
+            <param name="email">New email address</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateAvatar(System.String)">
+            <summary>
+            Update avatar URL
+            </summary>
+            <param name="avatarUrl">New avatar url address</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateOrgId(System.String)">
+            <summary>
+            Update organization
+            </summary>
+            <param name="orgId">Organization Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPersonUpdater.AddRole(System.String)">
+            <summary>
+            Add a role to the user (keep existing)
+            </summary>
+            <param name="roleId">Role Id to add</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPersonUpdater.ReplaceRoles(System.Collections.Generic.List{System.String})">
+            <summary>
+            Replace (overwrite) all roles with new ones
+            </summary>
+            <param name="roles">Role Ids to set for the user</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPersonUpdater.AddLicense(System.String)">
+            <summary>
+            Add a license to the user (keep existing)
+            </summary>
+            <param name="licenseId">License Id to add</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPersonUpdater.ReplaceLicenses(System.Collections.Generic.List{System.String})">
+            <summary>
+            Replace (overwrite) all licenses with new ones
+            </summary>
+            <param name="licenses">License Ids to set for the user</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateDisplayName(System.String)">
+            <summary>
+            Update display name
+            </summary>
+            <param name="displayName">New display name</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateFirstName(System.String)">
+            <summary>
+            Update first name
+            </summary>
+            <param name="firstName">New first name</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateLastName(System.String)">
+            <summary>
+            Update last name
+            </summary>
+            <param name="lastName">New last name</param>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.People.IPhoneNumber">
+            <summary>
+            User phone number
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPhoneNumber.Type">
+            <summary>
+            Phone type (work, etc).
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.People.IPhoneNumber.Value">
+            <summary>
+            Phone number
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.People.ISetEmail">
+            <summary>
+            Set email of new user
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.ISetEmail.WithEmail(System.String)">
+            <summary>
+            Set email of new user
+            </summary>
+            <param name="email">email address</param>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.People.ISetIdentity">
+            <summary>
+            Set the identity for the new user. At least one of these has to be set.
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.ISetIdentity.WithDisplayName(System.String)">
+            <summary>
+            Set the users display name
+            </summary>
+            <param name="displayName">display name</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.ISetIdentity.WithFirstName(System.String)">
+            <summary>
+            Set the users first name
+            </summary>
+            <param name="firstName">first name</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.ISetIdentity.WithLastName(System.String)">
+            <summary>
+            Set the users last name
+            </summary>
+            <param name="lastName">last name</param>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.People.IUpdateablePerson">
+            <summary>
+            Updateable person object
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IUpdateablePerson.UpdateAsync">
+            <summary>
+            Update person with set properties
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.ResourceGroups.IResourceGroup">
+             <summary>
+             Resource Groups are collections of on-premise clusters which provide Hybrid Services to a particular subset of people in an organization. 
+             If a person has a Hybrid Services license associated with their account, they will be associated with a resource group to use specific 
+             on-premise clusters for that service.
+            
+             Searching and viewing Resource Groups requires an administrator auth token with a scope of spark-admin:resource_groups_read.
+             </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.ResourceGroups.IResourceGroup.Id">
+            <summary>
+            A unique identifier for the resource group.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.ResourceGroups.IResourceGroup.Name">
+            <summary>
+            A user-friendly name for the resource group.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.ResourceGroups.IResourceGroup.OrgId">
+            <summary>
+            The ID of the organization to which this resource group belongs.
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Roles.IRole">
+            <summary>
+            A persona for an authenticated user, corresponding to a set of privileges within an organization. 
+            This roles resource can be accessed only by an admin.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Roles.IRole.Id">
+            <summary>
+            A unique identifier for the role.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Roles.IRole.Name">
+            <summary>
+            The name of the role.
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Rooms.IMeetingDetails">
+            <summary>
+            Shows Webex meeting details for a room such as the SIP address, meeting URL, toll-free and toll dial-in numbers.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IMeetingDetails.RoomId">
+            <summary>
+            A unique identifier for the room.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IMeetingDetails.MeetingLink">
+            <summary>
+            The Webex meeting URL for the room.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IMeetingDetails.SipAddress">
+            <summary>
+            The SIP address for the room.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IMeetingDetails.MeetingNumber">
+            <summary>
+            The Webex meeting number for the room.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IMeetingDetails.CallInTollFreeNumber">
+            <summary>
+            The toll-free PSTN number for the room.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IMeetingDetails.CallInTollNumber">
+            <summary>
+            The toll (local) PSTN number for the room.
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Rooms.IRoom">
+             <summary>
+             Rooms are virtual meeting places where people post messages and collaborate to get work done. 
+             This API is used to manage the rooms themselves. Rooms are created and deleted with this API. 
+             You can also update a room to change its title, for example.
+            
+             To create a team room, specify the a teamId in the POST payload.Note that once a room is added to a team, it cannot be moved
+             </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IRoom.Id">
+            <summary>
+            A unique identifier for the room.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IRoom.Title">
+            <summary>
+            A user-friendly name for the room.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IRoom.Type">
+            <summary>
+            The room type.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IRoom.IsLocked">
+            <summary>
+            Whether the room is moderated (locked) or not.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IRoom.TeamId">
+            <summary>
+            The ID for the team with which this room is associated.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IRoom.LastActivity">
+            <summary>
+            The date and time of the room's last activity.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IRoom.CreatorId">
+            <summary>
+            The ID of the person who created this room.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IRoom.Created">
+            <summary>
+            The date and time the room was created.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Rooms.IRoom.SipAddress">
+            <summary>
+            The SIP URI for the room.
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.DeleteAsync">
+            <summary>
+            Deletes a room, by ID. Deleted rooms cannot be recovered.
+            Deleting a room that is part of a team will archive the room instead.
+            </summary>
+            <returns>This method returns a ResponseMessage that should be "OK"</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.UpdateAsync(System.String)">
+            <summary>
+            Updates details for this room
+            </summary>
+            <param name="title">A user-friendly name for the room.</param>
+            <returns>This method returns the updated Room</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.GetMeetingDetailsAsync">
+            <summary>
+            Shows Webex meeting details for this room such as the SIP address, meeting URL, toll-free and toll dial-in numbers.
+            </summary>
+            <returns>This method returns the Meeting Details for this room</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.GetMessagesAsync(System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String},System.DateTimeOffset,System.String)">
+            <summary>
+            Lists all messages in this room
+            </summary>
+            <param name="max">Limit the maximum number of messages in the response.</param>
+            <param name="userMentioned">List messages where authenticated user is mentioned</param>
+            <param name="mentionedPeople">List messages with these people mentioned, by ID</param>
+            <param name="before">List messages sent before a date and time.</param>
+            <param name="beforeMessage">List messages sent before a message, by ID.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Messages</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.GetMessagesBeforeDateAsync(System.DateTimeOffset,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">
+            <summary>
+            Lists all messages in this room before a specific date and time. 
+            Each message will include content attachments if present.
+            The list sorts the messages in descending order by creation date.
+            Long result sets will be split into pages.
+            </summary>
+            <param name="before">List messages sent before a date and time.</param>
+            <param name="max">Limit the maximum number of messages in the response.</param>
+            <param name="userMentioned">List messages where the authenticated user is mentioned</param>
+            <param name="mentionedPeople">List messages with these people mentioned, by ID</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Messages</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.GetMessagesBeforeMessageAsync(System.String,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">
+            <summary>
+            Lists all messages in this room before a specific message. 
+            Each message will include content attachments if present.
+            The list sorts the messages in descending order by creation date.
+            Long result sets will be split into pages.
+            </summary>
+            <param name="messageId">List messages sent before a message, by ID.</param>
+            <param name="max">Limit the maximum number of messages in the response.</param>
+            <param name="userMentioned">List messages where the authenticated user is mentioned</param>
+            <param name="mentionedPeople">List messages with these people mentioned, by ID</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Messages</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.GetMembershipsAsync(System.Int32)">
+            <summary>
+            Lists this room's memberships.
+            </summary>
+            <param name="max">Limit the maximum number of memberships in the response.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync(System.String,System.Boolean)">
+            <summary>
+            Add someone to this room by user ID or email address; optionally making them a moderator.
+            </summary>
+            <param name="userIdOrEmail">User ID or email</param>
+            <param name="isModerator">Whether or not the participant is a room moderator.</param>
+            <returns>This method will return the new Membership of the added user</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.UpdateUserAsync(System.String,System.Boolean)">
+            <summary>
+            Updates properties for a user in this room
+            </summary>
+            <param name="userIdOrEmail">User ID or email</param>
+            <param name="isModerator">Whether or not the participant is a room moderator.</param>
+            <returns>This method will return the updated Membership</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.RemoveUserAsync(System.String)">
+            <summary>
+            Remove a user from this room
+            </summary>
+            <param name="userIdOrEmail">User ID or email</param>
+            <returns>This method returns a ResponseMessage which should be "OK"</returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Teams.ITeam">
+            <summary>
+            Teams are groups of people with a set of rooms that are visible to all members of that team. 
+            This API is used to manage the teams themselves. 
+            
+            Teams are created and deleted with this API. You can also update a team to change its name, for example.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Teams.ITeam.Id">
+            <summary>
+            A unique identifier for the team.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Teams.ITeam.Name">
+            <summary>
+            A user-friendly name for the team.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Teams.ITeam.Created">
+            <summary>
+            The date and time the team was created.
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Teams.ITeam.GetMembershipsAsync(System.Int32)">
+            <summary>
+            Lists all team memberships for this team
+            </summary>
+            <param name="max">Limit the maximum number of team memberships in the response.</param>
+            <returns>This method returns an IListResult object whose Items property is a list of Team Memberships</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Teams.ITeam.AddUserAsync(System.String,System.Boolean)">
+            <summary>
+            Add someone to this team
+            </summary>
+            <param name="userIdOrEmail">ID or email of the user to add</param>
+            <param name="isModerator">Whether or not the participant is a team moderator.</param>
+            <returns>This method returns the new Membership of the added user</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Teams.ITeam.UpdateUserAsync(System.String,System.Boolean)">
+            <summary>
+            Updates a user of this team
+            </summary>
+            <param name="userIdOrEmail">ID or email of the user to update</param>
+            <param name="isModerator">Whether or not the participant is a team moderator.</param>
+            <returns>This method returns the updated Membership</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Teams.ITeam.RemoveUserAsync(System.String)">
+            <summary>
+            Removes a user from this team
+            </summary>
+            <param name="userIdOrEmail">ID or email of the user to update</param>
+            <returns>This method returns a ResponseMessage which should be "OK"</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Teams.ITeam.DeleteAsync">
+            <summary>
+            Delete this team
+            </summary>
+            <returns>This method returns a ResponseMessage which should be "OK"</returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Webhooks.IWebhook">
+             <summary>
+             Webhooks allow your app to be notified via HTTP when a specific event occurs in Webex Teams. 
+             For example, your app can register a webhook to be notified when a new message is posted into a specific room.
+            
+             Events trigger in near real-time allowing your app and backend IT 
+             systems to stay in sync with new content and room activity.
+             </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Id">
+            <summary>
+            A unique identifier for the webhook.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Name">
+            <summary>
+            A user-friendly name for the webhook.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.TargetUrl">
+            <summary>
+            The URL that receives POST requests for each event.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Resource">
+            <summary>
+            The resource type for the webhook. Creating a webhook requires 'read' scope on the resource the webhook is for.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Event">
+            <summary>
+            The event type for the webhook.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Filter">
+            <summary>
+            The filter that defines the webhook scope.
+            ex: roomId=2356df236tsdgs246e
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.OrganizationId">
+            <summary>
+            Unique Id of the Organization
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.CreatedBy">
+            <summary>
+            What user created the webhook
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.ApplicationId">
+            <summary>
+            The application Id attributed to the webhook
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.OwnedBy">
+            <summary>
+            What user the webhook is owned by
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Secret">
+            <summary>
+            The secret used to generate payload signature.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Status">
+            <summary>
+            The status of the webhook. Use active to reactivate a disabled webhook.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Created">
+            <summary>
+            The date and time the webhook was created.
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Webhooks.IWebhook.UpdateAsync(System.String,System.String,System.String,System.Nullable{WxTeamsSharp.Enums.WebhookStatus})">
+            <summary>
+            Updates this webhook
+            </summary>
+            <param name="name">A user-friendly name for the webhook.</param>
+            <param name="targetUrl">The URL that receives POST requests for each event.</param>
+            <param name="secret">The secret used to generate payload signature.</param>
+            <param name="status">The status of the webhook. Use active to reactivate a disabled webhook.</param>
+            <returns>This method returns the updated Webhook</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Webhooks.IWebhook.DeleteAsync">
+            <summary>
+            Deleted this webhook
+            </summary>
+            <returns>This method returns a ResponseMessage which should be "OK"</returns>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Events.Event">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.Event.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.Event.Resource">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.Event.Type">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.Event.AppId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.Event.ActorId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.Event.OrgId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.Event.Created">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.Event.EventData">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.Event.Error">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Events.EventData">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.EventData.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.EventData.RoomId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.EventData.RoomType">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.EventData.Text">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.EventData.PersonId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.EventData.PersonEmail">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Events.EventData.Created">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Exceptions.TeamsApiException">
+            <summary>
+            Exception thrown from Webex Teams API
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Exceptions.TeamsApiException.TrackingId">
+            <summary>
+            API Exception Tracking Id
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Exceptions.TeamsApiException.RawMessage">
+            <summary>
+            Raw message from API
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Exceptions.TeamsApiException.ObjectType">
+            <summary>
+            Type of object that had an error
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Exceptions.TeamsApiException.RequestUrl">
+            <summary>
+            API endpoint that was used
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Exceptions.TeamsApiException.HttpStatusCode">
+            <summary>
+            Error status code received
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Exceptions.TeamsApiException.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Exceptions.TeamsApiException.#ctor(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Exceptions.TeamsApiException.#ctor(System.String,System.Exception)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Exceptions.TeamsApiException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Exceptions.TeamsApiException.#ctor(WxTeamsSharp.Models.General.ResponseMessage)">
+            <summary>
+            Standard constructor
+            </summary>
+            <param name="message">ResponseMessage from API</param>
+        </member>
+        <member name="T:WxTeamsSharp.Models.General.ItemsResult`1">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.General.ResponseMessage">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Licenses.License">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Licenses.License.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Licenses.License.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Licenses.License.TotalUnits">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Licenses.License.ConsumedUnits">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Memberships.RoomMembership">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.RoomMembership.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.RoomMembership.RoomId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.RoomMembership.PersonId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.RoomMembership.PersonEmail">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.RoomMembership.PersonDisplayName">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.RoomMembership.PersonOrgId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.RoomMembership.IsModerator">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.RoomMembership.Created">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.RoomMembership.Error">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Memberships.RoomMembership.UpdateAsync(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Memberships.RoomMembership.DeleteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Memberships.TeamMembership">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.TeamMembership.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.TeamMembership.RoomId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.TeamMembership.PersonId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.TeamMembership.PersonEmail">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.TeamMembership.PersonDisplayName">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.TeamMembership.PersonOrgId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.TeamMembership.IsModerator">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.TeamMembership.Created">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.TeamMembership.Error">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Memberships.TeamMembership.UpdateAsync(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Memberships.TeamMembership.DeleteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Messages.Message">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.RoomId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.RoomType">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.RecipientId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.RecipientEmail">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.Text">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.Markdown">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.Files">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.AuthorId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.AuthorEmail">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.MentionedPeople">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.MentionedGroups">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.Created">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.Error">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Messages.Message.DeleteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Messages.MessageBuilder">
+            <summary>
+            Builder class for new messages. Start with MessageBuilder.New()
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Messages.MessageBuilder.New">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Messages.MessageBuilder.SendToRoom(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Messages.MessageBuilder.SendToUserId(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Messages.MessageBuilder.SendToUserEmail(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Messages.MessageBuilder.WithText(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Messages.MessageBuilder.WithMarkdown(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Messages.MessageBuilder.WithLocalFile(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Messages.MessageBuilder.WithPublicFileUrl(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Messages.MessageBuilder.Build">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Organizations.Organization">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Organizations.Organization.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Organizations.Organization.DisplayName">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Organizations.Organization.Created">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.People.Person">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.Emails">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.PhoneNumbers">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.DisplayName">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.NickName">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.FirstName">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.LastName">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.Avatar">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.OrgId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.Roles">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.Licenses">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.Created">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.LastModified">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.Timezone">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.LastActivity">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.Status">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.InvitePending">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.LoginEnabled">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.Person.Type">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.AddLicenseAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.AddRoleAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.DeleteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.ReplaceLicensesAsync(System.Collections.Generic.List{System.String})">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.ReplaceRolesAsync(System.Collections.Generic.List{System.String})">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.SendMessageAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.SendPlainMessageAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.UpdateAvatarAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.UpdateDisplayNameAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.UpdateEmailAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.UpdateFirstNameAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.UpdateLastNameAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.UpdateOrganizationAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.Person.UpdateUser">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.People.PersonBuilder">
+            <summary>
+            Builder class for new people. Start with PersonBuilder.New()
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonBuilder.New">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonBuilder.WithEmail(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonBuilder.WithAvatar(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonBuilder.WithOrgId(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonBuilder.AddRole(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonBuilder.AddLicense(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonBuilder.WithDisplayName(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonBuilder.WithFirstName(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonBuilder.WithLastName(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonBuilder.Build">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.People.PersonUpdater">
+            <summary>
+            Builder class for updating an existing user
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.#ctor(WxTeamsSharp.Interfaces.People.IPerson)">
+            <summary>
+            Create a new PersonUpdater with specific IPerson.
+            Prefer to use an IPerson.Update() or
+            PersonUpdater.New(IPerson person)
+            </summary>
+            <param name="person">Person object to udpate</param>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.Update(WxTeamsSharp.Interfaces.People.IPerson)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.UpdateEmail(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.UpdateAvatar(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.UpdateOrgId(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.AddRole(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.AddLicense(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.ReplaceRoles(System.Collections.Generic.List{System.String})">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.ReplaceLicenses(System.Collections.Generic.List{System.String})">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.UpdateDisplayName(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.UpdateFirstName(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.UpdateLastName(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.Build">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.ResourceGroups.ResourceGroup">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.ResourceGroups.ResourceGroup.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.ResourceGroups.ResourceGroup.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.ResourceGroups.ResourceGroup.OrgId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.ResourceGroups.ResourceGroup.Error">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.ResourceGroups.ResourceGroupMembership">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.ResourceGroups.ResourceGroupMembership.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.ResourceGroups.ResourceGroupMembership.ResourceGroupId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.ResourceGroups.ResourceGroupMembership.LicenseId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.ResourceGroups.ResourceGroupMembership.PersonId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.ResourceGroups.ResourceGroupMembership.PersonOrgId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.ResourceGroups.ResourceGroupMembership.Status">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Roles.Role">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Roles.Role.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Roles.Role.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Roles.Role.Error">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Rooms.MeetingDetails">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.MeetingDetails.RoomId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.MeetingDetails.MeetingLink">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.MeetingDetails.SipAddress">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.MeetingDetails.MeetingNumber">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.MeetingDetails.CallInTollFreeNumber">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.MeetingDetails.CallInTollNumber">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Rooms.Room">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.Room.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.Room.Title">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.Room.Type">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.Room.IsLocked">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.Room.TeamId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.Room.LastActivity">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.Room.CreatorId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.Room.Created">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.Room.Error">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.Room.SipAddress">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.DeleteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.UpdateAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.GetMeetingDetailsAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.GetMessagesAsync(System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String},System.DateTimeOffset,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.SendPlainMessageAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.SendMessageAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.GetMembershipsAsync(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.AddUserAsync(System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.UpdateUserAsync(System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeDateAsync(System.DateTimeOffset,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync(System.String,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Teams.Team">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Teams.Team.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Teams.Team.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Teams.Team.Created">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Teams.Team.Error">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Teams.Team.DeleteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Teams.Team.AddUserAsync(System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Teams.Team.GetMembershipsAsync(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Teams.Team.UpdateUserAsync(System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Teams.Team.RemoveUserAsync(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Webhooks.Webhook">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.TargetUrl">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.Resource">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.Event">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.Filter">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.Secret">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.Status">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.Created">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.OrganizationId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.CreatedBy">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.ApplicationId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.Webhook.OwnedBy">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Webhooks.Webhook.UpdateAsync(System.String,System.String,System.String,System.Nullable{WxTeamsSharp.Enums.WebhookStatus})">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Webhooks.Webhook.DeleteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Utilities.StringExtensions.FirstCharToLower(System.String)">
+            <summary>
+            Returns the input string with the first character converted to uppercase
+            </summary>
+        </member>
+    </members>
+</doc>

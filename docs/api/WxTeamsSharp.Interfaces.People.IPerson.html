@@ -1,0 +1,1207 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IPerson
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IPerson
+   ">
+    <meta name="generator" content="docfx 2.43.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="WxTeamsSharp.Interfaces.People.IPerson">
+  
+  
+  <h1 id="WxTeamsSharp_Interfaces_People_IPerson" data-uid="WxTeamsSharp.Interfaces.People.IPerson" class="text-break">Interface IPerson
+  </h1>
+  <div class="markdown level0 summary"><p>People are registered users of Webex Teams. Searching and viewing People requires an auth token with a scope of spark:people_read.
+Viewing the list of all People in your Organization requires an administrator auth token with spark-admin:people_read scope.
+Adding, updating, and removing People requires an administrator auth token with the spark-admin:people_write scope.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessageable.html#WxTeamsSharp_Interfaces_Messages_IMessageable_SendPlainMessageAsync_System_String_">IMessageable.SendPlainMessageAsync(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessageable.html#WxTeamsSharp_Interfaces_Messages_IMessageable_SendMessageAsync_System_String_">IMessageable.SendMessageAsync(String)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="WxTeamsSharp.Interfaces.People.html">WxTeamsSharp.Interfaces.People</a></h6>
+  <h6><strong>Assembly</strong>: WxTeamsSharp.dll</h6>
+  <h5 id="WxTeamsSharp_Interfaces_People_IPerson_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPerson : IMessageable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=55">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_Avatar_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Avatar*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_Avatar" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Avatar">Avatar</h4>
+  <div class="markdown level1 summary"><p>The URL to the person's avatar in PNG format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Avatar { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=75">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_Created_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Created*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_Created" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Created">Created</h4>
+  <div class="markdown level1 summary"><p>The date and time the person was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset Created { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=35">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_DisplayName_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.DisplayName*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_DisplayName" data-uid="WxTeamsSharp.Interfaces.People.IPerson.DisplayName">DisplayName</h4>
+  <div class="markdown level1 summary"><p>The full name of the person.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DisplayName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=25">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_Emails_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Emails*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_Emails" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Emails">Emails</h4>
+  <div class="markdown level1 summary"><p>The email addresses of the person.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;string&gt; Emails { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=45">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_FirstName_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.FirstName*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_FirstName" data-uid="WxTeamsSharp.Interfaces.People.IPerson.FirstName">FirstName</h4>
+  <div class="markdown level1 summary"><p>The first name of the person.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string FirstName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=20">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_Id_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Id*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_Id" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Id">Id</h4>
+  <div class="markdown level1 summary"><p>A unique identifier for the person.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Id { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=113">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_InvitePending_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.InvitePending*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_InvitePending" data-uid="WxTeamsSharp.Interfaces.People.IPerson.InvitePending">InvitePending</h4>
+  <div class="markdown level1 summary"><p>Whether or not an invite is pending for the user to complete account activation.</p>
+<p>true - the person has been invited to Webex Teams but has not created an account
+false - an invite is not pending for this person</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool InvitePending { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=90">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_LastActivity_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.LastActivity*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_LastActivity" data-uid="WxTeamsSharp.Interfaces.People.IPerson.LastActivity">LastActivity</h4>
+  <div class="markdown level1 summary"><p>The date and time of the person's last activity within Webex Teams.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset LastActivity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=80">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_LastModified_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.LastModified*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_LastModified" data-uid="WxTeamsSharp.Interfaces.People.IPerson.LastModified">LastModified</h4>
+  <div class="markdown level1 summary"><p>The date and time the person was last changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset LastModified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=50">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_LastName_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.LastName*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_LastName" data-uid="WxTeamsSharp.Interfaces.People.IPerson.LastName">LastName</h4>
+  <div class="markdown level1 summary"><p>The last name of the person.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string LastName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=70">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_Licenses_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Licenses*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_Licenses" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Licenses">Licenses</h4>
+  <div class="markdown level1 summary"><p>An array of license strings allocated to this person.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;string&gt; Licenses { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=121">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_LoginEnabled_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.LoginEnabled*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_LoginEnabled" data-uid="WxTeamsSharp.Interfaces.People.IPerson.LoginEnabled">LoginEnabled</h4>
+  <div class="markdown level1 summary"><p>Whether or not the user is allowed to use Webex Teams.</p>
+<p>true - the person can log into Webex Teams
+false - the person cannot log into Webex Teams</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool LoginEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=40">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_NickName_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.NickName*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_NickName" data-uid="WxTeamsSharp.Interfaces.People.IPerson.NickName">NickName</h4>
+  <div class="markdown level1 summary"><p>The nickname of the person if configured. If no nickname is configured for the person, this field will not be present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string NickName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=60">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_OrgId_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.OrgId*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_OrgId" data-uid="WxTeamsSharp.Interfaces.People.IPerson.OrgId">OrgId</h4>
+  <div class="markdown level1 summary"><p>The ID of the organization to which this person belongs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string OrgId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=30">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_PhoneNumbers_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.PhoneNumbers*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_PhoneNumbers" data-uid="WxTeamsSharp.Interfaces.People.IPerson.PhoneNumbers">PhoneNumbers</h4>
+  <div class="markdown level1 summary"><p>Phone numbers for the person.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;IPhoneNumber&gt; PhoneNumbers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.People.IPhoneNumber.html">IPhoneNumber</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=65">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_Roles_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Roles*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_Roles" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Roles">Roles</h4>
+  <div class="markdown level1 summary"><p>An array of role strings representing the roles to which this person belongs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;string&gt; Roles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=105">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_Status_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Status*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_Status" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Status">Status</h4>
+  <div class="markdown level1 summary"><p>The current presence status of the person.</p>
+<p>active - active within the last 10 minutes
+call - the user is in a call
+DoNotDisturb - the user has manually set their status to &quot;Do Not Disturb&quot;
+inactive - last activity occurred more than 10 minutes ago
+meeting - the user is in a meeting
+OutOfOffice - the user or a Hybrid Calendar service has indicated that they are &quot;Out of Office&quot;
+pending - the user has never logged in; a status cannot be determined
+presenting - the user is sharing content
+unknown - the user's status could not be determined</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PersonStatus Status { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Enums.PersonStatus.html">PersonStatus</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=85">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_Timezone_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Timezone*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_Timezone" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Timezone">Timezone</h4>
+  <div class="markdown level1 summary"><p>The time zone of the person if configured. If no timezone is configured on the account, this field will not be present</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Timezone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=126">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_Type_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Type*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_Type" data-uid="WxTeamsSharp.Interfaces.People.IPerson.Type">Type</h4>
+  <div class="markdown level1 summary"><p>The type of person account, such as person or bot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PersonType Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Enums.PersonType.html">PersonType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=182">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_AddLicenseAsync_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.AddLicenseAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_AddLicenseAsync_System_String_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.AddLicenseAsync(System.String)">AddLicenseAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Add a license to this user (keeps existing licenses).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IPerson&gt; AddLicenseAsync(string licenseId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">licenseId</span></td>
+        <td><p>license id to add to user</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.People.IPerson.html">IPerson</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=175">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_AddRoleAsync_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.AddRoleAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_AddRoleAsync_System_String_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.AddRoleAsync(System.String)">AddRoleAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Add a role to this user (keeps existing roles).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IPerson&gt; AddRoleAsync(string roleId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">roleId</span></td>
+        <td><p>role id to add to user</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.People.IPerson.html">IPerson</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=208">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_DeleteAsync_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.DeleteAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_DeleteAsync" data-uid="WxTeamsSharp.Interfaces.People.IPerson.DeleteAsync">DeleteAsync()</h4>
+  <div class="markdown level1 summary"><p>Delete this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IResponseMessage&gt; DeleteAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.General.IResponseMessage.html">IResponseMessage</a>&gt;</td>
+        <td><p>This method returns a ResponseMessage which should be &quot;OK&quot;</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=196">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_ReplaceLicensesAsync_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.ReplaceLicensesAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_ReplaceLicensesAsync_System_Collections_Generic_List_System_String__" data-uid="WxTeamsSharp.Interfaces.People.IPerson.ReplaceLicensesAsync(System.Collections.Generic.List{System.String})">ReplaceLicensesAsync(List&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Replace (overwrite) all licenses for this user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IPerson&gt; ReplaceLicensesAsync(List&lt;string&gt; licenseIds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">licenseIds</span></td>
+        <td><p>list of license ids to give the user</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.People.IPerson.html">IPerson</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=189">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_ReplaceRolesAsync_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.ReplaceRolesAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_ReplaceRolesAsync_System_Collections_Generic_List_System_String__" data-uid="WxTeamsSharp.Interfaces.People.IPerson.ReplaceRolesAsync(System.Collections.Generic.List{System.String})">ReplaceRolesAsync(List&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Replace (overwrite) all roles for this user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IPerson&gt; ReplaceRolesAsync(List&lt;string&gt; roleIds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">roleIds</span></td>
+        <td><p>list of role ids to give the user</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.People.IPerson.html">IPerson</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=161">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_UpdateAvatarAsync_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateAvatarAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_UpdateAvatarAsync_System_String_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateAvatarAsync(System.String)">UpdateAvatarAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Update the avatar of this user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IPerson&gt; UpdateAvatarAsync(string avatar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">avatar</span></td>
+        <td><p>new avatar url</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.People.IPerson.html">IPerson</a>&gt;</td>
+        <td><p>This method returns the updated Person</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=140">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_UpdateDisplayNameAsync_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateDisplayNameAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_UpdateDisplayNameAsync_System_String_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateDisplayNameAsync(System.String)">UpdateDisplayNameAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Update the display name of this user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IPerson&gt; UpdateDisplayNameAsync(string displayName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">displayName</span></td>
+        <td><p>new display name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.People.IPerson.html">IPerson</a>&gt;</td>
+        <td><p>This method returns the updated Person</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=133">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_UpdateEmailAsync_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateEmailAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_UpdateEmailAsync_System_String_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateEmailAsync(System.String)">UpdateEmailAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Update the email of this user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IPerson&gt; UpdateEmailAsync(string email)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">email</span></td>
+        <td><p>new email address</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.People.IPerson.html">IPerson</a>&gt;</td>
+        <td><p>This method returns the updated Person</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=147">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_UpdateFirstNameAsync_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateFirstNameAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_UpdateFirstNameAsync_System_String_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateFirstNameAsync(System.String)">UpdateFirstNameAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Update the first name of this user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IPerson&gt; UpdateFirstNameAsync(string firstName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">firstName</span></td>
+        <td><p>new first name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.People.IPerson.html">IPerson</a>&gt;</td>
+        <td><p>This method returns the updated Person</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=154">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_UpdateLastNameAsync_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateLastNameAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_UpdateLastNameAsync_System_String_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateLastNameAsync(System.String)">UpdateLastNameAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Update the last name of this Person</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IPerson&gt; UpdateLastNameAsync(string lastName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">lastName</span></td>
+        <td><p>new last name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.People.IPerson.html">IPerson</a>&gt;</td>
+        <td><p>This method returns the updated Person</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=168">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_UpdateOrganizationAsync_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateOrganizationAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_UpdateOrganizationAsync_System_String_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateOrganizationAsync(System.String)">UpdateOrganizationAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Update the organization of this user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IPerson&gt; UpdateOrganizationAsync(string orgId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">orgId</span></td>
+        <td><p>new organization id</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.People.IPerson.html">IPerson</a>&gt;</td>
+        <td><p>This method returns the updated Person</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=202">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_People_IPerson_UpdateUser_" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateUser*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_People_IPerson_UpdateUser" data-uid="WxTeamsSharp.Interfaces.People.IPerson.UpdateUser">UpdateUser()</h4>
+  <div class="markdown level1 summary"><p>Start the PersonUpdater for this user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPersonUpdater UpdateUser()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.People.IPersonUpdater.html">IPersonUpdater</a></td>
+        <td><p>This method returns a PersonUpdater object for this user</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/People/IPerson.cs&amp;version=GBmaster&amp;line=15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

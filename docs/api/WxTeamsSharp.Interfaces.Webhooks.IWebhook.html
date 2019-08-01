@@ -1,0 +1,589 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IWebhook
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IWebhook
+   ">
+    <meta name="generator" content="docfx 2.43.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook">
+  
+  
+  <h1 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook" class="text-break">Interface IWebhook
+  </h1>
+  <div class="markdown level0 summary"><p>Webhooks allow your app to be notified via HTTP when a specific event occurs in Webex Teams.
+For example, your app can register a webhook to be notified when a new message is posted into a specific room.</p>
+<p>Events trigger in near real-time allowing your app and backend IT
+systems to stay in sync with new content and room activity.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="WxTeamsSharp.Interfaces.Webhooks.html">WxTeamsSharp.Interfaces.Webhooks</a></h6>
+  <h6><strong>Assembly</strong>: WxTeamsSharp.dll</h6>
+  <h5 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IWebhook</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=61">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_ApplicationId_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.ApplicationId*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_ApplicationId" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.ApplicationId">ApplicationId</h4>
+  <div class="markdown level1 summary"><p>The application Id attributed to the webhook</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string ApplicationId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=81">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Created_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Created*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Created" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Created">Created</h4>
+  <div class="markdown level1 summary"><p>The date and time the webhook was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTimeOffset Created { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.DateTimeOffset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=56">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_CreatedBy_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.CreatedBy*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_CreatedBy" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.CreatedBy">CreatedBy</h4>
+  <div class="markdown level1 summary"><p>What user created the webhook</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string CreatedBy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=40">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Event_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Event*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Event" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Event">Event</h4>
+  <div class="markdown level1 summary"><p>The event type for the webhook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EventType Event { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Enums.EventType.html">EventType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=46">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Filter_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Filter*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Filter" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Filter">Filter</h4>
+  <div class="markdown level1 summary"><p>The filter that defines the webhook scope.
+ex: roomId=2356df236tsdgs246e</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Filter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=20">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Id_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Id*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Id" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Id">Id</h4>
+  <div class="markdown level1 summary"><p>A unique identifier for the webhook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Id { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=25">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Name_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Name*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Name" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Name">Name</h4>
+  <div class="markdown level1 summary"><p>A user-friendly name for the webhook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=51">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_OrganizationId_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.OrganizationId*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_OrganizationId" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.OrganizationId">OrganizationId</h4>
+  <div class="markdown level1 summary"><p>Unique Id of the Organization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string OrganizationId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=66">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_OwnedBy_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.OwnedBy*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_OwnedBy" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.OwnedBy">OwnedBy</h4>
+  <div class="markdown level1 summary"><p>What user the webhook is owned by</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string OwnedBy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=35">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Resource_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Resource*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Resource" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Resource">Resource</h4>
+  <div class="markdown level1 summary"><p>The resource type for the webhook. Creating a webhook requires 'read' scope on the resource the webhook is for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">WebhookResource Resource { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Enums.WebhookResource.html">WebhookResource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=71">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Secret_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Secret*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Secret" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Secret">Secret</h4>
+  <div class="markdown level1 summary"><p>The secret used to generate payload signature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Secret { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=76">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Status_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Status*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_Status" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.Status">Status</h4>
+  <div class="markdown level1 summary"><p>The status of the webhook. Use active to reactivate a disabled webhook.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">WebhookStatus Status { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Enums.WebhookStatus.html">WebhookStatus</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=30">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_TargetUrl_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.TargetUrl*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_TargetUrl" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.TargetUrl">TargetUrl</h4>
+  <div class="markdown level1 summary"><p>The URL that receives POST requests for each event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string TargetUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=98">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_DeleteAsync_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.DeleteAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_DeleteAsync" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.DeleteAsync">DeleteAsync()</h4>
+  <div class="markdown level1 summary"><p>Deleted this webhook</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IResponseMessage&gt; DeleteAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.General.IResponseMessage.html">IResponseMessage</a>&gt;</td>
+        <td><p>This method returns a ResponseMessage which should be &quot;OK&quot;</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=91">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_UpdateAsync_" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.UpdateAsync*"></a>
+  <h4 id="WxTeamsSharp_Interfaces_Webhooks_IWebhook_UpdateAsync_System_String_System_String_System_String_System_Nullable_WxTeamsSharp_Enums_WebhookStatus__" data-uid="WxTeamsSharp.Interfaces.Webhooks.IWebhook.UpdateAsync(System.String,System.String,System.String,System.Nullable{WxTeamsSharp.Enums.WebhookStatus})">UpdateAsync(String, String, String, Nullable&lt;WebhookStatus&gt;)</h4>
+  <div class="markdown level1 summary"><p>Updates this webhook</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IWebhook&gt; UpdateAsync(string name = &quot;&quot;, string targetUrl = &quot;&quot;, string secret = &quot;&quot;, WebhookStatus? status = default(WebhookStatus? ))</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>A user-friendly name for the webhook.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetUrl</span></td>
+        <td><p>The URL that receives POST requests for each event.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">secret</span></td>
+        <td><p>The secret used to generate payload signature.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="WxTeamsSharp.Enums.WebhookStatus.html">WebhookStatus</a>&gt;</td>
+        <td><span class="parametername">status</span></td>
+        <td><p>The status of the webhook. Use active to reactivate a disabled webhook.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.Webhooks.IWebhook.html">IWebhook</a>&gt;</td>
+        <td><p>This method returns the updated Webhook</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/Webhooks/IWebhook.cs&amp;version=GBmaster&amp;line=15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

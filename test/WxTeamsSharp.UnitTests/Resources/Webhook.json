@@ -1,0 +1,11 @@
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOTZhYmMyYWEtM2RjYy0xMWU1LWExNTItZmUzNDgxOWNkYzlh",
+  "name": "My Awesome Webhook",
+  "targetUrl": "https://example.com/mywebhook",
+  "resource": "messages",
+  "event": "created",
+  "filter": "roomId=Y2lzY29zcGFyazovL3VzL1JPT00vYmJjZWIxYWQtNDNmMS0zYjU4LTkxNDctZjE0YmIwYzRkMTU0",
+  "secret": "86dacc007724d8ea666f88fc77d918dad9537a15",
+  "status": "active",
+  "created": "2015-10-18T14:26:16+00:00"
+}
