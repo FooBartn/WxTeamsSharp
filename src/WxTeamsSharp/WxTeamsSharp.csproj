@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <Version>0.1.0</Version>
+    <Version>1.0.0</Version>
     <Authors>Joshua Barton</Authors>
     <PackageId>$(AssemblyName)</PackageId>
     <Title>WxTeamsSharp</Title>
