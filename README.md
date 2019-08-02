@@ -1,36 +1,78 @@
-## Purpose
+[![Build status](https://ci.appveyor.com/api/projects/status/s3wub78ddch27qmx/branch/master?svg=true)](https://ci.appveyor.com/project/FooBartn/wxteamssharp/branch/master)
 
-Create a .NET Standard Library to make communicating with the Webex Teams API easier
+## WxTeamsSharp: A Webex Teams .NET C# Library
+
+A .NET Standard 2.0 Library to help developers communicate easily with the Webex Teams API. 
+
+Available on GitHub and [NuGet](https://www.nuget.org/packages/WxTeamsSharp/):
+
+    Install-Package WxTeamsSharp
 
 ## Basic Usage
 
-Will continue to update user friend documentation. In the meantime, reviewing the integration tests 
-and [API docs](https://foobartn.github.io/WxTeamsSharp/api/index.html) may provide insight.
+Take a look at the [Integration Tests](https://github.com/FooBartn/WxTeamsSharp/tree/master/test/WxTeamsSharp.IntegrationTests) for more examples. They should cover most of the ways you can use the library. If all else fails, there's always the [API Reference](https://foobartn.github.io/WxTeamsSharp/api/index.html)!
 
-### Setting the Authentication Token is Required
 
-```WxTeamsApi.SetAuth("MyToken");```
+### Example
 
-### Rooms
+```csharp
+// Set the Auth Token
+WxTeamsApi.SetAuth("MyToken");
 
-Get All Rooms: ```var rooms = await WxTeamsApi.GetRoomsAsync();```
+// Create a room
+var room = await WxTeamsApi.CreateRoomAsync("MyRoomName");
 
-Get A Single Room: ```var room = await WxTeamsApi.GetRoomAsync("RoomId");```
+// Get users
+var users = await WxTeamsApi.GetUsersByEmail("example@test.com");
 
-Create A Room: ```var room = await WxTeamsApi.CreateRoomAsync("MyRoomName");```
+// Get user
+var user = users.FirstOrDefault(x => x.FirstName == "Bob");
 
-Send A Message via Room Object: ```var message = await room.SendMessageAsync("**hi!**);```
+// Add user to room
+var membership = await room.AddUserAsync(user.Id);
 
-Add A User to via Room Object: ```var membership = await room.AddUserAsync("UserId");```
+// Make user moderator
+var updatedMembership = await membership.UpdateAsync(true);
 
-Delete A Room via Room Object: ```await room.DeleteAsync();```
+// Create webhook for this room
+// To catch new messages
+var webhook = await WxTeamsApi.CreateWebhookAsync(
+    "Example Webhook", 
+    "http://example.com/exampleWebhookReceiver", 
+    WebhookResource.Messages, 
+    EventType.Created, 
+    filter: $"roomId={room.Id}");
 
-### Webhooks
+// Send a message to the room
+var message = await room.SendMessageAsync("**Hello**");
 
-Get All Webhooks: ```var webhooks = await WxTeamsApi.GetWebhooksAsync();```
+// Delete Webhook
+await webhook.DeleteAsync();
 
-Get A Single Webhook: ```var webhook = await WxTeamsApi.GetWebhookAsync("MyWebhookId");```
+// Delete message
+await message.DeleteAsync();
 
-Create Webhook: ```var webhook = await WxTeamsApi.CreateWebhookAsync("MyWebhook", "http://example.com/myWebhookReceiver", WebhookResource.Messages, EventType.Created, filter: "roomId=MyRoomId");```
+// Remove user from room via membership
+await membership.DeleteAsync();
 
-Delete Webhook: ```await webhook.DeleteAsync();```
+// OR
+
+// Remove user from room via room object
+await room.RemoveUserAsync("example@test.com");
+
+// Delete room
+room.DeleteAsync();
+
+// Create Team
+var team = await WxTeamsApi.CreateTeamAsync("My Team");
+
+// Add user to team as moderator
+var teamMember = await team.AddUserAsync(user.Id, true);
+
+// Remove user from team
+await team.RemoveUserAsync(user.Id);
+
+// Delete team
+await team.DeleteAsync();
+
+```
