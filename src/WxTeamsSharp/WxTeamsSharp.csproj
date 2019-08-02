@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <PackageId>$(AssemblyName)</PackageId>
+    <Title>WxTeamsSharp</Title>
+    <AssemblyTitle>$(AssemblyName)</AssemblyTitle>
+    <Product>WxTeamsSharp</Product>
+    <Description>.NET Standard Library for Webex Teams API</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
