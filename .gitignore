@@ -341,3 +341,6 @@ healthchecksdb
 
 # No appsettings included
 **/appsettings*.json
+
+# Custom
+generatedocs.txt
