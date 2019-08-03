@@ -5,12 +5,13 @@
 
     <IsPackable>false</IsPackable>
 
-    <UserSecretsId>0f1c9a27-2fed-479c-930b-c611600c8d8c</UserSecretsId>
+    <UserSecretsId>1030aec7-e8c3-49b9-b771-bccb9d5b84b7</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.7.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
@@ -20,16 +21,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\WxTeamsSharp\WxTeamsSharp.csproj" />
+    <ProjectReference Include="..\WxTeamsWebhookReceiver\WxTeamsWebhookReceiver.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\TestFile.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Resources\WebhookPost.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>

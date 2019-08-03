@@ -1,5 +1,7 @@
 ﻿using FluentAssertions;
+using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using WxTeamsSharp.Api;
@@ -14,7 +16,12 @@ namespace WxTeamsSharp.IntegrationTests
         {
             // This is a 12 hour token. It becomes useless and has to be replaced after that time. So need to possibly move these tests
             // to a separate project and not include it outside of local testing.
-            var token = "NWNkNjVhZWMtM2EwYi00YTIxLWFkMTgtYjNlMjA4OGE3OGE1YTI5Y2YxZDYtZjQx_PF84_54c9b869-e95f-4fec-9276-1b378157e50f";
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddUserSecrets<Settings>()
+                .Build();
+
+            var token = configuration.GetSection("AdminBotToken").Value;
             WxTeamsApi.SetAuth(token);
         }
 

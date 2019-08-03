@@ -5,6 +5,8 @@ using WxTeamsSharp.Enums;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Interfaces.Memberships;
 using WxTeamsSharp.Interfaces.Messages;
+using WxTeamsSharp.Interfaces.People;
+using WxTeamsSharp.Interfaces.Webhooks;
 
 namespace WxTeamsSharp.Interfaces.Rooms
 {
@@ -138,6 +140,14 @@ namespace WxTeamsSharp.Interfaces.Rooms
         Task<IMembership> AddUserAsync(string userIdOrEmail, bool isModerator = false);
 
         /// <summary>
+        /// Add someone to this room by person object; optionally making them a moderator.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="isModerator"></param>
+        /// <returns></returns>
+        Task<IMembership> AddUserAsync(IPerson user, bool isModerator = false);
+
+        /// <summary>
         /// Updates properties for a user in this room
         /// </summary>
         /// <param name="userIdOrEmail">User ID or email</param>
@@ -151,5 +161,70 @@ namespace WxTeamsSharp.Interfaces.Rooms
         /// <param name="userIdOrEmail">User ID or email</param>
         /// <returns>This method returns a ResponseMessage which should be "OK"</returns>
         Task<IResponseMessage> RemoveUserAsync(string userIdOrEmail);
+
+        /// <summary>
+        /// Remove a user from this room
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        Task<IResponseMessage> RemoveUserAsync(IPerson user);
+
+        /// <summary>
+        /// Add a new webhook for message created events that is filtered for this room by default.
+        /// </summary>
+        /// <param name="name">Name of the webhook</param>
+        /// <param name="targetUrl">Url to receive the webhook POST at</param>
+        /// <param name="personIdFilter">limit to a particular person, by ID</param>
+        /// <param name="personEmailFilter">limit to a particular person, by email</param>
+        /// <param name="mentionedPeople">limit to messages which contain these mentioned people, by person ID; accepts me as a shorthand for your own person ID</param>
+        /// <param name="hasFiles">limit to messages which contain file content attachments </param>
+        /// <param name="secret">The secret used to generate payload signature.</param>
+        /// <returns>This method returns the created Webhook</returns>
+        Task<IWebhook> AddMessageCreatedWebhookAsync(string name, string targetUrl, 
+            string personIdFilter = "", string personEmailFilter = "", IEnumerable<string> mentionedPeople = default,
+            bool hasFiles = false, string secret = "");
+
+        /// <summary>
+        /// Add a new webhook for message deleted events that is filtered for this room by default.
+        /// </summary>
+        /// <param name="name">Name of the webhook</param>
+        /// <param name="targetUrl">Url to receive the webhook POST at</param>
+        /// <param name="personIdFilter">limit to a particular person, by ID</param>
+        /// <param name="personEmailFilter">limit to a particular person, by email</param>
+        /// <param name="mentionedPeople">limit to messages which contain these mentioned people, by person ID; accepts me as a shorthand for your own person ID</param>
+        /// <param name="hasFiles">limit to messages which contain file content attachments </param>
+        /// <param name="secret">The secret used to generate payload signature.</param>
+        /// <returns>This method returns the created Webhook</returns>
+        Task<IWebhook> AddMessageDeletedWebhookAsync(string name, string targetUrl,
+            string personIdFilter = "", string personEmailFilter = "", IEnumerable<string> mentionedPeople = default,
+            bool hasFiles = false, string secret = "");
+
+        /// <summary>
+        /// Add a new webhook for user added events that is filtered for this room by default.
+        /// </summary>
+        /// <param name="name">Name of the webhook</param>
+        /// <param name="targetUrl">Url to receive the webhook POST at</param>
+        /// <param name="personIdFilter">limit to a particular person, by ID</param>
+        /// <param name="personEmailFilter">limit to a particular person, by email</param>
+        /// <param name="isModerator">limit to moderators of a room</param>
+        /// <param name="secret">The secret used to generate payload signature.</param>
+        /// <returns>This method returns the created Webhook</returns>
+        Task<IWebhook> AddUserAddedWebhookAsync(string name, string targetUrl,
+            string personIdFilter = "", string personEmailFilter = "", bool isModerator = false, 
+            string secret = "");
+
+        /// <summary>
+        /// Add a new webhook for user added events that is filtered for this room by default.
+        /// </summary>
+        /// <param name="name">Name of the webhook</param>
+        /// <param name="targetUrl">Url to receive the webhook POST at</param>
+        /// <param name="personIdFilter">limit to a particular person, by ID</param>
+        /// <param name="personEmailFilter">limit to a particular person, by email</param>
+        /// <param name="isModerator">limit to moderators of a room</param>
+        /// <param name="secret">The secret used to generate payload signature.</param>
+        /// <returns>This method returns the created Webhook</returns>
+        Task<IWebhook> AddUserRemovedWebhookAsync(string name, string targetUrl,
+            string personIdFilter = "", string personEmailFilter = "", bool isModerator = false,
+            string secret = "");
     }
 }

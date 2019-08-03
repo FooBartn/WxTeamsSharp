@@ -13,58 +13,73 @@ using static WxTeamsSharp.Utilities.JsonUtilities;
 namespace WxTeamsSharp.Models.Messages
 {
     /// <inheritdoc/>
-    internal class Message : IMessage
+    public class Message : IMessage
     {
         /// <inheritdoc/>
-        public string Id { get; set; }
+        [JsonProperty]
+        public string Id { get; private set; }
 
         /// <inheritdoc/>
-        public string RoomId { get; set; }
+        [JsonProperty]
+        public string RoomId { get; private set; }
 
         /// <inheritdoc/>
+        [JsonProperty]
         [JsonConverter(typeof(StringEnumConverter))]
-        public RoomType RoomType { get; set; }
+        public RoomType RoomType { get; private set; }
 
         /// <inheritdoc/>
         [JsonProperty(PropertyName = "toPersonId")]
-        public string RecipientId { get; set; }
+        public string RecipientId { get; private set; }
 
         /// <inheritdoc/>
         [JsonProperty(PropertyName = "toPersonEmail")]
-        public string RecipientEmail { get; set; }
+        public string RecipientEmail { get; private set; }
 
         /// <inheritdoc/>
-        public string Text { get; set; }
+        [JsonProperty]
+        public string Text { get; private set; }
 
         /// <inheritdoc/>
-        public string Markdown { get; set; }
+        [JsonProperty]
+        public string Markdown { get; private set; }
 
         /// <inheritdoc/>
-        public IList<string> Files { get; set; }
+        [JsonProperty]
+        public List<string> Files { get; private set; }
 
         /// <inheritdoc/>
         [JsonProperty(PropertyName = "personId")]
-        public string AuthorId { get; set; }
+        public string AuthorId { get; private set; }
 
         /// <inheritdoc/>
         [JsonProperty(PropertyName = "personEmail")]
-        public string AuthorEmail { get; set; }
+        public string AuthorEmail { get; private set; }
 
         /// <inheritdoc/>
-        public IList<string> MentionedPeople { get; set; }
+        [JsonProperty]
+        public List<string> MentionedPeople { get; private set; }
 
         /// <inheritdoc/>
-        public IList<string> MentionedGroups { get; set; }
+        [JsonProperty]
+        public List<string> MentionedGroups { get; private set; }
 
         /// <inheritdoc/>
-        public DateTimeOffset Created { get; set; }
+        public DateTimeOffset Created { get; private set; }
 
         /// <inheritdoc/>
         [JsonProperty(PropertyName = "errors")]
         [JsonConverter(typeof(ConcreteConverter<ListError>))]
-        public IListError Error { get; set; }
+        public IListError Error { get; private set; }
 
         /// <inheritdoc/>
         public async Task<IResponseMessage> DeleteAsync() => await WxTeamsApi.DeleteMessageAsync(Id);
+
+        /// <summary>
+        /// If the message came from a webhook it will not include text. This will query the API
+        /// for the full message including text.
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IMessage> GetFullMessageAsync() => await WxTeamsApi.GetMessageAsync(Id);
     }
 }

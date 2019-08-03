@@ -116,6 +116,16 @@ namespace WxTeamsSharp.IntegrationTests
         }
 
         [Fact]
+        public async Task BotShouldGetMessagesFromOthers_RequiresUserMentioned()
+        {
+            var room = await WxTeamsApi.GetRoomAsync(StaticTestingValues.TestRoom);
+            var messages = await room.GetMessagesAsync(userMentioned: true);
+
+            messages.Should().NotBeNull();
+            messages.Items.Count.Should().BeGreaterOrEqualTo(1);
+        }
+
+        [Fact]
         public async Task ShouldGetRoomMessagesLimit10ViaObject()
         {
             var room = await WxTeamsApi.GetRoomAsync(StaticTestingValues.JRoom);

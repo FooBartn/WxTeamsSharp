@@ -10,36 +10,44 @@ using static WxTeamsSharp.Utilities.JsonUtilities;
 namespace WxTeamsSharp.Models.Memberships
 {
     /// <inheritdoc/>
-    internal class RoomMembership : IMembership
+    public class RoomMembership : IMembership
     {
         /// <inheritdoc/>
-        public string Id { get; set; }
+        [JsonProperty]
+        public string Id { get; private set; }
 
         /// <inheritdoc/>
-        public string RoomId { get; set; }
+        [JsonProperty]
+        public string RoomId { get; private set; }
 
         /// <inheritdoc/>
-        public string PersonId { get; set; }
+        [JsonProperty]
+        public string PersonId { get; private set; }
 
         /// <inheritdoc/>
-        public string PersonEmail { get; set; }
+        [JsonProperty]
+        public string PersonEmail { get; private set; }
 
         /// <inheritdoc/>
-        public string PersonDisplayName { get; set; }
+        [JsonProperty]
+        public string PersonDisplayName { get; private set; }
 
         /// <inheritdoc/>
-        public string PersonOrgId { get; set; }
+        [JsonProperty]
+        public string PersonOrgId { get; private set; }
 
         /// <inheritdoc/>
-        public bool IsModerator { get; set; }
+        [JsonProperty]
+        public bool IsModerator { get; private set; }
 
         /// <inheritdoc/>
-        public DateTimeOffset Created { get; set; }
+        [JsonProperty]
+        public DateTimeOffset Created { get; private set; }
 
         /// <inheritdoc/>
         [JsonProperty(PropertyName = "errors")]
         [JsonConverter(typeof(ConcreteConverter<ListError>))]
-        public IListError Error { get; set; }
+        public IListError Error { get; private set; }
 
         /// <inheritdoc/>
         public async Task<IMembership> UpdateAsync(bool isModerator)

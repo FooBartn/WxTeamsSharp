@@ -57,7 +57,7 @@ namespace WxTeamsSharp.IntegrationTests
         [Fact]
         public async Task ShouldGetPeopleByEmail()
         {
-            var people = await WxTeamsApi.GetUsersByEmail("jbarton@netsyncnetwork.com");
+            var people = await WxTeamsApi.GetUsersByEmailAsync("jbarton@netsyncnetwork.com");
 
             people.Should().NotBeNull();
             people.Items.Count.Should().Be(1);
@@ -67,7 +67,7 @@ namespace WxTeamsSharp.IntegrationTests
         [Fact]
         public async Task ShouldGetPeopleByDisplayName()
         {
-            var people = await WxTeamsApi.GetUsersByDisplayName("Joshua Barton");
+            var people = await WxTeamsApi.GetUsersByDisplayNameAsync("Joshua Barton");
 
             people.Should().NotBeNull();
             people.Items.Count.Should().Be(1);
@@ -77,7 +77,7 @@ namespace WxTeamsSharp.IntegrationTests
         [Fact]
         public async Task ShouldGetPeopleByIdList()
         {
-            var people = await WxTeamsApi.GetUsersByIdList(new string[] { StaticTestingValues.JId });
+            var people = await WxTeamsApi.GetUsersByIdListAsync(new string[] { StaticTestingValues.JId });
 
             people.Should().NotBeNull();
             people.Items.Count.Should().Be(1);
@@ -87,7 +87,7 @@ namespace WxTeamsSharp.IntegrationTests
         [Fact]
         public void ShouldGetPeopleByOrgId()
         {
-            Func<Task> result = async () => await WxTeamsApi.GetUsersByOrgId(StaticTestingValues.JOrgId);
+            Func<Task> result = async () => await WxTeamsApi.GetUsersByOrgIdAsync(StaticTestingValues.JOrgId);
 
             result.Should().Throw<TeamsApiException>("Admin only").WithMessage("Email, displayName, or id list should be specified.");
         }

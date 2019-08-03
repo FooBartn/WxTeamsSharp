@@ -3,54 +3,67 @@ using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using WxTeamsSharp.Api;
 using WxTeamsSharp.Enums;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Interfaces.Memberships;
 using WxTeamsSharp.Interfaces.Messages;
+using WxTeamsSharp.Interfaces.People;
 using WxTeamsSharp.Interfaces.Rooms;
+using WxTeamsSharp.Interfaces.Webhooks;
 using WxTeamsSharp.Models.General;
 using WxTeamsSharp.Models.Messages;
+using WxTeamsSharp.Utilities;
 using static WxTeamsSharp.Utilities.JsonUtilities;
 
 namespace WxTeamsSharp.Models.Rooms
 {
     /// <inheritdoc/>
-    internal class Room : IRoom
+    public class Room : IRoom
     {
         /// <inheritdoc/>
-        public string Id { get; set; } = string.Empty;
+        [JsonProperty]
+        public string Id { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
-        public string Title { get; set; } = string.Empty;
+        [JsonProperty]
+        public string Title { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
+        [JsonProperty]
         [JsonConverter(typeof(StringEnumConverter))]
-        public RoomType Type { get; set; }
+        public RoomType Type { get; private set; }
 
         /// <inheritdoc/>
-        public bool IsLocked { get; set; }
+        [JsonProperty]
+        public bool IsLocked { get; private set; }
 
         /// <inheritdoc/>
-        public string TeamId { get; set; } = string.Empty;
+        [JsonProperty]
+        public string TeamId { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
-        public DateTimeOffset LastActivity { get; set; }
+        [JsonProperty]
+        public DateTimeOffset LastActivity { get; private set; }
 
         /// <inheritdoc/>
-        public string CreatorId { get; set; } = string.Empty;
+        [JsonProperty]
+        public string CreatorId { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
-        public DateTimeOffset Created { get; set; }
+        [JsonProperty]
+        public DateTimeOffset Created { get; private set; }
 
         /// <inheritdoc/>
         [JsonProperty(PropertyName = "errors")]
         [JsonConverter(typeof(ConcreteConverter<ListError>))]
-        public IListError Error { get; set; }
+        public IListError Error { get; private set; }
 
         /// <inheritdoc/>
-        public string SipAddress { get; set; }
+        [JsonProperty]
+        public string SipAddress { get; private set; }
 
         /// <inheritdoc/>
         public Task<IResponseMessage> DeleteAsync() => WxTeamsApi.DeleteRoomAsync(Id);
@@ -125,5 +138,75 @@ namespace WxTeamsSharp.Models.Rooms
         public async Task<IListResult<IMessage>> GetMessagesBeforeMessageAsync(string messageId, int max = 50,
             bool userMentioned = false, ICollection<string> mentionedPeople = null)
             => await WxTeamsApi.GetRoomMessagesBeforeMessageAsync(Id, messageId, max, userMentioned, mentionedPeople);
+
+        /// <inheritdoc/>
+        public async Task<IMembership> AddUserAsync(IPerson user, bool isModerator = false)
+            => await AddUserAsync(user.Id, isModerator);
+
+        /// <inheritdoc/>
+        public async Task<IResponseMessage> RemoveUserAsync(IPerson user)
+            => await RemoveUserAsync(user.Id);
+
+        /// <inheritdoc/>
+        public async Task<IWebhook> AddMessageCreatedWebhookAsync(string name, string targetUrl, string personIdFilter = "", 
+            string personEmailFilter = "", IEnumerable<string> mentionedPeople = null, bool hasFiles = false, string secret = "")
+        {
+            var filter = await BuildFilterAsync(personIdFilter, personEmailFilter, mentionedPeople, hasFiles);
+            return await CreateWebhookAsync(name, targetUrl, WebhookResource.Messages, EventType.Created, filter, secret);
+        }
+
+        /// <inheritdoc/>
+        public async Task<IWebhook> AddMessageDeletedWebhookAsync(string name, string targetUrl, string personIdFilter = "", 
+            string personEmailFilter = "", IEnumerable<string> mentionedPeople = null, bool hasFiles = false, string secret = "")
+        {
+            var filter = await BuildFilterAsync(personIdFilter, personEmailFilter, mentionedPeople, hasFiles);
+            return await CreateWebhookAsync(name, targetUrl, WebhookResource.Messages, EventType.Deleted, filter, secret);
+        }
+
+        /// <inheritdoc/>
+        public async Task<IWebhook> AddUserAddedWebhookAsync(string name, string targetUrl, string personIdFilter = "", string personEmailFilter = "", bool isModerator = false, string secret = "")
+        {
+            var filter = await BuildFilterAsync(personIdFilter, personEmailFilter, isModerator: isModerator);
+            return await CreateWebhookAsync(name, targetUrl, WebhookResource.Messages, EventType.Created, filter, secret);
+        }
+
+        /// <inheritdoc/>
+        public async Task<IWebhook> AddUserRemovedWebhookAsync(string name, string targetUrl, string personIdFilter = "", string personEmailFilter = "", bool isModerator = false, string secret = "")
+        {
+            var filter = await BuildFilterAsync(personIdFilter, personEmailFilter, isModerator: isModerator);
+            return await CreateWebhookAsync(name, targetUrl, WebhookResource.Messages, EventType.Deleted, filter, secret);
+        }
+
+        /// <inheritdoc/>
+        private async Task<string> BuildFilterAsync(string personId = "", string personEmail = "", IEnumerable<string> mentionedPeople = null,
+            bool hasFiles = false, bool isModerator = false)
+        {
+            var filters = new List<KeyValuePair<string, string>>
+            {
+                new KeyValuePair<string, string>("roomId", Id)
+            };
+
+            if (!string.IsNullOrEmpty(personId))
+                filters.Add(new KeyValuePair<string, string>(nameof(personId), personId));
+
+            if (!string.IsNullOrEmpty(personEmail))
+                filters.Add(new KeyValuePair<string, string>(nameof(personEmail), personEmail));
+
+            if (mentionedPeople != null && mentionedPeople.Any())
+                filters.Add(new KeyValuePair<string, string>(nameof(mentionedPeople), string.Join(",", mentionedPeople)));
+
+            if (hasFiles)
+                filters.Add(new KeyValuePair<string, string>(nameof(hasFiles), hasFiles.ToString().FirstCharToLower()));
+
+            if (isModerator)
+                filters.Add(new KeyValuePair<string, string>(nameof(isModerator), isModerator.ToString().FirstCharToLower()));
+
+            return await new FormUrlEncodedContent(filters).ReadAsStringAsync();
+        }
+
+        /// <inheritdoc/>
+        private async Task<IWebhook> CreateWebhookAsync(string name, string targetUrl, WebhookResource resource,
+            EventType eventType, string filter, string secret = "")
+            => await WxTeamsApi.CreateWebhookAsync(name, targetUrl, resource, eventType, filter, secret);
     }
 }

@@ -1,4 +1,5 @@
 using FluentAssertions;
+using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Linq;
@@ -233,6 +234,16 @@ namespace WxTeamsSharp.UnitTests
             var json = webhookParams.ToJson();
             json.Should().Contain("created");
             json.Should().Contain("messages");
+        }
+
+        [Fact]
+        public void ShouldReturnValidWebhookData()
+        {
+            var json = File.ReadAllText("Resources/WebhookPost.json");
+            var webhookData = JsonConvert.DeserializeObject<WebhookData<Message>>(json);
+
+            webhookData.Data.Should().BeOfType<Message>();
+            webhookData.Data.Id.Should().Be("Y2lzY29zcGFyazovL3VzL01FU1NBR0UvOTJkYjNiZTAtNDNiZC0xMWU2LThhZTktZGQ1YjNkZmM1NjVk");
         }
     }
 }

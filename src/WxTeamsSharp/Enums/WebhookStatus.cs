@@ -13,6 +13,11 @@
         /// <summary>
         /// the webhook is inactive
         /// </summary>
-        Inactive
+        Inactive,
+
+        /// <summary>
+        /// the webhook is disabled
+        /// </summary>
+        Disabled
     }
 }

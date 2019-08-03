@@ -57,7 +57,7 @@ namespace WxTeamsSharp.Interfaces.Messages
         /// <summary>
         /// Public URLs for files attached to the message. Currently limited to 1 at a time.
         /// </summary>
-        IList<string> Files { get; }
+        List<string> Files { get; }
 
         /// <summary>
         /// The person ID of the message author.
@@ -72,12 +72,12 @@ namespace WxTeamsSharp.Interfaces.Messages
         /// <summary>
         /// People IDs for anyone mentioned in the message.
         /// </summary>
-        IList<string> MentionedPeople { get; }
+        List<string> MentionedPeople { get; }
 
         /// <summary>
         /// Group names for the groups mentioned in the message.
         /// </summary>
-        IList<string> MentionedGroups { get; }
+        List<string> MentionedGroups { get; }
 
         /// <summary>
         /// The date and time the message was created.

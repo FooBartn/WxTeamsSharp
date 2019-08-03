@@ -61,7 +61,7 @@ namespace WxTeamsSharp.Api
         /// <param name="email">List people with this email address.</param>
         /// <param name="max">Limit the maximum number of people in the response.</param>
         /// <returns>This method returns an IListResult object whose Items property is a list of People</returns>
-        public static async Task<IListResult<IPerson>> GetUsersByEmail(string email, int max = 100)
+        public static async Task<IListResult<IPerson>> GetUsersByEmailAsync(string email, int max = 100)
             => await GetUsersAsync(email, max: max);
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace WxTeamsSharp.Api
         /// <param name="displayName">List people whose name starts with this string.</param>
         /// <param name="max">Limit the maximum number of people in the response.</param>
         /// <returns>This method returns an IListResult object whose Items property is a list of People</returns>
-        public static async Task<IListResult<IPerson>> GetUsersByDisplayName(string displayName, int max = 100)
+        public static async Task<IListResult<IPerson>> GetUsersByDisplayNameAsync(string displayName, int max = 100)
             => await GetUsersAsync(displayName: displayName, max: max);
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace WxTeamsSharp.Api
         /// <param name="ids">List people by ID. Accepts up to 85 person IDs separated by commas.</param>
         /// <param name="max">Limit the maximum number of people in the response.</param>
         /// <returns>This method returns an IListResult object whose Items property is a list of People</returns>
-        public static async Task<IListResult<IPerson>> GetUsersByIdList(IEnumerable<string> ids, int max = 100)
+        public static async Task<IListResult<IPerson>> GetUsersByIdListAsync(IEnumerable<string> ids, int max = 100)
             => await GetUsersAsync(id: ids, max: max);
 
         /// <summary>
@@ -91,7 +91,7 @@ namespace WxTeamsSharp.Api
         /// <param name="orgId">A unique identifier for the organization</param>
         /// <param name="max">Limit the maximum number of people in the response.</param>
         /// <returns>This method returns an IListResult object whose Items property is a list of People</returns>
-        public static async Task<IListResult<IPerson>> GetUsersByOrgId(string orgId, int max = 100)
+        public static async Task<IListResult<IPerson>> GetUsersByOrgIdAsync(string orgId, int max = 100)
             => await GetUsersAsync(orgId: orgId, max: max);
 
         /// <summary>

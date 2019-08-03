@@ -218,7 +218,7 @@
             <param name="userId">A unique identifier for the person.</param>
             <returns>This method returns a Person</returns>
         </member>
-        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmail(System.String,System.Int32)">
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmailAsync(System.String,System.Int32)">
             <summary>
             List people in your organization with this email address
             Long result sets will be split into pages.
@@ -227,7 +227,7 @@
             <param name="max">Limit the maximum number of people in the response.</param>
             <returns>This method returns an IListResult object whose Items property is a list of People</returns>
         </member>
-        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayName(System.String,System.Int32)">
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayNameAsync(System.String,System.Int32)">
             <summary>
             List people in your organization with this display name
             Long result sets will be split into pages.
@@ -236,7 +236,7 @@
             <param name="max">Limit the maximum number of people in the response.</param>
             <returns>This method returns an IListResult object whose Items property is a list of People</returns>
         </member>
-        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdList(System.Collections.Generic.IEnumerable{System.String},System.Int32)">
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdListAsync(System.Collections.Generic.IEnumerable{System.String},System.Int32)">
             <summary>
             List people in your organization that match this list of IDs.
             Long result sets will be split into pages.
@@ -245,7 +245,7 @@
             <param name="max">Limit the maximum number of people in the response.</param>
             <returns>This method returns an IListResult object whose Items property is a list of People</returns>
         </member>
-        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgId(System.String,System.Int32)">
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgIdAsync(System.String,System.Int32)">
             <summary>
             List people in this organization. Only admin users of another organization (such as partners) may use this.
             Long result sets will be split into pages.
@@ -696,6 +696,11 @@
         <member name="F:WxTeamsSharp.Enums.WebhookStatus.Inactive">
             <summary>
             the webhook is inactive
+            </summary>
+        </member>
+        <member name="F:WxTeamsSharp.Enums.WebhookStatus.Disabled">
+            <summary>
+            the webhook is disabled
             </summary>
         </member>
         <member name="T:WxTeamsSharp.Interfaces.Events.IEvent">
@@ -1828,6 +1833,14 @@
             <param name="isModerator">Whether or not the participant is a room moderator.</param>
             <returns>This method will return the new Membership of the added user</returns>
         </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync(WxTeamsSharp.Interfaces.People.IPerson,System.Boolean)">
+            <summary>
+            Add someone to this room by person object; optionally making them a moderator.
+            </summary>
+            <param name="user"></param>
+            <param name="isModerator"></param>
+            <returns></returns>
+        </member>
         <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.UpdateUserAsync(System.String,System.Boolean)">
             <summary>
             Updates properties for a user in this room
@@ -1842,6 +1855,63 @@
             </summary>
             <param name="userIdOrEmail">User ID or email</param>
             <returns>This method returns a ResponseMessage which should be "OK"</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.RemoveUserAsync(WxTeamsSharp.Interfaces.People.IPerson)">
+            <summary>
+            Remove a user from this room
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageCreatedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)">
+            <summary>
+            Add a new webhook for message created events that is filtered for this room by default.
+            </summary>
+            <param name="name">Name of the webhook</param>
+            <param name="targetUrl">Url to receive the webhook POST at</param>
+            <param name="personIdFilter">limit to a particular person, by ID</param>
+            <param name="personEmailFilter">limit to a particular person, by email</param>
+            <param name="mentionedPeople">limit to messages which contain these mentioned people, by person ID; accepts me as a shorthand for your own person ID</param>
+            <param name="hasFiles">limit to messages which contain file content attachments </param>
+            <param name="secret">The secret used to generate payload signature.</param>
+            <returns>This method returns the created Webhook</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageDeletedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)">
+            <summary>
+            Add a new webhook for message deleted events that is filtered for this room by default.
+            </summary>
+            <param name="name">Name of the webhook</param>
+            <param name="targetUrl">Url to receive the webhook POST at</param>
+            <param name="personIdFilter">limit to a particular person, by ID</param>
+            <param name="personEmailFilter">limit to a particular person, by email</param>
+            <param name="mentionedPeople">limit to messages which contain these mentioned people, by person ID; accepts me as a shorthand for your own person ID</param>
+            <param name="hasFiles">limit to messages which contain file content attachments </param>
+            <param name="secret">The secret used to generate payload signature.</param>
+            <returns>This method returns the created Webhook</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAddedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            Add a new webhook for user added events that is filtered for this room by default.
+            </summary>
+            <param name="name">Name of the webhook</param>
+            <param name="targetUrl">Url to receive the webhook POST at</param>
+            <param name="personIdFilter">limit to a particular person, by ID</param>
+            <param name="personEmailFilter">limit to a particular person, by email</param>
+            <param name="isModerator">limit to moderators of a room</param>
+            <param name="secret">The secret used to generate payload signature.</param>
+            <returns>This method returns the created Webhook</returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserRemovedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            Add a new webhook for user added events that is filtered for this room by default.
+            </summary>
+            <param name="name">Name of the webhook</param>
+            <param name="targetUrl">Url to receive the webhook POST at</param>
+            <param name="personIdFilter">limit to a particular person, by ID</param>
+            <param name="personEmailFilter">limit to a particular person, by email</param>
+            <param name="isModerator">limit to moderators of a room</param>
+            <param name="secret">The secret used to generate payload signature.</param>
+            <returns>This method returns the created Webhook</returns>
         </member>
         <member name="T:WxTeamsSharp.Interfaces.Teams.ITeam">
             <summary>
@@ -1911,65 +1981,14 @@
              systems to stay in sync with new content and room activity.
              </summary>
         </member>
-        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Id">
-            <summary>
-            A unique identifier for the webhook.
-            </summary>
-        </member>
-        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Name">
-            <summary>
-            A user-friendly name for the webhook.
-            </summary>
-        </member>
         <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.TargetUrl">
             <summary>
             The URL that receives POST requests for each event.
             </summary>
         </member>
-        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Resource">
-            <summary>
-            The resource type for the webhook. Creating a webhook requires 'read' scope on the resource the webhook is for.
-            </summary>
-        </member>
-        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Event">
-            <summary>
-            The event type for the webhook.
-            </summary>
-        </member>
-        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Filter">
-            <summary>
-            The filter that defines the webhook scope.
-            ex: roomId=2356df236tsdgs246e
-            </summary>
-        </member>
-        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.OrganizationId">
-            <summary>
-            Unique Id of the Organization
-            </summary>
-        </member>
-        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.CreatedBy">
-            <summary>
-            What user created the webhook
-            </summary>
-        </member>
-        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.ApplicationId">
-            <summary>
-            The application Id attributed to the webhook
-            </summary>
-        </member>
-        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.OwnedBy">
-            <summary>
-            What user the webhook is owned by
-            </summary>
-        </member>
         <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Secret">
             <summary>
             The secret used to generate payload signature.
-            </summary>
-        </member>
-        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Status">
-            <summary>
-            The status of the webhook. Use active to reactivate a disabled webhook.
             </summary>
         </member>
         <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Created">
@@ -1992,6 +2011,80 @@
             Deleted this webhook
             </summary>
             <returns>This method returns a ResponseMessage which should be "OK"</returns>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon">
+            <summary>
+            Common properties for Webhooks
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Id">
+            <summary>
+            A unique identifier for the webhook.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Name">
+            <summary>
+            A user-friendly name for the webhook.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Resource">
+            <summary>
+            The resource type for the webhook. Creating a webhook requires 'read' scope on the resource the webhook is for.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Event">
+            <summary>
+            The event type for the webhook.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Filter">
+            <summary>
+            The filter that defines the webhook scope.
+            ex: roomId=2356df236tsdgs246e
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OrganizationId">
+            <summary>
+            Unique Id of the Organization
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.CreatedBy">
+            <summary>
+            What user created the webhook
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.ApplicationId">
+            <summary>
+            The application Id attributed to the webhook
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OwnedBy">
+            <summary>
+            What user the webhook is owned by
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Status">
+            <summary>
+            The status of the webhook. Use active to reactivate a disabled webhook.
+            </summary>
+        </member>
+        <member name="T:WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1">
+            <summary>
+            Webhook Data
+            </summary>
+            <typeparam name="TResource">Type of resource</typeparam>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1.ActorId">
+            <summary>
+            The personId of the user that caused the webhook to be sent. 
+            For example, on a messsage created webhook, the author of the message will be the actor. 
+            On a membership deleted webhook, the actor is the person who removed a user from a room.
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1.Data">
+            <summary>
+            Contains the resource that triggered the webhook.
+            </summary>
         </member>
         <member name="T:WxTeamsSharp.Models.Events.Event">
             <inheritdoc/>
@@ -2235,6 +2328,13 @@
         </member>
         <member name="M:WxTeamsSharp.Models.Messages.Message.DeleteAsync">
             <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Messages.Message.GetFullMessageAsync">
+            <summary>
+            If the message came from a webhook it will not include text. This will query the API
+            for the full message including text.
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:WxTeamsSharp.Models.Messages.MessageBuilder">
             <summary>
@@ -2604,6 +2704,30 @@
         <member name="M:WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync(System.String,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">
             <inheritdoc/>
         </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.AddUserAsync(WxTeamsSharp.Interfaces.People.IPerson,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(WxTeamsSharp.Interfaces.People.IPerson)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.AddMessageCreatedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.AddMessageDeletedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.AddUserAddedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.AddUserRemovedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.BuildFilterAsync(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.CreateWebhookAsync(System.String,System.String,WxTeamsSharp.Enums.WebhookResource,WxTeamsSharp.Enums.EventType,System.String,System.String)">
+            <inheritdoc/>
+        </member>
         <member name="T:WxTeamsSharp.Models.Teams.Team">
             <inheritdoc/>
         </member>
@@ -2680,6 +2804,45 @@
             <inheritdoc/>
         </member>
         <member name="M:WxTeamsSharp.Models.Webhooks.Webhook.DeleteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="T:WxTeamsSharp.Models.Webhooks.WebhookData`1">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Id">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Resource">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Event">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Filter">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.WebhookData`1.OrganizationId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.WebhookData`1.CreatedBy">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.WebhookData`1.ApplicationId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.WebhookData`1.OwnedBy">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Status">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.WebhookData`1.ActorId">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Data">
             <inheritdoc/>
         </member>
         <member name="M:WxTeamsSharp.Utilities.StringExtensions.FirstCharToLower(System.String)">

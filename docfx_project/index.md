@@ -20,7 +20,7 @@ WxTeamsApi.SetAuth("MyToken");
 var room = await WxTeamsApi.CreateRoomAsync("MyRoomName");
 
 // Get users
-var users = await WxTeamsApi.GetUsersByEmail("example@test.com");
+var users = await WxTeamsApi.GetUsersByEmailAsync("example@test.com");
 
 // Get user
 var user = users.FirstOrDefault(x => x.FirstName == "Bob");
@@ -39,6 +39,10 @@ var webhook = await WxTeamsApi.CreateWebhookAsync(
     WebhookResource.Messages, 
     EventType.Created, 
     filter: $"roomId={room.Id}");
+
+// OR create the webhook via the room object
+var webhook = await room
+    .AddMessageCreatedWebhookAsync("Example Webhook", "http://example.com/exampleWebhookReceiver");
 
 // Send a message to the room
 var message = await room.SendMessageAsync("**Hello**");
