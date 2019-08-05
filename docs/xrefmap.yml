@@ -593,61 +593,61 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersAsync
   nameWithType: WxTeamsApi.GetUsersAsync
-- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayName(System.String,System.Int32)
-  name: GetUsersByDisplayName(String, Int32)
-  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByDisplayName_System_String_System_Int32_
-  commentId: M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayName(System.String,System.Int32)
-  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayName(System.String, System.Int32)
-  nameWithType: WxTeamsApi.GetUsersByDisplayName(String, Int32)
-- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayName*
-  name: GetUsersByDisplayName
-  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByDisplayName_
-  commentId: Overload:WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayName
+- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayNameAsync(System.String,System.Int32)
+  name: GetUsersByDisplayNameAsync(String, Int32)
+  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByDisplayNameAsync_System_String_System_Int32_
+  commentId: M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayNameAsync(System.String,System.Int32)
+  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayNameAsync(System.String, System.Int32)
+  nameWithType: WxTeamsApi.GetUsersByDisplayNameAsync(String, Int32)
+- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayNameAsync*
+  name: GetUsersByDisplayNameAsync
+  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByDisplayNameAsync_
+  commentId: Overload:WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayNameAsync
   isSpec: "True"
-  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayName
-  nameWithType: WxTeamsApi.GetUsersByDisplayName
-- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmail(System.String,System.Int32)
-  name: GetUsersByEmail(String, Int32)
-  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByEmail_System_String_System_Int32_
-  commentId: M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmail(System.String,System.Int32)
-  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmail(System.String, System.Int32)
-  nameWithType: WxTeamsApi.GetUsersByEmail(String, Int32)
-- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmail*
-  name: GetUsersByEmail
-  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByEmail_
-  commentId: Overload:WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmail
+  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByDisplayNameAsync
+  nameWithType: WxTeamsApi.GetUsersByDisplayNameAsync
+- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmailAsync(System.String,System.Int32)
+  name: GetUsersByEmailAsync(String, Int32)
+  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByEmailAsync_System_String_System_Int32_
+  commentId: M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmailAsync(System.String,System.Int32)
+  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmailAsync(System.String, System.Int32)
+  nameWithType: WxTeamsApi.GetUsersByEmailAsync(String, Int32)
+- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmailAsync*
+  name: GetUsersByEmailAsync
+  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByEmailAsync_
+  commentId: Overload:WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmailAsync
   isSpec: "True"
-  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmail
-  nameWithType: WxTeamsApi.GetUsersByEmail
-- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdList(System.Collections.Generic.IEnumerable{System.String},System.Int32)
-  name: GetUsersByIdList(IEnumerable<String>, Int32)
-  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByIdList_System_Collections_Generic_IEnumerable_System_String__System_Int32_
-  commentId: M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdList(System.Collections.Generic.IEnumerable{System.String},System.Int32)
-  name.vb: GetUsersByIdList(IEnumerable(Of String), Int32)
-  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdList(System.Collections.Generic.IEnumerable<System.String>, System.Int32)
-  fullName.vb: WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdList(System.Collections.Generic.IEnumerable(Of System.String), System.Int32)
-  nameWithType: WxTeamsApi.GetUsersByIdList(IEnumerable<String>, Int32)
-  nameWithType.vb: WxTeamsApi.GetUsersByIdList(IEnumerable(Of String), Int32)
-- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdList*
-  name: GetUsersByIdList
-  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByIdList_
-  commentId: Overload:WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdList
+  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByEmailAsync
+  nameWithType: WxTeamsApi.GetUsersByEmailAsync
+- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdListAsync(System.Collections.Generic.IEnumerable{System.String},System.Int32)
+  name: GetUsersByIdListAsync(IEnumerable<String>, Int32)
+  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByIdListAsync_System_Collections_Generic_IEnumerable_System_String__System_Int32_
+  commentId: M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdListAsync(System.Collections.Generic.IEnumerable{System.String},System.Int32)
+  name.vb: GetUsersByIdListAsync(IEnumerable(Of String), Int32)
+  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdListAsync(System.Collections.Generic.IEnumerable<System.String>, System.Int32)
+  fullName.vb: WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdListAsync(System.Collections.Generic.IEnumerable(Of System.String), System.Int32)
+  nameWithType: WxTeamsApi.GetUsersByIdListAsync(IEnumerable<String>, Int32)
+  nameWithType.vb: WxTeamsApi.GetUsersByIdListAsync(IEnumerable(Of String), Int32)
+- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdListAsync*
+  name: GetUsersByIdListAsync
+  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByIdListAsync_
+  commentId: Overload:WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdListAsync
   isSpec: "True"
-  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdList
-  nameWithType: WxTeamsApi.GetUsersByIdList
-- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgId(System.String,System.Int32)
-  name: GetUsersByOrgId(String, Int32)
-  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByOrgId_System_String_System_Int32_
-  commentId: M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgId(System.String,System.Int32)
-  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgId(System.String, System.Int32)
-  nameWithType: WxTeamsApi.GetUsersByOrgId(String, Int32)
-- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgId*
-  name: GetUsersByOrgId
-  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByOrgId_
-  commentId: Overload:WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgId
+  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByIdListAsync
+  nameWithType: WxTeamsApi.GetUsersByIdListAsync
+- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgIdAsync(System.String,System.Int32)
+  name: GetUsersByOrgIdAsync(String, Int32)
+  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByOrgIdAsync_System_String_System_Int32_
+  commentId: M:WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgIdAsync(System.String,System.Int32)
+  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgIdAsync(System.String, System.Int32)
+  nameWithType: WxTeamsApi.GetUsersByOrgIdAsync(String, Int32)
+- uid: WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgIdAsync*
+  name: GetUsersByOrgIdAsync
+  href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetUsersByOrgIdAsync_
+  commentId: Overload:WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgIdAsync
   isSpec: "True"
-  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgId
-  nameWithType: WxTeamsApi.GetUsersByOrgId
+  fullName: WxTeamsSharp.Api.WxTeamsApi.GetUsersByOrgIdAsync
+  nameWithType: WxTeamsApi.GetUsersByOrgIdAsync
 - uid: WxTeamsSharp.Api.WxTeamsApi.GetWebhookAsync(System.String)
   name: GetWebhookAsync(String)
   href: api/WxTeamsSharp.Api.WxTeamsApi.html#WxTeamsSharp_Api_WxTeamsApi_GetWebhookAsync_System_String_
@@ -1035,6 +1035,12 @@ references:
   commentId: F:WxTeamsSharp.Enums.WebhookStatus.Active
   fullName: WxTeamsSharp.Enums.WebhookStatus.Active
   nameWithType: WebhookStatus.Active
+- uid: WxTeamsSharp.Enums.WebhookStatus.Disabled
+  name: Disabled
+  href: api/WxTeamsSharp.Enums.WebhookStatus.html#WxTeamsSharp_Enums_WebhookStatus_Disabled
+  commentId: F:WxTeamsSharp.Enums.WebhookStatus.Disabled
+  fullName: WxTeamsSharp.Enums.WebhookStatus.Disabled
+  nameWithType: WebhookStatus.Disabled
 - uid: WxTeamsSharp.Enums.WebhookStatus.Inactive
   name: Inactive
   href: api/WxTeamsSharp.Enums.WebhookStatus.html#WxTeamsSharp_Enums_WebhookStatus_Inactive
@@ -3150,12 +3156,63 @@ references:
   commentId: T:WxTeamsSharp.Interfaces.Rooms.IRoom
   fullName: WxTeamsSharp.Interfaces.Rooms.IRoom
   nameWithType: IRoom
+- uid: WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageCreatedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)
+  name: AddMessageCreatedWebhookAsync(String, String, String, String, IEnumerable<String>, Boolean, String)
+  href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_AddMessageCreatedWebhookAsync_System_String_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_String_
+  commentId: M:WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageCreatedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)
+  name.vb: AddMessageCreatedWebhookAsync(String, String, String, String, IEnumerable(Of String), Boolean, String)
+  fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageCreatedWebhookAsync(System.String, System.String, System.String, System.String, System.Collections.Generic.IEnumerable<System.String>, System.Boolean, System.String)
+  fullName.vb: WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageCreatedWebhookAsync(System.String, System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of System.String), System.Boolean, System.String)
+  nameWithType: IRoom.AddMessageCreatedWebhookAsync(String, String, String, String, IEnumerable<String>, Boolean, String)
+  nameWithType.vb: IRoom.AddMessageCreatedWebhookAsync(String, String, String, String, IEnumerable(Of String), Boolean, String)
+- uid: WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageCreatedWebhookAsync*
+  name: AddMessageCreatedWebhookAsync
+  href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_AddMessageCreatedWebhookAsync_
+  commentId: Overload:WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageCreatedWebhookAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageCreatedWebhookAsync
+  nameWithType: IRoom.AddMessageCreatedWebhookAsync
+- uid: WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageDeletedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)
+  name: AddMessageDeletedWebhookAsync(String, String, String, String, IEnumerable<String>, Boolean, String)
+  href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_AddMessageDeletedWebhookAsync_System_String_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_String_
+  commentId: M:WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageDeletedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)
+  name.vb: AddMessageDeletedWebhookAsync(String, String, String, String, IEnumerable(Of String), Boolean, String)
+  fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageDeletedWebhookAsync(System.String, System.String, System.String, System.String, System.Collections.Generic.IEnumerable<System.String>, System.Boolean, System.String)
+  fullName.vb: WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageDeletedWebhookAsync(System.String, System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of System.String), System.Boolean, System.String)
+  nameWithType: IRoom.AddMessageDeletedWebhookAsync(String, String, String, String, IEnumerable<String>, Boolean, String)
+  nameWithType.vb: IRoom.AddMessageDeletedWebhookAsync(String, String, String, String, IEnumerable(Of String), Boolean, String)
+- uid: WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageDeletedWebhookAsync*
+  name: AddMessageDeletedWebhookAsync
+  href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_AddMessageDeletedWebhookAsync_
+  commentId: Overload:WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageDeletedWebhookAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageDeletedWebhookAsync
+  nameWithType: IRoom.AddMessageDeletedWebhookAsync
+- uid: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAddedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)
+  name: AddUserAddedWebhookAsync(String, String, String, String, Boolean, String)
+  href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserAddedWebhookAsync_System_String_System_String_System_String_System_String_System_Boolean_System_String_
+  commentId: M:WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAddedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)
+  fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAddedWebhookAsync(System.String, System.String, System.String, System.String, System.Boolean, System.String)
+  nameWithType: IRoom.AddUserAddedWebhookAsync(String, String, String, String, Boolean, String)
+- uid: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAddedWebhookAsync*
+  name: AddUserAddedWebhookAsync
+  href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserAddedWebhookAsync_
+  commentId: Overload:WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAddedWebhookAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAddedWebhookAsync
+  nameWithType: IRoom.AddUserAddedWebhookAsync
 - uid: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync(System.String,System.Boolean)
   name: AddUserAsync(String, Boolean)
   href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserAsync_System_String_System_Boolean_
   commentId: M:WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync(System.String,System.Boolean)
   fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync(System.String, System.Boolean)
   nameWithType: IRoom.AddUserAsync(String, Boolean)
+- uid: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync(WxTeamsSharp.Interfaces.People.IPerson,System.Boolean)
+  name: AddUserAsync(IPerson, Boolean)
+  href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserAsync_WxTeamsSharp_Interfaces_People_IPerson_System_Boolean_
+  commentId: M:WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync(WxTeamsSharp.Interfaces.People.IPerson,System.Boolean)
+  fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync(WxTeamsSharp.Interfaces.People.IPerson, System.Boolean)
+  nameWithType: IRoom.AddUserAsync(IPerson, Boolean)
 - uid: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync*
   name: AddUserAsync
   href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserAsync_
@@ -3163,6 +3220,19 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync
   nameWithType: IRoom.AddUserAsync
+- uid: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserRemovedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)
+  name: AddUserRemovedWebhookAsync(String, String, String, String, Boolean, String)
+  href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserRemovedWebhookAsync_System_String_System_String_System_String_System_String_System_Boolean_System_String_
+  commentId: M:WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserRemovedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)
+  fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserRemovedWebhookAsync(System.String, System.String, System.String, System.String, System.Boolean, System.String)
+  nameWithType: IRoom.AddUserRemovedWebhookAsync(String, String, String, String, Boolean, String)
+- uid: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserRemovedWebhookAsync*
+  name: AddUserRemovedWebhookAsync
+  href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserRemovedWebhookAsync_
+  commentId: Overload:WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserRemovedWebhookAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserRemovedWebhookAsync
+  nameWithType: IRoom.AddUserRemovedWebhookAsync
 - uid: WxTeamsSharp.Interfaces.Rooms.IRoom.Created
   name: Created
   href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_Created
@@ -3321,6 +3391,12 @@ references:
   commentId: M:WxTeamsSharp.Interfaces.Rooms.IRoom.RemoveUserAsync(System.String)
   fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.RemoveUserAsync(System.String)
   nameWithType: IRoom.RemoveUserAsync(String)
+- uid: WxTeamsSharp.Interfaces.Rooms.IRoom.RemoveUserAsync(WxTeamsSharp.Interfaces.People.IPerson)
+  name: RemoveUserAsync(IPerson)
+  href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_RemoveUserAsync_WxTeamsSharp_Interfaces_People_IPerson_
+  commentId: M:WxTeamsSharp.Interfaces.Rooms.IRoom.RemoveUserAsync(WxTeamsSharp.Interfaces.People.IPerson)
+  fullName: WxTeamsSharp.Interfaces.Rooms.IRoom.RemoveUserAsync(WxTeamsSharp.Interfaces.People.IPerson)
+  nameWithType: IRoom.RemoveUserAsync(IPerson)
 - uid: WxTeamsSharp.Interfaces.Rooms.IRoom.RemoveUserAsync*
   name: RemoveUserAsync
   href: api/WxTeamsSharp.Interfaces.Rooms.IRoom.html#WxTeamsSharp_Interfaces_Rooms_IRoom_RemoveUserAsync_
@@ -3534,19 +3610,6 @@ references:
   commentId: T:WxTeamsSharp.Interfaces.Webhooks.IWebhook
   fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook
   nameWithType: IWebhook
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.ApplicationId
-  name: ApplicationId
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_ApplicationId
-  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.ApplicationId
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.ApplicationId
-  nameWithType: IWebhook.ApplicationId
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.ApplicationId*
-  name: ApplicationId
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_ApplicationId_
-  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhook.ApplicationId
-  isSpec: "True"
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.ApplicationId
-  nameWithType: IWebhook.ApplicationId
 - uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Created
   name: Created
   href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Created
@@ -3560,19 +3623,6 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Created
   nameWithType: IWebhook.Created
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.CreatedBy
-  name: CreatedBy
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_CreatedBy
-  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.CreatedBy
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.CreatedBy
-  nameWithType: IWebhook.CreatedBy
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.CreatedBy*
-  name: CreatedBy
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_CreatedBy_
-  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhook.CreatedBy
-  isSpec: "True"
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.CreatedBy
-  nameWithType: IWebhook.CreatedBy
 - uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.DeleteAsync
   name: DeleteAsync()
   href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_DeleteAsync
@@ -3586,97 +3636,6 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.DeleteAsync
   nameWithType: IWebhook.DeleteAsync
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Event
-  name: Event
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Event
-  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Event
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Event
-  nameWithType: IWebhook.Event
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Event*
-  name: Event
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Event_
-  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Event
-  isSpec: "True"
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Event
-  nameWithType: IWebhook.Event
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Filter
-  name: Filter
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Filter
-  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Filter
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Filter
-  nameWithType: IWebhook.Filter
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Filter*
-  name: Filter
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Filter_
-  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Filter
-  isSpec: "True"
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Filter
-  nameWithType: IWebhook.Filter
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Id
-  name: Id
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Id
-  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Id
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Id
-  nameWithType: IWebhook.Id
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Id*
-  name: Id
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Id_
-  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Id
-  isSpec: "True"
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Id
-  nameWithType: IWebhook.Id
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Name
-  name: Name
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Name
-  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Name
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Name
-  nameWithType: IWebhook.Name
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Name*
-  name: Name
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Name_
-  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Name
-  isSpec: "True"
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Name
-  nameWithType: IWebhook.Name
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.OrganizationId
-  name: OrganizationId
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_OrganizationId
-  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.OrganizationId
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.OrganizationId
-  nameWithType: IWebhook.OrganizationId
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.OrganizationId*
-  name: OrganizationId
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_OrganizationId_
-  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhook.OrganizationId
-  isSpec: "True"
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.OrganizationId
-  nameWithType: IWebhook.OrganizationId
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.OwnedBy
-  name: OwnedBy
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_OwnedBy
-  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.OwnedBy
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.OwnedBy
-  nameWithType: IWebhook.OwnedBy
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.OwnedBy*
-  name: OwnedBy
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_OwnedBy_
-  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhook.OwnedBy
-  isSpec: "True"
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.OwnedBy
-  nameWithType: IWebhook.OwnedBy
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Resource
-  name: Resource
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Resource
-  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Resource
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Resource
-  nameWithType: IWebhook.Resource
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Resource*
-  name: Resource
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Resource_
-  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Resource
-  isSpec: "True"
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Resource
-  nameWithType: IWebhook.Resource
 - uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Secret
   name: Secret
   href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Secret
@@ -3690,19 +3649,6 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Secret
   nameWithType: IWebhook.Secret
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Status
-  name: Status
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Status
-  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Status
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Status
-  nameWithType: IWebhook.Status
-- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Status*
-  name: Status
-  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_Status_
-  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhook.Status
-  isSpec: "True"
-  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.Status
-  nameWithType: IWebhook.Status
 - uid: WxTeamsSharp.Interfaces.Webhooks.IWebhook.TargetUrl
   name: TargetUrl
   href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html#WxTeamsSharp_Interfaces_Webhooks_IWebhook_TargetUrl
@@ -3732,6 +3678,185 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhook.UpdateAsync
   nameWithType: IWebhook.UpdateAsync
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon
+  name: IWebhookCommon
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html
+  commentId: T:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon
+  nameWithType: IWebhookCommon
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.ApplicationId
+  name: ApplicationId
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_ApplicationId
+  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.ApplicationId
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.ApplicationId
+  nameWithType: IWebhookCommon.ApplicationId
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.ApplicationId*
+  name: ApplicationId
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_ApplicationId_
+  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.ApplicationId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.ApplicationId
+  nameWithType: IWebhookCommon.ApplicationId
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.CreatedBy
+  name: CreatedBy
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_CreatedBy
+  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.CreatedBy
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.CreatedBy
+  nameWithType: IWebhookCommon.CreatedBy
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.CreatedBy*
+  name: CreatedBy
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_CreatedBy_
+  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.CreatedBy
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.CreatedBy
+  nameWithType: IWebhookCommon.CreatedBy
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Event
+  name: Event
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_Event
+  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Event
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Event
+  nameWithType: IWebhookCommon.Event
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Event*
+  name: Event
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_Event_
+  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Event
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Event
+  nameWithType: IWebhookCommon.Event
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Filter
+  name: Filter
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_Filter
+  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Filter
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Filter
+  nameWithType: IWebhookCommon.Filter
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Filter*
+  name: Filter
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_Filter_
+  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Filter
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Filter
+  nameWithType: IWebhookCommon.Filter
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Id
+  name: Id
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_Id
+  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Id
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Id
+  nameWithType: IWebhookCommon.Id
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Id*
+  name: Id
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_Id_
+  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Id
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Id
+  nameWithType: IWebhookCommon.Id
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Name
+  name: Name
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_Name
+  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Name
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Name
+  nameWithType: IWebhookCommon.Name
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Name*
+  name: Name
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_Name_
+  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Name
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Name
+  nameWithType: IWebhookCommon.Name
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OrganizationId
+  name: OrganizationId
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_OrganizationId
+  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OrganizationId
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OrganizationId
+  nameWithType: IWebhookCommon.OrganizationId
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OrganizationId*
+  name: OrganizationId
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_OrganizationId_
+  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OrganizationId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OrganizationId
+  nameWithType: IWebhookCommon.OrganizationId
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OwnedBy
+  name: OwnedBy
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_OwnedBy
+  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OwnedBy
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OwnedBy
+  nameWithType: IWebhookCommon.OwnedBy
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OwnedBy*
+  name: OwnedBy
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_OwnedBy_
+  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OwnedBy
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.OwnedBy
+  nameWithType: IWebhookCommon.OwnedBy
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Resource
+  name: Resource
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_Resource
+  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Resource
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Resource
+  nameWithType: IWebhookCommon.Resource
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Resource*
+  name: Resource
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_Resource_
+  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Resource
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Resource
+  nameWithType: IWebhookCommon.Resource
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Status
+  name: Status
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_Status
+  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Status
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Status
+  nameWithType: IWebhookCommon.Status
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Status*
+  name: Status
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookCommon_Status_
+  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Status
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.Status
+  nameWithType: IWebhookCommon.Status
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1
+  name: IWebhookData<TResource>
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookData-1.html
+  commentId: T:WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1
+  name.vb: IWebhookData(Of TResource)
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookData<TResource>
+  fullName.vb: WxTeamsSharp.Interfaces.Webhooks.IWebhookData(Of TResource)
+  nameWithType: IWebhookData<TResource>
+  nameWithType.vb: IWebhookData(Of TResource)
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1.ActorId
+  name: ActorId
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookData-1.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookData_1_ActorId
+  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1.ActorId
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookData<TResource>.ActorId
+  fullName.vb: WxTeamsSharp.Interfaces.Webhooks.IWebhookData(Of TResource).ActorId
+  nameWithType: IWebhookData<TResource>.ActorId
+  nameWithType.vb: IWebhookData(Of TResource).ActorId
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1.ActorId*
+  name: ActorId
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookData-1.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookData_1_ActorId_
+  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1.ActorId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookData<TResource>.ActorId
+  fullName.vb: WxTeamsSharp.Interfaces.Webhooks.IWebhookData(Of TResource).ActorId
+  nameWithType: IWebhookData<TResource>.ActorId
+  nameWithType.vb: IWebhookData(Of TResource).ActorId
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1.Data
+  name: Data
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookData-1.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookData_1_Data
+  commentId: P:WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1.Data
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookData<TResource>.Data
+  fullName.vb: WxTeamsSharp.Interfaces.Webhooks.IWebhookData(Of TResource).Data
+  nameWithType: IWebhookData<TResource>.Data
+  nameWithType.vb: IWebhookData(Of TResource).Data
+- uid: WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1.Data*
+  name: Data
+  href: api/WxTeamsSharp.Interfaces.Webhooks.IWebhookData-1.html#WxTeamsSharp_Interfaces_Webhooks_IWebhookData_1_Data_
+  commentId: Overload:WxTeamsSharp.Interfaces.Webhooks.IWebhookData`1.Data
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Webhooks.IWebhookData<TResource>.Data
+  fullName.vb: WxTeamsSharp.Interfaces.Webhooks.IWebhookData(Of TResource).Data
+  nameWithType: IWebhookData<TResource>.Data
+  nameWithType.vb: IWebhookData(Of TResource).Data
 - uid: WxTeamsSharp.Models.Exceptions
   name: WxTeamsSharp.Models.Exceptions
   href: api/WxTeamsSharp.Models.Exceptions.html
@@ -3840,12 +3965,381 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Models.Exceptions.TeamsApiException.TrackingId
   nameWithType: TeamsApiException.TrackingId
+- uid: WxTeamsSharp.Models.Memberships
+  name: WxTeamsSharp.Models.Memberships
+  href: api/WxTeamsSharp.Models.Memberships.html
+  commentId: N:WxTeamsSharp.Models.Memberships
+  fullName: WxTeamsSharp.Models.Memberships
+  nameWithType: WxTeamsSharp.Models.Memberships
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership
+  name: RoomMembership
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html
+  commentId: T:WxTeamsSharp.Models.Memberships.RoomMembership
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership
+  nameWithType: RoomMembership
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.Created
+  name: Created
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_Created
+  commentId: P:WxTeamsSharp.Models.Memberships.RoomMembership.Created
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.Created
+  nameWithType: RoomMembership.Created
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.Created*
+  name: Created
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_Created_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.RoomMembership.Created
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.Created
+  nameWithType: RoomMembership.Created
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.DeleteAsync
+  name: DeleteAsync()
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_DeleteAsync
+  commentId: M:WxTeamsSharp.Models.Memberships.RoomMembership.DeleteAsync
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.DeleteAsync()
+  nameWithType: RoomMembership.DeleteAsync()
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.DeleteAsync*
+  name: DeleteAsync
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_DeleteAsync_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.RoomMembership.DeleteAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.DeleteAsync
+  nameWithType: RoomMembership.DeleteAsync
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.Error
+  name: Error
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_Error
+  commentId: P:WxTeamsSharp.Models.Memberships.RoomMembership.Error
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.Error
+  nameWithType: RoomMembership.Error
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.Error*
+  name: Error
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_Error_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.RoomMembership.Error
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.Error
+  nameWithType: RoomMembership.Error
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.Id
+  name: Id
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_Id
+  commentId: P:WxTeamsSharp.Models.Memberships.RoomMembership.Id
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.Id
+  nameWithType: RoomMembership.Id
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.Id*
+  name: Id
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_Id_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.RoomMembership.Id
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.Id
+  nameWithType: RoomMembership.Id
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.IsModerator
+  name: IsModerator
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_IsModerator
+  commentId: P:WxTeamsSharp.Models.Memberships.RoomMembership.IsModerator
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.IsModerator
+  nameWithType: RoomMembership.IsModerator
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.IsModerator*
+  name: IsModerator
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_IsModerator_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.RoomMembership.IsModerator
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.IsModerator
+  nameWithType: RoomMembership.IsModerator
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.PersonDisplayName
+  name: PersonDisplayName
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_PersonDisplayName
+  commentId: P:WxTeamsSharp.Models.Memberships.RoomMembership.PersonDisplayName
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.PersonDisplayName
+  nameWithType: RoomMembership.PersonDisplayName
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.PersonDisplayName*
+  name: PersonDisplayName
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_PersonDisplayName_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.RoomMembership.PersonDisplayName
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.PersonDisplayName
+  nameWithType: RoomMembership.PersonDisplayName
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.PersonEmail
+  name: PersonEmail
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_PersonEmail
+  commentId: P:WxTeamsSharp.Models.Memberships.RoomMembership.PersonEmail
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.PersonEmail
+  nameWithType: RoomMembership.PersonEmail
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.PersonEmail*
+  name: PersonEmail
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_PersonEmail_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.RoomMembership.PersonEmail
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.PersonEmail
+  nameWithType: RoomMembership.PersonEmail
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.PersonId
+  name: PersonId
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_PersonId
+  commentId: P:WxTeamsSharp.Models.Memberships.RoomMembership.PersonId
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.PersonId
+  nameWithType: RoomMembership.PersonId
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.PersonId*
+  name: PersonId
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_PersonId_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.RoomMembership.PersonId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.PersonId
+  nameWithType: RoomMembership.PersonId
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.PersonOrgId
+  name: PersonOrgId
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_PersonOrgId
+  commentId: P:WxTeamsSharp.Models.Memberships.RoomMembership.PersonOrgId
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.PersonOrgId
+  nameWithType: RoomMembership.PersonOrgId
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.PersonOrgId*
+  name: PersonOrgId
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_PersonOrgId_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.RoomMembership.PersonOrgId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.PersonOrgId
+  nameWithType: RoomMembership.PersonOrgId
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.RoomId
+  name: RoomId
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_RoomId
+  commentId: P:WxTeamsSharp.Models.Memberships.RoomMembership.RoomId
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.RoomId
+  nameWithType: RoomMembership.RoomId
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.RoomId*
+  name: RoomId
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_RoomId_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.RoomMembership.RoomId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.RoomId
+  nameWithType: RoomMembership.RoomId
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.UpdateAsync(System.Boolean)
+  name: UpdateAsync(Boolean)
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_UpdateAsync_System_Boolean_
+  commentId: M:WxTeamsSharp.Models.Memberships.RoomMembership.UpdateAsync(System.Boolean)
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.UpdateAsync(System.Boolean)
+  nameWithType: RoomMembership.UpdateAsync(Boolean)
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.UpdateAsync*
+  name: UpdateAsync
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_UpdateAsync_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.RoomMembership.UpdateAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.UpdateAsync
+  nameWithType: RoomMembership.UpdateAsync
 - uid: WxTeamsSharp.Models.Messages
   name: WxTeamsSharp.Models.Messages
   href: api/WxTeamsSharp.Models.Messages.html
   commentId: N:WxTeamsSharp.Models.Messages
   fullName: WxTeamsSharp.Models.Messages
   nameWithType: WxTeamsSharp.Models.Messages
+- uid: WxTeamsSharp.Models.Messages.Message
+  name: Message
+  href: api/WxTeamsSharp.Models.Messages.Message.html
+  commentId: T:WxTeamsSharp.Models.Messages.Message
+  fullName: WxTeamsSharp.Models.Messages.Message
+  nameWithType: Message
+- uid: WxTeamsSharp.Models.Messages.Message.AuthorEmail
+  name: AuthorEmail
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_AuthorEmail
+  commentId: P:WxTeamsSharp.Models.Messages.Message.AuthorEmail
+  fullName: WxTeamsSharp.Models.Messages.Message.AuthorEmail
+  nameWithType: Message.AuthorEmail
+- uid: WxTeamsSharp.Models.Messages.Message.AuthorEmail*
+  name: AuthorEmail
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_AuthorEmail_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.AuthorEmail
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.AuthorEmail
+  nameWithType: Message.AuthorEmail
+- uid: WxTeamsSharp.Models.Messages.Message.AuthorId
+  name: AuthorId
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_AuthorId
+  commentId: P:WxTeamsSharp.Models.Messages.Message.AuthorId
+  fullName: WxTeamsSharp.Models.Messages.Message.AuthorId
+  nameWithType: Message.AuthorId
+- uid: WxTeamsSharp.Models.Messages.Message.AuthorId*
+  name: AuthorId
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_AuthorId_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.AuthorId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.AuthorId
+  nameWithType: Message.AuthorId
+- uid: WxTeamsSharp.Models.Messages.Message.Created
+  name: Created
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Created
+  commentId: P:WxTeamsSharp.Models.Messages.Message.Created
+  fullName: WxTeamsSharp.Models.Messages.Message.Created
+  nameWithType: Message.Created
+- uid: WxTeamsSharp.Models.Messages.Message.Created*
+  name: Created
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Created_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.Created
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.Created
+  nameWithType: Message.Created
+- uid: WxTeamsSharp.Models.Messages.Message.DeleteAsync
+  name: DeleteAsync()
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_DeleteAsync
+  commentId: M:WxTeamsSharp.Models.Messages.Message.DeleteAsync
+  fullName: WxTeamsSharp.Models.Messages.Message.DeleteAsync()
+  nameWithType: Message.DeleteAsync()
+- uid: WxTeamsSharp.Models.Messages.Message.DeleteAsync*
+  name: DeleteAsync
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_DeleteAsync_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.DeleteAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.DeleteAsync
+  nameWithType: Message.DeleteAsync
+- uid: WxTeamsSharp.Models.Messages.Message.Error
+  name: Error
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Error
+  commentId: P:WxTeamsSharp.Models.Messages.Message.Error
+  fullName: WxTeamsSharp.Models.Messages.Message.Error
+  nameWithType: Message.Error
+- uid: WxTeamsSharp.Models.Messages.Message.Error*
+  name: Error
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Error_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.Error
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.Error
+  nameWithType: Message.Error
+- uid: WxTeamsSharp.Models.Messages.Message.Files
+  name: Files
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Files
+  commentId: P:WxTeamsSharp.Models.Messages.Message.Files
+  fullName: WxTeamsSharp.Models.Messages.Message.Files
+  nameWithType: Message.Files
+- uid: WxTeamsSharp.Models.Messages.Message.Files*
+  name: Files
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Files_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.Files
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.Files
+  nameWithType: Message.Files
+- uid: WxTeamsSharp.Models.Messages.Message.GetFullMessageAsync
+  name: GetFullMessageAsync()
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_GetFullMessageAsync
+  commentId: M:WxTeamsSharp.Models.Messages.Message.GetFullMessageAsync
+  fullName: WxTeamsSharp.Models.Messages.Message.GetFullMessageAsync()
+  nameWithType: Message.GetFullMessageAsync()
+- uid: WxTeamsSharp.Models.Messages.Message.GetFullMessageAsync*
+  name: GetFullMessageAsync
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_GetFullMessageAsync_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.GetFullMessageAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.GetFullMessageAsync
+  nameWithType: Message.GetFullMessageAsync
+- uid: WxTeamsSharp.Models.Messages.Message.Id
+  name: Id
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Id
+  commentId: P:WxTeamsSharp.Models.Messages.Message.Id
+  fullName: WxTeamsSharp.Models.Messages.Message.Id
+  nameWithType: Message.Id
+- uid: WxTeamsSharp.Models.Messages.Message.Id*
+  name: Id
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Id_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.Id
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.Id
+  nameWithType: Message.Id
+- uid: WxTeamsSharp.Models.Messages.Message.Markdown
+  name: Markdown
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Markdown
+  commentId: P:WxTeamsSharp.Models.Messages.Message.Markdown
+  fullName: WxTeamsSharp.Models.Messages.Message.Markdown
+  nameWithType: Message.Markdown
+- uid: WxTeamsSharp.Models.Messages.Message.Markdown*
+  name: Markdown
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Markdown_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.Markdown
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.Markdown
+  nameWithType: Message.Markdown
+- uid: WxTeamsSharp.Models.Messages.Message.MentionedGroups
+  name: MentionedGroups
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_MentionedGroups
+  commentId: P:WxTeamsSharp.Models.Messages.Message.MentionedGroups
+  fullName: WxTeamsSharp.Models.Messages.Message.MentionedGroups
+  nameWithType: Message.MentionedGroups
+- uid: WxTeamsSharp.Models.Messages.Message.MentionedGroups*
+  name: MentionedGroups
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_MentionedGroups_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.MentionedGroups
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.MentionedGroups
+  nameWithType: Message.MentionedGroups
+- uid: WxTeamsSharp.Models.Messages.Message.MentionedPeople
+  name: MentionedPeople
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_MentionedPeople
+  commentId: P:WxTeamsSharp.Models.Messages.Message.MentionedPeople
+  fullName: WxTeamsSharp.Models.Messages.Message.MentionedPeople
+  nameWithType: Message.MentionedPeople
+- uid: WxTeamsSharp.Models.Messages.Message.MentionedPeople*
+  name: MentionedPeople
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_MentionedPeople_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.MentionedPeople
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.MentionedPeople
+  nameWithType: Message.MentionedPeople
+- uid: WxTeamsSharp.Models.Messages.Message.RecipientEmail
+  name: RecipientEmail
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_RecipientEmail
+  commentId: P:WxTeamsSharp.Models.Messages.Message.RecipientEmail
+  fullName: WxTeamsSharp.Models.Messages.Message.RecipientEmail
+  nameWithType: Message.RecipientEmail
+- uid: WxTeamsSharp.Models.Messages.Message.RecipientEmail*
+  name: RecipientEmail
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_RecipientEmail_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.RecipientEmail
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.RecipientEmail
+  nameWithType: Message.RecipientEmail
+- uid: WxTeamsSharp.Models.Messages.Message.RecipientId
+  name: RecipientId
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_RecipientId
+  commentId: P:WxTeamsSharp.Models.Messages.Message.RecipientId
+  fullName: WxTeamsSharp.Models.Messages.Message.RecipientId
+  nameWithType: Message.RecipientId
+- uid: WxTeamsSharp.Models.Messages.Message.RecipientId*
+  name: RecipientId
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_RecipientId_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.RecipientId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.RecipientId
+  nameWithType: Message.RecipientId
+- uid: WxTeamsSharp.Models.Messages.Message.RoomId
+  name: RoomId
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_RoomId
+  commentId: P:WxTeamsSharp.Models.Messages.Message.RoomId
+  fullName: WxTeamsSharp.Models.Messages.Message.RoomId
+  nameWithType: Message.RoomId
+- uid: WxTeamsSharp.Models.Messages.Message.RoomId*
+  name: RoomId
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_RoomId_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.RoomId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.RoomId
+  nameWithType: Message.RoomId
+- uid: WxTeamsSharp.Models.Messages.Message.RoomType
+  name: RoomType
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_RoomType
+  commentId: P:WxTeamsSharp.Models.Messages.Message.RoomType
+  fullName: WxTeamsSharp.Models.Messages.Message.RoomType
+  nameWithType: Message.RoomType
+- uid: WxTeamsSharp.Models.Messages.Message.RoomType*
+  name: RoomType
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_RoomType_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.RoomType
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.RoomType
+  nameWithType: Message.RoomType
+- uid: WxTeamsSharp.Models.Messages.Message.Text
+  name: Text
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Text
+  commentId: P:WxTeamsSharp.Models.Messages.Message.Text
+  fullName: WxTeamsSharp.Models.Messages.Message.Text
+  nameWithType: Message.Text
+- uid: WxTeamsSharp.Models.Messages.Message.Text*
+  name: Text
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Text_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.Text
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.Text
+  nameWithType: Message.Text
 - uid: WxTeamsSharp.Models.Messages.MessageBuilder
   name: MessageBuilder
   href: api/WxTeamsSharp.Models.Messages.MessageBuilder.html
@@ -4292,3 +4786,599 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Models.People.PersonUpdater.UpdateOrgId
   nameWithType: PersonUpdater.UpdateOrgId
+- uid: WxTeamsSharp.Models.Rooms
+  name: WxTeamsSharp.Models.Rooms
+  href: api/WxTeamsSharp.Models.Rooms.html
+  commentId: N:WxTeamsSharp.Models.Rooms
+  fullName: WxTeamsSharp.Models.Rooms
+  nameWithType: WxTeamsSharp.Models.Rooms
+- uid: WxTeamsSharp.Models.Rooms.Room
+  name: Room
+  href: api/WxTeamsSharp.Models.Rooms.Room.html
+  commentId: T:WxTeamsSharp.Models.Rooms.Room
+  fullName: WxTeamsSharp.Models.Rooms.Room
+  nameWithType: Room
+- uid: WxTeamsSharp.Models.Rooms.Room.AddMessageCreatedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)
+  name: AddMessageCreatedWebhookAsync(String, String, String, String, IEnumerable<String>, Boolean, String)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_AddMessageCreatedWebhookAsync_System_String_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_String_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.AddMessageCreatedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)
+  name.vb: AddMessageCreatedWebhookAsync(String, String, String, String, IEnumerable(Of String), Boolean, String)
+  fullName: WxTeamsSharp.Models.Rooms.Room.AddMessageCreatedWebhookAsync(System.String, System.String, System.String, System.String, System.Collections.Generic.IEnumerable<System.String>, System.Boolean, System.String)
+  fullName.vb: WxTeamsSharp.Models.Rooms.Room.AddMessageCreatedWebhookAsync(System.String, System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of System.String), System.Boolean, System.String)
+  nameWithType: Room.AddMessageCreatedWebhookAsync(String, String, String, String, IEnumerable<String>, Boolean, String)
+  nameWithType.vb: Room.AddMessageCreatedWebhookAsync(String, String, String, String, IEnumerable(Of String), Boolean, String)
+- uid: WxTeamsSharp.Models.Rooms.Room.AddMessageCreatedWebhookAsync*
+  name: AddMessageCreatedWebhookAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_AddMessageCreatedWebhookAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.AddMessageCreatedWebhookAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.AddMessageCreatedWebhookAsync
+  nameWithType: Room.AddMessageCreatedWebhookAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.AddMessageDeletedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)
+  name: AddMessageDeletedWebhookAsync(String, String, String, String, IEnumerable<String>, Boolean, String)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_AddMessageDeletedWebhookAsync_System_String_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_String_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.AddMessageDeletedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)
+  name.vb: AddMessageDeletedWebhookAsync(String, String, String, String, IEnumerable(Of String), Boolean, String)
+  fullName: WxTeamsSharp.Models.Rooms.Room.AddMessageDeletedWebhookAsync(System.String, System.String, System.String, System.String, System.Collections.Generic.IEnumerable<System.String>, System.Boolean, System.String)
+  fullName.vb: WxTeamsSharp.Models.Rooms.Room.AddMessageDeletedWebhookAsync(System.String, System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of System.String), System.Boolean, System.String)
+  nameWithType: Room.AddMessageDeletedWebhookAsync(String, String, String, String, IEnumerable<String>, Boolean, String)
+  nameWithType.vb: Room.AddMessageDeletedWebhookAsync(String, String, String, String, IEnumerable(Of String), Boolean, String)
+- uid: WxTeamsSharp.Models.Rooms.Room.AddMessageDeletedWebhookAsync*
+  name: AddMessageDeletedWebhookAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_AddMessageDeletedWebhookAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.AddMessageDeletedWebhookAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.AddMessageDeletedWebhookAsync
+  nameWithType: Room.AddMessageDeletedWebhookAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.AddUserAddedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)
+  name: AddUserAddedWebhookAsync(String, String, String, String, Boolean, String)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_AddUserAddedWebhookAsync_System_String_System_String_System_String_System_String_System_Boolean_System_String_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.AddUserAddedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)
+  fullName: WxTeamsSharp.Models.Rooms.Room.AddUserAddedWebhookAsync(System.String, System.String, System.String, System.String, System.Boolean, System.String)
+  nameWithType: Room.AddUserAddedWebhookAsync(String, String, String, String, Boolean, String)
+- uid: WxTeamsSharp.Models.Rooms.Room.AddUserAddedWebhookAsync*
+  name: AddUserAddedWebhookAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_AddUserAddedWebhookAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.AddUserAddedWebhookAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.AddUserAddedWebhookAsync
+  nameWithType: Room.AddUserAddedWebhookAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.AddUserAsync(System.String,System.Boolean)
+  name: AddUserAsync(String, Boolean)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_AddUserAsync_System_String_System_Boolean_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.AddUserAsync(System.String,System.Boolean)
+  fullName: WxTeamsSharp.Models.Rooms.Room.AddUserAsync(System.String, System.Boolean)
+  nameWithType: Room.AddUserAsync(String, Boolean)
+- uid: WxTeamsSharp.Models.Rooms.Room.AddUserAsync(WxTeamsSharp.Interfaces.People.IPerson,System.Boolean)
+  name: AddUserAsync(IPerson, Boolean)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_AddUserAsync_WxTeamsSharp_Interfaces_People_IPerson_System_Boolean_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.AddUserAsync(WxTeamsSharp.Interfaces.People.IPerson,System.Boolean)
+  fullName: WxTeamsSharp.Models.Rooms.Room.AddUserAsync(WxTeamsSharp.Interfaces.People.IPerson, System.Boolean)
+  nameWithType: Room.AddUserAsync(IPerson, Boolean)
+- uid: WxTeamsSharp.Models.Rooms.Room.AddUserAsync*
+  name: AddUserAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_AddUserAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.AddUserAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.AddUserAsync
+  nameWithType: Room.AddUserAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.AddUserRemovedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)
+  name: AddUserRemovedWebhookAsync(String, String, String, String, Boolean, String)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_AddUserRemovedWebhookAsync_System_String_System_String_System_String_System_String_System_Boolean_System_String_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.AddUserRemovedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)
+  fullName: WxTeamsSharp.Models.Rooms.Room.AddUserRemovedWebhookAsync(System.String, System.String, System.String, System.String, System.Boolean, System.String)
+  nameWithType: Room.AddUserRemovedWebhookAsync(String, String, String, String, Boolean, String)
+- uid: WxTeamsSharp.Models.Rooms.Room.AddUserRemovedWebhookAsync*
+  name: AddUserRemovedWebhookAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_AddUserRemovedWebhookAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.AddUserRemovedWebhookAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.AddUserRemovedWebhookAsync
+  nameWithType: Room.AddUserRemovedWebhookAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.Created
+  name: Created
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_Created
+  commentId: P:WxTeamsSharp.Models.Rooms.Room.Created
+  fullName: WxTeamsSharp.Models.Rooms.Room.Created
+  nameWithType: Room.Created
+- uid: WxTeamsSharp.Models.Rooms.Room.Created*
+  name: Created
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_Created_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.Created
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.Created
+  nameWithType: Room.Created
+- uid: WxTeamsSharp.Models.Rooms.Room.CreatorId
+  name: CreatorId
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_CreatorId
+  commentId: P:WxTeamsSharp.Models.Rooms.Room.CreatorId
+  fullName: WxTeamsSharp.Models.Rooms.Room.CreatorId
+  nameWithType: Room.CreatorId
+- uid: WxTeamsSharp.Models.Rooms.Room.CreatorId*
+  name: CreatorId
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_CreatorId_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.CreatorId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.CreatorId
+  nameWithType: Room.CreatorId
+- uid: WxTeamsSharp.Models.Rooms.Room.DeleteAsync
+  name: DeleteAsync()
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_DeleteAsync
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.DeleteAsync
+  fullName: WxTeamsSharp.Models.Rooms.Room.DeleteAsync()
+  nameWithType: Room.DeleteAsync()
+- uid: WxTeamsSharp.Models.Rooms.Room.DeleteAsync*
+  name: DeleteAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_DeleteAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.DeleteAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.DeleteAsync
+  nameWithType: Room.DeleteAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.Error
+  name: Error
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_Error
+  commentId: P:WxTeamsSharp.Models.Rooms.Room.Error
+  fullName: WxTeamsSharp.Models.Rooms.Room.Error
+  nameWithType: Room.Error
+- uid: WxTeamsSharp.Models.Rooms.Room.Error*
+  name: Error
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_Error_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.Error
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.Error
+  nameWithType: Room.Error
+- uid: WxTeamsSharp.Models.Rooms.Room.GetMeetingDetailsAsync
+  name: GetMeetingDetailsAsync()
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_GetMeetingDetailsAsync
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.GetMeetingDetailsAsync
+  fullName: WxTeamsSharp.Models.Rooms.Room.GetMeetingDetailsAsync()
+  nameWithType: Room.GetMeetingDetailsAsync()
+- uid: WxTeamsSharp.Models.Rooms.Room.GetMeetingDetailsAsync*
+  name: GetMeetingDetailsAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_GetMeetingDetailsAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.GetMeetingDetailsAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.GetMeetingDetailsAsync
+  nameWithType: Room.GetMeetingDetailsAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.GetMembershipsAsync(System.Int32)
+  name: GetMembershipsAsync(Int32)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_GetMembershipsAsync_System_Int32_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.GetMembershipsAsync(System.Int32)
+  fullName: WxTeamsSharp.Models.Rooms.Room.GetMembershipsAsync(System.Int32)
+  nameWithType: Room.GetMembershipsAsync(Int32)
+- uid: WxTeamsSharp.Models.Rooms.Room.GetMembershipsAsync*
+  name: GetMembershipsAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_GetMembershipsAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.GetMembershipsAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.GetMembershipsAsync
+  nameWithType: Room.GetMembershipsAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.GetMessagesAsync(System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String},System.DateTimeOffset,System.String)
+  name: GetMessagesAsync(Int32, Boolean, ICollection<String>, DateTimeOffset, String)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_GetMessagesAsync_System_Int32_System_Boolean_System_Collections_Generic_ICollection_System_String__System_DateTimeOffset_System_String_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.GetMessagesAsync(System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String},System.DateTimeOffset,System.String)
+  name.vb: GetMessagesAsync(Int32, Boolean, ICollection(Of String), DateTimeOffset, String)
+  fullName: WxTeamsSharp.Models.Rooms.Room.GetMessagesAsync(System.Int32, System.Boolean, System.Collections.Generic.ICollection<System.String>, System.DateTimeOffset, System.String)
+  fullName.vb: WxTeamsSharp.Models.Rooms.Room.GetMessagesAsync(System.Int32, System.Boolean, System.Collections.Generic.ICollection(Of System.String), System.DateTimeOffset, System.String)
+  nameWithType: Room.GetMessagesAsync(Int32, Boolean, ICollection<String>, DateTimeOffset, String)
+  nameWithType.vb: Room.GetMessagesAsync(Int32, Boolean, ICollection(Of String), DateTimeOffset, String)
+- uid: WxTeamsSharp.Models.Rooms.Room.GetMessagesAsync*
+  name: GetMessagesAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_GetMessagesAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.GetMessagesAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.GetMessagesAsync
+  nameWithType: Room.GetMessagesAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeDateAsync(System.DateTimeOffset,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})
+  name: GetMessagesBeforeDateAsync(DateTimeOffset, Int32, Boolean, ICollection<String>)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_GetMessagesBeforeDateAsync_System_DateTimeOffset_System_Int32_System_Boolean_System_Collections_Generic_ICollection_System_String__
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeDateAsync(System.DateTimeOffset,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})
+  name.vb: GetMessagesBeforeDateAsync(DateTimeOffset, Int32, Boolean, ICollection(Of String))
+  fullName: WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeDateAsync(System.DateTimeOffset, System.Int32, System.Boolean, System.Collections.Generic.ICollection<System.String>)
+  fullName.vb: WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeDateAsync(System.DateTimeOffset, System.Int32, System.Boolean, System.Collections.Generic.ICollection(Of System.String))
+  nameWithType: Room.GetMessagesBeforeDateAsync(DateTimeOffset, Int32, Boolean, ICollection<String>)
+  nameWithType.vb: Room.GetMessagesBeforeDateAsync(DateTimeOffset, Int32, Boolean, ICollection(Of String))
+- uid: WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeDateAsync*
+  name: GetMessagesBeforeDateAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_GetMessagesBeforeDateAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeDateAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeDateAsync
+  nameWithType: Room.GetMessagesBeforeDateAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync(System.String,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})
+  name: GetMessagesBeforeMessageAsync(String, Int32, Boolean, ICollection<String>)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_GetMessagesBeforeMessageAsync_System_String_System_Int32_System_Boolean_System_Collections_Generic_ICollection_System_String__
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync(System.String,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})
+  name.vb: GetMessagesBeforeMessageAsync(String, Int32, Boolean, ICollection(Of String))
+  fullName: WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync(System.String, System.Int32, System.Boolean, System.Collections.Generic.ICollection<System.String>)
+  fullName.vb: WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync(System.String, System.Int32, System.Boolean, System.Collections.Generic.ICollection(Of System.String))
+  nameWithType: Room.GetMessagesBeforeMessageAsync(String, Int32, Boolean, ICollection<String>)
+  nameWithType.vb: Room.GetMessagesBeforeMessageAsync(String, Int32, Boolean, ICollection(Of String))
+- uid: WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync*
+  name: GetMessagesBeforeMessageAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_GetMessagesBeforeMessageAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync
+  nameWithType: Room.GetMessagesBeforeMessageAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.Id
+  name: Id
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_Id
+  commentId: P:WxTeamsSharp.Models.Rooms.Room.Id
+  fullName: WxTeamsSharp.Models.Rooms.Room.Id
+  nameWithType: Room.Id
+- uid: WxTeamsSharp.Models.Rooms.Room.Id*
+  name: Id
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_Id_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.Id
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.Id
+  nameWithType: Room.Id
+- uid: WxTeamsSharp.Models.Rooms.Room.IsLocked
+  name: IsLocked
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_IsLocked
+  commentId: P:WxTeamsSharp.Models.Rooms.Room.IsLocked
+  fullName: WxTeamsSharp.Models.Rooms.Room.IsLocked
+  nameWithType: Room.IsLocked
+- uid: WxTeamsSharp.Models.Rooms.Room.IsLocked*
+  name: IsLocked
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_IsLocked_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.IsLocked
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.IsLocked
+  nameWithType: Room.IsLocked
+- uid: WxTeamsSharp.Models.Rooms.Room.LastActivity
+  name: LastActivity
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_LastActivity
+  commentId: P:WxTeamsSharp.Models.Rooms.Room.LastActivity
+  fullName: WxTeamsSharp.Models.Rooms.Room.LastActivity
+  nameWithType: Room.LastActivity
+- uid: WxTeamsSharp.Models.Rooms.Room.LastActivity*
+  name: LastActivity
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_LastActivity_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.LastActivity
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.LastActivity
+  nameWithType: Room.LastActivity
+- uid: WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(System.String)
+  name: RemoveUserAsync(String)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_RemoveUserAsync_System_String_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(System.String)
+  fullName: WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(System.String)
+  nameWithType: Room.RemoveUserAsync(String)
+- uid: WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(WxTeamsSharp.Interfaces.People.IPerson)
+  name: RemoveUserAsync(IPerson)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_RemoveUserAsync_WxTeamsSharp_Interfaces_People_IPerson_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(WxTeamsSharp.Interfaces.People.IPerson)
+  fullName: WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(WxTeamsSharp.Interfaces.People.IPerson)
+  nameWithType: Room.RemoveUserAsync(IPerson)
+- uid: WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync*
+  name: RemoveUserAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_RemoveUserAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync
+  nameWithType: Room.RemoveUserAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.SendMessageAsync(System.String)
+  name: SendMessageAsync(String)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_SendMessageAsync_System_String_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.SendMessageAsync(System.String)
+  fullName: WxTeamsSharp.Models.Rooms.Room.SendMessageAsync(System.String)
+  nameWithType: Room.SendMessageAsync(String)
+- uid: WxTeamsSharp.Models.Rooms.Room.SendMessageAsync*
+  name: SendMessageAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_SendMessageAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.SendMessageAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.SendMessageAsync
+  nameWithType: Room.SendMessageAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.SendPlainMessageAsync(System.String)
+  name: SendPlainMessageAsync(String)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_SendPlainMessageAsync_System_String_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.SendPlainMessageAsync(System.String)
+  fullName: WxTeamsSharp.Models.Rooms.Room.SendPlainMessageAsync(System.String)
+  nameWithType: Room.SendPlainMessageAsync(String)
+- uid: WxTeamsSharp.Models.Rooms.Room.SendPlainMessageAsync*
+  name: SendPlainMessageAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_SendPlainMessageAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.SendPlainMessageAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.SendPlainMessageAsync
+  nameWithType: Room.SendPlainMessageAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.SipAddress
+  name: SipAddress
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_SipAddress
+  commentId: P:WxTeamsSharp.Models.Rooms.Room.SipAddress
+  fullName: WxTeamsSharp.Models.Rooms.Room.SipAddress
+  nameWithType: Room.SipAddress
+- uid: WxTeamsSharp.Models.Rooms.Room.SipAddress*
+  name: SipAddress
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_SipAddress_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.SipAddress
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.SipAddress
+  nameWithType: Room.SipAddress
+- uid: WxTeamsSharp.Models.Rooms.Room.TeamId
+  name: TeamId
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_TeamId
+  commentId: P:WxTeamsSharp.Models.Rooms.Room.TeamId
+  fullName: WxTeamsSharp.Models.Rooms.Room.TeamId
+  nameWithType: Room.TeamId
+- uid: WxTeamsSharp.Models.Rooms.Room.TeamId*
+  name: TeamId
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_TeamId_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.TeamId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.TeamId
+  nameWithType: Room.TeamId
+- uid: WxTeamsSharp.Models.Rooms.Room.Title
+  name: Title
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_Title
+  commentId: P:WxTeamsSharp.Models.Rooms.Room.Title
+  fullName: WxTeamsSharp.Models.Rooms.Room.Title
+  nameWithType: Room.Title
+- uid: WxTeamsSharp.Models.Rooms.Room.Title*
+  name: Title
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_Title_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.Title
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.Title
+  nameWithType: Room.Title
+- uid: WxTeamsSharp.Models.Rooms.Room.Type
+  name: Type
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_Type
+  commentId: P:WxTeamsSharp.Models.Rooms.Room.Type
+  fullName: WxTeamsSharp.Models.Rooms.Room.Type
+  nameWithType: Room.Type
+- uid: WxTeamsSharp.Models.Rooms.Room.Type*
+  name: Type
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_Type_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.Type
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.Type
+  nameWithType: Room.Type
+- uid: WxTeamsSharp.Models.Rooms.Room.UpdateAsync(System.String)
+  name: UpdateAsync(String)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_UpdateAsync_System_String_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.UpdateAsync(System.String)
+  fullName: WxTeamsSharp.Models.Rooms.Room.UpdateAsync(System.String)
+  nameWithType: Room.UpdateAsync(String)
+- uid: WxTeamsSharp.Models.Rooms.Room.UpdateAsync*
+  name: UpdateAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_UpdateAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.UpdateAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.UpdateAsync
+  nameWithType: Room.UpdateAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.UpdateUserAsync(System.String,System.Boolean)
+  name: UpdateUserAsync(String, Boolean)
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_UpdateUserAsync_System_String_System_Boolean_
+  commentId: M:WxTeamsSharp.Models.Rooms.Room.UpdateUserAsync(System.String,System.Boolean)
+  fullName: WxTeamsSharp.Models.Rooms.Room.UpdateUserAsync(System.String, System.Boolean)
+  nameWithType: Room.UpdateUserAsync(String, Boolean)
+- uid: WxTeamsSharp.Models.Rooms.Room.UpdateUserAsync*
+  name: UpdateUserAsync
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_UpdateUserAsync_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.UpdateUserAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.UpdateUserAsync
+  nameWithType: Room.UpdateUserAsync
+- uid: WxTeamsSharp.Models.Webhooks
+  name: WxTeamsSharp.Models.Webhooks
+  href: api/WxTeamsSharp.Models.Webhooks.html
+  commentId: N:WxTeamsSharp.Models.Webhooks
+  fullName: WxTeamsSharp.Models.Webhooks
+  nameWithType: WxTeamsSharp.Models.Webhooks
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1
+  name: WebhookData<T>
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html
+  commentId: T:WxTeamsSharp.Models.Webhooks.WebhookData`1
+  name.vb: WebhookData(Of T)
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T)
+  nameWithType: WebhookData<T>
+  nameWithType.vb: WebhookData(Of T)
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.ActorId
+  name: ActorId
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_ActorId
+  commentId: P:WxTeamsSharp.Models.Webhooks.WebhookData`1.ActorId
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.ActorId
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).ActorId
+  nameWithType: WebhookData<T>.ActorId
+  nameWithType.vb: WebhookData(Of T).ActorId
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.ActorId*
+  name: ActorId
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_ActorId_
+  commentId: Overload:WxTeamsSharp.Models.Webhooks.WebhookData`1.ActorId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.ActorId
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).ActorId
+  nameWithType: WebhookData<T>.ActorId
+  nameWithType.vb: WebhookData(Of T).ActorId
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.ApplicationId
+  name: ApplicationId
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_ApplicationId
+  commentId: P:WxTeamsSharp.Models.Webhooks.WebhookData`1.ApplicationId
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.ApplicationId
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).ApplicationId
+  nameWithType: WebhookData<T>.ApplicationId
+  nameWithType.vb: WebhookData(Of T).ApplicationId
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.ApplicationId*
+  name: ApplicationId
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_ApplicationId_
+  commentId: Overload:WxTeamsSharp.Models.Webhooks.WebhookData`1.ApplicationId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.ApplicationId
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).ApplicationId
+  nameWithType: WebhookData<T>.ApplicationId
+  nameWithType.vb: WebhookData(Of T).ApplicationId
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.CreatedBy
+  name: CreatedBy
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_CreatedBy
+  commentId: P:WxTeamsSharp.Models.Webhooks.WebhookData`1.CreatedBy
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.CreatedBy
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).CreatedBy
+  nameWithType: WebhookData<T>.CreatedBy
+  nameWithType.vb: WebhookData(Of T).CreatedBy
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.CreatedBy*
+  name: CreatedBy
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_CreatedBy_
+  commentId: Overload:WxTeamsSharp.Models.Webhooks.WebhookData`1.CreatedBy
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.CreatedBy
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).CreatedBy
+  nameWithType: WebhookData<T>.CreatedBy
+  nameWithType.vb: WebhookData(Of T).CreatedBy
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Data
+  name: Data
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Data
+  commentId: P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Data
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Data
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Data
+  nameWithType: WebhookData<T>.Data
+  nameWithType.vb: WebhookData(Of T).Data
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Data*
+  name: Data
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Data_
+  commentId: Overload:WxTeamsSharp.Models.Webhooks.WebhookData`1.Data
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Data
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Data
+  nameWithType: WebhookData<T>.Data
+  nameWithType.vb: WebhookData(Of T).Data
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Event
+  name: Event
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Event
+  commentId: P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Event
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Event
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Event
+  nameWithType: WebhookData<T>.Event
+  nameWithType.vb: WebhookData(Of T).Event
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Event*
+  name: Event
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Event_
+  commentId: Overload:WxTeamsSharp.Models.Webhooks.WebhookData`1.Event
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Event
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Event
+  nameWithType: WebhookData<T>.Event
+  nameWithType.vb: WebhookData(Of T).Event
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Filter
+  name: Filter
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Filter
+  commentId: P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Filter
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Filter
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Filter
+  nameWithType: WebhookData<T>.Filter
+  nameWithType.vb: WebhookData(Of T).Filter
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Filter*
+  name: Filter
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Filter_
+  commentId: Overload:WxTeamsSharp.Models.Webhooks.WebhookData`1.Filter
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Filter
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Filter
+  nameWithType: WebhookData<T>.Filter
+  nameWithType.vb: WebhookData(Of T).Filter
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Id
+  name: Id
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Id
+  commentId: P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Id
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Id
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Id
+  nameWithType: WebhookData<T>.Id
+  nameWithType.vb: WebhookData(Of T).Id
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Id*
+  name: Id
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Id_
+  commentId: Overload:WxTeamsSharp.Models.Webhooks.WebhookData`1.Id
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Id
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Id
+  nameWithType: WebhookData<T>.Id
+  nameWithType.vb: WebhookData(Of T).Id
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Name
+  name: Name
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Name
+  commentId: P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Name
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Name
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Name
+  nameWithType: WebhookData<T>.Name
+  nameWithType.vb: WebhookData(Of T).Name
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Name*
+  name: Name
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Name_
+  commentId: Overload:WxTeamsSharp.Models.Webhooks.WebhookData`1.Name
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Name
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Name
+  nameWithType: WebhookData<T>.Name
+  nameWithType.vb: WebhookData(Of T).Name
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.OrganizationId
+  name: OrganizationId
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_OrganizationId
+  commentId: P:WxTeamsSharp.Models.Webhooks.WebhookData`1.OrganizationId
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.OrganizationId
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).OrganizationId
+  nameWithType: WebhookData<T>.OrganizationId
+  nameWithType.vb: WebhookData(Of T).OrganizationId
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.OrganizationId*
+  name: OrganizationId
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_OrganizationId_
+  commentId: Overload:WxTeamsSharp.Models.Webhooks.WebhookData`1.OrganizationId
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.OrganizationId
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).OrganizationId
+  nameWithType: WebhookData<T>.OrganizationId
+  nameWithType.vb: WebhookData(Of T).OrganizationId
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.OwnedBy
+  name: OwnedBy
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_OwnedBy
+  commentId: P:WxTeamsSharp.Models.Webhooks.WebhookData`1.OwnedBy
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.OwnedBy
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).OwnedBy
+  nameWithType: WebhookData<T>.OwnedBy
+  nameWithType.vb: WebhookData(Of T).OwnedBy
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.OwnedBy*
+  name: OwnedBy
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_OwnedBy_
+  commentId: Overload:WxTeamsSharp.Models.Webhooks.WebhookData`1.OwnedBy
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.OwnedBy
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).OwnedBy
+  nameWithType: WebhookData<T>.OwnedBy
+  nameWithType.vb: WebhookData(Of T).OwnedBy
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Resource
+  name: Resource
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Resource
+  commentId: P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Resource
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Resource
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Resource
+  nameWithType: WebhookData<T>.Resource
+  nameWithType.vb: WebhookData(Of T).Resource
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Resource*
+  name: Resource
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Resource_
+  commentId: Overload:WxTeamsSharp.Models.Webhooks.WebhookData`1.Resource
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Resource
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Resource
+  nameWithType: WebhookData<T>.Resource
+  nameWithType.vb: WebhookData(Of T).Resource
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Status
+  name: Status
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Status
+  commentId: P:WxTeamsSharp.Models.Webhooks.WebhookData`1.Status
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Status
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Status
+  nameWithType: WebhookData<T>.Status
+  nameWithType.vb: WebhookData(Of T).Status
+- uid: WxTeamsSharp.Models.Webhooks.WebhookData`1.Status*
+  name: Status
+  href: api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html#WxTeamsSharp_Models_Webhooks_WebhookData_1_Status_
+  commentId: Overload:WxTeamsSharp.Models.Webhooks.WebhookData`1.Status
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Webhooks.WebhookData<T>.Status
+  fullName.vb: WxTeamsSharp.Models.Webhooks.WebhookData(Of T).Status
+  nameWithType: WebhookData<T>.Status
+  nameWithType.vb: WebhookData(Of T).Status

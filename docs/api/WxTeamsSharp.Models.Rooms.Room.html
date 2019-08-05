@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IRoom
+    <title>Class Room
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IRoom
+    <meta name="title" content="Class Room
    ">
     <meta name="generator" content="docfx 2.43.3.0">
     
@@ -68,10 +68,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom">
+            <article class="content wrap" id="_content" data-uid="WxTeamsSharp.Models.Rooms.Room">
   
   
-  <h1 id="WxTeamsSharp_Interfaces_Rooms_IRoom" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom" class="text-break">Interface IRoom
+  <h1 id="WxTeamsSharp_Models_Rooms_Room" data-uid="WxTeamsSharp.Models.Rooms.Room" class="text-break">Class Room
   </h1>
   <div class="markdown level0 summary"><p>Rooms are virtual meeting places where people post messages and collaborate to get work done.
 This API is used to manage the rooms themselves. Rooms are created and deleted with this API.
@@ -79,38 +79,62 @@ You can also update a room to change its title, for example.</p>
 <p>To create a team room, specify the a teamId in the POST payload.Note that once a room is added to a team, it cannot be moved</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Room</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="WxTeamsSharp.Interfaces.Rooms.IRoom.html">IRoom</a></div>
+    <div><a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessageable.html">IMessageable</a></div>
+    <div><a class="xref" href="WxTeamsSharp.Interfaces.General.IListable.html">IListable</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessageable.html#WxTeamsSharp_Interfaces_Messages_IMessageable_SendPlainMessageAsync_System_String_">IMessageable.SendPlainMessageAsync(String)</a>
+      <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessageable.html#WxTeamsSharp_Interfaces_Messages_IMessageable_SendMessageAsync_System_String_">IMessageable.SendMessageAsync(String)</a>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
     </div>
     <div>
-      <a class="xref" href="WxTeamsSharp.Interfaces.General.IListable.html#WxTeamsSharp_Interfaces_General_IListable_Error">IListable.Error</a>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="WxTeamsSharp.Interfaces.Rooms.html">WxTeamsSharp.Interfaces.Rooms</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="WxTeamsSharp.Models.Rooms.html">WxTeamsSharp.Models.Rooms</a></h6>
   <h6><strong>Assembly</strong>: WxTeamsSharp.dll</h6>
-  <h5 id="WxTeamsSharp_Interfaces_Rooms_IRoom_syntax">Syntax</h5>
+  <h5 id="WxTeamsSharp_Models_Rooms_Room_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IRoom : IMessageable, IListable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Room : IRoom, IMessageable, IListable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=60">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=56">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_Created_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.Created*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_Created" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.Created">Created</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_Created_" data-uid="WxTeamsSharp.Models.Rooms.Room.Created*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_Created" data-uid="WxTeamsSharp.Models.Rooms.Room.Created">Created</h4>
   <div class="markdown level1 summary"><p>The date and time the room was created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DateTimeOffset Created { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public DateTimeOffset Created { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -129,16 +153,17 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=55">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=52">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_CreatorId_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.CreatorId*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_CreatorId" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.CreatorId">CreatorId</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_CreatorId_" data-uid="WxTeamsSharp.Models.Rooms.Room.CreatorId*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_CreatorId" data-uid="WxTeamsSharp.Models.Rooms.Room.CreatorId">CreatorId</h4>
   <div class="markdown level1 summary"><p>The ID of the person who created this room.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string CreatorId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public string CreatorId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,16 +182,47 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=25">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=60">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_Id_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.Id*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_Id" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.Id">Id</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_Error_" data-uid="WxTeamsSharp.Models.Rooms.Room.Error*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_Error" data-uid="WxTeamsSharp.Models.Rooms.Room.Error">Error</h4>
+  <div class="markdown level1 summary"><p>Potential error when get multiple results</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;errors&quot;)]
+[JsonConverter(typeof(JsonUtilities.ConcreteConverter&lt;ListError&gt;))]
+public IListError Error { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.General.IListError.html">IListError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=27">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_Rooms_Room_Id_" data-uid="WxTeamsSharp.Models.Rooms.Room.Id*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_Id" data-uid="WxTeamsSharp.Models.Rooms.Room.Id">Id</h4>
   <div class="markdown level1 summary"><p>A unique identifier for the room.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Id { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public string Id { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,16 +241,17 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=40">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=40">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_IsLocked_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.IsLocked*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_IsLocked" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.IsLocked">IsLocked</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_IsLocked_" data-uid="WxTeamsSharp.Models.Rooms.Room.IsLocked*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_IsLocked" data-uid="WxTeamsSharp.Models.Rooms.Room.IsLocked">IsLocked</h4>
   <div class="markdown level1 summary"><p>Whether the room is moderated (locked) or not.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">bool IsLocked { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public bool IsLocked { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,16 +270,17 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=50">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=48">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_LastActivity_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.LastActivity*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_LastActivity" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.LastActivity">LastActivity</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_LastActivity_" data-uid="WxTeamsSharp.Models.Rooms.Room.LastActivity*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_LastActivity" data-uid="WxTeamsSharp.Models.Rooms.Room.LastActivity">LastActivity</h4>
   <div class="markdown level1 summary"><p>The date and time of the room's last activity.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DateTimeOffset LastActivity { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public DateTimeOffset LastActivity { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,16 +299,17 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=65">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=65">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_SipAddress_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.SipAddress*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_SipAddress" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.SipAddress">SipAddress</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_SipAddress_" data-uid="WxTeamsSharp.Models.Rooms.Room.SipAddress*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_SipAddress" data-uid="WxTeamsSharp.Models.Rooms.Room.SipAddress">SipAddress</h4>
   <div class="markdown level1 summary"><p>The SIP URI for the room.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string SipAddress { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public string SipAddress { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -269,16 +328,17 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=45">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=44">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_TeamId_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.TeamId*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_TeamId" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.TeamId">TeamId</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_TeamId_" data-uid="WxTeamsSharp.Models.Rooms.Room.TeamId*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_TeamId" data-uid="WxTeamsSharp.Models.Rooms.Room.TeamId">TeamId</h4>
   <div class="markdown level1 summary"><p>The ID for the team with which this room is associated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string TeamId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public string TeamId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -297,16 +357,17 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=30">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=31">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_Title_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.Title*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_Title" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.Title">Title</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_Title_" data-uid="WxTeamsSharp.Models.Rooms.Room.Title*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_Title" data-uid="WxTeamsSharp.Models.Rooms.Room.Title">Title</h4>
   <div class="markdown level1 summary"><p>A user-friendly name for the room.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Title { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public string Title { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -325,16 +386,18 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=35">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=35">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_Type_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.Type*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_Type" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.Type">Type</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_Type_" data-uid="WxTeamsSharp.Models.Rooms.Room.Type*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_Type" data-uid="WxTeamsSharp.Models.Rooms.Room.Type">Type</h4>
   <div class="markdown level1 summary"><p>The room type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RoomType Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+[JsonConverter(typeof(StringEnumConverter))]
+public RoomType Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,16 +418,16 @@ You can also update a room to change its title, for example.</p>
   </h3>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=183">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=151">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_AddMessageCreatedWebhookAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageCreatedWebhookAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_AddMessageCreatedWebhookAsync_System_String_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_String_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageCreatedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)">AddMessageCreatedWebhookAsync(String, String, String, String, IEnumerable&lt;String&gt;, Boolean, String)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_AddMessageCreatedWebhookAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.AddMessageCreatedWebhookAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_AddMessageCreatedWebhookAsync_System_String_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_String_" data-uid="WxTeamsSharp.Models.Rooms.Room.AddMessageCreatedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)">AddMessageCreatedWebhookAsync(String, String, String, String, IEnumerable&lt;String&gt;, Boolean, String)</h4>
   <div class="markdown level1 summary"><p>Add a new webhook for message created events that is filtered for this room by default.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IWebhook&gt; AddMessageCreatedWebhookAsync(string name, string targetUrl, string personIdFilter = &quot;&quot;, string personEmailFilter = &quot;&quot;, IEnumerable&lt;string&gt; mentionedPeople = null, bool hasFiles = false, string secret = &quot;&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IWebhook&gt; AddMessageCreatedWebhookAsync(string name, string targetUrl, string personIdFilter = &quot;&quot;, string personEmailFilter = &quot;&quot;, IEnumerable&lt;string&gt; mentionedPeople = null, bool hasFiles = false, string secret = &quot;&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -438,16 +501,16 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=198">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=159">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_AddMessageDeletedWebhookAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageDeletedWebhookAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_AddMessageDeletedWebhookAsync_System_String_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_String_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.AddMessageDeletedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)">AddMessageDeletedWebhookAsync(String, String, String, String, IEnumerable&lt;String&gt;, Boolean, String)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_AddMessageDeletedWebhookAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.AddMessageDeletedWebhookAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_AddMessageDeletedWebhookAsync_System_String_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_Boolean_System_String_" data-uid="WxTeamsSharp.Models.Rooms.Room.AddMessageDeletedWebhookAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.String)">AddMessageDeletedWebhookAsync(String, String, String, String, IEnumerable&lt;String&gt;, Boolean, String)</h4>
   <div class="markdown level1 summary"><p>Add a new webhook for message deleted events that is filtered for this room by default.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IWebhook&gt; AddMessageDeletedWebhookAsync(string name, string targetUrl, string personIdFilter = &quot;&quot;, string personEmailFilter = &quot;&quot;, IEnumerable&lt;string&gt; mentionedPeople = null, bool hasFiles = false, string secret = &quot;&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IWebhook&gt; AddMessageDeletedWebhookAsync(string name, string targetUrl, string personIdFilter = &quot;&quot;, string personEmailFilter = &quot;&quot;, IEnumerable&lt;string&gt; mentionedPeople = null, bool hasFiles = false, string secret = &quot;&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -521,16 +584,16 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=212">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=167">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserAddedWebhookAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAddedWebhookAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserAddedWebhookAsync_System_String_System_String_System_String_System_String_System_Boolean_System_String_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAddedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)">AddUserAddedWebhookAsync(String, String, String, String, Boolean, String)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_AddUserAddedWebhookAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.AddUserAddedWebhookAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_AddUserAddedWebhookAsync_System_String_System_String_System_String_System_String_System_Boolean_System_String_" data-uid="WxTeamsSharp.Models.Rooms.Room.AddUserAddedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)">AddUserAddedWebhookAsync(String, String, String, String, Boolean, String)</h4>
   <div class="markdown level1 summary"><p>Add a new webhook for user added events that is filtered for this room by default.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IWebhook&gt; AddUserAddedWebhookAsync(string name, string targetUrl, string personIdFilter = &quot;&quot;, string personEmailFilter = &quot;&quot;, bool isModerator = false, string secret = &quot;&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IWebhook&gt; AddUserAddedWebhookAsync(string name, string targetUrl, string personIdFilter = &quot;&quot;, string personEmailFilter = &quot;&quot;, bool isModerator = false, string secret = &quot;&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -598,16 +661,16 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=140">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=104">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserAsync_System_String_System_Boolean_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync(System.String,System.Boolean)">AddUserAsync(String, Boolean)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_AddUserAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.AddUserAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_AddUserAsync_System_String_System_Boolean_" data-uid="WxTeamsSharp.Models.Rooms.Room.AddUserAsync(System.String,System.Boolean)">AddUserAsync(String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Add someone to this room by user ID or email address; optionally making them a moderator.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IMembership&gt; AddUserAsync(string userIdOrEmail, bool isModerator = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IMembership&gt; AddUserAsync(string userIdOrEmail, bool isModerator = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -651,16 +714,16 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=148">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=143">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserAsync_WxTeamsSharp_Interfaces_People_IPerson_System_Boolean_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserAsync(WxTeamsSharp.Interfaces.People.IPerson,System.Boolean)">AddUserAsync(IPerson, Boolean)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_AddUserAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.AddUserAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_AddUserAsync_WxTeamsSharp_Interfaces_People_IPerson_System_Boolean_" data-uid="WxTeamsSharp.Models.Rooms.Room.AddUserAsync(WxTeamsSharp.Interfaces.People.IPerson,System.Boolean)">AddUserAsync(IPerson, Boolean)</h4>
   <div class="markdown level1 summary"><p>Add someone to this room by person object; optionally making them a moderator.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IMembership&gt; AddUserAsync(IPerson user, bool isModerator = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IMembership&gt; AddUserAsync(IPerson user, bool isModerator = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -701,16 +764,16 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=226">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=174">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserRemovedWebhookAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserRemovedWebhookAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_AddUserRemovedWebhookAsync_System_String_System_String_System_String_System_String_System_Boolean_System_String_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.AddUserRemovedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)">AddUserRemovedWebhookAsync(String, String, String, String, Boolean, String)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_AddUserRemovedWebhookAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.AddUserRemovedWebhookAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_AddUserRemovedWebhookAsync_System_String_System_String_System_String_System_String_System_Boolean_System_String_" data-uid="WxTeamsSharp.Models.Rooms.Room.AddUserRemovedWebhookAsync(System.String,System.String,System.String,System.String,System.Boolean,System.String)">AddUserRemovedWebhookAsync(String, String, String, String, Boolean, String)</h4>
   <div class="markdown level1 summary"><p>Add a new webhook for user added events that is filtered for this room by default.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IWebhook&gt; AddUserRemovedWebhookAsync(string name, string targetUrl, string personIdFilter = &quot;&quot;, string personEmailFilter = &quot;&quot;, bool isModerator = false, string secret = &quot;&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IWebhook&gt; AddUserRemovedWebhookAsync(string name, string targetUrl, string personIdFilter = &quot;&quot;, string personEmailFilter = &quot;&quot;, bool isModerator = false, string secret = &quot;&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -778,17 +841,17 @@ You can also update a room to change its title, for example.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=72">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=69">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_DeleteAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.DeleteAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_DeleteAsync" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.DeleteAsync">DeleteAsync()</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_DeleteAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.DeleteAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_DeleteAsync" data-uid="WxTeamsSharp.Models.Rooms.Room.DeleteAsync">DeleteAsync()</h4>
   <div class="markdown level1 summary"><p>Deletes a room, by ID. Deleted rooms cannot be recovered.
 Deleting a room that is part of a team will archive the room instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IResponseMessage&gt; DeleteAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IResponseMessage&gt; DeleteAsync()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -808,16 +871,16 @@ Deleting a room that is part of a team will archive the room instead.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=85">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=75">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_GetMeetingDetailsAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.GetMeetingDetailsAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_GetMeetingDetailsAsync" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.GetMeetingDetailsAsync">GetMeetingDetailsAsync()</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_GetMeetingDetailsAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.GetMeetingDetailsAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_GetMeetingDetailsAsync" data-uid="WxTeamsSharp.Models.Rooms.Room.GetMeetingDetailsAsync">GetMeetingDetailsAsync()</h4>
   <div class="markdown level1 summary"><p>Shows Webex meeting details for this room such as the SIP address, meeting URL, toll-free and toll dial-in numbers.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IMeetingDetails&gt; GetMeetingDetailsAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IMeetingDetails&gt; GetMeetingDetailsAsync()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -837,16 +900,16 @@ Deleting a room that is part of a team will archive the room instead.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=132">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=100">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_GetMembershipsAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.GetMembershipsAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_GetMembershipsAsync_System_Int32_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.GetMembershipsAsync(System.Int32)">GetMembershipsAsync(Int32)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_GetMembershipsAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.GetMembershipsAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_GetMembershipsAsync_System_Int32_" data-uid="WxTeamsSharp.Models.Rooms.Room.GetMembershipsAsync(System.Int32)">GetMembershipsAsync(Int32)</h4>
   <div class="markdown level1 summary"><p>Lists this room's memberships.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IListResult&lt;IMembership&gt;&gt; GetMembershipsAsync(int max = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IListResult&lt;IMembership&gt;&gt; GetMembershipsAsync(int max = 100)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -883,16 +946,16 @@ Deleting a room that is part of a team will archive the room instead.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=96">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=79">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_GetMessagesAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.GetMessagesAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_GetMessagesAsync_System_Int32_System_Boolean_System_Collections_Generic_ICollection_System_String__System_DateTimeOffset_System_String_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.GetMessagesAsync(System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String},System.DateTimeOffset,System.String)">GetMessagesAsync(Int32, Boolean, ICollection&lt;String&gt;, DateTimeOffset, String)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_GetMessagesAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.GetMessagesAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_GetMessagesAsync_System_Int32_System_Boolean_System_Collections_Generic_ICollection_System_String__System_DateTimeOffset_System_String_" data-uid="WxTeamsSharp.Models.Rooms.Room.GetMessagesAsync(System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String},System.DateTimeOffset,System.String)">GetMessagesAsync(Int32, Boolean, ICollection&lt;String&gt;, DateTimeOffset, String)</h4>
   <div class="markdown level1 summary"><p>Lists all messages in this room</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IListResult&lt;IMessage&gt;&gt; GetMessagesAsync(int max = 50, bool userMentioned = false, ICollection&lt;string&gt; mentionedPeople = null, DateTimeOffset before = default(DateTimeOffset), string beforeMessage = &quot;&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IListResult&lt;IMessage&gt;&gt; GetMessagesAsync(int max = 50, bool userMentioned = false, ICollection&lt;string&gt; mentionedPeople = null, DateTimeOffset before = default(DateTimeOffset), string beforeMessage = &quot;&quot;)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -954,10 +1017,10 @@ Deleting a room that is part of a team will archive the room instead.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=110">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=133">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_GetMessagesBeforeDateAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.GetMessagesBeforeDateAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_GetMessagesBeforeDateAsync_System_DateTimeOffset_System_Int32_System_Boolean_System_Collections_Generic_ICollection_System_String__" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.GetMessagesBeforeDateAsync(System.DateTimeOffset,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">GetMessagesBeforeDateAsync(DateTimeOffset, Int32, Boolean, ICollection&lt;String&gt;)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_GetMessagesBeforeDateAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeDateAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_GetMessagesBeforeDateAsync_System_DateTimeOffset_System_Int32_System_Boolean_System_Collections_Generic_ICollection_System_String__" data-uid="WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeDateAsync(System.DateTimeOffset,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">GetMessagesBeforeDateAsync(DateTimeOffset, Int32, Boolean, ICollection&lt;String&gt;)</h4>
   <div class="markdown level1 summary"><p>Lists all messages in this room before a specific date and time.
 Each message will include content attachments if present.
 The list sorts the messages in descending order by creation date.
@@ -966,7 +1029,7 @@ Long result sets will be split into pages.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IListResult&lt;IMessage&gt;&gt; GetMessagesBeforeDateAsync(DateTimeOffset before, int max = 50, bool userMentioned = false, ICollection&lt;string&gt; mentionedPeople = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IListResult&lt;IMessage&gt;&gt; GetMessagesBeforeDateAsync(DateTimeOffset before, int max = 50, bool userMentioned = false, ICollection&lt;string&gt; mentionedPeople = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1022,10 +1085,10 @@ Long result sets will be split into pages.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=124">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=138">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_GetMessagesBeforeMessageAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.GetMessagesBeforeMessageAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_GetMessagesBeforeMessageAsync_System_String_System_Int32_System_Boolean_System_Collections_Generic_ICollection_System_String__" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.GetMessagesBeforeMessageAsync(System.String,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">GetMessagesBeforeMessageAsync(String, Int32, Boolean, ICollection&lt;String&gt;)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_GetMessagesBeforeMessageAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_GetMessagesBeforeMessageAsync_System_String_System_Int32_System_Boolean_System_Collections_Generic_ICollection_System_String__" data-uid="WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync(System.String,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">GetMessagesBeforeMessageAsync(String, Int32, Boolean, ICollection&lt;String&gt;)</h4>
   <div class="markdown level1 summary"><p>Lists all messages in this room before a specific message.
 Each message will include content attachments if present.
 The list sorts the messages in descending order by creation date.
@@ -1034,7 +1097,7 @@ Long result sets will be split into pages.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IListResult&lt;IMessage&gt;&gt; GetMessagesBeforeMessageAsync(string messageId, int max = 50, bool userMentioned = false, ICollection&lt;string&gt; mentionedPeople = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IListResult&lt;IMessage&gt;&gt; GetMessagesBeforeMessageAsync(string messageId, int max = 50, bool userMentioned = false, ICollection&lt;string&gt; mentionedPeople = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1090,16 +1153,16 @@ Long result sets will be split into pages.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=163">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=115">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_RemoveUserAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.RemoveUserAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_RemoveUserAsync_System_String_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.RemoveUserAsync(System.String)">RemoveUserAsync(String)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_RemoveUserAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_RemoveUserAsync_System_String_" data-uid="WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(System.String)">RemoveUserAsync(String)</h4>
   <div class="markdown level1 summary"><p>Remove a user from this room</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IResponseMessage&gt; RemoveUserAsync(string userIdOrEmail)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IResponseMessage&gt; RemoveUserAsync(string userIdOrEmail)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1137,16 +1200,16 @@ Long result sets will be split into pages.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=170">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=147">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_RemoveUserAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.RemoveUserAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_RemoveUserAsync_WxTeamsSharp_Interfaces_People_IPerson_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.RemoveUserAsync(WxTeamsSharp.Interfaces.People.IPerson)">RemoveUserAsync(IPerson)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_RemoveUserAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_RemoveUserAsync_WxTeamsSharp_Interfaces_People_IPerson_" data-uid="WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(WxTeamsSharp.Interfaces.People.IPerson)">RemoveUserAsync(IPerson)</h4>
   <div class="markdown level1 summary"><p>Remove a user from this room</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IResponseMessage&gt; RemoveUserAsync(IPerson user)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IResponseMessage&gt; RemoveUserAsync(IPerson user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1182,16 +1245,108 @@ Long result sets will be split into pages.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=79">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=92">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_UpdateAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.UpdateAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_UpdateAsync_System_String_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.UpdateAsync(System.String)">UpdateAsync(String)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_SendMessageAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.SendMessageAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_SendMessageAsync_System_String_" data-uid="WxTeamsSharp.Models.Rooms.Room.SendMessageAsync(System.String)">SendMessageAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Send a markdown message</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IMessage&gt; SendMessageAsync(string markdown)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">markdown</span></td>
+        <td><p>markdown to send</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessage.html">IMessage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=84">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_Rooms_Room_SendPlainMessageAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.SendPlainMessageAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_SendPlainMessageAsync_System_String_" data-uid="WxTeamsSharp.Models.Rooms.Room.SendPlainMessageAsync(System.String)">SendPlainMessageAsync(String)</h4>
+  <div class="markdown level1 summary"><p>Send a plain text message</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IMessage&gt; SendPlainMessageAsync(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>text to send</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessage.html">IMessage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=72">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_Rooms_Room_UpdateAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.UpdateAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_UpdateAsync_System_String_" data-uid="WxTeamsSharp.Models.Rooms.Room.UpdateAsync(System.String)">UpdateAsync(String)</h4>
   <div class="markdown level1 summary"><p>Updates details for this room</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IRoom&gt; UpdateAsync(string title)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IRoom&gt; UpdateAsync(string title)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1229,16 +1384,16 @@ Long result sets will be split into pages.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=156">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=108">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Rooms_IRoom_UpdateUserAsync_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.UpdateUserAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Rooms_IRoom_UpdateUserAsync_System_String_System_Boolean_" data-uid="WxTeamsSharp.Interfaces.Rooms.IRoom.UpdateUserAsync(System.String,System.Boolean)">UpdateUserAsync(String, Boolean)</h4>
+  <a id="WxTeamsSharp_Models_Rooms_Room_UpdateUserAsync_" data-uid="WxTeamsSharp.Models.Rooms.Room.UpdateUserAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Rooms_Room_UpdateUserAsync_System_String_System_Boolean_" data-uid="WxTeamsSharp.Models.Rooms.Room.UpdateUserAsync(System.String,System.Boolean)">UpdateUserAsync(String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Updates properties for a user in this room</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IMembership&gt; UpdateUserAsync(string userIdOrEmail, bool isModerator)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IMembership&gt; UpdateUserAsync(string userIdOrEmail, bool isModerator)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1280,6 +1435,16 @@ Long result sets will be split into pages.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="WxTeamsSharp.Interfaces.Rooms.IRoom.html">IRoom</a>
+  </div>
+  <div>
+      <a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessageable.html">IMessageable</a>
+  </div>
+  <div>
+      <a class="xref" href="WxTeamsSharp.Interfaces.General.IListable.html">IListable</a>
+  </div>
 </article>
           </div>
           
@@ -1288,7 +1453,7 @@ Long result sets will be split into pages.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Rooms/IRoom.cs&amp;version=GBmaster&amp;line=20" class="contribution-link">View Source</a>
+                    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Rooms/Room.cs&amp;version=GBmaster&amp;line=24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

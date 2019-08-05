@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IMessage
+    <title>Class Message
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IMessage
+    <meta name="title" content="Class Message
    ">
     <meta name="generator" content="docfx 2.43.3.0">
     
@@ -68,10 +68,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage">
+            <article class="content wrap" id="_content" data-uid="WxTeamsSharp.Models.Messages.Message">
   
   
-  <h1 id="WxTeamsSharp_Interfaces_Messages_IMessage" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage" class="text-break">Interface IMessage
+  <h1 id="WxTeamsSharp_Models_Messages_Message" data-uid="WxTeamsSharp.Models.Messages.Message" class="text-break">Class Message
   </h1>
   <div class="markdown level0 summary"><p>Messages are how we communicate in a room. In Webex Teams, each message is displayed
 on its own line along with a timestamp and sender information. Use this API to list, create, and delete messages.</p>
@@ -79,32 +79,61 @@ on its own line along with a timestamp and sender information. Use this API to l
 <p>Just like in the Webex Teams app, you must be a member of the room in order to target it with this API.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Message</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessage.html">IMessage</a></div>
+    <div><a class="xref" href="WxTeamsSharp.Interfaces.General.IListable.html">IListable</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="WxTeamsSharp.Interfaces.General.IListable.html#WxTeamsSharp_Interfaces_General_IListable_Error">IListable.Error</a>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="WxTeamsSharp.Interfaces.Messages.html">WxTeamsSharp.Interfaces.Messages</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="WxTeamsSharp.Models.Messages.html">WxTeamsSharp.Models.Messages</a></h6>
   <h6><strong>Assembly</strong>: WxTeamsSharp.dll</h6>
-  <h5 id="WxTeamsSharp_Interfaces_Messages_IMessage_syntax">Syntax</h5>
+  <h5 id="WxTeamsSharp_Models_Messages_Message_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IMessage : IListable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Message : IMessage, IListable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=70">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=56">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_AuthorEmail_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.AuthorEmail*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_AuthorEmail" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.AuthorEmail">AuthorEmail</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_AuthorEmail_" data-uid="WxTeamsSharp.Models.Messages.Message.AuthorEmail*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_AuthorEmail" data-uid="WxTeamsSharp.Models.Messages.Message.AuthorEmail">AuthorEmail</h4>
   <div class="markdown level1 summary"><p>The email address of the message author.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string AuthorEmail { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;personEmail&quot;)]
+public string AuthorEmail { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,16 +152,17 @@ on its own line along with a timestamp and sender information. Use this API to l
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=65">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=52">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_AuthorId_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.AuthorId*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_AuthorId" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.AuthorId">AuthorId</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_AuthorId_" data-uid="WxTeamsSharp.Models.Messages.Message.AuthorId*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_AuthorId" data-uid="WxTeamsSharp.Models.Messages.Message.AuthorId">AuthorId</h4>
   <div class="markdown level1 summary"><p>The person ID of the message author.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string AuthorId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;personId&quot;)]
+public string AuthorId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,16 +181,16 @@ on its own line along with a timestamp and sender information. Use this API to l
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=85">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=68">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_Created_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.Created*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_Created" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.Created">Created</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_Created_" data-uid="WxTeamsSharp.Models.Messages.Message.Created*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_Created" data-uid="WxTeamsSharp.Models.Messages.Message.Created">Created</h4>
   <div class="markdown level1 summary"><p>The date and time the message was created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DateTimeOffset Created { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DateTimeOffset Created { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,16 +209,47 @@ on its own line along with a timestamp and sender information. Use this API to l
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=60">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=71">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_Files_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.Files*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_Files" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.Files">Files</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_Error_" data-uid="WxTeamsSharp.Models.Messages.Message.Error*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_Error" data-uid="WxTeamsSharp.Models.Messages.Message.Error">Error</h4>
+  <div class="markdown level1 summary"><p>Potential error when get multiple results</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;errors&quot;)]
+[JsonConverter(typeof(JsonUtilities.ConcreteConverter&lt;ListError&gt;))]
+public IListError Error { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WxTeamsSharp.Interfaces.General.IListError.html">IListError</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=48">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_Messages_Message_Files_" data-uid="WxTeamsSharp.Models.Messages.Message.Files*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_Files" data-uid="WxTeamsSharp.Models.Messages.Message.Files">Files</h4>
   <div class="markdown level1 summary"><p>Public URLs for files attached to the message. Currently limited to 1 at a time.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;string&gt; Files { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public List&lt;string&gt; Files { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,16 +268,17 @@ on its own line along with a timestamp and sender information. Use this API to l
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=22">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=19">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_Id_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.Id*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_Id" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.Id">Id</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_Id_" data-uid="WxTeamsSharp.Models.Messages.Message.Id*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_Id" data-uid="WxTeamsSharp.Models.Messages.Message.Id">Id</h4>
   <div class="markdown level1 summary"><p>The unique identifier for the message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Id { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public string Id { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,16 +297,17 @@ on its own line along with a timestamp and sender information. Use this API to l
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=55">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=44">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_Markdown_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.Markdown*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_Markdown" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.Markdown">Markdown</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_Markdown_" data-uid="WxTeamsSharp.Models.Messages.Message.Markdown*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_Markdown" data-uid="WxTeamsSharp.Models.Messages.Message.Markdown">Markdown</h4>
   <div class="markdown level1 summary"><p>The message, in Markdown format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Markdown { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public string Markdown { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,16 +326,17 @@ on its own line along with a timestamp and sender information. Use this API to l
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=80">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=64">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_MentionedGroups_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.MentionedGroups*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_MentionedGroups" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.MentionedGroups">MentionedGroups</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_MentionedGroups_" data-uid="WxTeamsSharp.Models.Messages.Message.MentionedGroups*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_MentionedGroups" data-uid="WxTeamsSharp.Models.Messages.Message.MentionedGroups">MentionedGroups</h4>
   <div class="markdown level1 summary"><p>Group names for the groups mentioned in the message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;string&gt; MentionedGroups { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public List&lt;string&gt; MentionedGroups { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,16 +355,17 @@ on its own line along with a timestamp and sender information. Use this API to l
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=75">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=60">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_MentionedPeople_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.MentionedPeople*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_MentionedPeople" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.MentionedPeople">MentionedPeople</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_MentionedPeople_" data-uid="WxTeamsSharp.Models.Messages.Message.MentionedPeople*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_MentionedPeople" data-uid="WxTeamsSharp.Models.Messages.Message.MentionedPeople">MentionedPeople</h4>
   <div class="markdown level1 summary"><p>People IDs for anyone mentioned in the message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">List&lt;string&gt; MentionedPeople { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public List&lt;string&gt; MentionedPeople { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -319,16 +384,17 @@ on its own line along with a timestamp and sender information. Use this API to l
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=44">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=36">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_RecipientEmail_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.RecipientEmail*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_RecipientEmail" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.RecipientEmail">RecipientEmail</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_RecipientEmail_" data-uid="WxTeamsSharp.Models.Messages.Message.RecipientEmail*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_RecipientEmail" data-uid="WxTeamsSharp.Models.Messages.Message.RecipientEmail">RecipientEmail</h4>
   <div class="markdown level1 summary"><p>The email address of the recipient when sending a private 1:1 message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string RecipientEmail { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;toPersonEmail&quot;)]
+public string RecipientEmail { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -347,16 +413,17 @@ on its own line along with a timestamp and sender information. Use this API to l
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=39">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=32">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_RecipientId_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.RecipientId*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_RecipientId" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.RecipientId">RecipientId</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_RecipientId_" data-uid="WxTeamsSharp.Models.Messages.Message.RecipientId*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_RecipientId" data-uid="WxTeamsSharp.Models.Messages.Message.RecipientId">RecipientId</h4>
   <div class="markdown level1 summary"><p>The person ID of the recipient when sending a private 1:1 message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string RecipientId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;toPersonId&quot;)]
+public string RecipientId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -375,16 +442,17 @@ on its own line along with a timestamp and sender information. Use this API to l
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=27">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=23">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_RoomId_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.RoomId*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_RoomId" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.RoomId">RoomId</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_RoomId_" data-uid="WxTeamsSharp.Models.Messages.Message.RoomId*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_RoomId" data-uid="WxTeamsSharp.Models.Messages.Message.RoomId">RoomId</h4>
   <div class="markdown level1 summary"><p>The room ID of the message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string RoomId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public string RoomId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -403,10 +471,10 @@ on its own line along with a timestamp and sender information. Use this API to l
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=34">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=27">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_RoomType_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.RoomType*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_RoomType" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.RoomType">RoomType</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_RoomType_" data-uid="WxTeamsSharp.Models.Messages.Message.RoomType*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_RoomType" data-uid="WxTeamsSharp.Models.Messages.Message.RoomType">RoomType</h4>
   <div class="markdown level1 summary"><p>The type of room.
 direct - 1:1 room
 group - group room</p>
@@ -414,7 +482,9 @@ group - group room</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RoomType RoomType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+[JsonConverter(typeof(StringEnumConverter))]
+public RoomType RoomType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -433,17 +503,18 @@ group - group room</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=50">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=40">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_Text_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.Text*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_Text" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.Text">Text</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_Text_" data-uid="WxTeamsSharp.Models.Messages.Message.Text*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_Text" data-uid="WxTeamsSharp.Models.Messages.Message.Text">Text</h4>
   <div class="markdown level1 summary"><p>The message, in plain text. If markdown is specified this parameter may be
 optionally used to provide alternate text for UI clients that do not support rich text.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">string Text { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public string Text { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -464,16 +535,16 @@ optionally used to provide alternate text for UI clients that do not support ric
   </h3>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=91">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=76">View Source</a>
   </span>
-  <a id="WxTeamsSharp_Interfaces_Messages_IMessage_DeleteAsync_" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.DeleteAsync*"></a>
-  <h4 id="WxTeamsSharp_Interfaces_Messages_IMessage_DeleteAsync" data-uid="WxTeamsSharp.Interfaces.Messages.IMessage.DeleteAsync">DeleteAsync()</h4>
+  <a id="WxTeamsSharp_Models_Messages_Message_DeleteAsync_" data-uid="WxTeamsSharp.Models.Messages.Message.DeleteAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_DeleteAsync" data-uid="WxTeamsSharp.Models.Messages.Message.DeleteAsync">DeleteAsync()</h4>
   <div class="markdown level1 summary"><p>Deletes this Message</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IResponseMessage&gt; DeleteAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IResponseMessage&gt; DeleteAsync()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -491,6 +562,42 @@ optionally used to provide alternate text for UI clients that do not support ric
       </tr>
     </tbody>
   </table>
+  
+  <span class="small pull-right mobile-hide">
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=83">View Source</a>
+  </span>
+  <a id="WxTeamsSharp_Models_Messages_Message_GetFullMessageAsync_" data-uid="WxTeamsSharp.Models.Messages.Message.GetFullMessageAsync*"></a>
+  <h4 id="WxTeamsSharp_Models_Messages_Message_GetFullMessageAsync" data-uid="WxTeamsSharp.Models.Messages.Message.GetFullMessageAsync">GetFullMessageAsync()</h4>
+  <div class="markdown level1 summary"><p>If the message came from a webhook it will not include text. This will query the API
+for the full message including text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IMessage&gt; GetFullMessageAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessage.html">IMessage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessage.html">IMessage</a>
+  </div>
+  <div>
+      <a class="xref" href="WxTeamsSharp.Interfaces.General.IListable.html">IListable</a>
+  </div>
 </article>
           </div>
           
@@ -499,7 +606,7 @@ optionally used to provide alternate text for UI clients that do not support ric
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/Messages/IMessage.cs&amp;version=GBmaster&amp;line=17" class="contribution-link">View Source</a>
+                    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
