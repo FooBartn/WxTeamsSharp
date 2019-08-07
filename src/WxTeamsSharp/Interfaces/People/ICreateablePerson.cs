@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using WxTeamsSharp.Interfaces.General;
+﻿using WxTeamsSharp.Interfaces.General;
 
 namespace WxTeamsSharp.Interfaces.People
 {
@@ -8,10 +7,6 @@ namespace WxTeamsSharp.Interfaces.People
     /// </summary>
     public interface ICreateablePerson : IJsonParams
     {
-        /// <summary>
-        /// Will create a person. Requires Admin privileges.
-        /// </summary>
-        /// <returns>IPerson object</returns>
-        Task<IPerson> CreateAsync();
+
     }
 }

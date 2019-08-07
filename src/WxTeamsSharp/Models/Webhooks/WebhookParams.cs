@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using WxTeamsSharp.Enums;
+using WxTeamsSharp.Helpers;
 using WxTeamsSharp.Interfaces.General;
-using WxTeamsSharp.Utilities;
 
 namespace WxTeamsSharp.Models.Webhooks
 {
@@ -31,6 +31,6 @@ namespace WxTeamsSharp.Models.Webhooks
         [JsonProperty(PropertyName = "status")]
         public WebhookStatus? Status { get; set; } = null;
 
-        public string ToJson() => JsonConvert.SerializeObject(this, JsonUtilities.IgnoreNull);
+        public string ToJson() => JsonConvert.SerializeObject(this, JsonSettings.IgnoreNull);
     }
 }

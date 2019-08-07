@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>WxTeamsSharp Documentation </title>
+    <title>WxTeamsSharp: A Webex Teams .NET C# Library </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="WxTeamsSharp Documentation ">
+    <meta name="title" content="WxTeamsSharp: A Webex Teams .NET C# Library ">
     <meta name="generator" content="docfx 2.43.3.0">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -60,78 +60,68 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="wxteamssharp-documentation">WxTeamsSharp Documentation</h1>
+<h2 id="wxteamssharp-a-webex-teams-net-c-library">WxTeamsSharp: A Webex Teams .NET C# Library</h2>
 
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
-<p>Install from Package Management Console:</p>
+<p>A .NET Standard 2.0 Library to help developers communicate easily with the Webex Teams API.</p>
+<p>Available on GitHub and <a href="https://www.nuget.org/packages/WxTeamsSharp/">NuGet</a>:</p>
 <pre><code>Install-Package WxTeamsSharp
 </code></pre>
+<blockquote>
+<p><strong>Notice:</strong> 2.0.0 is a major update with a paradigm shift from static to DI.
+You will want to check both of the examples for ways to get started.</p>
+</blockquote>
 <h2 id="basic-usage">Basic Usage</h2>
-<p>Take a look at the <a href="https://github.com/FooBartn/WxTeamsSharp/tree/master/test/WxTeamsSharp.IntegrationTests">Integration Tests</a> for more examples. They should cover most of the ways you can use the library. If all else fails, there's always the <a href="https://foobartn.github.io/WxTeamsSharp/api/index.html">API Reference</a>!</p>
+<p>Take a look at the <a href="https://github.com/FooBartn/WxTeamsSharp/tree/master/test/WxTeamsSharp.IntegrationTests">Integration Tests</a> and <a href="https://github.com/FooBartn/WxTeamsSharp/tree/master/examples">Example Projects</a>. They should cover most of the ways you can use the library. If all else fails, there's always the <a href="https://foobartn.github.io/WxTeamsSharp/api/index.html">API Reference</a>!</p>
 <h3 id="example">Example</h3>
-<pre><code class="lang-csharp">// Set the Auth Token
-WxTeamsApi.SetAuth(&quot;MyToken&quot;);
+<h4 id="di-setup">DI Setup</h4>
+<p>Be sure to check out the <a href="https://github.com/FooBartn/WxTeamsSharp/tree/master/examples/WxTeamsWebhookReceiver">WxTeamsWebhookReciever</a> for an ASP.NET Core example
+and <a href="https://github.com/FooBartn/WxTeamsSharp/tree/master/examples/WxTeamsConsoleBot">WxTeamsConsoleBot</a> for .NET Core Console example.</p>
+<pre><code class="lang-csharp"> public void ConfigureServices(IServiceCollection services)
+        {
+            ... 
 
-// Create a room
-var room = await WxTeamsApi.CreateRoomAsync(&quot;MyRoomName&quot;);
+            services.AddWxTeamsSharp();
 
-// Get users
-var users = await WxTeamsApi.GetUsersByEmailAsync(&quot;example@test.com&quot;);
+            ...
+        }
+</code></pre>
+<h4 id="code-example">Code Example</h4>
+<pre><code class="lang-csharp">public class TeamsService
+    {
+        private readonly IWxTeamsApi _wxTeamsApi;
 
-// Get user
-var user = users.FirstOrDefault(x =&gt; x.FirstName == &quot;Bob&quot;);
+        public TeamsService(IConfiguration configuration, IWxTeamsApi wxTeamsApi)
+        {
+            var token = configuration.GetSection(&quot;BotToken&quot;).Value;
+            _wxTeamsApi = wxTeamsApi;
+            _wxTeamsApi.Initialize(token);
+        }
 
-// Add user to room
-var membership = await room.AddUserAsync(user.Id);
+        public async Task HandleCreatedMessage(WebhookData&lt;Message&gt; webhookData)
+        {
+            var person = await _wxTeamsApi.GetUserAsync(webhookData.Data.AuthorId);
+            var room = await _wxTeamsApi.CreateRoomAsync(&quot;test&quot;);
+            await room.DeleteAsync();
 
-// Make user moderator
-var updatedMembership = await membership.UpdateAsync(true);
+            // The Message Created event will also trigger off a message created by the bot
+            // Unless you want to end up with an endless loop of messages, you have to make
+            // sure you're not responding to yourself.
 
-// Create webhook for this room
-// To catch new messages
-var webhook = await WxTeamsApi.CreateWebhookAsync(
-    &quot;Example Webhook&quot;, 
-    &quot;http://example.com/exampleWebhookReceiver&quot;, 
-    WebhookResource.Messages, 
-    EventType.Created, 
-    filter: $&quot;roomId={room.Id}&quot;);
+            // At the same time, it's probably a good idea to consider not letting your bot
+            // respond to other bots at all. Only people.
+            if (person.Type != PersonType.Bot)
+            {
+                var message = await _wxTeamsApi.GetMessageAsync(webhookData.Data.Id);
 
-// OR create the webhook via the room object
-var webhook = await room
-    .AddMessageCreatedWebhookAsync(&quot;Example Webhook&quot;, &quot;http://example.com/exampleWebhookReceiver&quot;);
+                var newMessage = MessageBuilder.New()
+                    .SendToRoom(message.RoomId)
+                    .WithMarkdown(&quot;**Hi!**&quot;)
+                    .Build();
 
-// Send a message to the room
-var message = await room.SendMessageAsync(&quot;**Hello**&quot;);
-
-// Delete Webhook
-await webhook.DeleteAsync();
-
-// Delete message
-await message.DeleteAsync();
-
-// Remove user from room via membership
-await membership.DeleteAsync();
-
-// OR
-
-// Remove user from room via room object
-await room.RemoveUserAsync(&quot;example@test.com&quot;);
-
-// Delete room
-room.DeleteAsync();
-
-// Create Team
-var team = await WxTeamsApi.CreateTeamAsync(&quot;My Team&quot;);
-
-// Add user to team as moderator
-var teamMember = await team.AddUserAsync(user.Id, true);
-
-// Remove user from team
-await team.RemoveUserAsync(user.Id);
-
-// Delete team
-await team.DeleteAsync();
-
+                await _wxTeamsApi.SendMessageAsync(newMessage);
+            }
+        }
+    }
 </code></pre>
 </article>
           </div>
@@ -141,7 +131,7 @@ await team.DeleteAsync();
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=docfx_project/index.md&amp;version=GBmaster&amp;line=1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=docfx_project/index.md&amp;version=GBdi_base&amp;line=1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

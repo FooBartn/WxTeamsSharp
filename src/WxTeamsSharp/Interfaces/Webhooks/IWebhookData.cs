@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WxTeamsSharp.Interfaces.Webhooks
+﻿namespace WxTeamsSharp.Interfaces.Webhooks
 {
     /// <summary>
     /// Webhook Data

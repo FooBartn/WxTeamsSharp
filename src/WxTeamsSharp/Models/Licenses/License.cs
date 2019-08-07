@@ -1,20 +1,26 @@
-﻿using WxTeamsSharp.Interfaces.Licenses;
+﻿using Newtonsoft.Json;
+using WxTeamsSharp.Interfaces.Licenses;
+using WxTeamsSharp.Models.General;
 
 namespace WxTeamsSharp.Models.Licenses
 {
     /// <inheritdoc/>
-    internal class License : ILicense
+    public class License : TeamsObject, ILicense
     {
         /// <inheritdoc/>
-        public string Id { get; set; }
+        [JsonProperty]
+        public string Id { get; private set; }
 
         /// <inheritdoc/>
-        public string Name { get; set; }
+        [JsonProperty]
+        public string Name { get; private set; }
 
         /// <inheritdoc/>
-        public int TotalUnits { get; set; }
+        [JsonProperty]
+        public int TotalUnits { get; private set; }
 
         /// <inheritdoc/>
-        public int ConsumedUnits { get; set; }
+        [JsonProperty]
+        public int ConsumedUnits { get; private set; }
     }
 }

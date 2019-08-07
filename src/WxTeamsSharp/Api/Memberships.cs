@@ -1,64 +1,39 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using WxTeamsSharp.Client;
+using WxTeamsSharp.Helpers;
 using WxTeamsSharp.Interfaces.General;
-using WxTeamsSharp.Interfaces.Memberships;
 using WxTeamsSharp.Models.Memberships;
-using WxTeamsSharp.Utilities;
 
 namespace WxTeamsSharp.Api
 {
-    public static partial class WxTeamsApi
+    internal partial class WxTeamsApi
     {
-        private static readonly string membershipUrl = "/memberships";
-
-        /// <summary>
-        /// Lists all room memberships.
-        /// </summary>
-        /// <param name="max">Limit the maximum number of memberships in the response.</param>
-        /// <returns>This method returns an IListResult object whose Items property is a list of IMembership</returns>
-        public static async Task<IListResult<IMembership>> GetAllMembershipsAsync(int max = 100)
+        /// <inheritdoc/>
+        public async Task<IListResult<RoomMembership>> GetAllMembershipsAsync(int max = 100)
         {
             var membershipParams = BuildMembershipQuery(max, null, null);
-            var path = await GetPathWithQueryAsync(membershipUrl, membershipParams);
-            return await TeamsClient.GetResultsAsync<RoomMembership, IMembership>(path);
+            var path = await GetPathWithQueryAsync(WxTeamsConstants.MembershipsUrl, membershipParams);
+            return await TeamsClient.GetResultsAsync<RoomMembership>(path);
         }
 
-
-        /// <summary>
-        /// Lists all room memberships associated with a particular user by userId or email
-        /// </summary>
-        /// <param name="userIdOrEmail">The Id or Email memberships should be associated with</param>
-        /// <param name="max">Limit the maximum number of memberships in the response.</param>
-        /// <returns>This method returns an IListResult object whose Items property is a list of IMembership</returns>
-        public static async Task<IListResult<IMembership>> GetMembershipsAssociatedWithAsync(string userIdOrEmail, int max = 100)
+        /// <inheritdoc/>
+        public async Task<IListResult<RoomMembership>> GetMembershipsAssociatedWithAsync(string userIdOrEmail, int max = 100)
         {
             var membershipParams = BuildMembershipQuery(max, userIdOrEmail, null);
-            var path = await GetPathWithQueryAsync(membershipUrl, membershipParams);
-            return await TeamsClient.GetResultsAsync<RoomMembership, IMembership>(path);
+            var path = await GetPathWithQueryAsync(WxTeamsConstants.MembershipsUrl, membershipParams);
+            return await TeamsClient.GetResultsAsync<RoomMembership>(path);
         }
 
-        /// <summary>
-        /// Lists all room memberships associated with a specific room
-        /// </summary>
-        /// <param name="roomId">Id of the room to which memberships should be associated</param>
-        /// <param name="max">Limit the maximum number of memberships in the response.</param>
-        /// <returns>This method returns an IListResult object whose Items property is a list of IMembership</returns>
-        public static async Task<IListResult<IMembership>> GetRoomMembershipsAsync(string roomId, int max = 100)
+        /// <inheritdoc/>
+        public async Task<IListResult<RoomMembership>> GetRoomMembershipsAsync(string roomId, int max = 100)
         {
             var membershipParams = BuildMembershipQuery(max, null, roomId);
-            var path = await GetPathWithQueryAsync(membershipUrl, membershipParams);
-            return await TeamsClient.GetResultsAsync<RoomMembership, IMembership>(path);
+            var path = await GetPathWithQueryAsync(WxTeamsConstants.MembershipsUrl, membershipParams);
+            return await TeamsClient.GetResultsAsync<RoomMembership>(path);
         }
 
-        /// <summary>
-        /// Add someone to a room by Person ID or email address; optionally making them a moderator.
-        /// </summary>
-        /// <param name="roomId">The room ID</param>
-        /// <param name="userIdOrEmail">The ID or email address of the person</param>
-        /// <param name="IsModerator">Whether or not the participant is a room moderator.</param>
-        /// <returns>This method returns the Membership that was created</returns>
-        public static async Task<IMembership> AddUserToRoomAsync(string roomId, string userIdOrEmail, bool IsModerator = false)
+        /// <inheritdoc/>
+        public async Task<RoomMembership> AddUserToRoomAsync(string roomId, string userIdOrEmail, bool IsModerator = false)
         {
             var props = new MembershipParams { RoomId = roomId, IsModerator = IsModerator };
 
@@ -67,37 +42,25 @@ namespace WxTeamsSharp.Api
             else
                 props.PersonId = userIdOrEmail;
 
-            return await TeamsClient.PostResultAsync<RoomMembership, MembershipParams>(membershipUrl, props);
+            return await TeamsClient.PostResultAsync<RoomMembership, MembershipParams>(WxTeamsConstants.MembershipsUrl, props);
         }
 
-        /// <summary>
-        /// Updates properties for a membership by ID.
-        /// </summary>
-        /// <param name="membershipId">The unique identifier for the membership.</param>
-        /// <param name="isModerator">Whether or not the participant is a room moderator.</param>
-        /// <returns>This method returns the Membership that was updated</returns>
-        public static async Task<IMembership> UpdateMembershipAsync(string membershipId, bool isModerator)
+        /// <inheritdoc/>
+        public async Task<RoomMembership> UpdateMembershipAsync(string membershipId, bool isModerator)
         {
             var props = new MembershipParams { IsModerator = isModerator };
-            return await TeamsClient.PutResultAsync<RoomMembership, MembershipParams>($"{membershipUrl}/{membershipId}", props);
+            return await TeamsClient.PutResultAsync<RoomMembership, MembershipParams>($"{WxTeamsConstants.MembershipsUrl}/{membershipId}", props);
         }
 
-        /// <summary>
-        /// Get details for a membership by ID.
-        /// </summary>
-        /// <param name="membershipId">The unique identifier for the membership.</param>
-        /// <returns>This method returns a Membership</returns>
-        public static async Task<IMembership> GetMembershipAsync(string membershipId)
-            => await TeamsClient.GetResultAsync<RoomMembership>($"{membershipUrl}/{membershipId}");
+        /// <inheritdoc/>
+        public async Task<RoomMembership> GetMembershipAsync(string membershipId)
+            => await TeamsClient.GetResultAsync<RoomMembership>($"{WxTeamsConstants.MembershipsUrl}/{membershipId}");
 
-        /// <summary>
-        /// Deletes a membership by ID.
-        /// </summary>
-        /// <param name="membershipId">The unique identifier for the membership.</param>
-        /// <returns>This method returns a response message which should be "OK"</returns>
-        public static async Task<IResponseMessage> DeleteMembershipAsync(string membershipId)
-            => await TeamsClient.DeleteResultAsync<RoomMembership>($"{membershipUrl}/{membershipId}");
+        /// <inheritdoc/>
+        public async Task<IResponseMessage> DeleteMembershipAsync(string membershipId)
+            => await TeamsClient.DeleteResultAsync<RoomMembership>($"{WxTeamsConstants.MembershipsUrl}/{membershipId}");
 
+        /// <inheritdoc/>
         private static List<KeyValuePair<string, string>> BuildMembershipQuery(int max, string userIdOrEmail, string roomId)
         {
             var membershipParams = new List<KeyValuePair<string, string>>();

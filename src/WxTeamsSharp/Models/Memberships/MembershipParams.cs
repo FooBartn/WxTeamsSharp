@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
+using WxTeamsSharp.Helpers;
 using WxTeamsSharp.Interfaces.General;
-using WxTeamsSharp.Utilities;
 
 namespace WxTeamsSharp.Models.Memberships
 {
@@ -18,6 +18,6 @@ namespace WxTeamsSharp.Models.Memberships
         public string PersonEmail { get; set; }
         [JsonProperty(PropertyName = "isModerator")]
         public bool IsModerator { get; set; }
-        public string ToJson() => JsonConvert.SerializeObject(this, JsonUtilities.IgnoreNull);
+        public string ToJson() => JsonConvert.SerializeObject(this, JsonSettings.IgnoreNull);
     }
 }

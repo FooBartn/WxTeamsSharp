@@ -1,23 +1,25 @@
 ﻿using Newtonsoft.Json;
+using WxTeamsSharp.Converters;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Interfaces.Roles;
 using WxTeamsSharp.Models.General;
-using static WxTeamsSharp.Utilities.JsonUtilities;
 
 namespace WxTeamsSharp.Models.Roles
 {
     /// <inheritdoc/>
-    internal class Role : IRole
+    public class Role : TeamsObject, IRole
     {
         /// <inheritdoc/>
-        public string Id { get; set; }
+        [JsonProperty]
+        public string Id { get; private set; }
 
         /// <inheritdoc/>
-        public string Name { get; set; }
+        [JsonProperty]
+        public string Name { get; private set; }
 
         /// <inheritdoc/>
         [JsonProperty(PropertyName = "errors")]
         [JsonConverter(typeof(ConcreteConverter<ListError>))]
-        public IListError Error { get; set; }
+        public IListError Error { get; private set; }
     }
 }

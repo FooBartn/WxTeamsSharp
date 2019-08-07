@@ -1,18 +1,17 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using WxTeamsSharp.Api;
+using WxTeamsSharp.Helpers;
 using WxTeamsSharp.Interfaces.People;
-using WxTeamsSharp.Utilities;
 
 namespace WxTeamsSharp.Models.People
 {
-    internal class PeopleParams : ICreateablePerson, IUpdateablePerson
+    internal class PeopleParams : IUpdateablePerson, ICreateablePerson
     {
-        private readonly string _id;
-
         public PeopleParams() { }
-        public PeopleParams(string id) { _id = id; }
+        public PeopleParams(string id) { Id = id; }
+
+        [JsonIgnore]
+        public string Id { get; set; }
 
         [JsonProperty(PropertyName = "emails")]
         public List<string> Emails { get; set; }
@@ -38,12 +37,6 @@ namespace WxTeamsSharp.Models.People
         [JsonProperty(PropertyName = "licenses")]
         public List<string> Licenses { get; set; }
 
-        public async Task<IPerson> CreateAsync()
-            => await WxTeamsApi.CreateUserAsync(this);
-
-        public string ToJson() => JsonConvert.SerializeObject(this, JsonUtilities.Standard);
-
-        public async Task<IPerson> UpdateAsync()
-            => await WxTeamsApi.UpdateUserAsync(_id, this);
+        public string ToJson() => JsonConvert.SerializeObject(this, JsonSettings.Standard);
     }
 }

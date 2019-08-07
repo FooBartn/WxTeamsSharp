@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
+using WxTeamsSharp.Helpers;
 using WxTeamsSharp.Interfaces.General;
-using WxTeamsSharp.Utilities;
 
 namespace WxTeamsSharp.Models.Rooms
 {
@@ -12,6 +12,6 @@ namespace WxTeamsSharp.Models.Rooms
         [JsonProperty("teamId")]
         public string TeamId { get; set; }
 
-        public string ToJson() => JsonConvert.SerializeObject(this, JsonUtilities.IgnoreNull);
+        public string ToJson() => JsonConvert.SerializeObject(this, JsonSettings.IgnoreNull);
     }
 }

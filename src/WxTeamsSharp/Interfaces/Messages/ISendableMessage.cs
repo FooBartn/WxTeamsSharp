@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using WxTeamsSharp.Interfaces.General;
+﻿using WxTeamsSharp.Interfaces.General;
 
 namespace WxTeamsSharp.Interfaces.Messages
 {
@@ -14,11 +13,5 @@ namespace WxTeamsSharp.Interfaces.Messages
         /// </summary>
         /// <returns>boolean</returns>
         bool HasLocalFile();
-
-        /// <summary>
-        /// Sends the message
-        /// </summary>
-        /// <returns>This method returns the new Message object</returns>
-        Task<IMessage> SendAsync();
     }
 }

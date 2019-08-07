@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
-using WxTeamsSharp.Api;
 using WxTeamsSharp.Enums;
+using WxTeamsSharp.Interfaces.Api;
 using WxTeamsSharp.Models.Messages;
 using WxTeamsSharp.Models.Webhooks;
 
@@ -9,15 +9,20 @@ namespace WxTeamsWebhookReceiver.Services
 {
     public class TeamsService
     {
-        public TeamsService(IConfiguration configuration)
+        private readonly IWxTeamsApi _wxTeamsApi;
+
+        public TeamsService(IConfiguration configuration, IWxTeamsApi wxTeamsApi)
         {
             var token = configuration.GetSection("BotToken").Value;
-            WxTeamsApi.SetAuth(token);
+            _wxTeamsApi = wxTeamsApi;
+            _wxTeamsApi.Initialize(token);
         }
 
         public async Task HandleCreatedMessage(WebhookData<Message> webhookData)
         {
-            var person = await WxTeamsApi.GetUserAsync(webhookData.Data.AuthorId);
+            var person = await _wxTeamsApi.GetUserAsync(webhookData.Data.AuthorId);
+            var room = await _wxTeamsApi.CreateRoomAsync("test");
+            await room.DeleteAsync();
 
             // The Message Created event will also trigger off a message created by the bot
             // Unless you want to end up with an endless loop of messages, you have to make
@@ -27,13 +32,14 @@ namespace WxTeamsWebhookReceiver.Services
             // respond to other bots at all. Only people.
             if (person.Type != PersonType.Bot)
             {
-                var message = await webhookData.Data.GetFullMessageAsync();
+                var message = await _wxTeamsApi.GetMessageAsync(webhookData.Data.Id);
 
-                await MessageBuilder.New()
+                var newMessage = MessageBuilder.New()
                     .SendToRoom(message.RoomId)
                     .WithMarkdown("**Hi!**")
-                    .Build()
-                    .SendAsync();
+                    .Build();
+
+                await _wxTeamsApi.SendMessageAsync(newMessage);
             }
         }
     }

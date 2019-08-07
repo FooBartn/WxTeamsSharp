@@ -7,12 +7,12 @@ namespace WxTeamsSharp.Interfaces.General
     /// Webex Teams returns an array of Items when getting multiple objects such as rooms.
     /// </summary>
     /// <typeparam name="TItem">Type for list of results from API</typeparam>
-    public interface IListResult<TItem>
+    public interface IListResult<TItem> : ITeamsObject
     {
         /// <summary>
         /// List of items of specified type
         /// </summary>
-        IList<TItem> Items { get; }
+        List<TItem> Items { get; }
 
         /// <summary>
         /// Whether the list has a next page or not

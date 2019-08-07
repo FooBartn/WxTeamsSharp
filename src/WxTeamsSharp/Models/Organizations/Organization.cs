@@ -1,18 +1,23 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using WxTeamsSharp.Interfaces.Organizations;
+using WxTeamsSharp.Models.General;
 
 namespace WxTeamsSharp.Models.Organizations
 {
     /// <inheritdoc/>
-    internal class Organization : IOrganization
+    public class Organization : TeamsObject, IOrganization
     {
         /// <inheritdoc/>
-        public string Id { get; set; }
+        [JsonProperty]
+        public string Id { get; private set; }
 
         /// <inheritdoc/>
-        public string DisplayName { get; set; }
+        [JsonProperty]
+        public string DisplayName { get; private set; }
 
         /// <inheritdoc/>
-        public DateTimeOffset Created { get; set; }
+        [JsonProperty]
+        public DateTimeOffset Created { get; private set; }
     }
 }

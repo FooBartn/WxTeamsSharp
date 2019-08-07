@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace WxTeamsSharp.Utilities
+namespace WxTeamsSharp.Extensions
 {
-    internal static class StringExtensions
+    internal static class String
     {
         /// <summary>
         /// Returns the input string with the first character converted to uppercase

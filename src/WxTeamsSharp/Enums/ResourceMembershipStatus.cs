@@ -9,7 +9,7 @@
         /// activation pending
         /// </summary>
         Pending,
-        
+
         /// <summary>
         /// activated
         /// </summary>

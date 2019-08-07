@@ -1,45 +1,58 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using WxTeamsSharp.Helpers;
+using WxTeamsSharp.Interfaces.Client;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Models.Exceptions;
 using WxTeamsSharp.Models.General;
-using WxTeamsSharp.Utilities;
 
 namespace WxTeamsSharp.Client
 {
-    internal static class TeamsClient
+    internal class TeamsClient : IWxTeamsClient
     {
-        private static readonly HttpClient _httpClient = new HttpClient();
-        private static string _token;
+        private readonly ILogger<TeamsClient> _logger;
+        private readonly IPolicyProvider _policyProvider;
+        private readonly IJsonDeserializer _serializer;
+        private readonly IHttpClientFactory _clientFactory;
+        private string _token;
 
-        internal static void SetAuth(string token, string url)
+        public TeamsClient(IHttpClientFactory clientFactory,
+            IJsonDeserializer serializer,
+            IPolicyProvider policyProvider,
+            ILogger<TeamsClient> logger)
         {
-            _token = token;
-
-            if (_httpClient.BaseAddress == null)
-                _httpClient.BaseAddress = new Uri(url);
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _policyProvider = policyProvider ?? throw new ArgumentNullException(nameof(policyProvider));
+            _serializer = serializer ?? throw new ArgumentNullException(nameof(serializer));
+            _clientFactory = clientFactory ?? throw new ArgumentNullException(nameof(clientFactory));
         }
 
-        private static async Task<string> HandleResultAsync<TEntity>(HttpResponseMessage result)
+        public void SetAuth(string token, string url = WxTeamsConstants.ApiBaseUrl)
+        {
+            _token = token ?? throw new ArgumentNullException(nameof(token));
+        }
+
+        private async Task HandleResultAsync<TEntity>(HttpResponseMessage result)
         {
             var message = await result.Content.ReadAsStringAsync();
-
-            if (result.IsSuccessStatusCode)
-                return message;
-
             var responseMessage = ConvertToResponseMessage(message);
             responseMessage.ObjectType = nameof(TEntity);
             responseMessage.RequestUrl = result.RequestMessage.RequestUri.PathAndQuery;
             responseMessage.HttpStatusCode = result.StatusCode;
 
-            throw new TeamsApiException(responseMessage);
+            var exception = new TeamsApiException(responseMessage);
+            _logger.LogError(exception, $"ObjectType: {exception.ObjectType} -- RawMessage:{exception.RawMessage}");
+            throw exception;
         }
 
-        private static HttpRequestMessage BuildRequestMessage(HttpMethod method, string endpoint,
+        private HttpRequestMessage BuildRequestMessage(HttpMethod method, string endpoint,
             string json, MultipartFormDataContent formData)
         {
             var request = new HttpRequestMessage(method, endpoint);
@@ -54,30 +67,68 @@ namespace WxTeamsSharp.Client
             return request;
         }
 
-        private static async Task<HttpResponseMessage> GetHttpResponse(HttpMethod method, string endpoint,
+        private async Task<HttpResponseMessage> GetHttpResponse<TEntity>(HttpMethod method, string endpoint,
             string json = null, MultipartFormDataContent formData = null)
         {
             ValidateTokenSet();
 
-            var request = BuildRequestMessage(method, endpoint, json, formData);
-            return await _httpClient.SendAsync(request);
+            var finalResult = await _policyProvider.RetryAfterPolicy
+                .ExecuteAsync(async () =>
+                {
+                    using (var client = _clientFactory.CreateClient())
+                    {
+                        var request = BuildRequestMessage(method, endpoint, json, formData);
+                        client.BaseAddress = new Uri(WxTeamsConstants.ApiBaseUrl);
+                        var result = await client.SendAsync(request);
+
+                        return result;
+                    }
+                });
+
+
+            if (!finalResult.IsSuccessStatusCode)
+                await HandleResultAsync<TEntity>(finalResult);
+
+            return finalResult;
         }
 
-        private static void ValidateTokenSet()
+        private void ValidateTokenSet()
         {
             if (string.IsNullOrEmpty(_token))
                 throw new ArgumentException("Token has not been set");
         }
 
-        internal static async Task<IListResult<TInterface>> GetResultsAsync<TEntity, TInterface>(string endpoint)
-            where TEntity : TInterface
+        private async Task<TEntity> DeserializeTeamsObjectAsync<TEntity>(HttpResponseMessage result)
+            where TEntity : TeamsObject
         {
-            var result = await Policies.RetryAfterPolicy
-                .ExecuteAsync(async () => await GetHttpResponse(HttpMethod.Get, endpoint));
-            var content = await HandleResultAsync<TEntity>(result);
-            var entity = JsonUtilities.FromJson<ItemsResult<TEntity>>(content);
+            using (var streamReader = new StreamReader(await result.Content.ReadAsStreamAsync()))
+            {
+                using (var jsonTextReader = new JsonTextReader(streamReader))
+                {
+                    return _serializer.Deserialize<TEntity>(jsonTextReader);
+                }
+            }
+        }
 
-            if (result.Headers.TryGetValues("Link", out IEnumerable<string> values)
+        private async Task<IListResult<TEntity>> DeserializeItemResultsAsync<TEntity>(HttpResponseMessage result)
+            where TEntity : TeamsObject
+        {
+            using (var streamReader = new StreamReader(await result.Content.ReadAsStreamAsync()))
+            {
+                using (var jsonTextReader = new JsonTextReader(streamReader))
+                {
+                    var itemsResult = _serializer.DeserializeList<TEntity>(jsonTextReader);
+                    SetNextPage(result, itemsResult);
+                    return itemsResult;
+                }
+            }
+        }
+
+        private void SetNextPage<TEntity>(HttpResponseMessage result, IListResult<TEntity> listResult)
+            where TEntity : TeamsObject
+        {
+            if (listResult is ItemsResult<TEntity> itemsResult
+                && result.Headers.TryGetValues("Link", out IEnumerable<string> values)
                 && values.FirstOrDefault() is string link
                 && !string.IsNullOrEmpty(link)
                 && link.Contains("rel=\"next\""))
@@ -87,89 +138,62 @@ namespace WxTeamsSharp.Client
                     .Replace(">; rel=\"next\"", "");
 
                 if (Uri.IsWellFormedUriString(link, UriKind.Relative))
-                    entity.NextPage = link;
+                    itemsResult.SetNextPage(link);
             }
-
-            return ConvertToIListResult<TInterface, TEntity>(entity);
         }
 
-        internal static async Task<TEntity> GetResultAsync<TEntity>(string endpoint)
-            where TEntity : class
+        public async Task<IListResult<TEntity>> GetResultsAsync<TEntity>(string endpoint)
+            where TEntity : TeamsObject
         {
-            var result = await Policies.RetryAfterPolicy
-                .ExecuteAsync(async () => await GetHttpResponse(HttpMethod.Get, endpoint));
-
-            var content = await HandleResultAsync<TEntity>(result);
-            var entity = JsonUtilities.FromJson<TEntity>(content);
-
-            return entity;
+            using (var result = await GetHttpResponse<TEntity>(HttpMethod.Get, endpoint))
+                return await DeserializeItemResultsAsync<TEntity>(result);
         }
 
-        internal static async Task<IResponseMessage> DeleteResultAsync<TEntity>(string endpoint)
+        public async Task<TEntity> GetResultAsync<TEntity>(string endpoint)
+            where TEntity : TeamsObject
         {
-            var result = await Policies.RetryAfterPolicy
-                .ExecuteAsync(async () => await GetHttpResponse(HttpMethod.Delete, endpoint));
-            await HandleResultAsync<TEntity>(result);
+            using (var result = await GetHttpResponse<TEntity>(HttpMethod.Get, endpoint))
+                return await DeserializeTeamsObjectAsync<TEntity>(result);
+        }
 
-            return new ResponseMessage
-            {
-                Message = "OK"
-            };
+        public async Task<IResponseMessage> DeleteResultAsync<TEntity>(string endpoint)
+        {
+            using (await GetHttpResponse<TEntity>(HttpMethod.Delete, endpoint))
+                return new ResponseMessage { Message = "OK" };
         }
 
         private static ResponseMessage ConvertToResponseMessage(string message)
         {
-            var errorResult = JsonUtilities.FromJson<ResponseMessage>(message);
+            var errorResult = JsonConvert.DeserializeObject<ResponseMessage>(message);
             errorResult.RawMessage = message;
             return errorResult;
         }
 
-        internal static async Task<TEntity> PostMultiPartResultAsync<TEntity, TEntityParams>(string endpoint, TEntityParams requestParams)
+        public async Task<TEntity> PostMultiPartResultAsync<TEntity, TEntityParams>(string endpoint, TEntityParams requestParams)
             where TEntityParams : IFormDataParams
-            where TEntity : class
+            where TEntity : TeamsObject
         {
             var formData = requestParams.ToFormData();
-            var result = await Policies.RetryAfterPolicy
-                .ExecuteAsync(async () => await GetHttpResponse(HttpMethod.Post, endpoint, formData: formData));
-            var content = await HandleResultAsync<TEntity>(result);
-            var entity = JsonUtilities.FromJson<TEntity>(content);
-
-            return entity;
+            using (var result = await GetHttpResponse<TEntity>(HttpMethod.Post, endpoint, formData: formData))
+                return await DeserializeTeamsObjectAsync<TEntity>(result);
         }
 
-        internal static async Task<TEntity> PostResultAsync<TEntity, TEntityParams>(string endpoint, TEntityParams requestParams)
+        public async Task<TEntity> PostResultAsync<TEntity, TEntityParams>(string endpoint, TEntityParams requestParams)
             where TEntityParams : IJsonParams
-            where TEntity : class
+            where TEntity : TeamsObject
         {
             var json = requestParams.ToJson();
-            var result = await Policies.RetryAfterPolicy
-                .ExecuteAsync(async () => await GetHttpResponse(HttpMethod.Post, endpoint, json));
-            var content = await HandleResultAsync<TEntity>(result);
-            var entity = JsonUtilities.FromJson<TEntity>(content);
-
-            return entity;
+            using (var result = await GetHttpResponse<TEntity>(HttpMethod.Post, endpoint, json))
+                return await DeserializeTeamsObjectAsync<TEntity>(result);
         }
 
-        internal static async Task<TEntity> PutResultAsync<TEntity, TEntityParams>(string endpoint, TEntityParams requestParams)
+        public async Task<TEntity> PutResultAsync<TEntity, TEntityParams>(string endpoint, TEntityParams requestParams)
             where TEntityParams : IJsonParams
-            where TEntity : class
+            where TEntity : TeamsObject
         {
             var json = requestParams.ToJson();
-            var result = await Policies.RetryAfterPolicy
-                .ExecuteAsync(async () => await GetHttpResponse(HttpMethod.Put, endpoint, json));
-            var content = await HandleResultAsync<TEntity>(result);
-            var entity = JsonUtilities.FromJson<TEntity>(content);
-
-            return entity;
-        }
-
-        private static IListResult<TInterface> ConvertToIListResult<TInterface, TConcrete>(ItemsResult<TConcrete> result)
-            where TConcrete : TInterface
-        {
-            var converted = Enumerable.Cast<TInterface>(result.Items).ToList();
-            var listResult = new ItemsResult<TInterface>(converted, result.NextPage);
-
-            return listResult;
+            using (var result = await GetHttpResponse<TEntity>(HttpMethod.Put, endpoint, json))
+                return await DeserializeTeamsObjectAsync<TEntity>(result);
         }
     }
 }

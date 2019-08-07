@@ -73,24 +73,28 @@
   
   <h1 id="WxTeamsSharp_Models_Messages_Message" data-uid="WxTeamsSharp.Models.Messages.Message" class="text-break">Class Message
   </h1>
-  <div class="markdown level0 summary"><p>Messages are how we communicate in a room. In Webex Teams, each message is displayed
-on its own line along with a timestamp and sender information. Use this API to list, create, and delete messages.</p>
-<p>Message can contain plain text, rich text, and a file attachment.</p>
-<p>Just like in the Webex Teams app, you must be a member of the room in order to target it with this API.</p>
+  <div class="markdown level0 summary"><p>Base Teams Object. Currently used to supply objects
+with reference to the API so we can make calls directly
+from the object</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Message</span></div>
+    <div class="level1"><a class="xref" href="WxTeamsSharp.Models.General.TeamsObject.html">TeamsObject</a></div>
+    <div class="level2"><span class="xref">Message</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="WxTeamsSharp.Interfaces.General.ITeamsObject.html">ITeamsObject</a></div>
     <div><a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessage.html">IMessage</a></div>
     <div><a class="xref" href="WxTeamsSharp.Interfaces.General.IListable.html">IListable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="WxTeamsSharp.Models.General.TeamsObject.html#WxTeamsSharp_Models_General_TeamsObject_TeamsApi">TeamsObject.TeamsApi</a>
+    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -117,13 +121,13 @@ on its own line along with a timestamp and sender information. Use this API to l
   <h6><strong>Assembly</strong>: WxTeamsSharp.dll</h6>
   <h5 id="WxTeamsSharp_Models_Messages_Message_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Message : IMessage, IListable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Message : TeamsObject, ITeamsObject, IMessage, IListable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=56">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=56">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_AuthorEmail_" data-uid="WxTeamsSharp.Models.Messages.Message.AuthorEmail*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_AuthorEmail" data-uid="WxTeamsSharp.Models.Messages.Message.AuthorEmail">AuthorEmail</h4>
@@ -152,7 +156,7 @@ public string AuthorEmail { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=52">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=52">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_AuthorId_" data-uid="WxTeamsSharp.Models.Messages.Message.AuthorId*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_AuthorId" data-uid="WxTeamsSharp.Models.Messages.Message.AuthorId">AuthorId</h4>
@@ -181,7 +185,7 @@ public string AuthorId { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=68">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=68">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_Created_" data-uid="WxTeamsSharp.Models.Messages.Message.Created*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_Created" data-uid="WxTeamsSharp.Models.Messages.Message.Created">Created</h4>
@@ -209,7 +213,7 @@ public string AuthorId { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=71">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=71">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_Error_" data-uid="WxTeamsSharp.Models.Messages.Message.Error*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_Error" data-uid="WxTeamsSharp.Models.Messages.Message.Error">Error</h4>
@@ -219,7 +223,7 @@ public string AuthorId { get; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;errors&quot;)]
-[JsonConverter(typeof(JsonUtilities.ConcreteConverter&lt;ListError&gt;))]
+[JsonConverter(typeof(ConcreteConverter&lt;ListError&gt;))]
 public IListError Error { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -239,7 +243,7 @@ public IListError Error { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=48">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=48">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_Files_" data-uid="WxTeamsSharp.Models.Messages.Message.Files*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_Files" data-uid="WxTeamsSharp.Models.Messages.Message.Files">Files</h4>
@@ -268,7 +272,7 @@ public List&lt;string&gt; Files { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=19">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=19">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_Id_" data-uid="WxTeamsSharp.Models.Messages.Message.Id*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_Id" data-uid="WxTeamsSharp.Models.Messages.Message.Id">Id</h4>
@@ -297,7 +301,7 @@ public string Id { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=44">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=44">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_Markdown_" data-uid="WxTeamsSharp.Models.Messages.Message.Markdown*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_Markdown" data-uid="WxTeamsSharp.Models.Messages.Message.Markdown">Markdown</h4>
@@ -326,7 +330,7 @@ public string Markdown { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=64">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=64">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_MentionedGroups_" data-uid="WxTeamsSharp.Models.Messages.Message.MentionedGroups*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_MentionedGroups" data-uid="WxTeamsSharp.Models.Messages.Message.MentionedGroups">MentionedGroups</h4>
@@ -355,7 +359,7 @@ public List&lt;string&gt; MentionedGroups { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=60">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=60">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_MentionedPeople_" data-uid="WxTeamsSharp.Models.Messages.Message.MentionedPeople*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_MentionedPeople" data-uid="WxTeamsSharp.Models.Messages.Message.MentionedPeople">MentionedPeople</h4>
@@ -384,7 +388,7 @@ public List&lt;string&gt; MentionedPeople { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=36">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=36">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_RecipientEmail_" data-uid="WxTeamsSharp.Models.Messages.Message.RecipientEmail*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_RecipientEmail" data-uid="WxTeamsSharp.Models.Messages.Message.RecipientEmail">RecipientEmail</h4>
@@ -413,7 +417,7 @@ public string RecipientEmail { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=32">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=32">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_RecipientId_" data-uid="WxTeamsSharp.Models.Messages.Message.RecipientId*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_RecipientId" data-uid="WxTeamsSharp.Models.Messages.Message.RecipientId">RecipientId</h4>
@@ -442,7 +446,7 @@ public string RecipientId { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=23">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=23">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_RoomId_" data-uid="WxTeamsSharp.Models.Messages.Message.RoomId*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_RoomId" data-uid="WxTeamsSharp.Models.Messages.Message.RoomId">RoomId</h4>
@@ -471,7 +475,7 @@ public string RoomId { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=27">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=27">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_RoomType_" data-uid="WxTeamsSharp.Models.Messages.Message.RoomType*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_RoomType" data-uid="WxTeamsSharp.Models.Messages.Message.RoomType">RoomType</h4>
@@ -503,7 +507,7 @@ public RoomType RoomType { get; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=40">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=40">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_Text_" data-uid="WxTeamsSharp.Models.Messages.Message.Text*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_Text" data-uid="WxTeamsSharp.Models.Messages.Message.Text">Text</h4>
@@ -535,7 +539,7 @@ public string Text { get; }</code></pre>
   </h3>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=76">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=76">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Messages_Message_DeleteAsync_" data-uid="WxTeamsSharp.Models.Messages.Message.DeleteAsync*"></a>
   <h4 id="WxTeamsSharp_Models_Messages_Message_DeleteAsync" data-uid="WxTeamsSharp.Models.Messages.Message.DeleteAsync">DeleteAsync()</h4>
@@ -562,36 +566,10 @@ public string Text { get; }</code></pre>
       </tr>
     </tbody>
   </table>
-  
-  <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=83">View Source</a>
-  </span>
-  <a id="WxTeamsSharp_Models_Messages_Message_GetFullMessageAsync_" data-uid="WxTeamsSharp.Models.Messages.Message.GetFullMessageAsync*"></a>
-  <h4 id="WxTeamsSharp_Models_Messages_Message_GetFullMessageAsync" data-uid="WxTeamsSharp.Models.Messages.Message.GetFullMessageAsync">GetFullMessageAsync()</h4>
-  <div class="markdown level1 summary"><p>If the message came from a webhook it will not include text. This will query the API
-for the full message including text.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IMessage&gt; GetFullMessageAsync()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessage.html">IMessage</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="WxTeamsSharp.Interfaces.General.ITeamsObject.html">ITeamsObject</a>
+  </div>
   <div>
       <a class="xref" href="WxTeamsSharp.Interfaces.Messages.IMessage.html">IMessage</a>
   </div>
@@ -606,7 +584,7 @@ for the full message including text.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBmaster&amp;line=16" class="contribution-link">View Source</a>
+                    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Messages/Message.cs&amp;version=GBdev&amp;line=15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

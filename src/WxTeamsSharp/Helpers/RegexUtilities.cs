@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace WxTeamsSharp.Utilities
+namespace WxTeamsSharp.Helpers
 {
     internal static class RegexUtilities
     {

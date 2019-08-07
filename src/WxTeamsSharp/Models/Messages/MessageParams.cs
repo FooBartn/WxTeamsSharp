@@ -4,10 +4,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
-using WxTeamsSharp.Api;
+using WxTeamsSharp.Extensions;
+using WxTeamsSharp.Helpers;
 using WxTeamsSharp.Interfaces.Messages;
-using WxTeamsSharp.Utilities;
 
 namespace WxTeamsSharp.Models.Messages
 {
@@ -35,7 +34,7 @@ namespace WxTeamsSharp.Models.Messages
 
         public bool HasLocalFile() => _hasLocalFile;
 
-        public string ToJson() => JsonConvert.SerializeObject(this, JsonUtilities.IgnoreNull);
+        public string ToJson() => JsonConvert.SerializeObject(this, JsonSettings.IgnoreNull);
         public MultipartFormDataContent ToFormData()
         {
             var formData = new MultipartFormDataContent();
@@ -72,8 +71,5 @@ namespace WxTeamsSharp.Models.Messages
 
             return formData;
         }
-
-        public async Task<IMessage> SendAsync()
-            => await WxTeamsApi.SendMessageAsync(this);
     }
 }
