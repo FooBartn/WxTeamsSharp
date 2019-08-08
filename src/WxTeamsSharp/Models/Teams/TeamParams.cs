@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
+using WxTeamsSharp.Helpers;
 using WxTeamsSharp.Interfaces.General;
-using WxTeamsSharp.Utilities;
 
 namespace WxTeamsSharp.Models.Teams
 {
@@ -9,6 +9,6 @@ namespace WxTeamsSharp.Models.Teams
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
-        public string ToJson() => JsonConvert.SerializeObject(this, JsonUtilities.IgnoreNull);
+        public string ToJson() => JsonConvert.SerializeObject(this, JsonSettings.IgnoreNull);
     }
 }

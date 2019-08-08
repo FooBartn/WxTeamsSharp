@@ -1,11 +1,13 @@
 ﻿using FluentAssertions;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using WxTeamsSharp.Api;
 using WxTeamsSharp.Enums;
+using WxTeamsSharp.Extensions;
+using WxTeamsSharp.Interfaces.Api;
 using WxTeamsSharp.Models.Exceptions;
 using Xunit;
 
@@ -13,6 +15,8 @@ namespace WxTeamsSharp.IntegrationTests
 {
     public class PeopleTests
     {
+        private readonly IWxTeamsApi _wxTeamsApi;
+
         public PeopleTests()
         {
             var configuration = new ConfigurationBuilder()
@@ -20,14 +24,21 @@ namespace WxTeamsSharp.IntegrationTests
                 .AddUserSecrets<Settings>()
                 .Build();
 
+            var services = new Microsoft.Extensions.DependencyInjection.ServiceCollection();
+
+            services.AddWxTeamsSharp();
+            var provider = services.BuildServiceProvider();
+
+            _wxTeamsApi = provider.GetRequiredService<IWxTeamsApi>();
+
             var token = configuration.GetSection("BotToken").Value;
-            WxTeamsApi.SetAuth(token);
+            _wxTeamsApi.Initialize(token);
         }
 
         [Fact]
         public async Task ShouldGetMyDetails()
         {
-            var me = await WxTeamsApi.GetMyUserDetails();
+            var me = await _wxTeamsApi.GetMyUserDetails();
 
             me.Should().NotBeNull();
             me.NickName.Should().Be("TeamsSharpEx");
@@ -38,7 +49,7 @@ namespace WxTeamsSharp.IntegrationTests
         [Fact]
         public async Task ShouldGetPersonById()
         {
-            var person = await WxTeamsApi.GetUserAsync(StaticTestingValues.JId);
+            var person = await _wxTeamsApi.GetUserAsync(StaticTestingValues.JId);
 
             person.Should().NotBeNull();
             person.Id.Should().Be(StaticTestingValues.JId);
@@ -47,7 +58,7 @@ namespace WxTeamsSharp.IntegrationTests
         [Fact]
         public async Task ShouldSendMessageToPerson()
         {
-            var person = await WxTeamsApi.GetUserAsync(StaticTestingValues.JId);
+            var person = await _wxTeamsApi.GetUserAsync(StaticTestingValues.JId);
             var message = await person.SendMessageAsync("**Woot**");
 
             message.Should().NotBeNull();
@@ -57,7 +68,7 @@ namespace WxTeamsSharp.IntegrationTests
         [Fact]
         public async Task ShouldGetPeopleByEmail()
         {
-            var people = await WxTeamsApi.GetUsersByEmailAsync("jbarton@netsyncnetwork.com");
+            var people = await _wxTeamsApi.GetUsersByEmailAsync("jbarton@netsyncnetwork.com");
 
             people.Should().NotBeNull();
             people.Items.Count.Should().Be(1);
@@ -67,7 +78,7 @@ namespace WxTeamsSharp.IntegrationTests
         [Fact]
         public async Task ShouldGetPeopleByDisplayName()
         {
-            var people = await WxTeamsApi.GetUsersByDisplayNameAsync("Joshua Barton");
+            var people = await _wxTeamsApi.GetUsersByDisplayNameAsync("Joshua Barton");
 
             people.Should().NotBeNull();
             people.Items.Count.Should().Be(1);
@@ -77,7 +88,7 @@ namespace WxTeamsSharp.IntegrationTests
         [Fact]
         public async Task ShouldGetPeopleByIdList()
         {
-            var people = await WxTeamsApi.GetUsersByIdListAsync(new string[] { StaticTestingValues.JId });
+            var people = await _wxTeamsApi.GetUsersByIdListAsync(new string[] { StaticTestingValues.JId });
 
             people.Should().NotBeNull();
             people.Items.Count.Should().Be(1);
@@ -87,7 +98,7 @@ namespace WxTeamsSharp.IntegrationTests
         [Fact]
         public void ShouldGetPeopleByOrgId()
         {
-            Func<Task> result = async () => await WxTeamsApi.GetUsersByOrgIdAsync(StaticTestingValues.JOrgId);
+            Func<Task> result = async () => await _wxTeamsApi.GetUsersByOrgIdAsync(StaticTestingValues.JOrgId);
 
             result.Should().Throw<TeamsApiException>("Admin only").WithMessage("Email, displayName, or id list should be specified.");
         }

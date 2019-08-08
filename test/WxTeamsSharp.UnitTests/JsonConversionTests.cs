@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Linq;
 using WxTeamsSharp.Enums;
+using WxTeamsSharp.Helpers;
 using WxTeamsSharp.Interfaces.Rooms;
 using WxTeamsSharp.Models.Events;
 using WxTeamsSharp.Models.General;
@@ -15,7 +16,6 @@ using WxTeamsSharp.Models.People;
 using WxTeamsSharp.Models.ResourceGroups;
 using WxTeamsSharp.Models.Rooms;
 using WxTeamsSharp.Models.Webhooks;
-using WxTeamsSharp.Utilities;
 using Xunit;
 
 namespace WxTeamsSharp.UnitTests
@@ -26,7 +26,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidResourceGroupList()
         {
             var json = File.ReadAllText("Resources/ResourceGroupList.json");
-            var list = JsonUtilities.FromJson<ItemsResult<ResourceGroup>>(json);
+            var list = JsonSettings.FromJson<ItemsResult<ResourceGroup>>(json);
 
             list.Should().NotBeNull();
             list.Items.Count.Should().Be(1);
@@ -37,7 +37,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidResourceGroup()
         {
             var json = File.ReadAllText("Resources/ResourceGroup.json");
-            var resourceGroup = JsonUtilities.FromJson<ResourceGroup>(json);
+            var resourceGroup = JsonSettings.FromJson<ResourceGroup>(json);
 
             resourceGroup.Should().NotBeNull();
             resourceGroup.Name.Should().Be("Resource Group 1");
@@ -49,7 +49,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidRoom(string file, RoomType roomType)
         {
             var json = File.ReadAllText(file);
-            IRoom room = JsonUtilities.FromJson<Room>(json);
+            IRoom room = JsonSettings.FromJson<Room>(json);
 
             room.Should().NotBeNull();
             room.IsLocked.Should().BeFalse();
@@ -65,7 +65,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidMeetingDetails()
         {
             var json = File.ReadAllText("Resources/MeetingDetails.json");
-            IMeetingDetails meeting = JsonUtilities.FromJson<MeetingDetails>(json);
+            IMeetingDetails meeting = JsonSettings.FromJson<MeetingDetails>(json);
 
             meeting.Should().NotBeNull();
             meeting.MeetingLink.Should().Be("https://cisco.webex.com/m/37a7d3a8-6563-487f-9577-cd029101c087");
@@ -78,7 +78,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidListResultRoomsWithError()
         {
             var json = File.ReadAllText("Resources/ItemResultErrors.json");
-            var rooms = JsonUtilities.FromJson<ItemsResult<Room>>(json);
+            var rooms = JsonSettings.FromJson<ItemsResult<Room>>(json);
 
             rooms.Should().NotBeNull();
             rooms.Items.Count.Should().Be(2);
@@ -92,7 +92,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidListResultRooms()
         {
             var json = File.ReadAllText("Resources/Rooms.json");
-            var rooms = JsonUtilities.FromJson<ItemsResult<Room>>(json);
+            var rooms = JsonSettings.FromJson<ItemsResult<Room>>(json);
 
             rooms.Should().NotBeNull();
             rooms.Items.Count.Should().Be(1);
@@ -103,7 +103,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidEvents()
         {
             var json = File.ReadAllText("Resources/Events.json");
-            var events = JsonUtilities.FromJson<ItemsResult<Event>>(json);
+            var events = JsonSettings.FromJson<ItemsResult<Event>>(json);
             events.Should().NotBeNull();
             events.Items.Count.Should().Be(1);
         }
@@ -112,7 +112,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidPeople()
         {
             var json = File.ReadAllText("Resources/People.json");
-            var people = JsonUtilities.FromJson<ItemsResult<Person>>(json);
+            var people = JsonSettings.FromJson<ItemsResult<Person>>(json);
             people.Should().NotBeNull();
             people.Items.Count.Should().Be(1);
 
@@ -130,7 +130,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidMessages()
         {
             var json = File.ReadAllText("Resources/Messages.json");
-            var messages = JsonUtilities.FromJson<ItemsResult<Message>>(json);
+            var messages = JsonSettings.FromJson<ItemsResult<Message>>(json);
             messages.Should().NotBeNull();
             messages.Items.First().Text.Should().NotBeNull();
             messages.Items.Count.Should().Be(2);
@@ -141,7 +141,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidMessage(string file, RoomType roomType)
         {
             var json = File.ReadAllText(file);
-            var message = JsonUtilities.FromJson<Message>(json);
+            var message = JsonSettings.FromJson<Message>(json);
             message.Should().NotBeNull();
             message.RoomType.Should().Be(roomType);
             message.Text.Should().Be("piece");
@@ -153,7 +153,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidEvent(string file, EventResource resourceType, EventType eventType)
         {
             var json = File.ReadAllText(file);
-            var singleEvent = JsonUtilities.FromJson<Event>(json);
+            var singleEvent = JsonSettings.FromJson<Event>(json);
             singleEvent.ActorId.Should().Be("Y2lzY29zcGFyazovL3VzL1BFT1BMRS9mNWIzNjE4Ny1jOGRkLTQ3MjctOGIyZi1mOWM0NDdmMjkwNDY");
             singleEvent.AppId.Should().Be("null");
             singleEvent.Resource.Should().Be(resourceType);
@@ -166,7 +166,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidEventData(string file, RoomType roomType)
         {
             var json = File.ReadAllText(file);
-            var singleEvent = JsonUtilities.FromJson<Event>(json);
+            var singleEvent = JsonSettings.FromJson<Event>(json);
             var eventData = singleEvent.EventData;
 
             eventData.Should().NotBeNull();
@@ -179,7 +179,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidLicense()
         {
             var json = File.ReadAllText("Resources/License.json");
-            var license = JsonUtilities.FromJson<License>(json);
+            var license = JsonSettings.FromJson<License>(json);
 
             license.ConsumedUnits.Should().Be(8);
             license.TotalUnits.Should().Be(42);
@@ -190,7 +190,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidRoomMembership()
         {
             var json = File.ReadAllText("Resources/RoomMembership.json");
-            var roomMembership = JsonUtilities.FromJson<RoomMembership>(json);
+            var roomMembership = JsonSettings.FromJson<RoomMembership>(json);
 
             roomMembership.PersonEmail.Should().Be("john.andersen@example.com");
             roomMembership.PersonDisplayName.Should().Be("John Andersen");
@@ -200,7 +200,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidOrganization()
         {
             var json = File.ReadAllText("Resources/Organization.json");
-            var organization = JsonUtilities.FromJson<Organization>(json);
+            var organization = JsonSettings.FromJson<Organization>(json);
 
             organization.DisplayName.Should().Be("Acme, Inc.");
         }
@@ -209,7 +209,7 @@ namespace WxTeamsSharp.UnitTests
         public void ShouldReturnValidWebhook()
         {
             var json = File.ReadAllText("Resources/Webhook.json");
-            var webhook = JsonUtilities.FromJson<Webhook>(json);
+            var webhook = JsonSettings.FromJson<Webhook>(json);
 
             webhook.Name.Should().Be("My Awesome Webhook");
             webhook.TargetUrl.Should().Be("https://example.com/mywebhook");

@@ -1,26 +1,34 @@
-﻿using WxTeamsSharp.Interfaces.Rooms;
+﻿using Newtonsoft.Json;
+using WxTeamsSharp.Interfaces.Rooms;
+using WxTeamsSharp.Models.General;
 
 namespace WxTeamsSharp.Models.Rooms
 {
     /// <inheritdoc/>
-    internal class MeetingDetails : IMeetingDetails
+    public class MeetingDetails : TeamsObject, IMeetingDetails
     {
         /// <inheritdoc/>
-        public string RoomId { get; set; } = string.Empty;
+        [JsonProperty]
+        public string RoomId { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
-        public string MeetingLink { get; set; } = string.Empty;
+        [JsonProperty]
+        public string MeetingLink { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
-        public string SipAddress { get; set; } = string.Empty;
+        [JsonProperty]
+        public string SipAddress { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
-        public string MeetingNumber { get; set; } = string.Empty;
+        [JsonProperty]
+        public string MeetingNumber { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
-        public string CallInTollFreeNumber { get; set; } = string.Empty;
+        [JsonProperty]
+        public string CallInTollFreeNumber { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
-        public string CallInTollNumber { get; set; } = string.Empty;
+        [JsonProperty]
+        public string CallInTollNumber { get; private set; } = string.Empty;
     }
 }

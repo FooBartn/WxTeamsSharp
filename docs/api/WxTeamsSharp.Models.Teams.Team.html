@@ -73,23 +73,28 @@
   
   <h1 id="WxTeamsSharp_Models_Teams_Team" data-uid="WxTeamsSharp.Models.Teams.Team" class="text-break">Class Team
   </h1>
-  <div class="markdown level0 summary"><p>Teams are groups of people with a set of rooms that are visible to all members of that team.
-This API is used to manage the teams themselves.</p>
-<p>Teams are created and deleted with this API. You can also update a team to change its name, for example.</p>
+  <div class="markdown level0 summary"><p>Base Teams Object. Currently used to supply objects
+with reference to the API so we can make calls directly
+from the object</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Team</span></div>
+    <div class="level1"><a class="xref" href="WxTeamsSharp.Models.General.TeamsObject.html">TeamsObject</a></div>
+    <div class="level2"><span class="xref">Team</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="WxTeamsSharp.Interfaces.General.ITeamsObject.html">ITeamsObject</a></div>
     <div><a class="xref" href="WxTeamsSharp.Interfaces.Teams.ITeam.html">ITeam</a></div>
     <div><a class="xref" href="WxTeamsSharp.Interfaces.General.IListable.html">IListable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="WxTeamsSharp.Models.General.TeamsObject.html#WxTeamsSharp_Models_General_TeamsObject_TeamsApi">TeamsObject.TeamsApi</a>
+    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -116,13 +121,13 @@ This API is used to manage the teams themselves.</p>
   <h6><strong>Assembly</strong>: WxTeamsSharp.dll</h6>
   <h5 id="WxTeamsSharp_Models_Teams_Team_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Team : ITeam, IListable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Team : TeamsObject, ITeamsObject, ITeam, IListable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBmaster&amp;line=25">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBdev&amp;line=28">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Teams_Team_Created_" data-uid="WxTeamsSharp.Models.Teams.Team.Created*"></a>
   <h4 id="WxTeamsSharp_Models_Teams_Team_Created" data-uid="WxTeamsSharp.Models.Teams.Team.Created">Created</h4>
@@ -131,7 +136,8 @@ This API is used to manage the teams themselves.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTimeOffset Created { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public DateTimeOffset Created { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,7 +156,7 @@ This API is used to manage the teams themselves.</p>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBmaster&amp;line=28">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBdev&amp;line=32">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Teams_Team_Error_" data-uid="WxTeamsSharp.Models.Teams.Team.Error*"></a>
   <h4 id="WxTeamsSharp_Models_Teams_Team_Error" data-uid="WxTeamsSharp.Models.Teams.Team.Error">Error</h4>
@@ -160,7 +166,7 @@ This API is used to manage the teams themselves.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[JsonProperty(PropertyName = &quot;errors&quot;)]
-[JsonConverter(typeof(JsonUtilities.ConcreteConverter&lt;ListError&gt;))]
+[JsonConverter(typeof(ConcreteConverter&lt;ListError&gt;))]
 public IListError Error { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -180,7 +186,7 @@ public IListError Error { get; set; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBmaster&amp;line=19">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBdev&amp;line=20">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Teams_Team_Id_" data-uid="WxTeamsSharp.Models.Teams.Team.Id*"></a>
   <h4 id="WxTeamsSharp_Models_Teams_Team_Id" data-uid="WxTeamsSharp.Models.Teams.Team.Id">Id</h4>
@@ -189,7 +195,8 @@ public IListError Error { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public string Id { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,7 +215,7 @@ public IListError Error { get; set; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBmaster&amp;line=22">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBdev&amp;line=24">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Teams_Team_Name_" data-uid="WxTeamsSharp.Models.Teams.Team.Name*"></a>
   <h4 id="WxTeamsSharp_Models_Teams_Team_Name" data-uid="WxTeamsSharp.Models.Teams.Team.Name">Name</h4>
@@ -217,7 +224,8 @@ public IListError Error { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonProperty]
+public string Name { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -238,7 +246,7 @@ public IListError Error { get; set; }</code></pre>
   </h3>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBmaster&amp;line=37">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBdev&amp;line=41">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Teams_Team_AddUserAsync_" data-uid="WxTeamsSharp.Models.Teams.Team.AddUserAsync*"></a>
   <h4 id="WxTeamsSharp_Models_Teams_Team_AddUserAsync_System_String_System_Boolean_" data-uid="WxTeamsSharp.Models.Teams.Team.AddUserAsync(System.String,System.Boolean)">AddUserAsync(String, Boolean)</h4>
@@ -247,7 +255,7 @@ public IListError Error { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IMembership&gt; AddUserAsync(string userIdOrEmail, bool isModerator = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IMembership&lt;TeamMembership&gt;&gt; AddUserAsync(string userIdOrEmail, bool isModerator = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,7 +291,7 @@ public IListError Error { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.Memberships.IMembership.html">IMembership</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.Memberships.IMembership-1.html">IMembership</a>&lt;<a class="xref" href="WxTeamsSharp.Models.Memberships.TeamMembership.html">TeamMembership</a>&gt;&gt;</td>
         <td><p>This method returns the new Membership of the added user</p>
 </td>
       </tr>
@@ -291,7 +299,7 @@ public IListError Error { get; set; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBmaster&amp;line=33">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBdev&amp;line=37">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Teams_Team_DeleteAsync_" data-uid="WxTeamsSharp.Models.Teams.Team.DeleteAsync*"></a>
   <h4 id="WxTeamsSharp_Models_Teams_Team_DeleteAsync" data-uid="WxTeamsSharp.Models.Teams.Team.DeleteAsync">DeleteAsync()</h4>
@@ -320,7 +328,7 @@ public IListError Error { get; set; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBmaster&amp;line=41">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBdev&amp;line=45">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Teams_Team_GetMembershipsAsync_" data-uid="WxTeamsSharp.Models.Teams.Team.GetMembershipsAsync*"></a>
   <h4 id="WxTeamsSharp_Models_Teams_Team_GetMembershipsAsync_System_Int32_" data-uid="WxTeamsSharp.Models.Teams.Team.GetMembershipsAsync(System.Int32)">GetMembershipsAsync(Int32)</h4>
@@ -329,7 +337,7 @@ public IListError Error { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IListResult&lt;IMembership&gt;&gt; GetMembershipsAsync(int max = 100)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IListResult&lt;TeamMembership&gt;&gt; GetMembershipsAsync(int max = 100)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -359,7 +367,7 @@ public IListError Error { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.General.IListResult-1.html">IListResult</a>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.Memberships.IMembership.html">IMembership</a>&gt;&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.General.IListResult-1.html">IListResult</a>&lt;<a class="xref" href="WxTeamsSharp.Models.Memberships.TeamMembership.html">TeamMembership</a>&gt;&gt;</td>
         <td><p>This method returns an IListResult object whose Items property is a list of Team Memberships</p>
 </td>
       </tr>
@@ -367,7 +375,7 @@ public IListError Error { get; set; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBmaster&amp;line=52">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBdev&amp;line=56">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Teams_Team_RemoveUserAsync_" data-uid="WxTeamsSharp.Models.Teams.Team.RemoveUserAsync*"></a>
   <h4 id="WxTeamsSharp_Models_Teams_Team_RemoveUserAsync_System_String_" data-uid="WxTeamsSharp.Models.Teams.Team.RemoveUserAsync(System.String)">RemoveUserAsync(String)</h4>
@@ -414,7 +422,7 @@ public IListError Error { get; set; }</code></pre>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBmaster&amp;line=45">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBdev&amp;line=49">View Source</a>
   </span>
   <a id="WxTeamsSharp_Models_Teams_Team_UpdateUserAsync_" data-uid="WxTeamsSharp.Models.Teams.Team.UpdateUserAsync*"></a>
   <h4 id="WxTeamsSharp_Models_Teams_Team_UpdateUserAsync_System_String_System_Boolean_" data-uid="WxTeamsSharp.Models.Teams.Team.UpdateUserAsync(System.String,System.Boolean)">UpdateUserAsync(String, Boolean)</h4>
@@ -423,7 +431,7 @@ public IListError Error { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;IMembership&gt; UpdateUserAsync(string userIdOrEmail, bool isModerator)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;IMembership&lt;TeamMembership&gt;&gt; UpdateUserAsync(string userIdOrEmail, bool isModerator)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -459,13 +467,16 @@ public IListError Error { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.Memberships.IMembership.html">IMembership</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="WxTeamsSharp.Interfaces.Memberships.IMembership-1.html">IMembership</a>&lt;<a class="xref" href="WxTeamsSharp.Models.Memberships.TeamMembership.html">TeamMembership</a>&gt;&gt;</td>
         <td><p>This method returns the updated Membership</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="WxTeamsSharp.Interfaces.General.ITeamsObject.html">ITeamsObject</a>
+  </div>
   <div>
       <a class="xref" href="WxTeamsSharp.Interfaces.Teams.ITeam.html">ITeam</a>
   </div>
@@ -480,7 +491,7 @@ public IListError Error { get; set; }</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBmaster&amp;line=16" class="contribution-link">View Source</a>
+                    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Models/Teams/Team.cs&amp;version=GBdev&amp;line=16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

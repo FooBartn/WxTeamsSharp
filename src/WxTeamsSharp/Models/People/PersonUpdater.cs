@@ -101,7 +101,7 @@ namespace WxTeamsSharp.Models.People
             _roles = roles;
             return this;
         }
-        
+
         /// <inheritdoc/>
         public IPersonUpdater ReplaceLicenses(List<string> licenses)
         {

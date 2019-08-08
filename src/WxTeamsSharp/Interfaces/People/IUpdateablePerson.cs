@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using WxTeamsSharp.Interfaces.General;
+﻿using WxTeamsSharp.Interfaces.General;
 
 namespace WxTeamsSharp.Interfaces.People
 {
@@ -9,9 +8,8 @@ namespace WxTeamsSharp.Interfaces.People
     public interface IUpdateablePerson : IJsonParams
     {
         /// <summary>
-        /// Update person with set properties
+        /// Person ID required to update
         /// </summary>
-        /// <returns></returns>
-        Task<IPerson> UpdateAsync();
+        string Id { get; }
     }
 }

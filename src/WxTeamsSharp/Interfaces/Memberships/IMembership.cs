@@ -11,7 +11,7 @@ namespace WxTeamsSharp.Interfaces.Memberships
     ///
     /// Just like in the Webex Teams app, you must be a member of the room in order to list its memberships or invite people.
     /// </summary>
-    public interface IMembership : IListable
+    public interface IMembership<TMembership> : IListable
     {
         /// <summary>
         /// A unique identifier for the membership.
@@ -58,7 +58,7 @@ namespace WxTeamsSharp.Interfaces.Memberships
         /// </summary>
         /// <param name="isModerator">Whether or not the participant is a room moderator.</param>
         /// <returns>This method returns the updated Membership</returns>
-        Task<IMembership> UpdateAsync(bool isModerator);
+        Task<TMembership> UpdateAsync(bool isModerator);
 
         /// <summary>
         /// Delete this membership

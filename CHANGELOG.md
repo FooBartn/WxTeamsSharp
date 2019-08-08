@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.0.0-beta] - 08-03-2019
+### Fixed
+- Getting NextPage on ItemsResult more than once
+
+### Changed
+- **Major Breaking Change:** Shifted from Static classes to Dependency Injection
+  - New extension to easily add WxTeamsSharp dependencies to default 
+    Microsoft.Extensions.DependencyInjection ServiceCollection DI Container
+  - Client, API, and Serializer are added via Interfaces for Mocking / Testing etc
+- Updated TeamsClient to use IHttpClientFactory because [things](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests)
+
+### Misc
+- Added WxTeamsConsoleBot with DI example
+- Updated WxTeamsWebhookReceiver example for DI
+- Documentation has been updated to reflect changes
+
 ## [1.1.0] - 08-03-2019
 ### Fixed
 - Added Disabled status to WebhookStatus. 

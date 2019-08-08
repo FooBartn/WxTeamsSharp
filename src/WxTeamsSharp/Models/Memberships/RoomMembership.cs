@@ -1,17 +1,17 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
-using WxTeamsSharp.Api;
+using WxTeamsSharp.Converters;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Interfaces.Memberships;
 using WxTeamsSharp.Models.General;
-using static WxTeamsSharp.Utilities.JsonUtilities;
 
 namespace WxTeamsSharp.Models.Memberships
 {
     /// <inheritdoc/>
-    public class RoomMembership : IMembership
+    public class RoomMembership : TeamsObject, IMembership<RoomMembership>
     {
+
         /// <inheritdoc/>
         [JsonProperty]
         public string Id { get; private set; }
@@ -50,12 +50,12 @@ namespace WxTeamsSharp.Models.Memberships
         public IListError Error { get; private set; }
 
         /// <inheritdoc/>
-        public async Task<IMembership> UpdateAsync(bool isModerator)
-            => await WxTeamsApi.UpdateMembershipAsync(Id, isModerator);
+        public async Task<RoomMembership> UpdateAsync(bool isModerator)
+            => await TeamsApi.UpdateMembershipAsync(Id, isModerator);
 
         /// <inheritdoc/>
         public async Task<IResponseMessage> DeleteAsync()
-            => await WxTeamsApi.DeleteMembershipAsync(Id);
+            => await TeamsApi.DeleteMembershipAsync(Id);
 
     }
 }

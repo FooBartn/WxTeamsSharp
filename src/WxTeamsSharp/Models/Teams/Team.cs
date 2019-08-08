@@ -3,26 +3,30 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WxTeamsSharp.Api;
+using WxTeamsSharp.Converters;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Interfaces.Memberships;
 using WxTeamsSharp.Interfaces.Teams;
 using WxTeamsSharp.Models.General;
-using static WxTeamsSharp.Utilities.JsonUtilities;
+using WxTeamsSharp.Models.Memberships;
 
 namespace WxTeamsSharp.Models.Teams
 {
     /// <inheritdoc/>
-    internal class Team : ITeam
+    public class Team : TeamsObject, ITeam
     {
-        /// <inheritdoc/>
-        public string Id { get; set; }
 
         /// <inheritdoc/>
-        public string Name { get; set; }
+        [JsonProperty]
+        public string Id { get; private set; }
 
         /// <inheritdoc/>
-        public DateTimeOffset Created { get; set; }
+        [JsonProperty]
+        public string Name { get; private set; }
+
+        /// <inheritdoc/>
+        [JsonProperty]
+        public DateTimeOffset Created { get; private set; }
 
         /// <inheritdoc/>
         [JsonProperty(PropertyName = "errors")]
@@ -31,18 +35,18 @@ namespace WxTeamsSharp.Models.Teams
 
         /// <inheritdoc/>
         public async Task<IResponseMessage> DeleteAsync()
-            => await WxTeamsApi.DeleteTeamAsync(Id);
+            => await TeamsApi.DeleteTeamAsync(Id);
 
         /// <inheritdoc/>
-        public async Task<IMembership> AddUserAsync(string userIdOrEmail, bool isModerator = false)
-            => await WxTeamsApi.AddUserToTeamAsync(Id, userIdOrEmail, isModerator);
+        public async Task<IMembership<TeamMembership>> AddUserAsync(string userIdOrEmail, bool isModerator = false)
+            => await TeamsApi.AddUserToTeamAsync(Id, userIdOrEmail, isModerator);
 
         /// <inheritdoc/>
-        public async Task<IListResult<IMembership>> GetMembershipsAsync(int max = 100)
-            => await WxTeamsApi.GetTeamMembershipsAsync(Id, max);
+        public async Task<IListResult<TeamMembership>> GetMembershipsAsync(int max = 100)
+            => await TeamsApi.GetTeamMembershipsAsync(Id, max);
 
         /// <inheritdoc/>
-        public async Task<IMembership> UpdateUserAsync(string userIdOrEmail, bool isModerator)
+        public async Task<IMembership<TeamMembership>> UpdateUserAsync(string userIdOrEmail, bool isModerator)
         {
             var membership = await FindMembershipByIdOrEmailAsync(userIdOrEmail);
             return await membership.UpdateAsync(isModerator);
@@ -55,9 +59,9 @@ namespace WxTeamsSharp.Models.Teams
             return await membership.DeleteAsync();
         }
 
-        private async Task<IMembership> FindMembershipByIdOrEmailAsync(string userIdOrEmail)
+        private async Task<IMembership<TeamMembership>> FindMembershipByIdOrEmailAsync(string userIdOrEmail)
         {
-            var memberships = await WxTeamsApi.GetTeamMembershipsAsync(Id);
+            var memberships = await TeamsApi.GetTeamMembershipsAsync(Id);
             var membership = memberships.Items.FirstOrDefault(x => x.PersonEmail == userIdOrEmail || x.PersonId == userIdOrEmail);
 
             if (membership == null)

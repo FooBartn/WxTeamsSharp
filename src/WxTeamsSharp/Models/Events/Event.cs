@@ -2,48 +2,55 @@
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 using System;
+using WxTeamsSharp.Converters;
 using WxTeamsSharp.Enums;
 using WxTeamsSharp.Interfaces.Events;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Models.General;
-using static WxTeamsSharp.Utilities.JsonUtilities;
 
 namespace WxTeamsSharp.Models.Events
 {
     /// <inheritdoc/>
-    internal class Event : IEvent
+    public class Event : TeamsObject, IEvent
     {
         /// <inheritdoc/>
-        public string Id { get; set; } = string.Empty;
+        [JsonProperty]
+        public string Id { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
+        [JsonProperty]
         [JsonConverter(typeof(StringEnumConverter))]
-        public EventResource Resource { get; set; }
+        public EventResource Resource { get; private set; }
 
         /// <inheritdoc/>
+        [JsonProperty]
         [JsonConverter(typeof(StringEnumConverter))]
-        public EventType Type { get; set; }
+        public EventType Type { get; private set; }
 
         /// <inheritdoc/>
-        public string AppId { get; set; } = string.Empty;
+        [JsonProperty]
+        public string AppId { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
-        public string ActorId { get; set; } = string.Empty;
+        [JsonProperty]
+        public string ActorId { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
-        public string OrgId { get; set; } = string.Empty;
+        [JsonProperty]
+        public string OrgId { get; private set; } = string.Empty;
 
         /// <inheritdoc/>
-        public DateTimeOffset Created { get; set; }
+        [JsonProperty]
+        public DateTimeOffset Created { get; private set; }
 
         /// <inheritdoc/>
         [JsonProperty(PropertyName = "data")]
         [JsonConverter(typeof(ConcreteConverter<EventData>))]
-        public IEventData EventData { get; set; }
+        public IEventData EventData { get; private set; }
 
         /// <inheritdoc/>
         [JsonProperty(PropertyName = "errors")]
         [JsonConverter(typeof(ConcreteConverter<ListError>))]
-        public IListError Error { get; set; }
+        public IListError Error { get; private set; }
     }
 }

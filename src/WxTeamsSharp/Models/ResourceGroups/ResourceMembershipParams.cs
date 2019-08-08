@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using WxTeamsSharp.Enums;
+using WxTeamsSharp.Helpers;
 using WxTeamsSharp.Interfaces.General;
-using WxTeamsSharp.Utilities;
 
 namespace WxTeamsSharp.Models.ResourceGroups
 {
@@ -24,6 +24,6 @@ namespace WxTeamsSharp.Models.ResourceGroups
         [JsonConverter(typeof(StringEnumConverter))]
         public ResourceMembershipStatus Status { get; set; }
 
-        public string ToJson() => JsonConvert.SerializeObject(this, JsonUtilities.Standard);
+        public string ToJson() => JsonConvert.SerializeObject(this, JsonSettings.Standard);
     }
 }

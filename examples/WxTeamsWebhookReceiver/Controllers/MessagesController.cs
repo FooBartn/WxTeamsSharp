@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
-using WxTeamsSharp.Api;
 using WxTeamsSharp.Models.Messages;
 using WxTeamsSharp.Models.Webhooks;
 using WxTeamsWebhookReceiver.Services;

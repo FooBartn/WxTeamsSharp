@@ -3,78 +3,98 @@ using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WxTeamsSharp.Api;
+using WxTeamsSharp.Converters;
 using WxTeamsSharp.Enums;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Interfaces.Messages;
 using WxTeamsSharp.Interfaces.People;
+using WxTeamsSharp.Models.General;
 using WxTeamsSharp.Models.Messages;
-using static WxTeamsSharp.Utilities.JsonUtilities;
 
 namespace WxTeamsSharp.Models.People
 {
     /// <inheritdoc/>
-    internal class Person : IPerson
+    public class Person : TeamsObject, IPerson
     {
-        /// <inheritdoc/>
-        public string Id { get; set; }
 
         /// <inheritdoc/>
-        public List<string> Emails { get; set; }
+        [JsonProperty]
+        public string Id { get; private set; }
 
         /// <inheritdoc/>
+        [JsonProperty]
+        public List<string> Emails { get; private set; }
+
+        /// <inheritdoc/>
+        [JsonProperty]
         [JsonConverter(typeof(ConcreteListConverter<PhoneNumber, IPhoneNumber>))]
-        public List<IPhoneNumber> PhoneNumbers { get; set; }
+        public List<IPhoneNumber> PhoneNumbers { get; private set; }
 
         /// <inheritdoc/>
-        public string DisplayName { get; set; }
+        [JsonProperty]
+        public string DisplayName { get; private set; }
 
         /// <inheritdoc/>
-        public string NickName { get; set; }
+        [JsonProperty]
+        public string NickName { get; private set; }
 
         /// <inheritdoc/>
-        public string FirstName { get; set; }
+        [JsonProperty]
+        public string FirstName { get; private set; }
 
         /// <inheritdoc/>
-        public string LastName { get; set; }
+        [JsonProperty]
+        public string LastName { get; private set; }
 
         /// <inheritdoc/>
-        public string Avatar { get; set; }
+        [JsonProperty]
+        public string Avatar { get; private set; }
 
         /// <inheritdoc/>
-        public string OrgId { get; set; }
+        [JsonProperty]
+        public string OrgId { get; private set; }
 
         /// <inheritdoc/>
-        public List<string> Roles { get; set; }
+        [JsonProperty]
+        public List<string> Roles { get; private set; }
 
         /// <inheritdoc/>
-        public List<string> Licenses { get; set; }
+        [JsonProperty]
+        public List<string> Licenses { get; private set; }
 
         /// <inheritdoc/>
-        public DateTimeOffset Created { get; set; }
+        [JsonProperty]
+        public DateTimeOffset Created { get; private set; }
 
         /// <inheritdoc/>
-        public DateTimeOffset LastModified { get; set; }
+        [JsonProperty]
+        public DateTimeOffset LastModified { get; private set; }
 
         /// <inheritdoc/>
-        public string Timezone { get; set; }
+        [JsonProperty]
+        public string Timezone { get; private set; }
 
         /// <inheritdoc/>
-        public DateTimeOffset LastActivity { get; set; }
+        [JsonProperty]
+        public DateTimeOffset LastActivity { get; private set; }
 
         /// <inheritdoc/>
+        [JsonProperty]
         [JsonConverter(typeof(StringEnumConverter))]
-        public PersonStatus Status { get; set; }
+        public PersonStatus Status { get; private set; }
 
         /// <inheritdoc/>
-        public bool InvitePending { get; set; }
+        [JsonProperty]
+        public bool InvitePending { get; private set; }
 
         /// <inheritdoc/>
-        public bool LoginEnabled { get; set; }
+        [JsonProperty]
+        public bool LoginEnabled { get; private set; }
 
         /// <inheritdoc/>
+        [JsonProperty]
         [JsonConverter(typeof(StringEnumConverter))]
-        public PersonType Type { get; set; }
+        public PersonType Type { get; private set; }
 
         private PeopleParams GetUserParams()
         {
@@ -113,7 +133,7 @@ namespace WxTeamsSharp.Models.People
 
             peopleParams.Licenses.Add(licenseId);
 
-            return await WxTeamsApi.UpdateUserAsync(Id, peopleParams);
+            return await TeamsApi.UpdateUserAsync(Id, peopleParams);
         }
 
         /// <inheritdoc/>
@@ -126,12 +146,12 @@ namespace WxTeamsSharp.Models.People
 
             peopleParams.Roles.Add(roleId);
 
-            return await WxTeamsApi.UpdateUserAsync(Id, peopleParams);
+            return await TeamsApi.UpdateUserAsync(Id, peopleParams);
         }
 
         /// <inheritdoc/>
         public async Task<IResponseMessage> DeleteAsync() =>
-            await WxTeamsApi.DeleteUserAsync(Id);
+            await TeamsApi.DeleteUserAsync(Id);
 
         /// <inheritdoc/>
         public async Task<IPerson> ReplaceLicensesAsync(List<string> licenseIds)
@@ -139,7 +159,7 @@ namespace WxTeamsSharp.Models.People
             var peopleParams = GetUserParams();
             peopleParams.Licenses = licenseIds;
 
-            return await WxTeamsApi.UpdateUserAsync(Id, peopleParams);
+            return await TeamsApi.UpdateUserAsync(Id, peopleParams);
         }
 
         /// <inheritdoc/>
@@ -148,24 +168,24 @@ namespace WxTeamsSharp.Models.People
             var peopleParams = GetUserParams();
             peopleParams.Roles = roleIds;
 
-            return await WxTeamsApi.UpdateUserAsync(Id, peopleParams);
+            return await TeamsApi.UpdateUserAsync(Id, peopleParams);
         }
 
         /// <inheritdoc/>
         public async Task<IMessage> SendMessageAsync(string markdown)
-            => await MessageBuilder.New()
-                .SendToUserId(Id)
-                .WithMarkdown(markdown)
-                .Build()
-                .SendAsync();
+            => await TeamsApi.SendMessageAsync(
+                new MessageBuilder()
+                    .SendToUserId(Id)
+                    .WithMarkdown(markdown)
+                    .Build());
 
         /// <inheritdoc/>
         public async Task<IMessage> SendPlainMessageAsync(string text)
-            => await MessageBuilder.New()
-                .SendToUserId(Id)
-                .WithText(text)
-                .Build()
-                .SendAsync();
+            => await TeamsApi.SendMessageAsync(
+                new MessageBuilder()
+                    .SendToUserId(Id)
+                    .WithText(text)
+                    .Build());
 
         /// <inheritdoc/>
         public async Task<IPerson> UpdateAvatarAsync(string avatar)
@@ -173,7 +193,7 @@ namespace WxTeamsSharp.Models.People
             var peopleParams = GetUserParams();
             peopleParams.Avatar = avatar;
 
-            return await WxTeamsApi.UpdateUserAsync(Id, peopleParams);
+            return await TeamsApi.UpdateUserAsync(Id, peopleParams);
         }
 
         /// <inheritdoc/>
@@ -182,7 +202,7 @@ namespace WxTeamsSharp.Models.People
             var peopleParams = GetUserParams();
             peopleParams.DisplayName = displayName;
 
-            return await WxTeamsApi.UpdateUserAsync(Id, peopleParams);
+            return await TeamsApi.UpdateUserAsync(Id, peopleParams);
         }
 
         /// <inheritdoc/>
@@ -191,7 +211,7 @@ namespace WxTeamsSharp.Models.People
             var peopleParams = GetUserParams();
             peopleParams.Emails = new List<string> { email };
 
-            return await WxTeamsApi.UpdateUserAsync(Id, peopleParams);
+            return await TeamsApi.UpdateUserAsync(Id, peopleParams);
         }
 
         /// <inheritdoc/>
@@ -200,7 +220,7 @@ namespace WxTeamsSharp.Models.People
             var peopleParams = GetUserParams();
             peopleParams.FirstName = firstName;
 
-            return await WxTeamsApi.UpdateUserAsync(Id, peopleParams);
+            return await TeamsApi.UpdateUserAsync(Id, peopleParams);
         }
 
         /// <inheritdoc/>
@@ -209,7 +229,7 @@ namespace WxTeamsSharp.Models.People
             var peopleParams = GetUserParams();
             peopleParams.LastName = lastName;
 
-            return await WxTeamsApi.UpdateUserAsync(Id, peopleParams);
+            return await TeamsApi.UpdateUserAsync(Id, peopleParams);
         }
 
         /// <inheritdoc/>
@@ -218,7 +238,7 @@ namespace WxTeamsSharp.Models.People
             var peopleParams = GetUserParams();
             peopleParams.OrganizationId = orgId;
 
-            return await WxTeamsApi.UpdateUserAsync(Id, peopleParams);
+            return await TeamsApi.UpdateUserAsync(Id, peopleParams);
         }
 
         /// <inheritdoc/>

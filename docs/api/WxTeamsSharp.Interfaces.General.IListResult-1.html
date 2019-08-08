@@ -76,11 +76,17 @@
   <div class="markdown level0 summary"><p>Webex Teams returns an array of Items when getting multiple objects such as rooms.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="WxTeamsSharp.Interfaces.General.ITeamsObject.html#WxTeamsSharp_Interfaces_General_ITeamsObject_TeamsApi">ITeamsObject.TeamsApi</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="WxTeamsSharp.Interfaces.General.html">WxTeamsSharp.Interfaces.General</a></h6>
   <h6><strong>Assembly</strong>: WxTeamsSharp.dll</h6>
   <h5 id="WxTeamsSharp_Interfaces_General_IListResult_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IListResult&lt;TItem&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IListResult&lt;TItem&gt; : ITeamsObject</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -102,7 +108,7 @@
   </h3>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/General/IListResult.cs&amp;version=GBmaster&amp;line=20">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/General/IListResult.cs&amp;version=GBdev&amp;line=20">View Source</a>
   </span>
   <a id="WxTeamsSharp_Interfaces_General_IListResult_1_HasNextPage_" data-uid="WxTeamsSharp.Interfaces.General.IListResult`1.HasNextPage*"></a>
   <h4 id="WxTeamsSharp_Interfaces_General_IListResult_1_HasNextPage" data-uid="WxTeamsSharp.Interfaces.General.IListResult`1.HasNextPage">HasNextPage</h4>
@@ -130,7 +136,7 @@
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/General/IListResult.cs&amp;version=GBmaster&amp;line=15">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/General/IListResult.cs&amp;version=GBdev&amp;line=15">View Source</a>
   </span>
   <a id="WxTeamsSharp_Interfaces_General_IListResult_1_Items_" data-uid="WxTeamsSharp.Interfaces.General.IListResult`1.Items*"></a>
   <h4 id="WxTeamsSharp_Interfaces_General_IListResult_1_Items" data-uid="WxTeamsSharp.Interfaces.General.IListResult`1.Items">Items</h4>
@@ -139,7 +145,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IList&lt;TItem&gt; Items { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">List&lt;TItem&gt; Items { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,14 +157,14 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IList</span>&lt;TItem&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;TItem&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/General/IListResult.cs&amp;version=GBmaster&amp;line=31">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/General/IListResult.cs&amp;version=GBdev&amp;line=31">View Source</a>
   </span>
   <a id="WxTeamsSharp_Interfaces_General_IListResult_1_NotFoundIds_" data-uid="WxTeamsSharp.Interfaces.General.IListResult`1.NotFoundIds*"></a>
   <h4 id="WxTeamsSharp_Interfaces_General_IListResult_1_NotFoundIds" data-uid="WxTeamsSharp.Interfaces.General.IListResult`1.NotFoundIds">NotFoundIds</h4>
@@ -188,7 +194,7 @@
   </h3>
   
   <span class="small pull-right mobile-hide">
-    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/General/IListResult.cs&amp;version=GBmaster&amp;line=26">View Source</a>
+    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/General/IListResult.cs&amp;version=GBdev&amp;line=26">View Source</a>
   </span>
   <a id="WxTeamsSharp_Interfaces_General_IListResult_1_GetNextPage_" data-uid="WxTeamsSharp.Interfaces.General.IListResult`1.GetNextPage*"></a>
   <h4 id="WxTeamsSharp_Interfaces_General_IListResult_1_GetNextPage" data-uid="WxTeamsSharp.Interfaces.General.IListResult`1.GetNextPage">GetNextPage()</h4>
@@ -222,7 +228,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://devc3.visualstudio.com/TeamsSharp/_git/TeamsSharp?path=src/WxTeamsSharp/Interfaces/General/IListResult.cs&amp;version=GBmaster&amp;line=10" class="contribution-link">View Source</a>
+                    <a href="https://devc3.visualstudio.com/WxTeamsSharp/_git/WxTeamsSharp?path=src/WxTeamsSharp/Interfaces/General/IListResult.cs&amp;version=GBdev&amp;line=10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

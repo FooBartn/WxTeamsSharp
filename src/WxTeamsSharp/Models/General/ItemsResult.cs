@@ -1,32 +1,40 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using WxTeamsSharp.Client;
 using WxTeamsSharp.Interfaces.General;
 
 namespace WxTeamsSharp.Models.General
 {
     /// <inheritdoc/>
-    internal class ItemsResult<TItem> : IListResult<TItem>
+    internal class ItemsResult<TItem> : TeamsObject, IListResult<TItem>
+        where TItem : TeamsObject
     {
+
         public ItemsResult() { }
-        public ItemsResult(IList<TItem> items, string nextPage)
+        public ItemsResult(List<TItem> items, string nextPage)
         {
             Items = items;
             NextPage = nextPage;
         }
 
-        internal string NextPage { get; set; } = string.Empty;
+        internal string NextPage { get; private set; } = string.Empty;
 
-        public IList<TItem> Items { get; set; } = new List<TItem>();
+        [JsonProperty]
+        public List<TItem> Items { get; private set; } = new List<TItem>();
+
         public bool HasNextPage => !string.IsNullOrEmpty(NextPage);
+
+        [JsonProperty]
         public List<string> NotFoundIds { get; set; }
 
         public async Task<IListResult<TItem>> GetNextPage()
         {
             if (HasNextPage)
-                return await TeamsClient.GetResultAsync<ItemsResult<TItem>>(NextPage);
+                return await TeamsApi.TeamsClient.GetResultsAsync<TItem>(NextPage);
 
             return new ItemsResult<TItem>();
         }
+
+        internal void SetNextPage(string nextPage) => NextPage = nextPage;
     }
 }

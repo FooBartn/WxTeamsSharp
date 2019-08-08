@@ -2,29 +2,36 @@
 using Newtonsoft.Json.Converters;
 using WxTeamsSharp.Enums;
 using WxTeamsSharp.Interfaces.Memberships;
+using WxTeamsSharp.Models.General;
 
 namespace WxTeamsSharp.Models.ResourceGroups
 {
     /// <inheritdoc/>
-    internal class ResourceGroupMembership : IResourceGroupMembership
+    public class ResourceGroupMembership : TeamsObject, IResourceGroupMembership
     {
         /// <inheritdoc/>
-        public string Id { get; set; }
+        [JsonProperty]
+        public string Id { get; private set; }
 
         /// <inheritdoc/>
-        public string ResourceGroupId { get; set; }
+        [JsonProperty]
+        public string ResourceGroupId { get; private set; }
 
         /// <inheritdoc/>
-        public string LicenseId { get; set; }
+        [JsonProperty]
+        public string LicenseId { get; private set; }
 
         /// <inheritdoc/>
-        public string PersonId { get; set; }
+        [JsonProperty]
+        public string PersonId { get; private set; }
 
         /// <inheritdoc/>
-        public string PersonOrgId { get; set; }
+        [JsonProperty]
+        public string PersonOrgId { get; private set; }
 
         /// <inheritdoc/>
+        [JsonProperty]
         [JsonConverter(typeof(StringEnumConverter))]
-        public ResourceMembershipStatus Status { get; set; }
+        public ResourceMembershipStatus Status { get; private set; }
     }
 }

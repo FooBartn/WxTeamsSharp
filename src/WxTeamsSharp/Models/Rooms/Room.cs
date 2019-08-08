@@ -5,23 +5,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using WxTeamsSharp.Api;
+using WxTeamsSharp.Converters;
 using WxTeamsSharp.Enums;
+using WxTeamsSharp.Extensions;
 using WxTeamsSharp.Interfaces.General;
-using WxTeamsSharp.Interfaces.Memberships;
 using WxTeamsSharp.Interfaces.Messages;
 using WxTeamsSharp.Interfaces.People;
 using WxTeamsSharp.Interfaces.Rooms;
-using WxTeamsSharp.Interfaces.Webhooks;
 using WxTeamsSharp.Models.General;
+using WxTeamsSharp.Models.Memberships;
 using WxTeamsSharp.Models.Messages;
-using WxTeamsSharp.Utilities;
-using static WxTeamsSharp.Utilities.JsonUtilities;
+using WxTeamsSharp.Models.Webhooks;
 
 namespace WxTeamsSharp.Models.Rooms
 {
     /// <inheritdoc/>
-    public class Room : IRoom
+    public class Room : TeamsObject, IRoom
     {
         /// <inheritdoc/>
         [JsonProperty]
@@ -66,46 +65,46 @@ namespace WxTeamsSharp.Models.Rooms
         public string SipAddress { get; private set; }
 
         /// <inheritdoc/>
-        public Task<IResponseMessage> DeleteAsync() => WxTeamsApi.DeleteRoomAsync(Id);
+        public Task<IResponseMessage> DeleteAsync() => TeamsApi.DeleteRoomAsync(Id);
 
         /// <inheritdoc/>
-        public Task<IRoom> UpdateAsync(string title) => WxTeamsApi.UpdateRoomAsync(Id, title);
+        public Task<Room> UpdateAsync(string title) => TeamsApi.UpdateRoomAsync(Id, title);
 
         /// <inheritdoc/>
-        public Task<IMeetingDetails> GetMeetingDetailsAsync()
-            => WxTeamsApi.GetMeetingDetailsAsync(Id);
+        public Task<MeetingDetails> GetMeetingDetailsAsync()
+            => TeamsApi.GetMeetingDetailsAsync(Id);
 
         /// <inheritdoc/>
-        public async Task<IListResult<IMessage>> GetMessagesAsync(int max = 50, bool userMentioned = false,
+        public async Task<IListResult<Message>> GetMessagesAsync(int max = 50, bool userMentioned = false,
             ICollection<string> mentionedPeople = default, DateTimeOffset before = default, string beforeMessage = "")
-                => await WxTeamsApi.GetRoomMessagesAsync(Id, max, userMentioned, mentionedPeople, before, beforeMessage);
+                => await TeamsApi.GetRoomMessagesAsync(Id, max, userMentioned, mentionedPeople, before, beforeMessage);
 
         /// <inheritdoc/>
         public async Task<IMessage> SendPlainMessageAsync(string text)
-            => await MessageBuilder.New()
-                .SendToRoom(Id)
-                .WithText(text)
-                .Build()
-                .SendAsync();
+            => await TeamsApi.SendMessageAsync(
+                new MessageBuilder()
+                    .SendToRoom(Id)
+                    .WithText(text)
+                    .Build());
 
         /// <inheritdoc/>
         public async Task<IMessage> SendMessageAsync(string markdown)
-           => await MessageBuilder.New()
-                .SendToRoom(Id)
-                .WithMarkdown(markdown)
-                .Build()
-                .SendAsync();
+           => await TeamsApi.SendMessageAsync(
+                new MessageBuilder()
+                    .SendToRoom(Id)
+                    .WithMarkdown(markdown)
+                    .Build());
 
         /// <inheritdoc/>
-        public async Task<IListResult<IMembership>> GetMembershipsAsync(int max = 100)
-            => await WxTeamsApi.GetRoomMembershipsAsync(Id, max);
+        public async Task<IListResult<RoomMembership>> GetMembershipsAsync(int max = 100)
+            => await TeamsApi.GetRoomMembershipsAsync(Id, max);
 
         /// <inheritdoc/>
-        public async Task<IMembership> AddUserAsync(string userIdOrEmail, bool isModerator = false)
-            => await WxTeamsApi.AddUserToRoomAsync(Id, userIdOrEmail, isModerator);
+        public async Task<RoomMembership> AddUserAsync(string userIdOrEmail, bool isModerator = false)
+            => await TeamsApi.AddUserToRoomAsync(Id, userIdOrEmail, isModerator);
 
         /// <inheritdoc/>
-        public async Task<IMembership> UpdateUserAsync(string userIdOrEmail, bool isModerator)
+        public async Task<RoomMembership> UpdateUserAsync(string userIdOrEmail, bool isModerator)
         {
             var membership = await FindMembershipByIdOrEmailAsync(userIdOrEmail);
             return await membership.UpdateAsync(isModerator);
@@ -118,9 +117,9 @@ namespace WxTeamsSharp.Models.Rooms
             return await membership.DeleteAsync();
         }
 
-        private async Task<IMembership> FindMembershipByIdOrEmailAsync(string userIdOrEmail)
+        private async Task<RoomMembership> FindMembershipByIdOrEmailAsync(string userIdOrEmail)
         {
-            var memberships = await WxTeamsApi.GetRoomMembershipsAsync(Id);
+            var memberships = await TeamsApi.GetRoomMembershipsAsync(Id);
             var membership = memberships.Items.FirstOrDefault(x => x.PersonEmail == userIdOrEmail || x.PersonId == userIdOrEmail);
 
             if (membership == null)
@@ -130,17 +129,17 @@ namespace WxTeamsSharp.Models.Rooms
         }
 
         /// <inheritdoc/>
-        public async Task<IListResult<IMessage>> GetMessagesBeforeDateAsync(DateTimeOffset before, int max = 50,
+        public async Task<IListResult<Message>> GetMessagesBeforeDateAsync(DateTimeOffset before, int max = 50,
             bool userMentioned = false, ICollection<string> mentionedPeople = null)
-            => await WxTeamsApi.GetRoomMessagesBeforeDateAsync(Id, before, max, userMentioned, mentionedPeople);
+            => await TeamsApi.GetRoomMessagesBeforeDateAsync(Id, before, max, userMentioned, mentionedPeople);
 
         /// <inheritdoc/>
-        public async Task<IListResult<IMessage>> GetMessagesBeforeMessageAsync(string messageId, int max = 50,
+        public async Task<IListResult<Message>> GetMessagesBeforeMessageAsync(string messageId, int max = 50,
             bool userMentioned = false, ICollection<string> mentionedPeople = null)
-            => await WxTeamsApi.GetRoomMessagesBeforeMessageAsync(Id, messageId, max, userMentioned, mentionedPeople);
+            => await TeamsApi.GetRoomMessagesBeforeMessageAsync(Id, messageId, max, userMentioned, mentionedPeople);
 
         /// <inheritdoc/>
-        public async Task<IMembership> AddUserAsync(IPerson user, bool isModerator = false)
+        public async Task<RoomMembership> AddUserAsync(IPerson user, bool isModerator = false)
             => await AddUserAsync(user.Id, isModerator);
 
         /// <inheritdoc/>
@@ -148,7 +147,7 @@ namespace WxTeamsSharp.Models.Rooms
             => await RemoveUserAsync(user.Id);
 
         /// <inheritdoc/>
-        public async Task<IWebhook> AddMessageCreatedWebhookAsync(string name, string targetUrl, string personIdFilter = "", 
+        public async Task<Webhook> AddMessageCreatedWebhookAsync(string name, string targetUrl, string personIdFilter = "",
             string personEmailFilter = "", IEnumerable<string> mentionedPeople = null, bool hasFiles = false, string secret = "")
         {
             var filter = await BuildFilterAsync(personIdFilter, personEmailFilter, mentionedPeople, hasFiles);
@@ -156,7 +155,7 @@ namespace WxTeamsSharp.Models.Rooms
         }
 
         /// <inheritdoc/>
-        public async Task<IWebhook> AddMessageDeletedWebhookAsync(string name, string targetUrl, string personIdFilter = "", 
+        public async Task<Webhook> AddMessageDeletedWebhookAsync(string name, string targetUrl, string personIdFilter = "",
             string personEmailFilter = "", IEnumerable<string> mentionedPeople = null, bool hasFiles = false, string secret = "")
         {
             var filter = await BuildFilterAsync(personIdFilter, personEmailFilter, mentionedPeople, hasFiles);
@@ -164,14 +163,14 @@ namespace WxTeamsSharp.Models.Rooms
         }
 
         /// <inheritdoc/>
-        public async Task<IWebhook> AddUserAddedWebhookAsync(string name, string targetUrl, string personIdFilter = "", string personEmailFilter = "", bool isModerator = false, string secret = "")
+        public async Task<Webhook> AddUserAddedWebhookAsync(string name, string targetUrl, string personIdFilter = "", string personEmailFilter = "", bool isModerator = false, string secret = "")
         {
             var filter = await BuildFilterAsync(personIdFilter, personEmailFilter, isModerator: isModerator);
             return await CreateWebhookAsync(name, targetUrl, WebhookResource.Messages, EventType.Created, filter, secret);
         }
 
         /// <inheritdoc/>
-        public async Task<IWebhook> AddUserRemovedWebhookAsync(string name, string targetUrl, string personIdFilter = "", string personEmailFilter = "", bool isModerator = false, string secret = "")
+        public async Task<Webhook> AddUserRemovedWebhookAsync(string name, string targetUrl, string personIdFilter = "", string personEmailFilter = "", bool isModerator = false, string secret = "")
         {
             var filter = await BuildFilterAsync(personIdFilter, personEmailFilter, isModerator: isModerator);
             return await CreateWebhookAsync(name, targetUrl, WebhookResource.Messages, EventType.Deleted, filter, secret);
@@ -201,12 +200,15 @@ namespace WxTeamsSharp.Models.Rooms
             if (isModerator)
                 filters.Add(new KeyValuePair<string, string>(nameof(isModerator), isModerator.ToString().FirstCharToLower()));
 
-            return await new FormUrlEncodedContent(filters).ReadAsStringAsync();
+            using (var content = new FormUrlEncodedContent(filters))
+            {
+                return await content.ReadAsStringAsync();
+            }
         }
 
         /// <inheritdoc/>
-        private async Task<IWebhook> CreateWebhookAsync(string name, string targetUrl, WebhookResource resource,
+        private async Task<Webhook> CreateWebhookAsync(string name, string targetUrl, WebhookResource resource,
             EventType eventType, string filter, string secret = "")
-            => await WxTeamsApi.CreateWebhookAsync(name, targetUrl, resource, eventType, filter, secret);
+            => await TeamsApi.CreateWebhookAsync(name, targetUrl, resource, eventType, filter, secret);
     }
 }

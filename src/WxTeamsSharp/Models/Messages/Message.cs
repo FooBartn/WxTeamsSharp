@@ -3,18 +3,18 @@ using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using WxTeamsSharp.Api;
+using WxTeamsSharp.Converters;
 using WxTeamsSharp.Enums;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Interfaces.Messages;
 using WxTeamsSharp.Models.General;
-using static WxTeamsSharp.Utilities.JsonUtilities;
 
 namespace WxTeamsSharp.Models.Messages
 {
     /// <inheritdoc/>
-    public class Message : IMessage
+    public class Message : TeamsObject, IMessage
     {
+
         /// <inheritdoc/>
         [JsonProperty]
         public string Id { get; private set; }
@@ -73,13 +73,6 @@ namespace WxTeamsSharp.Models.Messages
         public IListError Error { get; private set; }
 
         /// <inheritdoc/>
-        public async Task<IResponseMessage> DeleteAsync() => await WxTeamsApi.DeleteMessageAsync(Id);
-
-        /// <summary>
-        /// If the message came from a webhook it will not include text. This will query the API
-        /// for the full message including text.
-        /// </summary>
-        /// <returns></returns>
-        public async Task<IMessage> GetFullMessageAsync() => await WxTeamsApi.GetMessageAsync(Id);
+        public async Task<IResponseMessage> DeleteAsync() => await TeamsApi.DeleteMessageAsync(Id);
     }
 }

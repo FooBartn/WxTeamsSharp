@@ -1,15 +1,10 @@
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using System;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
-using WxTeamsSharp.Api;
 using WxTeamsSharp.Models.Messages;
 using WxTeamsSharp.Models.Webhooks;
 using Xunit;
@@ -33,10 +28,8 @@ namespace WxTeamsWebhookReceiver.IntegrationTests
             var file = File.ReadAllText("Resources/WebhookPost.json");
             var content = new StringContent(file, Encoding.UTF8, "application/json");
             var response = await client.PostAsync("/api/messages", content);
-
-            response.EnsureSuccessStatusCode();
-
             var responseContent = await response.Content.ReadAsStringAsync();
+            response.EnsureSuccessStatusCode();
             var webhook = JsonConvert.DeserializeObject<WebhookData<Message>>(responseContent);
 
             webhook.Data.Should().BeOfType<Message>();
