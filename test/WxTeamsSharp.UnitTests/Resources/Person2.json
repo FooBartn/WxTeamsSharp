@@ -1,0 +1,34 @@
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9mNWIzNjE4Ny1jOGRkLTQ3MjctOGIyZi1mOWM0NDdmMjkwNDY",
+  "emails": [
+    "john.andersen@example.com"
+  ],
+  "phoneNumbers": [
+    {
+      "type": "work",
+      "value": "+1 408 526 7209"
+    }
+  ],
+  "displayName": "John Andersen",
+  "nickName": "John",
+  "firstName": "John",
+  "lastName": "Andersen",
+  "avatar": "https://1efa7a94ed21783e352-c62266528714497a17239ececf39e9e2.ssl.cf1.rackcdn.com/V1~54c844c89e678e5a7b16a306bc2897b9~wx29yGtlTpilEFlYzqPKag==~1600",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi85NmFiYzJhYS0zZGNjLTExZTUtYTE1Mi1mZTM0ODE5Y2RjOWE",
+  "roles": [
+    "Y2lzY29zcGFyazovL3VzL1JPTEUvOTZhYmMyYWEtM2RjYy0xMWU1LWExNTItZmUzNDgxOWNkYzlh",
+    "Y2lzY29zcGFyazovL3VzL1JPTEUvOTZhYmMyYWEtM2RjYy0xMWU1LWIyNjMtMGY0NTkyYWRlZmFi"
+  ],
+  "licenses": [
+    "Y2lzY29zcGFyazovL3VzL0xJQ0VOU0UvOTZhYmMyYWEtM2RjYy0xMWU1LWExNTItZmUzNDgxOWNkYzlh",
+    "Y2lzY29zcGFyazovL3VzL0xJQ0VOU0UvOTZhYmMyYWEtM2RjYy0xMWU1LWIyNjMtMGY0NTkyYWRlZmFi"
+  ],
+  "created": "2015-10-18T14:26:16.000Z",
+  "lastModified": "2015-10-18T14:26:16.000Z",
+  "timezone": "America/Denver",
+  "lastActivity": "2015-10-18T14:26:16.028Z",
+  "status": "active",
+  "invitePending": "true",
+  "loginEnabled": "false",
+  "type": "bot"
+}

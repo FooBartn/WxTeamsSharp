@@ -285,10 +285,9 @@ namespace WxTeamsSharp.Interfaces.Api
         /// <summary>
         /// Update details for a person, by ID
         /// </summary>
-        /// <param name="personId">A unique identifier for the person.</param>
         /// <param name="personParams">Get from PersonUpdater.Update(IPerson)</param>
         /// <returns>This method returns the updated Person object</returns>
-        Task<Person> UpdateUserAsync(string personId, IUpdateablePerson personParams);
+        Task<Person> UpdateUserAsync(IUpdateablePerson personParams);
 
         /// <summary>
         /// Create a new user account for a given organization. Only an admin can create a new user account.

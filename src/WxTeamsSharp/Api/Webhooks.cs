@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using WxTeamsSharp.Enums;
 using WxTeamsSharp.Helpers;
+using WxTeamsSharp.Interfaces.Api;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Models.Webhooks;
 
 namespace WxTeamsSharp.Api
 {
-    internal partial class WxTeamsApi
+    internal partial class WxTeamsApi : IWxTeamsApi
     {
         /// <inheritdoc/>
         public async Task<IListResult<Webhook>> GetWebhooksAsync(int max = 100)

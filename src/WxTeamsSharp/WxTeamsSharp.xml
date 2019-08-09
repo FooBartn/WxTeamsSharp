@@ -70,7 +70,7 @@
         <member name="M:WxTeamsSharp.Api.WxTeamsApi.DeleteUserAsync(System.String)">
             <inheritdoc/>
         </member>
-        <member name="M:WxTeamsSharp.Api.WxTeamsApi.UpdateUserAsync(System.String,WxTeamsSharp.Interfaces.People.IUpdateablePerson)">
+        <member name="M:WxTeamsSharp.Api.WxTeamsApi.UpdateUserAsync(WxTeamsSharp.Interfaces.People.IUpdateablePerson)">
             <inheritdoc/>
         </member>
         <member name="M:WxTeamsSharp.Api.WxTeamsApi.CreateUserAsync(WxTeamsSharp.Interfaces.People.ICreateablePerson)">
@@ -385,19 +385,19 @@
             the webhook is disabled
             </summary>
         </member>
-        <member name="T:WxTeamsSharp.Extensions.ServiceCollection">
+        <member name="T:WxTeamsSharp.Extensions.ServiceCollectionExtensions">
             <summary>
             Extension for IServiceCollection
             </summary>
         </member>
-        <member name="M:WxTeamsSharp.Extensions.ServiceCollection.AddWxTeamsSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+        <member name="M:WxTeamsSharp.Extensions.ServiceCollectionExtensions.AddWxTeamsSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             Add WxTeamsSharp to MS DI Container
             </summary>
             <param name="services">IServiceCollection DI Container</param>
             <returns>IServiceCollection</returns>
         </member>
-        <member name="M:WxTeamsSharp.Extensions.String.FirstCharToLower(System.String)">
+        <member name="M:WxTeamsSharp.Extensions.StringExtensions.FirstCharToLower(System.String)">
             <summary>
             Returns the input string with the first character converted to uppercase
             </summary>
@@ -658,11 +658,10 @@
             <param name="personId">A unique identifier for the person.</param>
             <returns>This method returns a response message which should be "OK"</returns>
         </member>
-        <member name="M:WxTeamsSharp.Interfaces.Api.IWxTeamsApi.UpdateUserAsync(System.String,WxTeamsSharp.Interfaces.People.IUpdateablePerson)">
+        <member name="M:WxTeamsSharp.Interfaces.Api.IWxTeamsApi.UpdateUserAsync(WxTeamsSharp.Interfaces.People.IUpdateablePerson)">
             <summary>
             Update details for a person, by ID
             </summary>
-            <param name="personId">A unique identifier for the person.</param>
             <param name="personParams">Get from PersonUpdater.Update(IPerson)</param>
             <returns>This method returns the updated Person object</returns>
         </member>
@@ -946,9 +945,34 @@
             Async Policy for Retry-After Header from API. Used in TeamsClient
             </summary>
         </member>
+        <member name="T:WxTeamsSharp.Interfaces.Client.IWxBaseClient">
+            <summary>
+            Layer that communicates directly with API
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Client.IWxBaseClient.SetAuth(System.String,System.String)">
+            <summary>
+            Sets the access token. 
+            Required before using the API.
+            </summary>
+            <param name="token">The token used to access the API</param>
+            <param name="url">Base URL for API. Has default. Don't change unless you're sure what you're doing</param>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Client.IWxBaseClient.GetHttpResponse``1(System.Net.Http.HttpMethod,System.String,System.String,System.Net.Http.MultipartFormDataContent)">
+            <summary>
+            Method responsible for direct communication with API and returning 
+            a result or a TeamsApiException
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="method"></param>
+            <param name="endpoint"></param>
+            <param name="json"></param>
+            <param name="formData"></param>
+            <returns></returns>
+        </member>
         <member name="T:WxTeamsSharp.Interfaces.Client.IWxTeamsClient">
             <summary>
-            Client for accessing Teams API
+            Client for invoking and deserializing returns from BaseClient
             </summary>
         </member>
         <member name="M:WxTeamsSharp.Interfaces.Client.IWxTeamsClient.SetAuth(System.String,System.String)">
@@ -1148,6 +1172,11 @@
         <member name="P:WxTeamsSharp.Interfaces.General.IListable.Error">
             <summary>
             Potential error when get multiple results
+            </summary>
+        </member>
+        <member name="P:WxTeamsSharp.Interfaces.General.IListable.HasError">
+            <summary>
+            Whether there is an error in the result
             </summary>
         </member>
         <member name="T:WxTeamsSharp.Interfaces.General.IListError">
@@ -1878,6 +1907,18 @@
             <param name="lastName">New last name</param>
             <returns></returns>
         </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPersonUpdater.Build">
+            <summary>
+            IUpdateablePerson
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateAsync">
+            <summary>
+            Update User
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:WxTeamsSharp.Interfaces.People.IPhoneNumber">
             <summary>
             User phone number
@@ -2425,6 +2466,9 @@
         <member name="P:WxTeamsSharp.Models.Events.Event.Error">
             <inheritdoc/>
         </member>
+        <member name="P:WxTeamsSharp.Models.Events.Event.HasError">
+            <inheritdoc/>
+        </member>
         <member name="T:WxTeamsSharp.Models.Events.EventData">
             <inheritdoc/>
         </member>
@@ -2554,6 +2598,9 @@
         <member name="P:WxTeamsSharp.Models.Memberships.RoomMembership.Error">
             <inheritdoc/>
         </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.RoomMembership.HasError">
+            <inheritdoc/>
+        </member>
         <member name="M:WxTeamsSharp.Models.Memberships.RoomMembership.UpdateAsync(System.Boolean)">
             <inheritdoc/>
         </member>
@@ -2588,6 +2635,9 @@
             <inheritdoc/>
         </member>
         <member name="P:WxTeamsSharp.Models.Memberships.TeamMembership.Error">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Memberships.TeamMembership.HasError">
             <inheritdoc/>
         </member>
         <member name="M:WxTeamsSharp.Models.Memberships.TeamMembership.UpdateAsync(System.Boolean)">
@@ -2639,6 +2689,9 @@
             <inheritdoc/>
         </member>
         <member name="P:WxTeamsSharp.Models.Messages.Message.Error">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Messages.Message.HasError">
             <inheritdoc/>
         </member>
         <member name="M:WxTeamsSharp.Models.Messages.Message.DeleteAsync">
@@ -2830,7 +2883,7 @@
             Builder class for updating an existing user
             </summary>
         </member>
-        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.#ctor(WxTeamsSharp.Interfaces.People.IPerson)">
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.#ctor(WxTeamsSharp.Models.People.Person)">
             <summary>
             Create a new PersonUpdater with specific IPerson.
             Prefer to use an IPerson.Update() or
@@ -2838,7 +2891,7 @@
             </summary>
             <param name="person">Person object to udpate</param>
         </member>
-        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.Update(WxTeamsSharp.Interfaces.People.IPerson)">
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.StartUpdate(WxTeamsSharp.Models.People.Person)">
             <inheritdoc/>
         </member>
         <member name="M:WxTeamsSharp.Models.People.PersonUpdater.UpdateEmail(System.String)">
@@ -2874,6 +2927,9 @@
         <member name="M:WxTeamsSharp.Models.People.PersonUpdater.Build">
             <inheritdoc/>
         </member>
+        <member name="M:WxTeamsSharp.Models.People.PersonUpdater.UpdateAsync">
+            <inheritdoc/>
+        </member>
         <member name="T:WxTeamsSharp.Models.ResourceGroups.ResourceGroup">
             <inheritdoc/>
         </member>
@@ -2887,6 +2943,9 @@
             <inheritdoc/>
         </member>
         <member name="P:WxTeamsSharp.Models.ResourceGroups.ResourceGroup.Error">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.ResourceGroups.ResourceGroup.HasError">
             <inheritdoc/>
         </member>
         <member name="T:WxTeamsSharp.Models.ResourceGroups.ResourceGroupMembership">
@@ -2920,6 +2979,9 @@
             <inheritdoc/>
         </member>
         <member name="P:WxTeamsSharp.Models.Roles.Role.Error">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Roles.Role.HasError">
             <inheritdoc/>
         </member>
         <member name="T:WxTeamsSharp.Models.Rooms.MeetingDetails">
@@ -2971,6 +3033,9 @@
             <inheritdoc/>
         </member>
         <member name="P:WxTeamsSharp.Models.Rooms.Room.Error">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Rooms.Room.HasError">
             <inheritdoc/>
         </member>
         <member name="P:WxTeamsSharp.Models.Rooms.Room.SipAddress">
@@ -3049,6 +3114,9 @@
             <inheritdoc/>
         </member>
         <member name="P:WxTeamsSharp.Models.Teams.Team.Error">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.Teams.Team.HasError">
             <inheritdoc/>
         </member>
         <member name="M:WxTeamsSharp.Models.Teams.Team.DeleteAsync">

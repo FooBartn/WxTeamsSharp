@@ -4,13 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using WxTeamsSharp.Extensions;
 using WxTeamsSharp.Helpers;
+using WxTeamsSharp.Interfaces.Api;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Interfaces.Messages;
 using WxTeamsSharp.Models.Messages;
 
 namespace WxTeamsSharp.Api
 {
-    internal partial class WxTeamsApi
+    internal partial class WxTeamsApi : IWxTeamsApi
     {
         /// <inheritdoc/>
         public async Task<IResponseMessage> DeleteMessageAsync(string messageId)

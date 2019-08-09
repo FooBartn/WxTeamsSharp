@@ -25,5 +25,8 @@ namespace WxTeamsSharp.Models.ResourceGroups
         [JsonProperty(PropertyName = "errors")]
         [JsonConverter(typeof(ConcreteConverter<ListError>))]
         public IListError Error { get; set; }
+
+        /// <inheritdoc/>
+        public bool HasError => Error != null;
     }
 }

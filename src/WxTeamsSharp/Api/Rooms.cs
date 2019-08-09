@@ -2,12 +2,13 @@
 using System.Threading.Tasks;
 using WxTeamsSharp.Enums;
 using WxTeamsSharp.Helpers;
+using WxTeamsSharp.Interfaces.Api;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Models.Rooms;
 
 namespace WxTeamsSharp.Api
 {
-    internal partial class WxTeamsApi
+    internal partial class WxTeamsApi : IWxTeamsApi
     {
         /// <inheritdoc/>   
         public async Task<Room> GetRoomAsync(string roomId)

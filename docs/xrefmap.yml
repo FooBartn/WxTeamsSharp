@@ -247,25 +247,25 @@ references:
   commentId: N:WxTeamsSharp.Extensions
   fullName: WxTeamsSharp.Extensions
   nameWithType: WxTeamsSharp.Extensions
-- uid: WxTeamsSharp.Extensions.ServiceCollection
-  name: ServiceCollection
-  href: api/WxTeamsSharp.Extensions.ServiceCollection.html
-  commentId: T:WxTeamsSharp.Extensions.ServiceCollection
-  fullName: WxTeamsSharp.Extensions.ServiceCollection
-  nameWithType: ServiceCollection
-- uid: WxTeamsSharp.Extensions.ServiceCollection.AddWxTeamsSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: WxTeamsSharp.Extensions.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  href: api/WxTeamsSharp.Extensions.ServiceCollectionExtensions.html
+  commentId: T:WxTeamsSharp.Extensions.ServiceCollectionExtensions
+  fullName: WxTeamsSharp.Extensions.ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+- uid: WxTeamsSharp.Extensions.ServiceCollectionExtensions.AddWxTeamsSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   name: AddWxTeamsSharp(IServiceCollection)
-  href: api/WxTeamsSharp.Extensions.ServiceCollection.html#WxTeamsSharp_Extensions_ServiceCollection_AddWxTeamsSharp_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:WxTeamsSharp.Extensions.ServiceCollection.AddWxTeamsSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: WxTeamsSharp.Extensions.ServiceCollection.AddWxTeamsSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  nameWithType: ServiceCollection.AddWxTeamsSharp(IServiceCollection)
-- uid: WxTeamsSharp.Extensions.ServiceCollection.AddWxTeamsSharp*
+  href: api/WxTeamsSharp.Extensions.ServiceCollectionExtensions.html#WxTeamsSharp_Extensions_ServiceCollectionExtensions_AddWxTeamsSharp_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:WxTeamsSharp.Extensions.ServiceCollectionExtensions.AddWxTeamsSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName: WxTeamsSharp.Extensions.ServiceCollectionExtensions.AddWxTeamsSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: ServiceCollectionExtensions.AddWxTeamsSharp(IServiceCollection)
+- uid: WxTeamsSharp.Extensions.ServiceCollectionExtensions.AddWxTeamsSharp*
   name: AddWxTeamsSharp
-  href: api/WxTeamsSharp.Extensions.ServiceCollection.html#WxTeamsSharp_Extensions_ServiceCollection_AddWxTeamsSharp_
-  commentId: Overload:WxTeamsSharp.Extensions.ServiceCollection.AddWxTeamsSharp
+  href: api/WxTeamsSharp.Extensions.ServiceCollectionExtensions.html#WxTeamsSharp_Extensions_ServiceCollectionExtensions_AddWxTeamsSharp_
+  commentId: Overload:WxTeamsSharp.Extensions.ServiceCollectionExtensions.AddWxTeamsSharp
   isSpec: "True"
-  fullName: WxTeamsSharp.Extensions.ServiceCollection.AddWxTeamsSharp
-  nameWithType: ServiceCollection.AddWxTeamsSharp
+  fullName: WxTeamsSharp.Extensions.ServiceCollectionExtensions.AddWxTeamsSharp
+  nameWithType: ServiceCollectionExtensions.AddWxTeamsSharp
 - uid: WxTeamsSharp.Interfaces.Api
   name: WxTeamsSharp.Interfaces.Api
   href: api/WxTeamsSharp.Interfaces.Api.html
@@ -1056,12 +1056,12 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Interfaces.Api.IWxTeamsApi.UpdateTeamMembership
   nameWithType: IWxTeamsApi.UpdateTeamMembership
-- uid: WxTeamsSharp.Interfaces.Api.IWxTeamsApi.UpdateUserAsync(System.String,WxTeamsSharp.Interfaces.People.IUpdateablePerson)
-  name: UpdateUserAsync(String, IUpdateablePerson)
-  href: api/WxTeamsSharp.Interfaces.Api.IWxTeamsApi.html#WxTeamsSharp_Interfaces_Api_IWxTeamsApi_UpdateUserAsync_System_String_WxTeamsSharp_Interfaces_People_IUpdateablePerson_
-  commentId: M:WxTeamsSharp.Interfaces.Api.IWxTeamsApi.UpdateUserAsync(System.String,WxTeamsSharp.Interfaces.People.IUpdateablePerson)
-  fullName: WxTeamsSharp.Interfaces.Api.IWxTeamsApi.UpdateUserAsync(System.String, WxTeamsSharp.Interfaces.People.IUpdateablePerson)
-  nameWithType: IWxTeamsApi.UpdateUserAsync(String, IUpdateablePerson)
+- uid: WxTeamsSharp.Interfaces.Api.IWxTeamsApi.UpdateUserAsync(WxTeamsSharp.Interfaces.People.IUpdateablePerson)
+  name: UpdateUserAsync(IUpdateablePerson)
+  href: api/WxTeamsSharp.Interfaces.Api.IWxTeamsApi.html#WxTeamsSharp_Interfaces_Api_IWxTeamsApi_UpdateUserAsync_WxTeamsSharp_Interfaces_People_IUpdateablePerson_
+  commentId: M:WxTeamsSharp.Interfaces.Api.IWxTeamsApi.UpdateUserAsync(WxTeamsSharp.Interfaces.People.IUpdateablePerson)
+  fullName: WxTeamsSharp.Interfaces.Api.IWxTeamsApi.UpdateUserAsync(WxTeamsSharp.Interfaces.People.IUpdateablePerson)
+  nameWithType: IWxTeamsApi.UpdateUserAsync(IUpdateablePerson)
 - uid: WxTeamsSharp.Interfaces.Api.IWxTeamsApi.UpdateUserAsync*
   name: UpdateUserAsync
   href: api/WxTeamsSharp.Interfaces.Api.IWxTeamsApi.html#WxTeamsSharp_Interfaces_Api_IWxTeamsApi_UpdateUserAsync_
@@ -1161,6 +1161,41 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Interfaces.Client.IPolicyProvider.RetryAfterPolicy
   nameWithType: IPolicyProvider.RetryAfterPolicy
+- uid: WxTeamsSharp.Interfaces.Client.IWxBaseClient
+  name: IWxBaseClient
+  href: api/WxTeamsSharp.Interfaces.Client.IWxBaseClient.html
+  commentId: T:WxTeamsSharp.Interfaces.Client.IWxBaseClient
+  fullName: WxTeamsSharp.Interfaces.Client.IWxBaseClient
+  nameWithType: IWxBaseClient
+- uid: WxTeamsSharp.Interfaces.Client.IWxBaseClient.GetHttpResponse*
+  name: GetHttpResponse
+  href: api/WxTeamsSharp.Interfaces.Client.IWxBaseClient.html#WxTeamsSharp_Interfaces_Client_IWxBaseClient_GetHttpResponse_
+  commentId: Overload:WxTeamsSharp.Interfaces.Client.IWxBaseClient.GetHttpResponse
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Client.IWxBaseClient.GetHttpResponse
+  nameWithType: IWxBaseClient.GetHttpResponse
+- uid: WxTeamsSharp.Interfaces.Client.IWxBaseClient.GetHttpResponse``1(System.Net.Http.HttpMethod,System.String,System.String,System.Net.Http.MultipartFormDataContent)
+  name: GetHttpResponse<TEntity>(HttpMethod, String, String, MultipartFormDataContent)
+  href: api/WxTeamsSharp.Interfaces.Client.IWxBaseClient.html#WxTeamsSharp_Interfaces_Client_IWxBaseClient_GetHttpResponse__1_System_Net_Http_HttpMethod_System_String_System_String_System_Net_Http_MultipartFormDataContent_
+  commentId: M:WxTeamsSharp.Interfaces.Client.IWxBaseClient.GetHttpResponse``1(System.Net.Http.HttpMethod,System.String,System.String,System.Net.Http.MultipartFormDataContent)
+  name.vb: GetHttpResponse(Of TEntity)(HttpMethod, String, String, MultipartFormDataContent)
+  fullName: WxTeamsSharp.Interfaces.Client.IWxBaseClient.GetHttpResponse<TEntity>(System.Net.Http.HttpMethod, System.String, System.String, System.Net.Http.MultipartFormDataContent)
+  fullName.vb: WxTeamsSharp.Interfaces.Client.IWxBaseClient.GetHttpResponse(Of TEntity)(System.Net.Http.HttpMethod, System.String, System.String, System.Net.Http.MultipartFormDataContent)
+  nameWithType: IWxBaseClient.GetHttpResponse<TEntity>(HttpMethod, String, String, MultipartFormDataContent)
+  nameWithType.vb: IWxBaseClient.GetHttpResponse(Of TEntity)(HttpMethod, String, String, MultipartFormDataContent)
+- uid: WxTeamsSharp.Interfaces.Client.IWxBaseClient.SetAuth(System.String,System.String)
+  name: SetAuth(String, String)
+  href: api/WxTeamsSharp.Interfaces.Client.IWxBaseClient.html#WxTeamsSharp_Interfaces_Client_IWxBaseClient_SetAuth_System_String_System_String_
+  commentId: M:WxTeamsSharp.Interfaces.Client.IWxBaseClient.SetAuth(System.String,System.String)
+  fullName: WxTeamsSharp.Interfaces.Client.IWxBaseClient.SetAuth(System.String, System.String)
+  nameWithType: IWxBaseClient.SetAuth(String, String)
+- uid: WxTeamsSharp.Interfaces.Client.IWxBaseClient.SetAuth*
+  name: SetAuth
+  href: api/WxTeamsSharp.Interfaces.Client.IWxBaseClient.html#WxTeamsSharp_Interfaces_Client_IWxBaseClient_SetAuth_
+  commentId: Overload:WxTeamsSharp.Interfaces.Client.IWxBaseClient.SetAuth
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.Client.IWxBaseClient.SetAuth
+  nameWithType: IWxBaseClient.SetAuth
 - uid: WxTeamsSharp.Interfaces.Client.IWxTeamsClient
   name: IWxTeamsClient
   href: api/WxTeamsSharp.Interfaces.Client.IWxTeamsClient.html
@@ -1584,6 +1619,19 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Interfaces.General.IListable.Error
   nameWithType: IListable.Error
+- uid: WxTeamsSharp.Interfaces.General.IListable.HasError
+  name: HasError
+  href: api/WxTeamsSharp.Interfaces.General.IListable.html#WxTeamsSharp_Interfaces_General_IListable_HasError
+  commentId: P:WxTeamsSharp.Interfaces.General.IListable.HasError
+  fullName: WxTeamsSharp.Interfaces.General.IListable.HasError
+  nameWithType: IListable.HasError
+- uid: WxTeamsSharp.Interfaces.General.IListable.HasError*
+  name: HasError
+  href: api/WxTeamsSharp.Interfaces.General.IListable.html#WxTeamsSharp_Interfaces_General_IListable_HasError_
+  commentId: Overload:WxTeamsSharp.Interfaces.General.IListable.HasError
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.General.IListable.HasError
+  nameWithType: IListable.HasError
 - uid: WxTeamsSharp.Interfaces.General.IListError
   name: IListError
   href: api/WxTeamsSharp.Interfaces.General.IListError.html
@@ -3011,6 +3059,19 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Interfaces.People.IPersonUpdater.AddRole
   nameWithType: IPersonUpdater.AddRole
+- uid: WxTeamsSharp.Interfaces.People.IPersonUpdater.Build
+  name: Build()
+  href: api/WxTeamsSharp.Interfaces.People.IPersonUpdater.html#WxTeamsSharp_Interfaces_People_IPersonUpdater_Build
+  commentId: M:WxTeamsSharp.Interfaces.People.IPersonUpdater.Build
+  fullName: WxTeamsSharp.Interfaces.People.IPersonUpdater.Build()
+  nameWithType: IPersonUpdater.Build()
+- uid: WxTeamsSharp.Interfaces.People.IPersonUpdater.Build*
+  name: Build
+  href: api/WxTeamsSharp.Interfaces.People.IPersonUpdater.html#WxTeamsSharp_Interfaces_People_IPersonUpdater_Build_
+  commentId: Overload:WxTeamsSharp.Interfaces.People.IPersonUpdater.Build
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.People.IPersonUpdater.Build
+  nameWithType: IPersonUpdater.Build
 - uid: WxTeamsSharp.Interfaces.People.IPersonUpdater.ReplaceLicenses(System.Collections.Generic.List{System.String})
   name: ReplaceLicenses(List<String>)
   href: api/WxTeamsSharp.Interfaces.People.IPersonUpdater.html#WxTeamsSharp_Interfaces_People_IPersonUpdater_ReplaceLicenses_System_Collections_Generic_List_System_String__
@@ -3043,6 +3104,19 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Interfaces.People.IPersonUpdater.ReplaceRoles
   nameWithType: IPersonUpdater.ReplaceRoles
+- uid: WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateAsync
+  name: UpdateAsync()
+  href: api/WxTeamsSharp.Interfaces.People.IPersonUpdater.html#WxTeamsSharp_Interfaces_People_IPersonUpdater_UpdateAsync
+  commentId: M:WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateAsync
+  fullName: WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateAsync()
+  nameWithType: IPersonUpdater.UpdateAsync()
+- uid: WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateAsync*
+  name: UpdateAsync
+  href: api/WxTeamsSharp.Interfaces.People.IPersonUpdater.html#WxTeamsSharp_Interfaces_People_IPersonUpdater_UpdateAsync_
+  commentId: Overload:WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateAsync
+  nameWithType: IPersonUpdater.UpdateAsync
 - uid: WxTeamsSharp.Interfaces.People.IPersonUpdater.UpdateAvatar(System.String)
   name: UpdateAvatar(String)
   href: api/WxTeamsSharp.Interfaces.People.IPersonUpdater.html#WxTeamsSharp_Interfaces_People_IPersonUpdater_UpdateAvatar_System_String_
@@ -4199,6 +4273,19 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Models.Events.Event.EventData
   nameWithType: Event.EventData
+- uid: WxTeamsSharp.Models.Events.Event.HasError
+  name: HasError
+  href: api/WxTeamsSharp.Models.Events.Event.html#WxTeamsSharp_Models_Events_Event_HasError
+  commentId: P:WxTeamsSharp.Models.Events.Event.HasError
+  fullName: WxTeamsSharp.Models.Events.Event.HasError
+  nameWithType: Event.HasError
+- uid: WxTeamsSharp.Models.Events.Event.HasError*
+  name: HasError
+  href: api/WxTeamsSharp.Models.Events.Event.html#WxTeamsSharp_Models_Events_Event_HasError_
+  commentId: Overload:WxTeamsSharp.Models.Events.Event.HasError
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Events.Event.HasError
+  nameWithType: Event.HasError
 - uid: WxTeamsSharp.Models.Events.Event.Id
   name: Id
   href: api/WxTeamsSharp.Models.Events.Event.html#WxTeamsSharp_Models_Events_Event_Id
@@ -4499,6 +4586,19 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Models.Memberships.RoomMembership.Error
   nameWithType: RoomMembership.Error
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.HasError
+  name: HasError
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_HasError
+  commentId: P:WxTeamsSharp.Models.Memberships.RoomMembership.HasError
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.HasError
+  nameWithType: RoomMembership.HasError
+- uid: WxTeamsSharp.Models.Memberships.RoomMembership.HasError*
+  name: HasError
+  href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_HasError_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.RoomMembership.HasError
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.RoomMembership.HasError
+  nameWithType: RoomMembership.HasError
 - uid: WxTeamsSharp.Models.Memberships.RoomMembership.Id
   name: Id
   href: api/WxTeamsSharp.Models.Memberships.RoomMembership.html#WxTeamsSharp_Models_Memberships_RoomMembership_Id
@@ -4648,6 +4748,19 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Models.Memberships.TeamMembership.Error
   nameWithType: TeamMembership.Error
+- uid: WxTeamsSharp.Models.Memberships.TeamMembership.HasError
+  name: HasError
+  href: api/WxTeamsSharp.Models.Memberships.TeamMembership.html#WxTeamsSharp_Models_Memberships_TeamMembership_HasError
+  commentId: P:WxTeamsSharp.Models.Memberships.TeamMembership.HasError
+  fullName: WxTeamsSharp.Models.Memberships.TeamMembership.HasError
+  nameWithType: TeamMembership.HasError
+- uid: WxTeamsSharp.Models.Memberships.TeamMembership.HasError*
+  name: HasError
+  href: api/WxTeamsSharp.Models.Memberships.TeamMembership.html#WxTeamsSharp_Models_Memberships_TeamMembership_HasError_
+  commentId: Overload:WxTeamsSharp.Models.Memberships.TeamMembership.HasError
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Memberships.TeamMembership.HasError
+  nameWithType: TeamMembership.HasError
 - uid: WxTeamsSharp.Models.Memberships.TeamMembership.Id
   name: Id
   href: api/WxTeamsSharp.Models.Memberships.TeamMembership.html#WxTeamsSharp_Models_Memberships_TeamMembership_Id
@@ -4842,6 +4955,19 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Models.Messages.Message.Files
   nameWithType: Message.Files
+- uid: WxTeamsSharp.Models.Messages.Message.HasError
+  name: HasError
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_HasError
+  commentId: P:WxTeamsSharp.Models.Messages.Message.HasError
+  fullName: WxTeamsSharp.Models.Messages.Message.HasError
+  nameWithType: Message.HasError
+- uid: WxTeamsSharp.Models.Messages.Message.HasError*
+  name: HasError
+  href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_HasError_
+  commentId: Overload:WxTeamsSharp.Models.Messages.Message.HasError
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Messages.Message.HasError
+  nameWithType: Message.HasError
 - uid: WxTeamsSharp.Models.Messages.Message.Id
   name: Id
   href: api/WxTeamsSharp.Models.Messages.Message.html#WxTeamsSharp_Models_Messages_Message_Id
@@ -5722,12 +5848,12 @@ references:
   commentId: T:WxTeamsSharp.Models.People.PersonUpdater
   fullName: WxTeamsSharp.Models.People.PersonUpdater
   nameWithType: PersonUpdater
-- uid: WxTeamsSharp.Models.People.PersonUpdater.#ctor(WxTeamsSharp.Interfaces.People.IPerson)
-  name: PersonUpdater(IPerson)
-  href: api/WxTeamsSharp.Models.People.PersonUpdater.html#WxTeamsSharp_Models_People_PersonUpdater__ctor_WxTeamsSharp_Interfaces_People_IPerson_
-  commentId: M:WxTeamsSharp.Models.People.PersonUpdater.#ctor(WxTeamsSharp.Interfaces.People.IPerson)
-  fullName: WxTeamsSharp.Models.People.PersonUpdater.PersonUpdater(WxTeamsSharp.Interfaces.People.IPerson)
-  nameWithType: PersonUpdater.PersonUpdater(IPerson)
+- uid: WxTeamsSharp.Models.People.PersonUpdater.#ctor(WxTeamsSharp.Models.People.Person)
+  name: PersonUpdater(Person)
+  href: api/WxTeamsSharp.Models.People.PersonUpdater.html#WxTeamsSharp_Models_People_PersonUpdater__ctor_WxTeamsSharp_Models_People_Person_
+  commentId: M:WxTeamsSharp.Models.People.PersonUpdater.#ctor(WxTeamsSharp.Models.People.Person)
+  fullName: WxTeamsSharp.Models.People.PersonUpdater.PersonUpdater(WxTeamsSharp.Models.People.Person)
+  nameWithType: PersonUpdater.PersonUpdater(Person)
 - uid: WxTeamsSharp.Models.People.PersonUpdater.#ctor*
   name: PersonUpdater
   href: api/WxTeamsSharp.Models.People.PersonUpdater.html#WxTeamsSharp_Models_People_PersonUpdater__ctor_
@@ -5806,19 +5932,32 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Models.People.PersonUpdater.ReplaceRoles
   nameWithType: PersonUpdater.ReplaceRoles
-- uid: WxTeamsSharp.Models.People.PersonUpdater.Update(WxTeamsSharp.Interfaces.People.IPerson)
-  name: Update(IPerson)
-  href: api/WxTeamsSharp.Models.People.PersonUpdater.html#WxTeamsSharp_Models_People_PersonUpdater_Update_WxTeamsSharp_Interfaces_People_IPerson_
-  commentId: M:WxTeamsSharp.Models.People.PersonUpdater.Update(WxTeamsSharp.Interfaces.People.IPerson)
-  fullName: WxTeamsSharp.Models.People.PersonUpdater.Update(WxTeamsSharp.Interfaces.People.IPerson)
-  nameWithType: PersonUpdater.Update(IPerson)
-- uid: WxTeamsSharp.Models.People.PersonUpdater.Update*
-  name: Update
-  href: api/WxTeamsSharp.Models.People.PersonUpdater.html#WxTeamsSharp_Models_People_PersonUpdater_Update_
-  commentId: Overload:WxTeamsSharp.Models.People.PersonUpdater.Update
+- uid: WxTeamsSharp.Models.People.PersonUpdater.StartUpdate(WxTeamsSharp.Models.People.Person)
+  name: StartUpdate(Person)
+  href: api/WxTeamsSharp.Models.People.PersonUpdater.html#WxTeamsSharp_Models_People_PersonUpdater_StartUpdate_WxTeamsSharp_Models_People_Person_
+  commentId: M:WxTeamsSharp.Models.People.PersonUpdater.StartUpdate(WxTeamsSharp.Models.People.Person)
+  fullName: WxTeamsSharp.Models.People.PersonUpdater.StartUpdate(WxTeamsSharp.Models.People.Person)
+  nameWithType: PersonUpdater.StartUpdate(Person)
+- uid: WxTeamsSharp.Models.People.PersonUpdater.StartUpdate*
+  name: StartUpdate
+  href: api/WxTeamsSharp.Models.People.PersonUpdater.html#WxTeamsSharp_Models_People_PersonUpdater_StartUpdate_
+  commentId: Overload:WxTeamsSharp.Models.People.PersonUpdater.StartUpdate
   isSpec: "True"
-  fullName: WxTeamsSharp.Models.People.PersonUpdater.Update
-  nameWithType: PersonUpdater.Update
+  fullName: WxTeamsSharp.Models.People.PersonUpdater.StartUpdate
+  nameWithType: PersonUpdater.StartUpdate
+- uid: WxTeamsSharp.Models.People.PersonUpdater.UpdateAsync
+  name: UpdateAsync()
+  href: api/WxTeamsSharp.Models.People.PersonUpdater.html#WxTeamsSharp_Models_People_PersonUpdater_UpdateAsync
+  commentId: M:WxTeamsSharp.Models.People.PersonUpdater.UpdateAsync
+  fullName: WxTeamsSharp.Models.People.PersonUpdater.UpdateAsync()
+  nameWithType: PersonUpdater.UpdateAsync()
+- uid: WxTeamsSharp.Models.People.PersonUpdater.UpdateAsync*
+  name: UpdateAsync
+  href: api/WxTeamsSharp.Models.People.PersonUpdater.html#WxTeamsSharp_Models_People_PersonUpdater_UpdateAsync_
+  commentId: Overload:WxTeamsSharp.Models.People.PersonUpdater.UpdateAsync
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.People.PersonUpdater.UpdateAsync
+  nameWithType: PersonUpdater.UpdateAsync
 - uid: WxTeamsSharp.Models.People.PersonUpdater.UpdateAvatar(System.String)
   name: UpdateAvatar(String)
   href: api/WxTeamsSharp.Models.People.PersonUpdater.html#WxTeamsSharp_Models_People_PersonUpdater_UpdateAvatar_System_String_
@@ -5922,6 +6061,19 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Models.ResourceGroups.ResourceGroup.Error
   nameWithType: ResourceGroup.Error
+- uid: WxTeamsSharp.Models.ResourceGroups.ResourceGroup.HasError
+  name: HasError
+  href: api/WxTeamsSharp.Models.ResourceGroups.ResourceGroup.html#WxTeamsSharp_Models_ResourceGroups_ResourceGroup_HasError
+  commentId: P:WxTeamsSharp.Models.ResourceGroups.ResourceGroup.HasError
+  fullName: WxTeamsSharp.Models.ResourceGroups.ResourceGroup.HasError
+  nameWithType: ResourceGroup.HasError
+- uid: WxTeamsSharp.Models.ResourceGroups.ResourceGroup.HasError*
+  name: HasError
+  href: api/WxTeamsSharp.Models.ResourceGroups.ResourceGroup.html#WxTeamsSharp_Models_ResourceGroups_ResourceGroup_HasError_
+  commentId: Overload:WxTeamsSharp.Models.ResourceGroups.ResourceGroup.HasError
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.ResourceGroups.ResourceGroup.HasError
+  nameWithType: ResourceGroup.HasError
 - uid: WxTeamsSharp.Models.ResourceGroups.ResourceGroup.Id
   name: Id
   href: api/WxTeamsSharp.Models.ResourceGroups.ResourceGroup.html#WxTeamsSharp_Models_ResourceGroups_ResourceGroup_Id
@@ -6070,6 +6222,19 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Models.Roles.Role.Error
   nameWithType: Role.Error
+- uid: WxTeamsSharp.Models.Roles.Role.HasError
+  name: HasError
+  href: api/WxTeamsSharp.Models.Roles.Role.html#WxTeamsSharp_Models_Roles_Role_HasError
+  commentId: P:WxTeamsSharp.Models.Roles.Role.HasError
+  fullName: WxTeamsSharp.Models.Roles.Role.HasError
+  nameWithType: Role.HasError
+- uid: WxTeamsSharp.Models.Roles.Role.HasError*
+  name: HasError
+  href: api/WxTeamsSharp.Models.Roles.Role.html#WxTeamsSharp_Models_Roles_Role_HasError_
+  commentId: Overload:WxTeamsSharp.Models.Roles.Role.HasError
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Roles.Role.HasError
+  nameWithType: Role.HasError
 - uid: WxTeamsSharp.Models.Roles.Role.Id
   name: Id
   href: api/WxTeamsSharp.Models.Roles.Role.html#WxTeamsSharp_Models_Roles_Role_Id
@@ -6395,6 +6560,19 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync
   nameWithType: Room.GetMessagesBeforeMessageAsync
+- uid: WxTeamsSharp.Models.Rooms.Room.HasError
+  name: HasError
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_HasError
+  commentId: P:WxTeamsSharp.Models.Rooms.Room.HasError
+  fullName: WxTeamsSharp.Models.Rooms.Room.HasError
+  nameWithType: Room.HasError
+- uid: WxTeamsSharp.Models.Rooms.Room.HasError*
+  name: HasError
+  href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_HasError_
+  commentId: Overload:WxTeamsSharp.Models.Rooms.Room.HasError
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Rooms.Room.HasError
+  nameWithType: Room.HasError
 - uid: WxTeamsSharp.Models.Rooms.Room.Id
   name: Id
   href: api/WxTeamsSharp.Models.Rooms.Room.html#WxTeamsSharp_Models_Rooms_Room_Id
@@ -6634,6 +6812,19 @@ references:
   isSpec: "True"
   fullName: WxTeamsSharp.Models.Teams.Team.GetMembershipsAsync
   nameWithType: Team.GetMembershipsAsync
+- uid: WxTeamsSharp.Models.Teams.Team.HasError
+  name: HasError
+  href: api/WxTeamsSharp.Models.Teams.Team.html#WxTeamsSharp_Models_Teams_Team_HasError
+  commentId: P:WxTeamsSharp.Models.Teams.Team.HasError
+  fullName: WxTeamsSharp.Models.Teams.Team.HasError
+  nameWithType: Team.HasError
+- uid: WxTeamsSharp.Models.Teams.Team.HasError*
+  name: HasError
+  href: api/WxTeamsSharp.Models.Teams.Team.html#WxTeamsSharp_Models_Teams_Team_HasError_
+  commentId: Overload:WxTeamsSharp.Models.Teams.Team.HasError
+  isSpec: "True"
+  fullName: WxTeamsSharp.Models.Teams.Team.HasError
+  nameWithType: Team.HasError
 - uid: WxTeamsSharp.Models.Teams.Team.Id
   name: Id
   href: api/WxTeamsSharp.Models.Teams.Team.html#WxTeamsSharp_Models_Teams_Team_Id

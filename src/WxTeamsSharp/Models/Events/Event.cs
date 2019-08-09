@@ -52,5 +52,8 @@ namespace WxTeamsSharp.Models.Events
         [JsonProperty(PropertyName = "errors")]
         [JsonConverter(typeof(ConcreteConverter<ListError>))]
         public IListError Error { get; private set; }
+
+        /// <inheritdoc/>
+        public bool HasError => Error != null;
     }
 }

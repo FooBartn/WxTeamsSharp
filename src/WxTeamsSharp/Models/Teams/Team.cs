@@ -34,6 +34,9 @@ namespace WxTeamsSharp.Models.Teams
         public IListError Error { get; set; }
 
         /// <inheritdoc/>
+        public bool HasError => Error != null;
+
+        /// <inheritdoc/>
         public async Task<IResponseMessage> DeleteAsync()
             => await TeamsApi.DeleteTeamAsync(Id);
 

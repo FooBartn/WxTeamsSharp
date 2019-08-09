@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using WxTeamsSharp.Models.People;
 
 namespace WxTeamsSharp.Interfaces.People
 {
@@ -76,5 +78,17 @@ namespace WxTeamsSharp.Interfaces.People
         /// <param name="lastName">New last name</param>
         /// <returns></returns>
         IPersonUpdater UpdateLastName(string lastName);
+
+        /// <summary>
+        /// IUpdateablePerson
+        /// </summary>
+        /// <returns></returns>
+        IUpdateablePerson Build();
+
+        /// <summary>
+        /// Update User
+        /// </summary>
+        /// <returns></returns>
+        Task<Person> UpdateAsync();
     }
 }

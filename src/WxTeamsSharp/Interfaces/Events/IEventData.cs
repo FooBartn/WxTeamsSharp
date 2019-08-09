@@ -26,7 +26,7 @@ namespace WxTeamsSharp.Interfaces.Events
         /// <summary>
         /// Event Text
         /// </summary>
-        string Text { get; set; }
+        string Text { get; }
 
         /// <summary>
         /// Unique Id for the user

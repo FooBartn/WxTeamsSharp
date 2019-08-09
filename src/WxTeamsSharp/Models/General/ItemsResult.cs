@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using WxTeamsSharp.Interfaces.General;
 
@@ -13,14 +14,15 @@ namespace WxTeamsSharp.Models.General
         public ItemsResult() { }
         public ItemsResult(List<TItem> items, string nextPage)
         {
-            Items = items;
+            Items = new ReadOnlyCollection<TItem>(items);
             NextPage = nextPage;
         }
 
         internal string NextPage { get; private set; } = string.Empty;
 
         [JsonProperty]
-        public List<TItem> Items { get; private set; } = new List<TItem>();
+        public ReadOnlyCollection<TItem> Items { get; private set; } 
+            = new ReadOnlyCollection<TItem>(new List<TItem>());
 
         public bool HasNextPage => !string.IsNullOrEmpty(NextPage);
 

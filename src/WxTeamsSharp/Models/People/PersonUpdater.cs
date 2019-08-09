@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using WxTeamsSharp.Interfaces.People;
 
 namespace WxTeamsSharp.Models.People
@@ -16,7 +17,8 @@ namespace WxTeamsSharp.Models.People
         private List<string> _roles;
         private List<string> _licenses;
         private List<string> _email;
-        private readonly IPerson _person;
+        private PeopleParams _parameters;
+        private readonly Person _person;
 
         /// <summary>
         /// Create a new PersonUpdater with specific IPerson.
@@ -24,13 +26,13 @@ namespace WxTeamsSharp.Models.People
         /// PersonUpdater.New(IPerson person)
         /// </summary>
         /// <param name="person">Person object to udpate</param>
-        public PersonUpdater(IPerson person)
+        public PersonUpdater(Person person)
         {
             _person = person;
         }
 
         /// <inheritdoc/>
-        public static IPersonUpdater Update(IPerson person) => new PersonUpdater(person);
+        public static IPersonUpdater StartUpdate(Person person) => new PersonUpdater(person);
 
         /// <inheritdoc/>
         public IPersonUpdater UpdateEmail(string email)
@@ -88,7 +90,7 @@ namespace WxTeamsSharp.Models.People
             {
                 foreach (var license in _person.Licenses)
                 {
-                    _licenses.Add(licenseId);
+                    _licenses.Add(license);
                 }
             }
 
@@ -133,7 +135,7 @@ namespace WxTeamsSharp.Models.People
         /// <inheritdoc/>
         public IUpdateablePerson Build()
         {
-            var parameters = new PeopleParams(_person.Id)
+            _parameters = new PeopleParams(_person.Id)
             {
                 Avatar = _avatarUrl,
                 DisplayName = _displayName,
@@ -145,7 +147,11 @@ namespace WxTeamsSharp.Models.People
                 Roles = _roles
             };
 
-            return parameters;
+            return _parameters;
         }
+
+        /// <inheritdoc/>
+        public async Task<Person> UpdateAsync()
+            => await _person.TeamsApi.UpdateUserAsync(_parameters);
     }
 }

@@ -61,6 +61,9 @@ namespace WxTeamsSharp.Models.Rooms
         public IListError Error { get; private set; }
 
         /// <inheritdoc/>
+        public bool HasError => Error != null;
+
+        /// <inheritdoc/>
         [JsonProperty]
         public string SipAddress { get; private set; }
 

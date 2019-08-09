@@ -2,7 +2,7 @@
 
 namespace WxTeamsSharp.Extensions
 {
-    internal static class String
+    internal static class StringExtensions
     {
         /// <summary>
         /// Returns the input string with the first character converted to uppercase

@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Enums.EventResource.html",
-          "hash": "RD1EteNLzJWvFzyveg48Kw=="
+          "hash": "SQE6UQuz/68alP8mQdIYDA=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Enums.EventType.html",
-          "hash": "lAT6N1qBaZ9ZFdKDDyuHiA=="
+          "hash": "DGHqwqB7K3rbn5f0lmtLVQ=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Enums.PersonStatus.html",
-          "hash": "ciCCzN/m5i7dab2dlbAw/Q=="
+          "hash": "Ol/ssTs+4194J0cy++DEmA=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Enums.PersonType.html",
-          "hash": "GEonUE+quOgNsiuM/5YZsw=="
+          "hash": "VvaIlAZDlUoc5OY6dysSFQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Enums.ResourceMembershipStatus.html",
-          "hash": "ewgkZJiRizfZbeAfunIqoQ=="
+          "hash": "Kv7EKv4dSuR3F0/aoBtRTA=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Enums.RoomType.html",
-          "hash": "WBMCrVN3WvvqvYeuKrlnmg=="
+          "hash": "x8nUu+cdd1hklOIFMeSFBQ=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Enums.SortBy.html",
-          "hash": "+JTYUwt5PD/4GTV9AwMsfA=="
+          "hash": "Hkf7cUt3HhP7jeE3I+ye3Q=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Enums.WebhookResource.html",
-          "hash": "nEiwQMHNsR1NugLBOO61bQ=="
+          "hash": "dGUvyL11htnp7yDs2vvGkA=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Enums.WebhookStatus.html",
-          "hash": "0HadGNby+mK0zJAdPwlpCg=="
+          "hash": "vUvxEd7W/cLa3P4yeW0rFQ=="
         }
       },
       "is_incremental": false,
@@ -125,11 +125,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/WxTeamsSharp.Extensions.ServiceCollection.yml",
+      "source_relative_path": "api/WxTeamsSharp.Extensions.ServiceCollectionExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/WxTeamsSharp.Extensions.ServiceCollection.html",
-          "hash": "UK3IHQDAZyHuMrW0NCvqUw=="
+          "relative_path": "api/WxTeamsSharp.Extensions.ServiceCollectionExtensions.html",
+          "hash": "B90YvhO2CtASnwoz2LUHkQ=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Extensions.html",
-          "hash": "/d90DAnZPGhMoET9A4A1Hw=="
+          "hash": "3XLajuEMojELg4h6fVxKug=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Api.IWxTeamsApi.html",
-          "hash": "fn22f1oSpT6r4QUePhf4Cg=="
+          "hash": "QeeMZ3GRPF+6GkVDj52Z2Q=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Client.IJsonDeserializer.html",
-          "hash": "4iEyfvz95EC6G30IzoCR8A=="
+          "hash": "gx3DUS1039xZtT8f7LcFTw=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,19 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Client.IPolicyProvider.html",
-          "hash": "zLzNbwvNsgwsaC91pjVYYw=="
+          "hash": "1A8zqbM/zBZn1OOY+zvxGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WxTeamsSharp.Interfaces.Client.IWxBaseClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WxTeamsSharp.Interfaces.Client.IWxBaseClient.html",
+          "hash": "qlciSuTWPUy7VoHpxaV4oQ=="
         }
       },
       "is_incremental": false,
@@ -201,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Client.IWxTeamsClient.html",
-          "hash": "4Ud4NU35Kl65L/guX0XZaA=="
+          "hash": "iPt/b4hy5gx2iLiL/klcYg=="
         }
       },
       "is_incremental": false,
@@ -213,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Client.html",
-          "hash": "nhrniiD+LpddvD3h3yIf2g=="
+          "hash": "P/tpPGBNv1CCIqOz48Kjlw=="
         }
       },
       "is_incremental": false,
@@ -225,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Events.IEvent.html",
-          "hash": "VSegZB7zvEjH1feoAPqQrQ=="
+          "hash": "j0wQruX6yUrwD5iL4S3d1w=="
         }
       },
       "is_incremental": false,
@@ -237,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Events.IEventData.html",
-          "hash": "S0fmedhLAvoeFt0ML5DKbw=="
+          "hash": "ISmT/wo8d5ECTBHlLDnB7A=="
         }
       },
       "is_incremental": false,
@@ -261,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.General.IErrorTitle.html",
-          "hash": "H6oNB59aWUKVbftlTrsK7g=="
+          "hash": "ZqtfCOIevhVmIMSXYYgSfw=="
         }
       },
       "is_incremental": false,
@@ -273,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.General.IFormDataParams.html",
-          "hash": "EoKcjPetpRTzNSee1IEaxg=="
+          "hash": "8zvFbOgz5Ebmj9rxZNeIGQ=="
         }
       },
       "is_incremental": false,
@@ -285,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.General.IJsonParams.html",
-          "hash": "sMdFHxxi1OedZbMzVjdnMw=="
+          "hash": "AprN8493fA8pBrDg/mR3jQ=="
         }
       },
       "is_incremental": false,
@@ -297,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.General.IListError.html",
-          "hash": "qGQMrtFIDnOsWl2ZDDiOwA=="
+          "hash": "NSjzo1lillgPIGHmZOgSvw=="
         }
       },
       "is_incremental": false,
@@ -309,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.General.IListResult-1.html",
-          "hash": "61CRAuVLGqNwWPww1AwsBw=="
+          "hash": "B6kKV2lTLs9d8X7lPFIyMg=="
         }
       },
       "is_incremental": false,
@@ -321,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.General.IListable.html",
-          "hash": "ec0hTs1dLJxeicKfCTZVmA=="
+          "hash": "2OQOJC/Haa9Uximym2qq/Q=="
         }
       },
       "is_incremental": false,
@@ -333,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.General.IResponseMessage.html",
-          "hash": "Mk89jBVVP7M5fJLsoHeinw=="
+          "hash": "glkbTcaS0VMUGPXv6kz4Bg=="
         }
       },
       "is_incremental": false,
@@ -345,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.General.ITeamsObject.html",
-          "hash": "4sHPYx7lettj8S+xadGrvg=="
+          "hash": "spYYaMqBOl0o/8SnyhqYgg=="
         }
       },
       "is_incremental": false,
@@ -369,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Licenses.ILicense.html",
-          "hash": "6/52J3gwiHg9PvyWuo+vBw=="
+          "hash": "beOptGgV0Mjm0Ch6snuu5g=="
         }
       },
       "is_incremental": false,
@@ -393,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Memberships.IMembership-1.html",
-          "hash": "rtQx+dZCzDRRr57sgL3CNQ=="
+          "hash": "DlR8whnybZnQXLzZ+rFNjw=="
         }
       },
       "is_incremental": false,
@@ -405,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Memberships.IResourceGroupMembership.html",
-          "hash": "Zw4KB4QBm3KYYhQTnYs8Qw=="
+          "hash": "LoTdcOubMTPwbTjcS0AIDg=="
         }
       },
       "is_incremental": false,
@@ -429,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Messages.IBuildableMessage.html",
-          "hash": "r4+A1bEeZItKN66S3mF35Q=="
+          "hash": "k8gOB3ztkA9VzUT+77//mg=="
         }
       },
       "is_incremental": false,
@@ -441,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Messages.IMessage.html",
-          "hash": "/mb8YX01cs6zwuBDLyGtEQ=="
+          "hash": "fcVIzeewexgPpefM2AK3Aw=="
         }
       },
       "is_incremental": false,
@@ -453,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Messages.IMessageable.html",
-          "hash": "W0f+Rgj/Sb/pqfsNpU8Zqw=="
+          "hash": "0rNleM4Srm1zBETyBRcrKg=="
         }
       },
       "is_incremental": false,
@@ -465,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Messages.ISendMessageContent.html",
-          "hash": "bEoQNys5waxm9CsyZOqfow=="
+          "hash": "i/eg289RDlbxCAjbtYcAGA=="
         }
       },
       "is_incremental": false,
@@ -477,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Messages.ISendMessageTo.html",
-          "hash": "5ChNRmyQ6FXq+9kAimau1A=="
+          "hash": "pyPPHSko4NSVMZFQxEb8sg=="
         }
       },
       "is_incremental": false,
@@ -489,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Messages.ISendMessageWithFile.html",
-          "hash": "wCQ8S9ZTavPDd6KmUa0N2A=="
+          "hash": "71FoOV5aHriF99eplvTSyQ=="
         }
       },
       "is_incremental": false,
@@ -501,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Messages.ISendableMessage.html",
-          "hash": "SfmDGHIP013jprS3AfAVPA=="
+          "hash": "0+3YX+/5FsxbS9hY4aY0zA=="
         }
       },
       "is_incremental": false,
@@ -525,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Organizations.IOrganization.html",
-          "hash": "FacRj9CpIfJ4CQrqhZwqfA=="
+          "hash": "koDPg0HQqQEpy63mdg2glQ=="
         }
       },
       "is_incremental": false,
@@ -549,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.People.IBuildablePerson.html",
-          "hash": "PYuBdmWuF4FNalfu2qPFbA=="
+          "hash": "OeYfJ2TvPzAxgfoBhtrG9w=="
         }
       },
       "is_incremental": false,
@@ -561,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.People.ICreateablePerson.html",
-          "hash": "rweIMd4Kay/VgSZgDM37Zg=="
+          "hash": "mCdE2S3i+ZBlNkxKA9JsnA=="
         }
       },
       "is_incremental": false,
@@ -573,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.People.IOtherProperties.html",
-          "hash": "/1V2hRSuQUjDDL95IV7OGg=="
+          "hash": "bn4lMe7JnWjfzi8P2nHORQ=="
         }
       },
       "is_incremental": false,
@@ -585,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.People.IPerson.html",
-          "hash": "Xghf1ErKGr5RbmBau8ToTA=="
+          "hash": "uw/XrZ9nIBPrbxsy2act6w=="
         }
       },
       "is_incremental": false,
@@ -597,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.People.IPersonUpdater.html",
-          "hash": "A/B0KuYjyBVnJaPoLvsWPg=="
+          "hash": "izGOL/0iD9mETCtDBh1JdA=="
         }
       },
       "is_incremental": false,
@@ -609,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.People.IPhoneNumber.html",
-          "hash": "s3LvsDdX/dNvl24Ak9XRYg=="
+          "hash": "7Pja4DtVJJAwgNxttoBagw=="
         }
       },
       "is_incremental": false,
@@ -621,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.People.ISetEmail.html",
-          "hash": "MdkXoupVZiWVkDTHvEqNWQ=="
+          "hash": "uQ3itUtVDyfD+RUsevXcSw=="
         }
       },
       "is_incremental": false,
@@ -633,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.People.ISetIdentity.html",
-          "hash": "c1+BIz94UptmDIVWu9xddA=="
+          "hash": "Q3CyR563flLX0/qOj9IQoQ=="
         }
       },
       "is_incremental": false,
@@ -645,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.People.IUpdateablePerson.html",
-          "hash": "6d0d/jmxTPyfZZNM8hSKUw=="
+          "hash": "vs7SufJMM3l743NeqTPHIQ=="
         }
       },
       "is_incremental": false,
@@ -669,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.ResourceGroups.IResourceGroup.html",
-          "hash": "lZa3GOBXayeJjEfTBS8SQA=="
+          "hash": "dRldNhI4TM1/z41FVXY6Eg=="
         }
       },
       "is_incremental": false,
@@ -693,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Roles.IRole.html",
-          "hash": "X7EsE/HWfHnN2/IWcd/BPg=="
+          "hash": "Rq81FEYmJY/Spa1gCw8tCg=="
         }
       },
       "is_incremental": false,
@@ -717,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Rooms.IMeetingDetails.html",
-          "hash": "xwZspAJk9g5w6PkvICwiGw=="
+          "hash": "znzFzTIOqOJHmrd2SDgeUw=="
         }
       },
       "is_incremental": false,
@@ -729,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Rooms.IRoom.html",
-          "hash": "P4nE6iUsBhk8KFO+/aoUFA=="
+          "hash": "ZlBwKoYntqI6AR/DzympQQ=="
         }
       },
       "is_incremental": false,
@@ -753,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Teams.ITeam.html",
-          "hash": "J/anrbmFwvyR7ZY8AIy7RA=="
+          "hash": "UA6QFbCSnvg6q06iMBQ7cw=="
         }
       },
       "is_incremental": false,
@@ -777,7 +789,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Webhooks.IWebhook.html",
-          "hash": "Ysa2fCJS86jdky1JBTxupQ=="
+          "hash": "0hdQM2pSAhhjb+IUQUniBQ=="
         }
       },
       "is_incremental": false,
@@ -789,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Webhooks.IWebhookCommon.html",
-          "hash": "FEG0D0aHoBLR6TrHWo2/Ng=="
+          "hash": "oYiPvdrVmTV+aK4dd0VfLw=="
         }
       },
       "is_incremental": false,
@@ -801,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Interfaces.Webhooks.IWebhookData-1.html",
-          "hash": "VBAiAZasz0w7v1fXL1eUyg=="
+          "hash": "ovw7/3/c8yEJRlhA6R9Y7A=="
         }
       },
       "is_incremental": false,
@@ -825,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Events.Event.html",
-          "hash": "cfpmppShI+EJKTzey2YtzA=="
+          "hash": "y4KjyQvqJoSzDJ7MURggxg=="
         }
       },
       "is_incremental": false,
@@ -849,7 +861,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Exceptions.TeamsApiException.html",
-          "hash": "//QH3I4Sfv39INOnZM6zgw=="
+          "hash": "6FmuwVWKw1ufZhLvliAMMg=="
         }
       },
       "is_incremental": false,
@@ -873,7 +885,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.General.TeamsObject.html",
-          "hash": "VaGzdNMKrC0M+86k4M3a5g=="
+          "hash": "8AC9aSsErkIWC2DzqvrjMg=="
         }
       },
       "is_incremental": false,
@@ -897,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Licenses.License.html",
-          "hash": "mzXpyuaq2vbOso4hDhdm1w=="
+          "hash": "o6fnmkg7FXupjKJq8H92ZQ=="
         }
       },
       "is_incremental": false,
@@ -921,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Memberships.RoomMembership.html",
-          "hash": "CRCeoHF/SH9I1kDSJC8rWQ=="
+          "hash": "y6PRlL2F4APdqi+y3rGpnw=="
         }
       },
       "is_incremental": false,
@@ -933,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Memberships.TeamMembership.html",
-          "hash": "oOXCxYCz1zXbnGQ1dlIkqg=="
+          "hash": "62Ta6hM33C+g0XWSQwJUtw=="
         }
       },
       "is_incremental": false,
@@ -957,7 +969,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Messages.Message.html",
-          "hash": "N+MgCkRfXKxTBKoaBa3I2w=="
+          "hash": "4CbM4OyPHVEHU1Bf3nHiyA=="
         }
       },
       "is_incremental": false,
@@ -969,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Messages.MessageBuilder.html",
-          "hash": "bZvqHoEpKiZZ3Wl6yeWSIg=="
+          "hash": "/8And0AFQ25Y4hu30CHBJg=="
         }
       },
       "is_incremental": false,
@@ -993,7 +1005,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Organizations.Organization.html",
-          "hash": "uqcx5Os4D37pIBgz7oRZmA=="
+          "hash": "LI9L5eWozGr0cQr+0COIWA=="
         }
       },
       "is_incremental": false,
@@ -1017,7 +1029,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.People.Person.html",
-          "hash": "HpZreAfZL+lWmNgPhpz9Qw=="
+          "hash": "MeBeessTzucg7YUCjxrdGA=="
         }
       },
       "is_incremental": false,
@@ -1029,7 +1041,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.People.PersonBuilder.html",
-          "hash": "Gm35YiWjWQe6r7pcj0CA+Q=="
+          "hash": "K4xl7rNYSbr4mfwmQNCEIw=="
         }
       },
       "is_incremental": false,
@@ -1041,7 +1053,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.People.PersonUpdater.html",
-          "hash": "oHiqSMYdwX1g7bi65BrbrQ=="
+          "hash": "nOEJ64+GpMBBVlZ6ZLIGwg=="
         }
       },
       "is_incremental": false,
@@ -1065,7 +1077,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.ResourceGroups.ResourceGroup.html",
-          "hash": "99DofV/F65HsPPjcw9lQog=="
+          "hash": "o9sZJIASSID5N/1oZJSdwg=="
         }
       },
       "is_incremental": false,
@@ -1077,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.ResourceGroups.ResourceGroupMembership.html",
-          "hash": "96ho7ygOUfRaWZaLnjTi0w=="
+          "hash": "UVmev4wOva5vxjpaZvvRSw=="
         }
       },
       "is_incremental": false,
@@ -1101,7 +1113,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Roles.Role.html",
-          "hash": "ZmhKYgcQQGOzx/pWoQs28g=="
+          "hash": "ImhQbenpFDUiLyotHErzig=="
         }
       },
       "is_incremental": false,
@@ -1125,7 +1137,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Rooms.MeetingDetails.html",
-          "hash": "kaTQ8NzAkZS1JNCPE1EE4Q=="
+          "hash": "O+TVFJhs5vKrpX092Q/I4Q=="
         }
       },
       "is_incremental": false,
@@ -1137,7 +1149,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Rooms.Room.html",
-          "hash": "MfyJMs6NilAlTO/Jjb/YTQ=="
+          "hash": "jyYn1qOtvcHV72Tjj/GXuQ=="
         }
       },
       "is_incremental": false,
@@ -1161,7 +1173,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Teams.Team.html",
-          "hash": "N+t636Rs9HOy4CJ8W/ZErw=="
+          "hash": "1LG17LmJJTt0rYoew8ksgQ=="
         }
       },
       "is_incremental": false,
@@ -1185,7 +1197,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Webhooks.Webhook.html",
-          "hash": "DxfjCz/3B78y/nBYw5YDJA=="
+          "hash": "RZQ4MGrLndoSnFRG487HEA=="
         }
       },
       "is_incremental": false,
@@ -1197,7 +1209,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WxTeamsSharp.Models.Webhooks.WebhookData-1.html",
-          "hash": "IG8LgSeZu1mo2LUz6y7ZuA=="
+          "hash": "XmOxk+unP8CKrRTozchqww=="
         }
       },
       "is_incremental": false,
@@ -1233,7 +1245,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "bUY9/bYFWy35Yss4fyTp9Q=="
+          "hash": "3BQh+7H0ZxdfzsbWI2Q6AQ=="
         }
       },
       "is_incremental": false,
@@ -1297,24 +1309,24 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 3
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 101,
-          "skipped_file_count": 25
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 102,
+          "skipped_file_count": 26
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
         }
       }
     },

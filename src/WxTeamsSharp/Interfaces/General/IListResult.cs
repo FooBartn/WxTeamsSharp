@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 
 namespace WxTeamsSharp.Interfaces.General
@@ -12,7 +13,7 @@ namespace WxTeamsSharp.Interfaces.General
         /// <summary>
         /// List of items of specified type
         /// </summary>
-        List<TItem> Items { get; }
+        ReadOnlyCollection<TItem> Items { get; }
 
         /// <summary>
         /// Whether the list has a next page or not

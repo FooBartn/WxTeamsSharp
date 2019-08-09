@@ -9,7 +9,7 @@ namespace WxTeamsSharp.Extensions
     /// <summary>
     /// Extension for IServiceCollection
     /// </summary>
-    public static class ServiceCollection
+    public static class ServiceCollectionExtensions
     {
         /// <summary>
         /// Add WxTeamsSharp to MS DI Container
@@ -19,6 +19,7 @@ namespace WxTeamsSharp.Extensions
         public static IServiceCollection AddWxTeamsSharp(this IServiceCollection services)
         {
             services.AddHttpClient();
+            services.AddScoped<IWxBaseClient, BaseClient>();
             services.AddScoped<IWxTeamsApi, WxTeamsApi>();
             services.AddScoped<IWxTeamsClient, TeamsClient>();
             services.AddScoped<IJsonDeserializer, CustomJsonDeserializer>();

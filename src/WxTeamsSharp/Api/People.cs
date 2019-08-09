@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WxTeamsSharp.Helpers;
+using WxTeamsSharp.Interfaces.Api;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Interfaces.People;
 using WxTeamsSharp.Models.People;
 
 namespace WxTeamsSharp.Api
 {
-    internal partial class WxTeamsApi
+    internal partial class WxTeamsApi : IWxTeamsApi
     {
         /// <inheritdoc/>
         public async Task<IResponseMessage> DeleteUserAsync(string personId)
             => await TeamsClient.DeleteResultAsync<Person>($"{WxTeamsConstants.PeopleUrl}/{personId}");
 
         /// <inheritdoc/>
-        public async Task<Person> UpdateUserAsync(string personId, IUpdateablePerson personParams)
-            => await TeamsClient.PutResultAsync<Person, IUpdateablePerson>($"{WxTeamsConstants.PeopleUrl}/{personId}", personParams);
+        public async Task<Person> UpdateUserAsync(IUpdateablePerson personParams)
+            => await TeamsClient.PutResultAsync<Person, IUpdateablePerson>($"{WxTeamsConstants.PeopleUrl}/{personParams.Id}", personParams);
 
         /// <inheritdoc/>
         public async Task<Person> CreateUserAsync(ICreateablePerson personParams)

@@ -50,6 +50,9 @@ namespace WxTeamsSharp.Models.Memberships
         public IListError Error { get; private set; }
 
         /// <inheritdoc/>
+        public bool HasError => Error != null;
+
+        /// <inheritdoc/>
         public async Task<TeamMembership> UpdateAsync(bool isModerator)
             => await TeamsApi.UpdateTeamMembership(Id, isModerator);
 

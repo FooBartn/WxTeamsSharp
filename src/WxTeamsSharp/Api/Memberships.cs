@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using WxTeamsSharp.Helpers;
+using WxTeamsSharp.Interfaces.Api;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Models.Memberships;
 
 namespace WxTeamsSharp.Api
 {
-    internal partial class WxTeamsApi
+    internal partial class WxTeamsApi : IWxTeamsApi
     {
         /// <inheritdoc/>
         public async Task<IListResult<RoomMembership>> GetAllMembershipsAsync(int max = 100)

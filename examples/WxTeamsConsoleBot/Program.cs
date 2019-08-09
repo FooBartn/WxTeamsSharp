@@ -34,7 +34,7 @@ namespace WxTeamsConsoleBot
 
         private static IServiceProvider ConfigureServices()
         {
-            var services = new Microsoft.Extensions.DependencyInjection.ServiceCollection();
+            var services = new ServiceCollection();
 
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())

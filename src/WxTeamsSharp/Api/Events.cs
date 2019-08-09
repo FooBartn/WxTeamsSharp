@@ -4,12 +4,13 @@ using System.Threading.Tasks;
 using WxTeamsSharp.Enums;
 using WxTeamsSharp.Extensions;
 using WxTeamsSharp.Helpers;
+using WxTeamsSharp.Interfaces.Api;
 using WxTeamsSharp.Interfaces.General;
 using WxTeamsSharp.Models.Events;
 
 namespace WxTeamsSharp.Api
 {
-    internal partial class WxTeamsApi
+    internal partial class WxTeamsApi : IWxTeamsApi
     {
         /// <inheritdoc/>
         public async Task<IListResult<Event>> GetEventsAsync(int max = 100, EventResource? resource = null, EventType? type = null,
