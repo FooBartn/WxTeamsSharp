@@ -9,6 +9,8 @@ namespace WxTeamsSharp.Interfaces.General
     /// <typeparam name="TItem">Type for list of results from API</typeparam>
     public interface IListResult<TItem> : ITeamsObject
     {
+        // TODO: Should make items a readonly collection
+
         /// <summary>
         /// List of items of specified type
         /// </summary>

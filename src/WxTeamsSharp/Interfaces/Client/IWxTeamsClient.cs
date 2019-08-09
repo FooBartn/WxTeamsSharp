@@ -6,7 +6,7 @@ using WxTeamsSharp.Models.General;
 namespace WxTeamsSharp.Interfaces.Client
 {
     /// <summary>
-    /// Client for accessing Teams API
+    /// Client for invoking and deserializing returns from BaseClient
     /// </summary>
     public interface IWxTeamsClient
     {

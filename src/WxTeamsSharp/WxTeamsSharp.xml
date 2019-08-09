@@ -385,19 +385,19 @@
             the webhook is disabled
             </summary>
         </member>
-        <member name="T:WxTeamsSharp.Extensions.ServiceCollection">
+        <member name="T:WxTeamsSharp.Extensions.ServiceCollectionExtensions">
             <summary>
             Extension for IServiceCollection
             </summary>
         </member>
-        <member name="M:WxTeamsSharp.Extensions.ServiceCollection.AddWxTeamsSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+        <member name="M:WxTeamsSharp.Extensions.ServiceCollectionExtensions.AddWxTeamsSharp(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             Add WxTeamsSharp to MS DI Container
             </summary>
             <param name="services">IServiceCollection DI Container</param>
             <returns>IServiceCollection</returns>
         </member>
-        <member name="M:WxTeamsSharp.Extensions.String.FirstCharToLower(System.String)">
+        <member name="M:WxTeamsSharp.Extensions.StringExtensions.FirstCharToLower(System.String)">
             <summary>
             Returns the input string with the first character converted to uppercase
             </summary>
@@ -946,9 +946,34 @@
             Async Policy for Retry-After Header from API. Used in TeamsClient
             </summary>
         </member>
+        <member name="T:WxTeamsSharp.Interfaces.Client.IWxBaseClient">
+            <summary>
+            Layer that communicates directly with API
+            </summary>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Client.IWxBaseClient.SetAuth(System.String,System.String)">
+            <summary>
+            Sets the access token. 
+            Required before using the API.
+            </summary>
+            <param name="token">The token used to access the API</param>
+            <param name="url">Base URL for API. Has default. Don't change unless you're sure what you're doing</param>
+        </member>
+        <member name="M:WxTeamsSharp.Interfaces.Client.IWxBaseClient.GetHttpResponse``1(System.Net.Http.HttpMethod,System.String,System.String,System.Net.Http.MultipartFormDataContent)">
+            <summary>
+            Method responsible for direct communication with API and returning 
+            a result or a TeamsApiException
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="method"></param>
+            <param name="endpoint"></param>
+            <param name="json"></param>
+            <param name="formData"></param>
+            <returns></returns>
+        </member>
         <member name="T:WxTeamsSharp.Interfaces.Client.IWxTeamsClient">
             <summary>
-            Client for accessing Teams API
+            Client for invoking and deserializing returns from BaseClient
             </summary>
         </member>
         <member name="M:WxTeamsSharp.Interfaces.Client.IWxTeamsClient.SetAuth(System.String,System.String)">
