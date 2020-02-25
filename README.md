@@ -2,13 +2,13 @@
 
 ## WxTeamsSharp: A Webex Teams .NET C# Library
 
-A .NET Standard 2.0 Library to help developers communicate easily with the Webex Teams API. 
+A .NET Core 3.1 Library to help developers communicate easily with the Webex Teams API. 
 
 Available on GitHub and [NuGet](https://www.nuget.org/packages/WxTeamsSharp/):
 
     Install-Package WxTeamsSharp
 
-> **Notice:** 2.0.0 is a major update with a paradigm shift from static to DI.
+> **Notice:** 2.0.0 was a major update with a paradigm shift from static to DI.
 > You will want to check both of the examples for ways to get started.
 
 ## Basic Usage
