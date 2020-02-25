@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WxTeamsWebhookReceiver", "e
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WxTeamsWebhookReceiver.IntegrationTests", "examples\WxTeamsWebhookReceiver.IntegrationTests\WxTeamsWebhookReceiver.IntegrationTests.csproj", "{5305AF14-C232-4F50-91FB-D465E634C415}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WxTeamsConsoleBot", "examples\WxTeamsConsoleBot\WxTeamsConsoleBot.csproj", "{B426BB79-BEE3-4382-9197-0BB88EDBBD6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WxTeamsConsoleBot", "examples\WxTeamsConsoleBot\WxTeamsConsoleBot.csproj", "{B426BB79-BEE3-4382-9197-0BB88EDBBD6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

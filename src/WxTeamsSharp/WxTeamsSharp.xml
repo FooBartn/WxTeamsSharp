@@ -2930,6 +2930,15 @@
         <member name="M:WxTeamsSharp.Models.People.PersonUpdater.UpdateAsync">
             <inheritdoc/>
         </member>
+        <member name="T:WxTeamsSharp.Models.People.PhoneNumber">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.PhoneNumber.Type">
+            <inheritdoc/>
+        </member>
+        <member name="P:WxTeamsSharp.Models.People.PhoneNumber.Value">
+            <inheritdoc/>
+        </member>
         <member name="T:WxTeamsSharp.Models.ResourceGroups.ResourceGroup">
             <inheritdoc/>
         </member>
@@ -3062,13 +3071,7 @@
         <member name="M:WxTeamsSharp.Models.Rooms.Room.GetMembershipsAsync(System.Int32)">
             <inheritdoc/>
         </member>
-        <member name="M:WxTeamsSharp.Models.Rooms.Room.AddUserAsync(System.String,System.Boolean)">
-            <inheritdoc/>
-        </member>
         <member name="M:WxTeamsSharp.Models.Rooms.Room.UpdateUserAsync(System.String,System.Boolean)">
-            <inheritdoc/>
-        </member>
-        <member name="M:WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(System.String)">
             <inheritdoc/>
         </member>
         <member name="M:WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeDateAsync(System.DateTimeOffset,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">
@@ -3077,7 +3080,13 @@
         <member name="M:WxTeamsSharp.Models.Rooms.Room.GetMessagesBeforeMessageAsync(System.String,System.Int32,System.Boolean,System.Collections.Generic.ICollection{System.String})">
             <inheritdoc/>
         </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.AddUserAsync(System.String,System.Boolean)">
+            <inheritdoc/>
+        </member>
         <member name="M:WxTeamsSharp.Models.Rooms.Room.AddUserAsync(WxTeamsSharp.Interfaces.People.IPerson,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(System.String)">
             <inheritdoc/>
         </member>
         <member name="M:WxTeamsSharp.Models.Rooms.Room.RemoveUserAsync(WxTeamsSharp.Interfaces.People.IPerson)">

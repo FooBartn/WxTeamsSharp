@@ -68,7 +68,7 @@ namespace WxTeamsSharp.IntegrationTests
         [Fact]
         public async Task ShouldGetPeopleByEmail()
         {
-            var people = await _wxTeamsApi.GetUsersByEmailAsync("jbarton@netsyncnetwork.com");
+            var people = await _wxTeamsApi.GetUsersByEmailAsync(StaticTestingValues.JEmail);
 
             people.Should().NotBeNull();
             people.Items.Count.Should().Be(1);

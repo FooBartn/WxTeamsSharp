@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System;
 using System.Threading.Tasks;
 using WxTeamsSharp.Models.Messages;
 using WxTeamsSharp.Models.Webhooks;
@@ -19,10 +21,11 @@ namespace WxTeamsWebhookReceiver.Controllers
 
         // POST api/messages
         [HttpPost]
-        public async Task<JsonResult> Post([FromBody] WebhookData<Message> value)
+        public async Task<JsonResult> Post([FromBody] object value)
         {
-            // Teams seems to just be hitting this over and over.. really confused.
-            await _teamsService.HandleCreatedMessage(value);
+            var text = System.Text.Json.JsonSerializer.Serialize(value);
+            var data = JsonConvert.DeserializeObject<WebhookData<Message>>(text);
+            await _teamsService.HandleCreatedMessage(data);
             return new JsonResult(value);
         }
     }

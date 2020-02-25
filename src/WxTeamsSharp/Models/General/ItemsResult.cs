@@ -21,7 +21,7 @@ namespace WxTeamsSharp.Models.General
         internal string NextPage { get; private set; } = string.Empty;
 
         [JsonProperty]
-        public ReadOnlyCollection<TItem> Items { get; private set; } 
+        public ReadOnlyCollection<TItem> Items { get; private set; }
             = new ReadOnlyCollection<TItem>(new List<TItem>());
 
         public bool HasNextPage => !string.IsNullOrEmpty(NextPage);

@@ -2,10 +2,13 @@
 
 namespace WxTeamsSharp.Models.People
 {
-    internal class PhoneNumber : IPhoneNumber
+    /// <inheritdoc/>
+    public class PhoneNumber : IPhoneNumber
     {
+        /// <inheritdoc/>
         public string Type { get; set; }
 
+        /// <inheritdoc/>
         public string Value { get; set; }
     }
 }

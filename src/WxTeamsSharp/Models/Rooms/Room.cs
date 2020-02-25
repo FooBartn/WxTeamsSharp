@@ -103,21 +103,10 @@ namespace WxTeamsSharp.Models.Rooms
             => await TeamsApi.GetRoomMembershipsAsync(Id, max);
 
         /// <inheritdoc/>
-        public async Task<RoomMembership> AddUserAsync(string userIdOrEmail, bool isModerator = false)
-            => await TeamsApi.AddUserToRoomAsync(Id, userIdOrEmail, isModerator);
-
-        /// <inheritdoc/>
         public async Task<RoomMembership> UpdateUserAsync(string userIdOrEmail, bool isModerator)
         {
             var membership = await FindMembershipByIdOrEmailAsync(userIdOrEmail);
             return await membership.UpdateAsync(isModerator);
-        }
-
-        /// <inheritdoc/>
-        public async Task<IResponseMessage> RemoveUserAsync(string userIdOrEmail)
-        {
-            var membership = await FindMembershipByIdOrEmailAsync(userIdOrEmail);
-            return await membership.DeleteAsync();
         }
 
         private async Task<RoomMembership> FindMembershipByIdOrEmailAsync(string userIdOrEmail)
@@ -142,8 +131,19 @@ namespace WxTeamsSharp.Models.Rooms
             => await TeamsApi.GetRoomMessagesBeforeMessageAsync(Id, messageId, max, userMentioned, mentionedPeople);
 
         /// <inheritdoc/>
+        public async Task<RoomMembership> AddUserAsync(string userIdOrEmail, bool isModerator = false)
+            => await TeamsApi.AddUserToRoomAsync(Id, userIdOrEmail, isModerator);
+
+        /// <inheritdoc/>
         public async Task<RoomMembership> AddUserAsync(IPerson user, bool isModerator = false)
             => await AddUserAsync(user.Id, isModerator);
+
+        /// <inheritdoc/>
+        public async Task<IResponseMessage> RemoveUserAsync(string userIdOrEmail)
+        {
+            var membership = await FindMembershipByIdOrEmailAsync(userIdOrEmail);
+            return await membership.DeleteAsync();
+        }
 
         /// <inheritdoc/>
         public async Task<IResponseMessage> RemoveUserAsync(IPerson user)

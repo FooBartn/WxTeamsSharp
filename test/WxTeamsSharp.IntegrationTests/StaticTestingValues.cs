@@ -5,7 +5,7 @@
         public static string JRoom => "Y2lzY29zcGFyazovL3VzL1JPT00vNDIxNWU1ZDEtODRlOS0zMjc4LWFmMmYtNjM1NTNiOTcxZjg2";
         public static string JId = "Y2lzY29zcGFyazovL3VzL1BFT1BMRS9hMGJlZGI3Yy0wOWNiLTQ1OGQtOTVkNS0xNjBlNjAwMWI3MzA";
         public static string BotEmail = "SparklesTheUnicorn@webex.bot";
-        public static string JEmail = "jbarton@netsyncnetwork.com";
+        public static string JEmail = "jbarton@netsync.com";
         public static string BotId = "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8xNmU1ZTc4Ny0yNWZhLTQ2ZjktYjExNC00MWMxZjNiMmQ0MTY";
         public static string JRoomMembership = "Y2lzY29zcGFyazovL3VzL01FTUJFUlNISVAvMTZlNWU3ODctMjVmYS00NmY5LWIxMTQtNDFjMWYzYjJkNDE2OjQyMTVlNWQxLTg0ZTktMzI3OC1hZjJmLTYzNTUzYjk3MWY4Ng";
         public static string TestRoom = "Y2lzY29zcGFyazovL3VzL1JPT00vOTg4ODAyOTAtYThiOC0xMWU5LWI5YWMtYWZjZDIwMDFjODI0";

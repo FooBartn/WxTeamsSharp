@@ -49,7 +49,7 @@ namespace WxTeamsSharp.IntegrationTests
         [Fact]
         public async Task ShouldGetDirectMessagesByEmail()
         {
-            var userEmail = "jbarton@netsyncnetwork.com";
+            var userEmail = "jbarton@netsync.com";
             var messages = await _wxTeamsApi.GetDirectMessagesAsync(userEmail);
 
             messages.Should().NotBeNull();
